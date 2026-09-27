@@ -1,0 +1,30 @@
+[
+  {
+    "id": "01-lo-que-pesa",
+    "tipo": "gancho",
+    "titulo": "Lo que pesa",
+    "duracion": 10.75,
+    "transition_in": "cut"
+  },
+  {
+    "id": "02-la-campana-y-la-costumbre",
+    "tipo": "par",
+    "titulo": "La campaña y la costumbre",
+    "duracion": 10.75,
+    "transition_in": "cut"
+  },
+  {
+    "id": "03-cuatro-acciones",
+    "tipo": "lista",
+    "titulo": "Cuatro acciones",
+    "duracion": 10.75,
+    "transition_in": "cut"
+  },
+  {
+    "id": "04-todos-los-dias",
+    "tipo": "cierre",
+    "titulo": "Todos los días",
+    "duracion": 10.75,
+    "transition_in": "crossfade"
+  }
+]
