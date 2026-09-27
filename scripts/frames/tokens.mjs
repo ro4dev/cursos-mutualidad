@@ -58,6 +58,7 @@ export function tokens(area) {
  */
 export const R = {
   hero: 148, // titular de gancho
+  heroMd: 118, // titular de gancho cuando la frase es larga
   heroSm: 96,
   stat: 300, // numeral gigante
   title: 56, // titulo de tarjeta

@@ -70,8 +70,68 @@ function capas(f, worldInner) {
 /* ========================================================================= *
  * 1. GANCHO — la tesis. Sin numero, sin lista: una frase y su apoyo.
  * ========================================================================= */
+/**
+ * Cuantas lineas ocupa un titular, estimado, sin medir el navegador.
+ *
+ * El generador no puede preguntar cuanto mide un texto: la geometria tiene que
+ * salir entera antes de renderizar, o dos corridas del mismo spec darian html
+ * distintos. Asi que se estima con un avance medio por caracter.
+ *
+ * El 0.68 es conservador a proposito. Los titulares van en mayuscula y la
+ * mayuscula es ancha; quedarse corto de calculo hace que un titular baje de
+ * peso antes de tiempo, y eso se ve. Pasarse hace que el titular se coma la
+ * entradilla, y eso se ve peor.
+ */
+const AVANCE_MEDIO = 0.68;
+
+export function lineasDeTitular(frases, size) {
+  const porLinea = Math.max(6, Math.floor(INNER / (size * AVANCE_MEDIO)));
+  return frases.reduce((n, f) => n + Math.max(1, Math.ceil(f.length / porLinea)), 0);
+}
+
 export function gancho(f, { kicker, grande, remark }) {
   const t = f.tokens;
+
+  /* El titular arranca en 300 y la entradilla se ubica en 780: hay 460px para el
+     titular. Con una frase larga a 148px no alcanza y el bloque se pasa encima
+     de la entradilla. `check` lo detecta, pero mas tarde y sin decir cual fue
+     la causa, asi que el tamano se elige aca.
+
+     Se elige el mayor de la rampa que entre. `R.heroSm` estaba en la rampa sin
+     uso desde el principio: la idea del diseno estaba, faltaba el codigo. */
+  const TOP_HERO = 300;
+  const TOP_REMARK_POR_DEFECTO = 780;
+  const LH_HERO = 1.02;
+  const GAP = 44;
+  /* Margen para decidir si el titular entra. Sin esto el reparto de sizes
+     dependia de 1px: en diversidad-inclusion el titular a 118px ocupa 781.4 y
+     con un umbral en 780 no entra, pero por un margen que ninguna correccion de
+     copy va a mover de forma parecida. 8px es holgura de verdad. */
+  const HOLGURA = 8;
+
+  let size = R.hero;
+  let altoHero = lineasDeTitular(grande, size) * size * LH_HERO;
+  for (const paso of [R.heroMd, R.heroSm]) {
+    if (TOP_HERO + altoHero + HOLGURA <= TOP_REMARK_POR_DEFECTO) break;
+    size = paso;
+    altoHero = lineasDeTitular(grande, size) * size * LH_HERO;
+  }
+
+  /* La entradilla se baja solo si el titular le robo el lugar. Para el copy
+     corto queda en 780, que es donde la quesieron todos los frames de la
+     serie. */
+  const remarkTop = Math.max(TOP_REMARK_POR_DEFECTO, Math.ceil(TOP_HERO + altoHero + GAP));
+
+  /* Si ni con el titular chico entra, el copy es demasiado largo para el
+     arquetipo. Se corta aca y se dice cual es el culpable, en vez de dejar que
+     `check` reporte un solapamiento sin contexto. */
+  if (remark && remarkTop + 140 > CANVAS.H - 60) {
+    throw new Error(
+      `gancho: la entradilla queda en ${remarkTop}px y no entra en el canvas. ` +
+      `Reduce el titular (${grande.length} frases, ${size}px) o acorta la entradilla ` +
+      `(${remark.length} caracteres).`,
+    );
+  }
 
   rule(f, '-rule', { left: PAD, top: 212, width: 210, color: t.accent });
   block(f, '-kicker', {
@@ -79,12 +139,12 @@ export function gancho(f, { kicker, grande, remark }) {
     ls: '0.18em', color: t.greenLite, transform: 'uppercase',
   });
   block(f, '-hero', {
-    left: PAD, top: 300, width: INNER, font: display, size: R.hero,
-    weight: 500, lh: 1.02, ls: '-0.02em', color: t.ink,
+    left: PAD, top: TOP_HERO, width: INNER, font: display, size,
+    weight: 500, lh: LH_HERO, ls: '-0.02em', color: t.ink,
   }, FRASES);
   if (remark) {
     block(f, '-remark', {
-      left: PAD, top: 780, width: 1180, font: display, size: R.lead,
+      left: PAD, top: remarkTop, width: 1180, font: display, size: R.lead,
       weight: 400, lh: 1.34, color: t.greenDeep,
     });
   }
