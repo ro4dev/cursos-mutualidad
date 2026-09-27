@@ -15,7 +15,8 @@
     "frames:check": "node scripts/check-selectors.mjs",
     "video:build": "node scripts/render-all.mjs",
     "video:render": "node scripts/render-all.mjs",
-    "check": "npm run catalog:check && node scripts/check-selectors.mjs && npm run catalog:build"
+    "check": "npm run catalog:check && npm run frames:test && node scripts/check-selectors.mjs && npm run catalog:build",
+    "frames:test": "node scripts/frames/acentos.test.mjs"
   },
   "dependencies": {
     "next": "16.3.6",
