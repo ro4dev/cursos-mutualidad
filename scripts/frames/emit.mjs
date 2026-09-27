@@ -72,12 +72,13 @@ export class Frame {
 
     this.track = 0;
 
-    /* Las variables de color viajan como custom properties para que los
-       primitivos montados (count-up) sean token-native. */
+    /* Los colores de marca viajan como custom properties para que el CSS de
+       la composicion sea token-native. Solo las que existen en la paleta:
+       `tokens()` no expone `brand` ni `brandLite`, y una custom property con
+       el valor `undefined` resuelve a la cadena "undefined", no a nada. */
     this.vars = {
-      '--brand': tokens.brand,
       '--accent': tokens.accent,
-      '--accent-2': tokens.brandLite,
+      '--accent-deep': tokens.accentDeep,
       '--fg': tokens.ink,
       '--bg': tokens.cream,
       '--font-display': `"${tokens.display}", Georgia, serif`,

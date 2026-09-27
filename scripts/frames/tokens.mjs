@@ -30,15 +30,15 @@ const BASE = {
  * cambia es el color del filete de enfasis y del numero gigante.
  */
 const ACENTOS = {
-  'Legal / Derechos': { accent: '#b8562f', accentDeep: '#8f3f20' }, // terracota
-  'Legal / Acoso': { accent: '#b8562f', accentDeep: '#8f3f20' },
-  'Derecho Laboral': { accent: '#3f6b8a', accentDeep: '#2b4d66' }, // azul pizarra
-  Seguridad: { accent: '#c99a2e', accentDeep: '#a37a1c' }, // ambar
-  Bienestar: { accent: '#3f7d6a', accentDeep: '#2b5c4d' }, // verde agua
-  Cultura: { accent: '#8a5a9e', accentDeep: '#66406f' }, // ciruela
-  Habilidades: { accent: '#2f6f8a', accentDeep: '#1d5066' }, // teal
-  Liderazgo: { accent: '#a8522f', accentDeep: '#803a1f' }, // terracota oscura
-  Onboarding: { accent: '#4a7a4e', accentDeep: '#345a37' }, // verde oliva
+  'Legal / Derechos': { accent: '#9a4827', accentDeep: '#7a361b' }, // terracota
+  'Legal / Acoso': { accent: '#9a4827', accentDeep: '#7a361b' },
+  'Derecho Laboral': { accent: '#3b6481', accentDeep: '#2b4d66' }, // azul pizarra
+  Seguridad: { accent: '#785c1b', accentDeep: '#5d4610' }, // ambar
+  Bienestar: { accent: '#356959', accentDeep: '#265244' }, // verde agua
+  Cultura: { accent: '#794f8b', accentDeep: '#623d6a' }, // ciruela
+  Habilidades: { accent: '#2b667f', accentDeep: '#1d5066' }, // teal
+  Liderazgo: { accent: '#96492a', accentDeep: '#7a371e' }, // terracota oscura
+  Onboarding: { accent: '#3f6943', accentDeep: '#2f5232' }, // verde oliva
 };
 
 export function tokens(area) {

@@ -50,7 +50,7 @@
         "framesMontadas": 4,
         "mp4": "/videos/diversidad-inclusion.mp4",
         "disponible": true,
-        "tamano": 15688251
+        "tamano": 15672692
       }
     },
     {
@@ -103,14 +103,14 @@
       "language": "es-CL",
       "angle": "proceso",
       "narration": false,
-      "status": "research",
+      "status": "rendered",
       "fuente": "Ley N° 19.587 sobre prevencion y atencion de incendios; NCh 2502 y normativa de evacuacion",
       "video": {
-        "composicion": null,
-        "framesMontadas": 0,
+        "composicion": "/composiciones/evacuacion-incendios/",
+        "framesMontadas": 4,
         "mp4": "/videos/evacuacion-incendios.mp4",
-        "disponible": false,
-        "tamano": null
+        "disponible": true,
+        "tamano": 13317169
       }
     },
     {
@@ -190,7 +190,7 @@
         "framesMontadas": 4,
         "mp4": "/videos/ergonomia-oficina.mp4",
         "disponible": true,
-        "tamano": 13095864
+        "tamano": 13118709
       }
     },
     {
@@ -203,14 +203,14 @@
       "language": "es-CL",
       "angle": "habito",
       "narration": false,
-      "status": "research",
+      "status": "rendered",
       "fuente": "Guia de pausas activas y higiene postural; recomendaciones de salud ocupacional",
       "video": {
-        "composicion": null,
-        "framesMontadas": 0,
+        "composicion": "/composiciones/pausas-activas/",
+        "framesMontadas": 4,
         "mp4": "/videos/pausas-activas.mp4",
-        "disponible": false,
-        "tamano": null
+        "disponible": true,
+        "tamano": 13014794
       }
     },
     {
@@ -263,14 +263,14 @@
       "language": "es-CL",
       "angle": "habito",
       "narration": false,
-      "status": "research",
+      "status": "rendered",
       "fuente": "Ley N° 20.920 (residuos y economia circular); guias de sostenibilidad operativa",
       "video": {
-        "composicion": null,
-        "framesMontadas": 0,
+        "composicion": "/composiciones/sostenibilidad-ambiental/",
+        "framesMontadas": 4,
         "mp4": "/videos/sostenibilidad-ambiental.mp4",
-        "disponible": false,
-        "tamano": null
+        "disponible": true,
+        "tamano": 13328495
       }
     },
     {
@@ -310,7 +310,7 @@
         "framesMontadas": 4,
         "mp4": "/videos/dignidad-respeto.mp4",
         "disponible": true,
-        "tamano": 14553767
+        "tamano": 14559312
       }
     },
     {
@@ -323,14 +323,14 @@
       "language": "es-CL",
       "angle": "normativa",
       "narration": false,
-      "status": "research",
+      "status": "rendered",
       "fuente": "Conceptos de responsabilidad social empresarial; normativa de sostenibilidad corporativa",
       "video": {
-        "composicion": null,
-        "framesMontadas": 0,
+        "composicion": "/composiciones/responsabilidad-social/",
+        "framesMontadas": 4,
         "mp4": "/videos/responsabilidad-social.mp4",
-        "disponible": false,
-        "tamano": null
+        "disponible": true,
+        "tamano": 13400637
       }
     },
     {
@@ -350,7 +350,7 @@
         "framesMontadas": 4,
         "mp4": "/videos/comunicacion-asertiva.mp4",
         "disponible": true,
-        "tamano": 12320031
+        "tamano": 12311618
       }
     },
     {
@@ -363,14 +363,14 @@
       "language": "es-CL",
       "angle": "proceso",
       "narration": false,
-      "status": "research",
+      "status": "rendered",
       "fuente": "Material de desarrollo de equipos; guias de colaboracion laboral",
       "video": {
-        "composicion": null,
-        "framesMontadas": 0,
+        "composicion": "/composiciones/trabajo-en-equipo/",
+        "framesMontadas": 4,
         "mp4": "/videos/trabajo-en-equipo.mp4",
-        "disponible": false,
-        "tamano": null
+        "disponible": true,
+        "tamano": 13608172
       }
     },
     {
