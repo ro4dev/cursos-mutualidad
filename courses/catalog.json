@@ -63,14 +63,14 @@
       "language": "es-CL",
       "angle": "normativa",
       "narration": false,
-      "status": "research",
+      "status": "rendered",
       "fuente": "Ley N° 20.584 (igualdad de oportunidades y no discriminacion); Convencion OIT 111",
       "video": {
-        "composicion": null,
-        "framesMontadas": 0,
+        "composicion": "/composiciones/igualdad-no-discriminacion/",
+        "framesMontadas": 5,
         "mp4": "/videos/igualdad-no-discriminacion.mp4",
-        "disponible": false,
-        "tamano": null
+        "disponible": true,
+        "tamano": 18100085
       }
     },
     {
@@ -83,14 +83,14 @@
       "language": "es-CL",
       "angle": "normativa",
       "narration": false,
-      "status": "research",
+      "status": "rendered",
       "fuente": "Ley N° 21.719 (trabajo a distancia / teletrabajo), publicada 2024",
       "video": {
-        "composicion": null,
-        "framesMontadas": 0,
+        "composicion": "/composiciones/teletrabajo/",
+        "framesMontadas": 4,
         "mp4": "/videos/teletrabajo.mp4",
-        "disponible": false,
-        "tamano": null
+        "disponible": true,
+        "tamano": 17453638
       }
     },
     {
@@ -123,14 +123,14 @@
       "language": "es-CL",
       "angle": "proceso",
       "narration": false,
-      "status": "research",
+      "status": "rendered",
       "fuente": "Ley N° 16.625 sobre exijencia de medidas de prevencion de riesgos; DS N° 40 de 1969",
       "video": {
-        "composicion": null,
-        "framesMontadas": 0,
+        "composicion": "/composiciones/prevencion-riesgos/",
+        "framesMontadas": 4,
         "mp4": "/videos/prevencion-riesgos.mp4",
-        "disponible": false,
-        "tamano": null
+        "disponible": true,
+        "tamano": 16998482
       }
     },
     {
@@ -143,14 +143,14 @@
       "language": "es-CL",
       "angle": "proceso",
       "narration": false,
-      "status": "research",
+      "status": "rendered",
       "fuente": "Guia de primeros auxilios; recomendaciones de la Cruz Roja y de salud de emergencia",
       "video": {
-        "composicion": null,
-        "framesMontadas": 0,
+        "composicion": "/composiciones/primeros-auxilios/",
+        "framesMontadas": 4,
         "mp4": "/videos/primeros-auxilios.mp4",
-        "disponible": false,
-        "tamano": null
+        "disponible": true,
+        "tamano": 14707074
       }
     },
     {
@@ -163,14 +163,14 @@
       "language": "es-CL",
       "angle": "normativa",
       "narration": false,
-      "status": "research",
+      "status": "rendered",
       "fuente": "Codigo del Trabajo (Ley 18.290) y DFL N° 1 de 1969; DS N° 594 de 1971 sobre condiciones sanitarias y ambientales del trabajo",
       "video": {
-        "composicion": null,
-        "framesMontadas": 0,
+        "composicion": "/composiciones/seguridad-trabajo/",
+        "framesMontadas": 5,
         "mp4": "/videos/seguridad-trabajo.mp4",
-        "disponible": false,
-        "tamano": null
+        "disponible": true,
+        "tamano": 18229670
       }
     },
     {
@@ -223,14 +223,14 @@
       "language": "es-CL",
       "angle": "proceso",
       "narration": false,
-      "status": "research",
+      "status": "rendered",
       "fuente": "Protocolo de identificacion y gestion de riesgos psicosociales (-sector salud); orientaciones de salud ocupacional",
       "video": {
-        "composicion": null,
-        "framesMontadas": 0,
+        "composicion": "/composiciones/riesgos-psicosociales/",
+        "framesMontadas": 5,
         "mp4": "/videos/riesgos-psicosociales.mp4",
-        "disponible": false,
-        "tamano": null
+        "disponible": true,
+        "tamano": 16772167
       }
     },
     {
@@ -243,14 +243,14 @@
       "language": "es-CL",
       "angle": "habito",
       "narration": false,
-      "status": "research",
+      "status": "rendered",
       "fuente": "Ley N° 21.668 (salud mental y bienestar); orientaciones de salud mental laboral",
       "video": {
-        "composicion": null,
-        "framesMontadas": 0,
+        "composicion": "/composiciones/salud-mental/",
+        "framesMontadas": 4,
         "mp4": "/videos/salud-mental.mp4",
-        "disponible": false,
-        "tamano": null
+        "disponible": true,
+        "tamano": 15557289
       }
     },
     {
@@ -283,14 +283,14 @@
       "language": "es-CL",
       "angle": "normativa",
       "narration": false,
-      "status": "research",
+      "status": "rendered",
       "fuente": "Ley N° 20.026 sobre probidad y conducta funcionaria; politica interna de la organizacion",
       "video": {
-        "composicion": null,
-        "framesMontadas": 0,
+        "composicion": "/composiciones/codigo-conducta/",
+        "framesMontadas": 4,
         "mp4": "/videos/codigo-conducta.mp4",
-        "disponible": false,
-        "tamano": null
+        "disponible": true,
+        "tamano": 17422501
       }
     },
     {
@@ -383,14 +383,14 @@
       "language": "es-CL",
       "angle": "normativa",
       "narration": false,
-      "status": "research",
+      "status": "rendered",
       "fuente": "Normativa y buenas practicas de liderazgo; politica de trato laboral",
       "video": {
-        "composicion": null,
-        "framesMontadas": 0,
+        "composicion": "/composiciones/liderazgo-sin-violencia/",
+        "framesMontadas": 4,
         "mp4": "/videos/liderazgo-sin-violencia.mp4",
-        "disponible": false,
-        "tamano": null
+        "disponible": true,
+        "tamano": 16093670
       }
     },
     {
@@ -403,14 +403,14 @@
       "language": "es-CL",
       "angle": "proceso",
       "narration": false,
-      "status": "research",
+      "status": "rendered",
       "fuente": "Buenas practicas de induccion laboral; normativa de capacitacion y prevencion de riesgos",
       "video": {
-        "composicion": null,
-        "framesMontadas": 0,
+        "composicion": "/composiciones/nuevo-trabajador/",
+        "framesMontadas": 4,
         "mp4": "/videos/nuevo-trabajador.mp4",
-        "disponible": false,
-        "tamano": null
+        "disponible": true,
+        "tamano": 17712438
       }
     }
   ]
