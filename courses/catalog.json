@@ -1,0 +1,417 @@
+{
+  "generado": "2026-09-27",
+  "total": 20,
+  "areas": [
+    "Legal / Acoso",
+    "Legal / Derechos",
+    "Derecho Laboral",
+    "Seguridad",
+    "Bienestar",
+    "Cultura",
+    "Habilidades",
+    "Liderazgo",
+    "Onboarding"
+  ],
+  "cursos": [
+    {
+      "slug": "ley-karin",
+      "titulo": "Ley Karin: una sola conducta basta",
+      "area": "Legal / Acoso",
+      "mensaje": "Desde el 1 de agosto de 2024 la ley obliga a investigar TODA denuncia de acoso sexual: una sola conducta basta para activar el protocolo.",
+      "duracion": 75,
+      "aspect": "1920x1080",
+      "language": "es-CL",
+      "angle": "plazos",
+      "narration": false,
+      "status": "rendered",
+      "fuente": "Ley N° 21.643, Diario Oficial 15-01-2024, arts. 211-C, 211-D, 211-E, 211-B",
+      "video": {
+        "composicion": null,
+        "framesMontadas": 0,
+        "mp4": "/videos/ley-karin.mp4",
+        "disponible": true,
+        "tamano": 31576
+      }
+    },
+    {
+      "slug": "diversidad-inclusion",
+      "titulo": "Diversidad e inclusion",
+      "area": "Legal / Derechos",
+      "mensaje": "Un equipo diverso no es un adorno: la variedad de experiencias mejora las decisiones. Inclusion significa que esa variedad pueda opinar.",
+      "duracion": 45,
+      "aspect": "1920x1080",
+      "language": "es-CL",
+      "angle": "normativa",
+      "narration": false,
+      "status": "research",
+      "fuente": "Ley N° 20.584; guias de inclusion y diversidad laboral",
+      "video": {
+        "composicion": null,
+        "framesMontadas": 0,
+        "mp4": "/videos/diversidad-inclusion.mp4",
+        "disponible": false,
+        "tamano": null
+      }
+    },
+    {
+      "slug": "igualdad-no-discriminacion",
+      "titulo": "Igualdad y no discriminacion",
+      "area": "Legal / Derechos",
+      "mensaje": "Ninguna diferencia por edad, sexo, orientacion, etnia o discapacidad da derecho a un trato distinto en el acceso al empleo o en su desarrollo.",
+      "duracion": 60,
+      "aspect": "1920x1080",
+      "language": "es-CL",
+      "angle": "normativa",
+      "narration": false,
+      "status": "research",
+      "fuente": "Ley N° 20.584 (igualdad de oportunidades y no discriminacion); Convencion OIT 111",
+      "video": {
+        "composicion": null,
+        "framesMontadas": 0,
+        "mp4": "/videos/igualdad-no-discriminacion.mp4",
+        "disponible": false,
+        "tamano": null
+      }
+    },
+    {
+      "slug": "teletrabajo",
+      "titulo": "Teletrabajo: derechos y limites",
+      "area": "Derecho Laboral",
+      "mensaje": "Teletrabajo no es trabajar donde quieras, cuando quieras: hay condiciones de salud, seguridad, equipos y desconexion que la ley fija.",
+      "duracion": 60,
+      "aspect": "1920x1080",
+      "language": "es-CL",
+      "angle": "normativa",
+      "narration": false,
+      "status": "research",
+      "fuente": "Ley N° 21.719 (trabajo a distancia / teletrabajo), publicada 2024",
+      "video": {
+        "composicion": null,
+        "framesMontadas": 0,
+        "mp4": "/videos/teletrabajo.mp4",
+        "disponible": false,
+        "tamano": null
+      }
+    },
+    {
+      "slug": "evacuacion-incendios",
+      "titulo": "Incendios y evacuacion",
+      "area": "Seguridad",
+      "mensaje": "En un incendio decides en 30 segundos: la evacuacion no se improvisa, se entrena. Salida, punto de encuentro, y el numero al que llamar.",
+      "duracion": 45,
+      "aspect": "1920x1080",
+      "language": "es-CL",
+      "angle": "proceso",
+      "narration": false,
+      "status": "research",
+      "fuente": "Ley N° 19.587 sobre prevencion y atencion de incendios; NCh 2502 y normativa de evacuacion",
+      "video": {
+        "composicion": null,
+        "framesMontadas": 0,
+        "mp4": "/videos/evacuacion-incendios.mp4",
+        "disponible": false,
+        "tamano": null
+      }
+    },
+    {
+      "slug": "prevencion-riesgos",
+      "titulo": "Prevencion de riesgos: antes del incidente",
+      "area": "Seguridad",
+      "mensaje": "La quase-accidente es la mejor noticia: informa de un riesgo real antes de que haga dano. Reportar no es hacer ruido, es prevenir.",
+      "duracion": 60,
+      "aspect": "1920x1080",
+      "language": "es-CL",
+      "angle": "proceso",
+      "narration": false,
+      "status": "research",
+      "fuente": "Ley N° 16.625 sobre exijencia de medidas de prevencion de riesgos; DS N° 40 de 1969",
+      "video": {
+        "composicion": null,
+        "framesMontadas": 0,
+        "mp4": "/videos/prevencion-riesgos.mp4",
+        "disponible": false,
+        "tamano": null
+      }
+    },
+    {
+      "slug": "primeros-auxilios",
+      "titulo": "Primeros auxilios: los 5 primeros minutos",
+      "area": "Seguridad",
+      "mensaje": "En los primeros minutos decides el resultado: avisar, proteger, atender. La cadena de supervivencia empieza antes que la ambulancia.",
+      "duracion": 60,
+      "aspect": "1920x1080",
+      "language": "es-CL",
+      "angle": "proceso",
+      "narration": false,
+      "status": "research",
+      "fuente": "Guia de primeros auxilios; recomendaciones de la Cruz Roja y de salud de emergencia",
+      "video": {
+        "composicion": null,
+        "framesMontadas": 0,
+        "mp4": "/videos/primeros-auxilios.mp4",
+        "disponible": false,
+        "tamano": null
+      }
+    },
+    {
+      "slug": "seguridad-trabajo",
+      "titulo": "Seguridad en el trabajo: derechos y deberes",
+      "area": "Seguridad",
+      "mensaje": "Tu seguridad no depende solo de ti: la ley obliga al empleador a dar EPP, condiciones seguras y a permitir el derecho de retirada ante riesgo grave.",
+      "duracion": 60,
+      "aspect": "1920x1080",
+      "language": "es-CL",
+      "angle": "normativa",
+      "narration": false,
+      "status": "research",
+      "fuente": "Codigo del Trabajo (Ley 18.290) y DFL N° 1 de 1969; DS N° 594 de 1971 sobre condiciones sanitarias y ambientales del trabajo",
+      "video": {
+        "composicion": null,
+        "framesMontadas": 0,
+        "mp4": "/videos/seguridad-trabajo.mp4",
+        "disponible": false,
+        "tamano": null
+      }
+    },
+    {
+      "slug": "ergonomia-oficina",
+      "titulo": "Ergonomia en la oficina",
+      "area": "Bienestar",
+      "mensaje": "La silla, el monitor y la altura de la mesa deciden cuanto tensiona tu cuerpo: tres ajustes de 5 minutos evitan la mayoria de las molestias.",
+      "duracion": 45,
+      "aspect": "1920x1080",
+      "language": "es-CL",
+      "angle": "habito",
+      "narration": false,
+      "status": "research",
+      "fuente": "Guia de ergonomia para trabajo de oficina; recomendaciones de salud ocupacional",
+      "video": {
+        "composicion": null,
+        "framesMontadas": 0,
+        "mp4": "/videos/ergonomia-oficina.mp4",
+        "disponible": false,
+        "tamano": null
+      }
+    },
+    {
+      "slug": "pausas-activas",
+      "titulo": "Pausas activas: por que el cuerpo necesita moverse",
+      "area": "Bienestar",
+      "mensaje": "Concentrar la atencion 8 horas seguidas degrada la postura, la vision y la concentracion: la pausa activa no es un recreo, es parte del trabajo.",
+      "duracion": 45,
+      "aspect": "1920x1080",
+      "language": "es-CL",
+      "angle": "habito",
+      "narration": false,
+      "status": "research",
+      "fuente": "Guia de pausas activas y higiene postural; recomendaciones de salud ocupacional",
+      "video": {
+        "composicion": null,
+        "framesMontadas": 0,
+        "mp4": "/videos/pausas-activas.mp4",
+        "disponible": false,
+        "tamano": null
+      }
+    },
+    {
+      "slug": "riesgos-psicosociales",
+      "titulo": "Riesgos psicosociales",
+      "area": "Bienestar",
+      "mensaje": "Estrés, burnout y mobbing no son \"ser debil\": son riesgos laborales que se pueden medir, prevenir y tratar como lo que son.",
+      "duracion": 60,
+      "aspect": "1920x1080",
+      "language": "es-CL",
+      "angle": "proceso",
+      "narration": false,
+      "status": "research",
+      "fuente": "Protocolo de identificacion y gestion de riesgos psicosociales (-sector salud); orientaciones de salud ocupacional",
+      "video": {
+        "composicion": null,
+        "framesMontadas": 0,
+        "mp4": "/videos/riesgos-psicosociales.mp4",
+        "disponible": false,
+        "tamano": null
+      }
+    },
+    {
+      "slug": "salud-mental",
+      "titulo": "Salud mental en el trabajo",
+      "area": "Bienestar",
+      "mensaje": "La salud mental tambien es un riesgo laboral: se protege con limites claros, escucha y una cultura donde pedir ayuda no es un problema.",
+      "duracion": 60,
+      "aspect": "1920x1080",
+      "language": "es-CL",
+      "angle": "habito",
+      "narration": false,
+      "status": "research",
+      "fuente": "Ley N° 21.668 (salud mental y bienestar); orientaciones de salud mental laboral",
+      "video": {
+        "composicion": null,
+        "framesMontadas": 0,
+        "mp4": "/videos/salud-mental.mp4",
+        "disponible": false,
+        "tamano": null
+      }
+    },
+    {
+      "slug": "sostenibilidad-ambiental",
+      "titulo": "Sostenibilidad ambiental en el trabajo",
+      "area": "Bienestar",
+      "mensaje": "Un trabajo mas limpio no cuesta mas: ordenar, apagar y separar reduce costos y residuos. Lo pequeno suma cuando es sostenido.",
+      "duracion": 45,
+      "aspect": "1920x1080",
+      "language": "es-CL",
+      "angle": "habito",
+      "narration": false,
+      "status": "research",
+      "fuente": "Ley N° 20.920 (residuos y economia circular); guias de sustainability operativa",
+      "video": {
+        "composicion": null,
+        "framesMontadas": 0,
+        "mp4": "/videos/sostenibilidad-ambiental.mp4",
+        "disponible": false,
+        "tamano": null
+      }
+    },
+    {
+      "slug": "codigo-conducta",
+      "titulo": "Codigo de conducta y etica",
+      "area": "Cultura",
+      "mensaje": "Un codigo de conducta escrito no protege a nadie si no se conoce: la etica se juega en decisiones pequenas y cotidianas.",
+      "duracion": 60,
+      "aspect": "1920x1080",
+      "language": "es-CL",
+      "angle": "normativa",
+      "narration": false,
+      "status": "research",
+      "fuente": "Ley N° 20.026 sobre probidad y conductafuncionaria; politica interna de la organizacion",
+      "video": {
+        "composicion": null,
+        "framesMontadas": 0,
+        "mp4": "/videos/codigo-conducta.mp4",
+        "disponible": false,
+        "tamano": null
+      }
+    },
+    {
+      "slug": "dignidad-respeto",
+      "titulo": "Dignidad y respeto en el trabajo",
+      "area": "Cultura",
+      "mensaje": "El respeto no es un extra: es la base del clima laboral. Comentarios, apodos y bromas que incomodan degradan a todos.",
+      "duracion": 45,
+      "aspect": "1920x1080",
+      "language": "es-CL",
+      "angle": "habito",
+      "narration": false,
+      "status": "research",
+      "fuente": "Ley N° 21.643 (Ley Karin); politica de convivencia laboral",
+      "video": {
+        "composicion": null,
+        "framesMontadas": 0,
+        "mp4": "/videos/dignidad-respeto.mp4",
+        "disponible": false,
+        "tamano": null
+      }
+    },
+    {
+      "slug": "responsabilidad-social",
+      "titulo": "Responsabilidad social empresarial",
+      "area": "Cultura",
+      "mensaje": "La responsabilidad social no es un eslogan: es el compromiso concreto con los trabajadores, la comunidad y el entorno, y se puede medir.",
+      "duracion": 45,
+      "aspect": "1920x1080",
+      "language": "es-CL",
+      "angle": "normativa",
+      "narration": false,
+      "status": "research",
+      "fuente": "Conceptos de responsabilidad social empresarial; normativa de sustainability corporativa",
+      "video": {
+        "composicion": null,
+        "framesMontadas": 0,
+        "mp4": "/videos/responsabilidad-social.mp4",
+        "disponible": false,
+        "tamano": null
+      }
+    },
+    {
+      "slug": "comunicacion-asertiva",
+      "titulo": "Comunicacion asertiva",
+      "area": "Habilidades",
+      "mensaje": "Puedes expresar lo que te molesta sin gritar ni ceder: decir la molestia con claridad protege la relacion y el trabajo.",
+      "duracion": 45,
+      "aspect": "1920x1080",
+      "language": "es-CL",
+      "angle": "habito",
+      "narration": false,
+      "status": "research",
+      "fuente": "Material de desarrollo de habilidades de comunicacion; guias de trabajo en equipo",
+      "video": {
+        "composicion": null,
+        "framesMontadas": 0,
+        "mp4": "/videos/comunicacion-asertiva.mp4",
+        "disponible": false,
+        "tamano": null
+      }
+    },
+    {
+      "slug": "trabajo-en-equipo",
+      "titulo": "Trabajo en equipo",
+      "area": "Habilidades",
+      "mensaje": "Un equipo no es un grupo de personas haciendo tareas: es un grupo con un objetivo comun, roles claros y confianza para hablar.",
+      "duracion": 45,
+      "aspect": "1920x1080",
+      "language": "es-CL",
+      "angle": "proceso",
+      "narration": false,
+      "status": "research",
+      "fuente": "Material de desarrollo de equipos; guias de colaboracion laboral",
+      "video": {
+        "composicion": null,
+        "framesMontadas": 0,
+        "mp4": "/videos/trabajo-en-equipo.mp4",
+        "disponible": false,
+        "tamano": null
+      }
+    },
+    {
+      "slug": "liderazgo-sin-violencia",
+      "titulo": "Liderazgo sin violencia",
+      "area": "Liderazgo",
+      "mensaje": "El liderazgo no se impone con miedo: se sostiene en respeto, limites claros y coherencia entre lo que se dice y lo que se hace.",
+      "duracion": 60,
+      "aspect": "1920x1080",
+      "language": "es-CL",
+      "angle": "normativa",
+      "narration": false,
+      "status": "research",
+      "fuente": "Normativa y buenas practicas de liderazgo; politica de trato laboral",
+      "video": {
+        "composicion": null,
+        "framesMontadas": 0,
+        "mp4": "/videos/liderazgo-sin-violencia.mp4",
+        "disponible": false,
+        "tamano": null
+      }
+    },
+    {
+      "slug": "nuevo-trabajador",
+      "titulo": "Induccion al nuevo trabajador",
+      "area": "Onboarding",
+      "mensaje": "La primera semana define la cultura que se vive: reglas claras, accesos listos y un acompanamiento real, no un manual.",
+      "duracion": 60,
+      "aspect": "1920x1080",
+      "language": "es-CL",
+      "angle": "proceso",
+      "narration": false,
+      "status": "research",
+      "fuente": "Buenas practicas de induccion laboral; normativa de capacitacion y prevention",
+      "video": {
+        "composicion": null,
+        "framesMontadas": 0,
+        "mp4": "/videos/nuevo-trabajador.mp4",
+        "disponible": false,
+        "tamano": null
+      }
+    }
+  ]
+}
