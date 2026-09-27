@@ -1,0 +1,342 @@
+<template>
+  <div data-hf-id="hf-faxw" id="03-el-recorrido" data-composition-id="03-el-recorrido" data-start="0" data-duration="11.25" data-width="1920" data-height="1080">
+    <style>
+      /* frame.md typography, resolved to the real woff2 files shipped in
+         capture/assets/fonts. Both are the latin subset variable cuts, so
+         the render host never falls back to a generic family. */
+      @font-face {
+        font-family: 'Source Serif 4';
+        font-style: normal;
+        font-weight: 200 900;
+        font-display: block;
+        src: url('capture/assets/fonts/source-serif-4-latin.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'JetBrains Mono';
+        font-style: normal;
+        font-weight: 100 800;
+        font-display: block;
+        src: url('capture/assets/fonts/jetbrains-mono-latin.woff2') format('woff2');
+      }
+    </style>
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      /* ── Frame root — full 1920x1080 ground box, container-query basis ─── */
+      [id="03-el-recorrido"] {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        container-type: size;
+        isolation: isolate;
+        color: #1a1a17;
+        font-family: var(--font-display);
+      }
+
+      /* ── Full-bleed ground (own clip layer, never the root) ───────────── */
+      [id="03-el-recorrido-bg"] {
+        position: absolute;
+        inset: 0;
+        background: #efe7d4;
+      }
+
+      /* ── El mundo: una camara virtual. Todo lo que se mueve, sube aqui ── */
+      [id="03-el-recorrido-world"] {
+        --accent: #785c1b;
+        --accent-deep: #5d4610;
+        --fg: #1a1a17;
+        --bg: #efe7d4;
+        --font-display: "Source Serif 4", Georgia, serif;
+        --font-mono: "JetBrains Mono", ui-monospace, monospace;
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+      }
+
+[id="03-el-recorrido-toprule"] {
+        position: absolute;
+        left: 96px;
+        top: 96px;
+        width: 1728px;
+        height: 2px;
+        background: #2e4a2a;
+        transform-origin: 0% 50%;
+        will-change: transform;
+      }
+
+[id="03-el-recorrido-kicker"] {
+        position: absolute;
+        left: 96px;
+        top: 118px;
+        margin: 0;
+        color: #3a5a36;
+        font-family: var(--font-mono);
+        font-size: 1.1458cqw;
+        font-weight: 500;
+        line-height: 1.25;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        will-change: transform, opacity;
+      }
+
+[id="03-el-recorrido-titulo"] {
+        position: absolute;
+        left: 96px;
+        top: 170px;
+        width: 1200px;
+        margin: 0;
+        color: #1a1a17;
+        font-family: var(--font-display);
+        font-size: 2.9167cqw;
+        font-weight: 500;
+        line-height: 1.06;
+        letter-spacing: -0.01em;
+        will-change: transform, opacity;
+      }
+
+[id="03-el-recorrido-i0-rule"] {
+        position: absolute;
+        left: 96px;
+        top: 404px;
+        width: 1688px;
+        height: 2px;
+        background: #3a5a36;
+        transform-origin: 0% 50%;
+        will-change: transform;
+      }
+
+[id="03-el-recorrido-i0-num"] {
+        position: absolute;
+        left: 96px;
+        top: 430px;
+        width: 76px;
+        margin: 0;
+        color: #785c1b;
+        font-family: var(--font-mono);
+        font-size: 1.3542cqw;
+        font-weight: 500;
+        line-height: 1.25;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+
+[id="03-el-recorrido-i0-head"] {
+        position: absolute;
+        left: 196px;
+        top: 420px;
+        width: 470px;
+        margin: 0;
+        color: #1a1a17;
+        font-family: var(--font-display);
+        font-size: 2.0833cqw;
+        font-weight: 500;
+        line-height: 1.1;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+
+[id="03-el-recorrido-i0-gloss"] {
+        position: absolute;
+        left: 716px;
+        top: 424px;
+        width: 1068px;
+        margin: 0;
+        color: #243a21;
+        font-family: var(--font-display);
+        font-size: 1.4063cqw;
+        font-weight: 400;
+        line-height: 1.4;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+
+[id="03-el-recorrido-i1-rule"] {
+        position: absolute;
+        left: 96px;
+        top: 534px;
+        width: 1688px;
+        height: 2px;
+        background: #3a5a36;
+        transform-origin: 0% 50%;
+        will-change: transform;
+      }
+
+[id="03-el-recorrido-i1-num"] {
+        position: absolute;
+        left: 96px;
+        top: 560px;
+        width: 76px;
+        margin: 0;
+        color: #785c1b;
+        font-family: var(--font-mono);
+        font-size: 1.3542cqw;
+        font-weight: 500;
+        line-height: 1.25;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+
+[id="03-el-recorrido-i1-head"] {
+        position: absolute;
+        left: 196px;
+        top: 550px;
+        width: 470px;
+        margin: 0;
+        color: #1a1a17;
+        font-family: var(--font-display);
+        font-size: 2.0833cqw;
+        font-weight: 500;
+        line-height: 1.1;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+
+[id="03-el-recorrido-i1-gloss"] {
+        position: absolute;
+        left: 716px;
+        top: 554px;
+        width: 1068px;
+        margin: 0;
+        color: #243a21;
+        font-family: var(--font-display);
+        font-size: 1.4063cqw;
+        font-weight: 400;
+        line-height: 1.4;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+
+[id="03-el-recorrido-i2-rule"] {
+        position: absolute;
+        left: 96px;
+        top: 664px;
+        width: 1688px;
+        height: 2px;
+        background: #3a5a36;
+        transform-origin: 0% 50%;
+        will-change: transform;
+      }
+
+[id="03-el-recorrido-i2-num"] {
+        position: absolute;
+        left: 96px;
+        top: 690px;
+        width: 76px;
+        margin: 0;
+        color: #785c1b;
+        font-family: var(--font-mono);
+        font-size: 1.3542cqw;
+        font-weight: 500;
+        line-height: 1.25;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+
+[id="03-el-recorrido-i2-head"] {
+        position: absolute;
+        left: 196px;
+        top: 680px;
+        width: 470px;
+        margin: 0;
+        color: #1a1a17;
+        font-family: var(--font-display);
+        font-size: 2.0833cqw;
+        font-weight: 500;
+        line-height: 1.1;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+
+[id="03-el-recorrido-i2-gloss"] {
+        position: absolute;
+        left: 716px;
+        top: 684px;
+        width: 1068px;
+        margin: 0;
+        color: #243a21;
+        font-family: var(--font-display);
+        font-size: 1.4063cqw;
+        font-weight: 400;
+        line-height: 1.4;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+    </style>
+
+      <div data-hf-id="hf-wk84" id="03-el-recorrido-bg" class="clip" data-start="0" data-duration="11.25" data-track-index="0"></div>
+    <div data-hf-id="hf-yorl" id="03-el-recorrido-world" class="clip" data-start="0" data-duration="11.25" data-track-index="1">      <span data-hf-id="hf-q7qc" id="03-el-recorrido-toprule"></span>      <div data-hf-id="hf-uxem" id="03-el-recorrido-kicker-w">        <span data-hf-id="hf-nsv6" id="03-el-recorrido-kicker">EL RECORRIDO</span></div>      <div data-hf-id="hf-zeg6" id="03-el-recorrido-titulo-w">        <h2 data-hf-id="hf-mxq2" id="03-el-recorrido-titulo">En orden, y sin saltos</h2></div>      <div data-hf-id="hf-ktjy" id="03-el-recorrido-i0-w">        <span data-hf-id="hf-3l2z" id="03-el-recorrido-i0-rule"></span>        <span data-hf-id="hf-hexn" id="03-el-recorrido-i0-num">01</span>        <h3 data-hf-id="hf-t87f" id="03-el-recorrido-i0-head">Alarma</h3>        <p data-hf-id="hf-m0qp" id="03-el-recorrido-i0-gloss">La evacuación es inmediata y ordenada: arranca ahí, no después.</p></div>      <div data-hf-id="hf-bmnh" id="03-el-recorrido-i1-w">        <span data-hf-id="hf-5a8m" id="03-el-recorrido-i1-rule"></span>        <span data-hf-id="hf-3sd4" id="03-el-recorrido-i1-num">02</span>        <h3 data-hf-id="hf-rwyi" id="03-el-recorrido-i1-head">Ruta</h3>        <p data-hf-id="hf-agr6" id="03-el-recorrido-i1-gloss">La salida más cercana y segura. Nunca el ascensor.</p></div>      <div data-hf-id="hf-zqak" id="03-el-recorrido-i2-w">        <span data-hf-id="hf-rav1" id="03-el-recorrido-i2-rule"></span>        <span data-hf-id="hf-bzox" id="03-el-recorrido-i2-num">03</span>        <h3 data-hf-id="hf-4hmh" id="03-el-recorrido-i2-head">Punto de encuentro</h3>        <p data-hf-id="hf-eha3" id="03-el-recorrido-i2-gloss">Todos se reúnen ahí. La cuenta de personas confirma quiénes salieron y permite dar aviso de los faltantes.</p></div></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      (function () {
+        "use strict";
+
+        // Ids and class names carry no custom tokens: every selector is an
+        // attribute or id selector, so sibling frames cannot collide.
+        var byId = function (id) {
+          return document.querySelector('[id="' + id + '"]');
+        };
+
+        // Cada id que este frame anima tiene que existir de verdad. Si falta
+        // uno, el tween seria sobre null y el reveal nunca correria — que es
+        // exactamente el bug que tubo el frame 09 del piloto.
+        var IDS = [
+          "03-el-recorrido-toprule",
+          "03-el-recorrido-kicker",
+          "03-el-recorrido-titulo",
+          "03-el-recorrido-i0-rule",
+          "03-el-recorrido-i0-num",
+          "03-el-recorrido-i0-head",
+          "03-el-recorrido-i0-gloss",
+          "03-el-recorrido-i1-rule",
+          "03-el-recorrido-i1-num",
+          "03-el-recorrido-i1-head",
+          "03-el-recorrido-i1-gloss",
+          "03-el-recorrido-i2-rule",
+          "03-el-recorrido-i2-num",
+          "03-el-recorrido-i2-head",
+          "03-el-recorrido-i2-gloss",
+        ];
+        var faltantes = IDS.filter(function (id) { return !byId(id); });
+        if (faltantes.length) {
+          throw new Error(
+            "[03-el-recorrido] ids sin elemento en el DOM: " + faltantes.join(", "),
+          );
+        }
+
+        var tl = gsap.timeline({ paused: true });
+
+
+        tl.fromTo(byId("03-el-recorrido-toprule"), { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power3.out" }, 0.1);
+        tl.fromTo(byId("03-el-recorrido-kicker"), { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 0.2);
+        tl.fromTo(byId("03-el-recorrido-titulo"), { opacity: 0, y: 26 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 0.45);
+
+        // — cada item entra con su filete, de arriba hacia abajo.
+        tl.fromTo(byId("03-el-recorrido-i0-rule"), { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power3.out" }, 0.95);
+        tl.fromTo(byId("03-el-recorrido-i0-num"), { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 1.01);
+        tl.fromTo(byId("03-el-recorrido-i0-head"), { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 1.07);
+        tl.fromTo(byId("03-el-recorrido-i0-gloss"), { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 1.15);
+        tl.fromTo(byId("03-el-recorrido-i1-rule"), { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power3.out" }, 1.29);
+        tl.fromTo(byId("03-el-recorrido-i1-num"), { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 1.35);
+        tl.fromTo(byId("03-el-recorrido-i1-head"), { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 1.41);
+        tl.fromTo(byId("03-el-recorrido-i1-gloss"), { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 1.49);
+        tl.fromTo(byId("03-el-recorrido-i2-rule"), { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power3.out" }, 1.63);
+        tl.fromTo(byId("03-el-recorrido-i2-num"), { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 1.69);
+        tl.fromTo(byId("03-el-recorrido-i2-head"), { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 1.75);
+        tl.fromTo(byId("03-el-recorrido-i2-gloss"), { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 1.83);
+
+        // hold the declared 10.75s window open without an exit tween
+        tl.to({}, { duration: 0.01 }, 10.74);
+
+        tl.seek(0);
+        window.__timelines = window.__timelines || {};
+        window.__timelines["03-el-recorrido"] = tl;
+      })();
+    </script>
+  </div>
+</template>

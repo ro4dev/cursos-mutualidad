@@ -1,0 +1,320 @@
+<template>
+  <div data-hf-id="hf-gsm4" id="02-escape-primero" data-composition-id="02-escape-primero" data-start="0" data-duration="10.75" data-width="1920" data-height="1080">
+    <style>
+      /* frame.md typography, resolved to the real woff2 files shipped in
+         capture/assets/fonts. Both are the latin subset variable cuts, so
+         the render host never falls back to a generic family. */
+      @font-face {
+        font-family: 'Source Serif 4';
+        font-style: normal;
+        font-weight: 200 900;
+        font-display: block;
+        src: url('capture/assets/fonts/source-serif-4-latin.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'JetBrains Mono';
+        font-style: normal;
+        font-weight: 100 800;
+        font-display: block;
+        src: url('capture/assets/fonts/jetbrains-mono-latin.woff2') format('woff2');
+      }
+    </style>
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      /* ── Frame root — full 1920x1080 ground box, container-query basis ─── */
+      [id="02-escape-primero"] {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        container-type: size;
+        isolation: isolate;
+        color: #1a1a17;
+        font-family: var(--font-display);
+      }
+
+      /* ── Full-bleed ground (own clip layer, never the root) ───────────── */
+      [id="02-escape-primero-bg"] {
+        position: absolute;
+        inset: 0;
+        background: #efe7d4;
+      }
+
+      /* ── El mundo: una camara virtual. Todo lo que se mueve, sube aqui ── */
+      [id="02-escape-primero-world"] {
+        --accent: #785c1b;
+        --accent-deep: #5d4610;
+        --fg: #1a1a17;
+        --bg: #efe7d4;
+        --font-display: "Source Serif 4", Georgia, serif;
+        --font-mono: "JetBrains Mono", ui-monospace, monospace;
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+      }
+
+[id="02-escape-primero-toprule"] {
+        position: absolute;
+        left: 96px;
+        top: 96px;
+        width: 1728px;
+        height: 2px;
+        background: #2e4a2a;
+        transform-origin: 0% 50%;
+        will-change: transform;
+      }
+
+[id="02-escape-primero-kicker"] {
+        position: absolute;
+        left: 96px;
+        top: 118px;
+        margin: 0;
+        color: #3a5a36;
+        font-family: var(--font-mono);
+        font-size: 1.1458cqw;
+        font-weight: 500;
+        line-height: 1.25;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        will-change: transform, opacity;
+      }
+
+[id="02-escape-primero-titulo"] {
+        position: absolute;
+        left: 96px;
+        top: 170px;
+        width: 1400px;
+        margin: 0;
+        color: #1a1a17;
+        font-family: var(--font-display);
+        font-size: 2.9167cqw;
+        font-weight: 500;
+        line-height: 1.06;
+        letter-spacing: -0.01em;
+        will-change: transform, opacity;
+      }
+
+[id="02-escape-primero-a-card"] {
+        position: absolute;
+        left: 96px;
+        top: 430px;
+        width: 4px;
+        height: 470px;
+        background: #2e4a2a;
+        transform-origin: 50% 0%;
+        will-change: transform;
+      }
+
+[id="02-escape-primero-a-label"] {
+        position: absolute;
+        left: 136px;
+        top: 474px;
+        width: 732px;
+        margin: 0;
+        color: #e6dcc4;
+        font-family: var(--font-mono);
+        font-size: 0.8854cqw;
+        font-weight: 500;
+        line-height: 1.25;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        will-change: transform, opacity;
+      }
+
+[id="02-escape-primero-a-head"] {
+        position: absolute;
+        left: 136px;
+        top: 520px;
+        width: 732px;
+        margin: 0;
+        color: #efe7d4;
+        font-family: var(--font-display);
+        font-size: 2.3958cqw;
+        font-weight: 500;
+        line-height: 1.06;
+        letter-spacing: -0.01em;
+        will-change: transform, opacity;
+      }
+
+[id="02-escape-primero-a-rule"] {
+        position: absolute;
+        left: 136px;
+        top: 606px;
+        width: 110px;
+        height: 2px;
+        background: #efe7d4;
+        transform-origin: 0% 50%;
+        will-change: transform;
+      }
+
+[id="02-escape-primero-a-body"] {
+        position: absolute;
+        left: 136px;
+        top: 644px;
+        width: 732px;
+        margin: 0;
+        color: #e6dcc4;
+        font-family: var(--font-display);
+        font-size: 1.4583cqw;
+        font-weight: 400;
+        line-height: 1.44;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+
+[id="02-escape-primero-a-bg"] {
+        position: absolute;
+        left: 96px;
+        top: 402px;
+        width: 812px;
+        height: 526px;
+        background: #2e4a2a;
+        transform-origin: 0% 50%;
+        will-change: transform;
+      }
+
+[id="02-escape-primero-b-card"] {
+        position: absolute;
+        left: 1012px;
+        top: 430px;
+        width: 4px;
+        height: 470px;
+        background: #785c1b;
+        transform-origin: 50% 0%;
+        will-change: transform;
+      }
+
+[id="02-escape-primero-b-label"] {
+        position: absolute;
+        left: 1052px;
+        top: 474px;
+        width: 732px;
+        margin: 0;
+        color: #785c1b;
+        font-family: var(--font-mono);
+        font-size: 0.8854cqw;
+        font-weight: 500;
+        line-height: 1.25;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        will-change: transform, opacity;
+      }
+
+[id="02-escape-primero-b-head"] {
+        position: absolute;
+        left: 1052px;
+        top: 520px;
+        width: 732px;
+        margin: 0;
+        color: #1a1a17;
+        font-family: var(--font-display);
+        font-size: 2.3958cqw;
+        font-weight: 500;
+        line-height: 1.06;
+        letter-spacing: -0.01em;
+        will-change: transform, opacity;
+      }
+
+[id="02-escape-primero-b-rule"] {
+        position: absolute;
+        left: 1052px;
+        top: 606px;
+        width: 110px;
+        height: 2px;
+        background: #785c1b;
+        transform-origin: 0% 50%;
+        will-change: transform;
+      }
+
+[id="02-escape-primero-b-body"] {
+        position: absolute;
+        left: 1052px;
+        top: 644px;
+        width: 732px;
+        margin: 0;
+        color: #243a21;
+        font-family: var(--font-display);
+        font-size: 1.4583cqw;
+        font-weight: 400;
+        line-height: 1.44;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+    </style>
+
+      <div data-hf-id="hf-mc64" id="02-escape-primero-bg" class="clip" data-start="0" data-duration="10.75" data-track-index="0"></div>
+    <div data-hf-id="hf-4nm1" id="02-escape-primero-world" class="clip" data-start="0" data-duration="10.75" data-track-index="1">      <span data-hf-id="hf-eg7g" id="02-escape-primero-toprule"></span>      <div data-hf-id="hf-h55i" id="02-escape-primero-kicker-w">        <span data-hf-id="hf-7uoa" id="02-escape-primero-kicker">LA PRIORIDAD</span></div>      <div data-hf-id="hf-eeym" id="02-escape-primero-titulo-w">        <h2 data-hf-id="hf-i876" id="02-escape-primero-titulo">Dos acciones, un orden</h2></div>      <div data-hf-id="hf-kl3m" id="02-escape-primero-a-w">        <span data-hf-id="hf-8ktm" id="02-escape-primero-a-bg"></span>        <span data-hf-id="hf-ugmr" id="02-escape-primero-a-card"></span>        <span data-hf-id="hf-th6h" id="02-escape-primero-a-label">Siempre</span>        <h3 data-hf-id="hf-l85b" id="02-escape-primero-a-head">El escape va primero</h3>        <span data-hf-id="hf-43xj" id="02-escape-primero-a-rule"></span>        <p data-hf-id="hf-12ch" id="02-escape-primero-a-body">La evacuación es inmediata y ordenada. Por la salida más cercana y segura, nunca por el ascensor.</p></div>      <div data-hf-id="hf-ip3r" id="02-escape-primero-b-w">        <span data-hf-id="hf-tuxc" id="02-escape-primero-b-card"></span>        <span data-hf-id="hf-750g" id="02-escape-primero-b-label">Solo con dos condiciones</span>        <h3 data-hf-id="hf-soj8" id="02-escape-primero-b-head">El extintor, con salida libre</h3>        <span data-hf-id="hf-1j58" id="02-escape-primero-b-rule"></span>        <p data-hf-id="hf-362m" id="02-escape-primero-b-body">Y con la llama pequeña. Si falta cualquiera de las dos, el escape vuelve a ser la prioridad.</p></div></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      (function () {
+        "use strict";
+
+        // Ids and class names carry no custom tokens: every selector is an
+        // attribute or id selector, so sibling frames cannot collide.
+        var byId = function (id) {
+          return document.querySelector('[id="' + id + '"]');
+        };
+
+        // Cada id que este frame anima tiene que existir de verdad. Si falta
+        // uno, el tween seria sobre null y el reveal nunca correria — que es
+        // exactamente el bug que tubo el frame 09 del piloto.
+        var IDS = [
+          "02-escape-primero-toprule",
+          "02-escape-primero-kicker",
+          "02-escape-primero-titulo",
+          "02-escape-primero-a-card",
+          "02-escape-primero-a-label",
+          "02-escape-primero-a-head",
+          "02-escape-primero-a-rule",
+          "02-escape-primero-a-body",
+          "02-escape-primero-a-bg",
+          "02-escape-primero-b-card",
+          "02-escape-primero-b-label",
+          "02-escape-primero-b-head",
+          "02-escape-primero-b-rule",
+          "02-escape-primero-b-body",
+        ];
+        var faltantes = IDS.filter(function (id) { return !byId(id); });
+        if (faltantes.length) {
+          throw new Error(
+            "[02-escape-primero] ids sin elemento en el DOM: " + faltantes.join(", "),
+          );
+        }
+
+        var tl = gsap.timeline({ paused: true });
+
+
+        tl.fromTo(byId("02-escape-primero-toprule"), { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power3.out" }, 0.1);
+        tl.fromTo(byId("02-escape-primero-kicker"), { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 0.2);
+        tl.fromTo(byId("02-escape-primero-titulo"), { opacity: 0, y: 26 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 0.45);
+
+        // — la columna que gana entra como bloque macizo; la que se descarta,
+        // en contour, despues, para que el contraste se lea.
+        tl.fromTo(byId("02-escape-primero-a-bg"), { opacity: 0, x: -28 }, { opacity: 1, x: 0, duration: 0.55, ease: "power3.out" }, 0.95);
+        tl.fromTo(byId("02-escape-primero-a-card"), { scaleY: 0 }, { scaleY: 1, duration: 0.5, ease: "power3.out" }, 1);
+        tl.fromTo(byId("02-escape-primero-a-label"), { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 1.1099999999999999);
+        tl.fromTo(byId("02-escape-primero-a-head"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.55, ease: "power3.out" }, 1.19);
+        tl.fromTo(byId("02-escape-primero-a-rule"), { scaleX: 0 }, { scaleX: 1, duration: 0.4, ease: "power3.out" }, 1.31);
+        tl.fromTo(byId("02-escape-primero-a-body"), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 1.39);
+        tl.fromTo(byId("02-escape-primero-b-card"), { scaleY: 0 }, { scaleY: 1, duration: 0.5, ease: "power3.out" }, 1.5);
+        tl.fromTo(byId("02-escape-primero-b-label"), { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 1.6099999999999999);
+        tl.fromTo(byId("02-escape-primero-b-head"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.55, ease: "power3.out" }, 1.69);
+        tl.fromTo(byId("02-escape-primero-b-rule"), { scaleX: 0 }, { scaleX: 1, duration: 0.4, ease: "power3.out" }, 1.81);
+        tl.fromTo(byId("02-escape-primero-b-body"), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 1.89);
+
+        // hold the declared 10.75s window open without an exit tween
+        tl.to({}, { duration: 0.01 }, 10.74);
+
+        tl.seek(0);
+        window.__timelines = window.__timelines || {};
+        window.__timelines["02-escape-primero"] = tl;
+      })();
+    </script>
+  </div>
+</template>
