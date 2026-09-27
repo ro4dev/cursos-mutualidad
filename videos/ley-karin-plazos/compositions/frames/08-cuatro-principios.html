@@ -1,0 +1,231 @@
+<template>
+  <div id="root" data-composition-id="08-cuatro-principios" data-duration="8" data-width="1920" data-height="1080">
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      /* Type: the frame.md families (Source Serif 4 / JetBrains Mono) are
+         declared under CSS-safe alias names so this file's faces can never
+         shadow a face supplied by the assembled project. local() sources
+         only — no font is fetched at render time. */
+      @font-face {
+        font-family: "Editorial Forest Serif";
+        src: local("Source Serif 4"), local("SourceSerif4"), local("Source Serif 4 Pro");
+        font-weight: 100 900;
+        font-style: normal;
+        font-display: block;
+      }
+
+      @font-face {
+        font-family: "Editorial Forest Mono";
+        src: local("JetBrains Mono"), local("JetBrainsMono-Regular");
+        font-weight: 100 800;
+        font-style: normal;
+        font-display: block;
+      }
+
+      #root {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        container-type: size;
+        isolation: isolate;
+        color: #1a1a17;
+        pointer-events: none;
+      }
+
+      /* Background — the cream field is a full-duration clip on the lowest
+         track, never a background on #root. */
+      #root .p08-ground {
+        position: absolute;
+        inset: 0;
+        background: #efe7d4;
+      }
+
+      /* Stage — the content region is the top 83% of the canvas, so the
+         caption band at the bottom stays clear. Centering inside it puts the
+         stack's optical centre at ~0.42 × height. */
+      #root .p08-frame {
+        position: absolute;
+        inset: 0 0 17% 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .p08-stack {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 72cqw;
+      }
+
+      /* Mono article tag — the only chrome. Frame.md label: 26px / 500 /
+         0.18em. The negative right margin cancels the trailing letter-space
+         so the tag sits optically centred. */
+      .p08-tag {
+        display: inline-block;
+        margin-right: -0.18em;
+        margin-bottom: 4.4cqh;
+        color: #2e4a2a;
+        font-family: "Editorial Forest Mono", "JetBrains Mono", "DejaVu Sans Mono",
+          "Liberation Mono", "Courier New", monospace;
+        font-size: 1.35cqw;
+        font-weight: 500;
+        line-height: 1;
+        letter-spacing: 0.18em;
+        white-space: nowrap;
+      }
+
+      .p08-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+
+      /* One row = one 2px hairline + one line of serif. These are limits,
+         not actions: no cards, no icons, no fills — just ruled lines. */
+      .p08-row {
+        width: 100%;
+      }
+
+      .p08-row + .p08-row {
+        margin-top: 1.4cqh;
+      }
+
+      .p08-rule {
+        width: 100%;
+        height: 2px;
+        background: #2e4a2a;
+        transform-origin: 0 50%;
+      }
+
+      .p08-word {
+        margin-top: 2.4cqh;
+        color: #1a1a17;
+        font-family: "Editorial Forest Serif", "Source Serif 4", Georgia,
+          "Liberation Serif", "Times New Roman", Times, serif;
+        font-size: 4.4cqw;
+        font-weight: 500;
+        font-optical-sizing: auto;
+        line-height: 1;
+        letter-spacing: -0.02em;
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      /* The closing filete seals the list. It grows from the centre, not the
+         left edge, so it reads as a seal rather than a wipe. */
+      .p08-close {
+        width: 100%;
+        height: 2px;
+        margin-top: 3.4cqh;
+        background: #2e4a2a;
+        transform-origin: 50% 50%;
+      }
+    </style>
+
+    <div class="clip p08-ground" data-start="0" data-duration="8" data-track-index="0"></div>
+
+    <div class="clip p08-stage" data-start="0" data-duration="8" data-track-index="1">
+      <div class="p08-frame">
+        <div class="p08-stack">
+          <div class="p08-tag">art. 211-B</div>
+          <div class="p08-list">
+            <div class="p08-row">
+              <div class="p08-rule"></div>
+              <div class="p08-word">CONFIDENCIALIDAD</div>
+            </div>
+            <div class="p08-row">
+              <div class="p08-rule"></div>
+              <div class="p08-word">IMPARCIALIDAD</div>
+            </div>
+            <div class="p08-row">
+              <div class="p08-rule"></div>
+              <div class="p08-word">CELERIDAD</div>
+            </div>
+            <div class="p08-row">
+              <div class="p08-rule"></div>
+              <div class="p08-word">PERSPECTIVA DE GÉNERO</div>
+            </div>
+          </div>
+          <div class="p08-close"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      (function () {
+        "use strict";
+
+        var root =
+          (document.currentScript && document.currentScript.closest("#root")) ||
+          document.getElementById("root");
+
+        var tag = root.querySelector(".p08-tag");
+        var closeRule = root.querySelector(".p08-close");
+        var rows = Array.prototype.slice.call(root.querySelectorAll(".p08-row"));
+
+        var tl = gsap.timeline({ paused: true });
+
+        /* Scene 1 (0.0–1.2) — the mono article tag alone on the cream field.
+           Fully opaque by 0.35s, settled by 0.6s. */
+        tl.fromTo(
+          tag,
+          { opacity: 0, y: 10 },
+          { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" },
+          0
+        );
+
+        /* Scenes 2–5 (1.2–6.4) — the blueprint's signature cascade: four
+           items arriving one per beat into their final slots of a vertical
+           list, co-resident and accumulating. Low drama — each hairline
+           draws first, then its line settles a short distance into place.
+           Slots are pre-laid-out (only opacity/y/scale move), so the list
+           never reflows and nothing that has landed ever leaves. */
+        var starts = [1.25, 2.65, 4.05, 5.25];
+        starts.forEach(function (at, i) {
+          var rule = rows[i].querySelector(".p08-rule");
+          var word = rows[i].querySelector(".p08-word");
+
+          tl.fromTo(
+            rule,
+            { scaleX: 0 },
+            { scaleX: 1, duration: 0.6, ease: "power2.out" },
+            at
+          );
+          tl.fromTo(
+            word,
+            { opacity: 0, y: 24, scale: 0.985 },
+            { opacity: 1, y: 0, scale: 1, duration: 0.72, ease: "power3.out" },
+            at + 0.1
+          );
+        });
+
+        /* Scene 6 (6.4–8.0) — the four lines hold, a filete closes the list
+           from the centre, and then nothing at all moves. No float, no
+           push-in, no glow: the stillness is the design. */
+        tl.fromTo(
+          closeRule,
+          { scaleX: 0, opacity: 0 },
+          { scaleX: 1, opacity: 1, duration: 0.55, ease: "power2.inOut" },
+          6.45
+        );
+
+        // The closing second is frozen. The set lands on the frame boundary
+        // so the timeline ends at 8.0 with nothing left to resolve.
+        tl.set(closeRule, { opacity: 1 }, 8);
+
+        tl.seek(0);
+        window.__timelines = window.__timelines || {};
+        window.__timelines["08-cuatro-principios"] = tl;
+      })();
+    </script>
+  </div>
+</template>
