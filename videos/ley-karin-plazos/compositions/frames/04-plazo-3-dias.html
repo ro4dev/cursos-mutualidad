@@ -1,0 +1,420 @@
+<template>
+  <div data-hf-id="hf-n7eo" id="root" data-composition-id="04-plazo-3-dias" data-start="0" data-duration="9.5" data-width="1920" data-height="1080">
+    <style>
+      /* frame.md typography, resolved to the real woff2 files shipped in
+         capture/assets/fonts. Both are the latin subset variable cuts, so
+         the render host never falls back to a generic family. */
+      @font-face {
+        font-family: 'Source Serif 4';
+        font-style: normal;
+        font-weight: 200 900;
+        font-display: block;
+        src: url('capture/assets/fonts/source-serif-4-latin.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'JetBrains Mono';
+        font-style: normal;
+        font-weight: 100 800;
+        font-display: block;
+        src: url('capture/assets/fonts/jetbrains-mono-latin.woff2') format('woff2');
+      }
+    </style>
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      /* ── Frame root — full 1920x1080 ground box, container-query basis ────── */
+      #root {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        container-type: size;
+        isolation: isolate;
+        color: #1a1a17;
+        font-family: "Source Serif 4", Georgia, serif;
+      }
+
+      /* ── Full-bleed ground (own clip layer, never the root) ───────────────── */
+      [id="04-plazo-3-dias-bg"] {
+        position: absolute;
+        inset: 0;
+        background: #efe7d4;
+      }
+
+      /* ── topbar: the system's hairline at the slide pad, no added copy ────── */
+      [id="04-plazo-3-dias-toprule"] {
+        position: absolute;
+        left: 96px;
+        top: 96px;
+        width: 1728px;
+        height: 2px;
+        background: #2e4a2a;
+      }
+
+      /* ── The world IS the camera (viewport-change, PAN mode) ────────────────
+         Preset tokens ride as custom properties so the mounted count-up is
+         token-native: --brand drives the count, --fg tints its affix. */
+      [id="04-plazo-3-dias-world"] {
+        --brand: #2e4a2a;
+        --accent: #e89cb1;
+        --accent-2: #3a5a36;
+        --fg: #1a1a17;
+        --bg: #efe7d4;
+        --font-display: "Source Serif 4", Georgia, serif;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 3456px;
+        height: 1080px;
+        overflow: hidden;
+      }
+
+      /* ── The axis: one 2px hairline, the shared object of all four stops ──── */
+      [id="04-plazo-3-dias-axis"] {
+        position: absolute;
+        left: 0;
+        top: 699px;
+        width: 3456px;
+        height: 2px;
+        background: #2e4a2a;
+      }
+
+      /* ── Stations: 2 / 3 / 30 / 15, evenly spaced, identical label type ───── */
+      [id^="04-plazo-3-dias-station-"] {
+        position: absolute;
+        top: 688px;
+        width: 160px;
+        text-align: center;
+        will-change: transform, opacity;
+      }
+
+      [id^="04-plazo-3-dias-tick-"] {
+        display: block;
+        width: 2px;
+        height: 24px;
+        margin: 0 auto;
+        background: #2e4a2a;
+      }
+
+      [id^="04-plazo-3-dias-num-"] {
+        display: block;
+        margin-top: 18px;
+        color: #2e4a2a;
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 1.354cqw; /* 26px */
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: 0.18em;
+        text-indent: 0.18em; /* optically recentre the trailing track */
+        text-transform: uppercase;
+      }
+
+      /* The article label for the focused stop only: it is the citation the
+         audience must be able to re-check, so it stays firm under the numeral. */
+      [id="04-plazo-3-dias-art"] {
+        display: block;
+        margin-top: 14px;
+        color: #3a5a36;
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 1.25cqw; /* caption-mono, 24px */
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: 0.14em;
+        text-indent: 0.14em;
+        text-transform: uppercase;
+      }
+
+      /* ── Hero host: the mounted count-up composition ─────────────────────────
+         Left column, clear of the fork that opens to its right. */
+      [id="04-plazo-3-dias-counter"] {
+        position: absolute;
+        left: 120px;
+        top: 180px;
+        width: 900px;
+        height: 440px;
+        container-type: size;
+        color: #1a1a17;
+        font-family: "Source Serif 4", Georgia, serif;
+      }
+
+      /* Preset atoms on the mounted primitive: display weight 500 (never 600),
+         ramp tracking, and the unit set in mono per the label ramp. */
+      [id="04-plazo-3-dias-counter"] .cu-stage {
+        font-weight: 500;
+        letter-spacing: -0.02em;
+      }
+
+      [id="04-plazo-3-dias-counter"] .cu-suffix {
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+      }
+
+      /* ── The fork: both branches draw out of the station point ──────────────
+         A single overlay holds the two stroked paths and their end dots. */
+      [id="04-plazo-3-dias-fork"] {
+        position: absolute;
+        left: 900px;
+        top: 260px;
+        width: 1100px;
+        height: 760px;
+        overflow: visible;
+      }
+
+      [id^="04-plazo-3-dias-branch-"] {
+        fill: none;
+        stroke: #2e4a2a;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      [id^="04-plazo-3-dias-dot-"] {
+        fill: #2e4a2a;
+      }
+
+      /* ── Route tiles: neither route is a way out, so neither is filled in.
+         Flat cream-2 plate, 2px green hairline, 8px step-tile radius. ────── */
+      [id^="04-plazo-3-dias-route-"] {
+        position: absolute;
+        left: 1380px;
+        width: 560px;
+        height: 128px;
+        padding: 33px 40px;
+        border: 2px solid #2e4a2a;
+        border-radius: 8px;
+        background: #e6dcc4;
+        color: #2e4a2a;
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 1.354cqw; /* label, 26px */
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        transform-origin: 0% 50%;
+        will-change: transform, opacity;
+      }
+
+      [id="04-plazo-3-dias-route-up"] {
+        top: 291px;
+      }
+
+      [id="04-plazo-3-dias-route-down"] {
+        top: 831px;
+      }
+
+      /* ── The single pink hairline plus the mono line it annotates ─────────── */
+      [id="04-plazo-3-dias-pink"] {
+        position: absolute;
+        left: 728px;
+        top: 1012px;
+        width: 96px;
+        height: 2px;
+        background: #e89cb1;
+        transform-origin: 0% 50%;
+      }
+
+      [id="04-plazo-3-dias-same"] {
+        position: absolute;
+        left: 848px;
+        top: 1000px;
+        margin: 0;
+        color: #2e4a2a;
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 1.25cqw; /* caption-mono, 24px */
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+    </style>
+
+    <!-- lowest track: the full-bleed cream ground -->
+    <div data-hf-id="hf-qpg5" id="04-plazo-3-dias-bg" class="clip" data-start="0" data-duration="9.5" data-track-index="0"></div>
+
+    <div data-hf-id="hf-jry0" id="04-plazo-3-dias-toprule" class="clip" data-start="0" data-duration="9.5" data-track-index="1"></div>
+
+    <!-- one virtual camera; the numeral, the fork and the axis all ride it -->
+    <div data-hf-id="hf-jxju" id="04-plazo-3-dias-world" class="clip" data-start="0" data-duration="9.5" data-track-index="2">
+      <!-- Hero: the registry count-up primitive, mounted as a sub-composition.
+           First in the world so its ground never occludes the axis. -->
+      <div data-hf-id="hf-simu" id="04-plazo-3-dias-counter" class="clip" data-composition-id="count-up" data-composition-src="compositions/components/count-up.html" data-variable-values="{&quot;start&quot;:0,&quot;end&quot;:3,&quot;prefix&quot;:&quot;&quot;,&quot;suffix&quot;:&quot;DÍAS HÁBILES&quot;,&quot;accent&quot;:&quot;green&quot;,&quot;glow&quot;:false,&quot;exit&quot;:&quot;none&quot;}" data-start="0" data-duration="9.5" data-track-index="3"></div>
+
+      <div data-hf-id="hf-a8a0" id="04-plazo-3-dias-axis"></div>
+
+      <div data-hf-id="hf-5c9r" id="04-plazo-3-dias-station-1" style="left: 480px;">
+        <span data-hf-id="hf-jr5t" id="04-plazo-3-dias-tick-1"></span>
+        <span data-hf-id="hf-0pv0" id="04-plazo-3-dias-num-1">2</span>
+      </div>
+      <div data-hf-id="hf-jw0m" id="04-plazo-3-dias-station-2" style="left: 992px;">
+        <span data-hf-id="hf-np9u" id="04-plazo-3-dias-tick-2"></span>
+        <span data-hf-id="hf-33he" id="04-plazo-3-dias-num-2">3</span>
+        <span data-hf-id="hf-d8vy" id="04-plazo-3-dias-art">art. 211-C</span>
+      </div>
+      <div data-hf-id="hf-o7e3" id="04-plazo-3-dias-station-3" style="left: 1504px;">
+        <span data-hf-id="hf-rndv" id="04-plazo-3-dias-tick-3"></span>
+        <span data-hf-id="hf-8oaf" id="04-plazo-3-dias-num-3">30</span>
+      </div>
+      <div data-hf-id="hf-vaiv" id="04-plazo-3-dias-station-4" style="left: 2016px;">
+        <span data-hf-id="hf-45wc" id="04-plazo-3-dias-tick-4"></span>
+        <span data-hf-id="hf-fgwp" id="04-plazo-3-dias-num-4">15</span>
+      </div>
+
+      <svg data-hf-id="hf-24cb" id="04-plazo-3-dias-fork" width="1100" height="760" viewBox="0 0 1100 760" aria-hidden="true" focusable="false">
+        <path data-hf-id="hf-zhui" id="04-plazo-3-dias-branch-up" d="M 172 439 C 172 308 296 102 462 102" />
+        <path data-hf-id="hf-501c" id="04-plazo-3-dias-branch-down" d="M 172 439 C 172 570 296 636 462 636" />
+        <circle data-hf-id="hf-ptqd" id="04-plazo-3-dias-dot-up" cx="462" cy="102" r="7" />
+        <circle data-hf-id="hf-m15c" id="04-plazo-3-dias-dot-down" cx="462" cy="636" r="7" />
+      </svg>
+
+      <div data-hf-id="hf-w0po" id="04-plazo-3-dias-route-up">INVESTIGACIÓN<br data-hf-id="hf-x5px">INTERNA</div>
+      <div data-hf-id="hf-sy2g" id="04-plazo-3-dias-route-down">A LA INSPECCIÓN<br data-hf-id="hf-rsrt">DEL TRABAJO</div>
+
+      <div data-hf-id="hf-k9f7" id="04-plazo-3-dias-pink"></div>
+      <p data-hf-id="hf-b1r3" id="04-plazo-3-dias-same">el plazo corre igual en las dos</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      (function () {
+        "use strict";
+
+        // Ids and class names carry no custom tokens: every selector is an
+        // attribute or id selector, so sibling frames cannot collide.
+        var byId = function (id) {
+          return document.querySelector('[id="' + id + '"]');
+        };
+
+        var world = byId("04-plazo-3-dias-world");
+        var station2 = byId("04-plazo-3-dias-station-2");
+        var support = [
+          byId("04-plazo-3-dias-station-1"),
+          byId("04-plazo-3-dias-station-3"),
+          byId("04-plazo-3-dias-station-4"),
+        ];
+        var branchUp = byId("04-plazo-3-dias-branch-up");
+        var branchDown = byId("04-plazo-3-dias-branch-down");
+        var dotUp = byId("04-plazo-3-dias-dot-up");
+        var dotDown = byId("04-plazo-3-dias-dot-down");
+        var routeUp = byId("04-plazo-3-dias-route-up");
+        var routeDown = byId("04-plazo-3-dias-route-down");
+        var pink = byId("04-plazo-3-dias-pink");
+        var same = byId("04-plazo-3-dias-same");
+
+        // svg-path-draw — dasharray/dashoffset from getTotalLength(), guarded so
+        // a host that cannot measure geometry still plays the rest of the frame.
+        function armDraw(path) {
+          if (!path || typeof path.getTotalLength !== "function") {
+            return null;
+          }
+          var len = path.getTotalLength();
+          if (!(len > 0)) {
+            return null;
+          }
+          path.style.strokeDasharray = len;
+          path.style.strokeDashoffset = len;
+          return len;
+        }
+
+        var lenUp = armDraw(branchUp);
+        var lenDown = armDraw(branchDown);
+
+        var tl = gsap.timeline({ paused: true });
+
+        // ── Scene 1 (0.0–1.5s) — the travelling camera arrives at the second
+        //    stop and the other three drop to a dimmed supporting plane. The
+        //    mounted count-up runs its own 0→3 count and lands at 1.72s.
+        tl.fromTo(
+          world,
+          { x: 200 },
+          { x: -112, duration: 1.15, ease: "power2.inOut" },
+          0.1,
+        );
+        tl.fromTo(
+          support,
+          { opacity: 1 },
+          { opacity: 0.34, duration: 1.1, ease: "power2.inOut" },
+          0.25,
+        );
+        tl.fromTo(
+          station2,
+          { opacity: 0, y: -8 },
+          { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" },
+          0.5,
+        );
+
+        // ── Scene 2 (1.5–3.4s) — the axis stops being scenery and forks. Both
+        //    branches are DRAWN out of the station point, not faded in.
+        if (lenUp) {
+          tl.to(branchUp, { strokeDashoffset: 0, duration: 0.7, ease: "power2.out" }, 1.9);
+        } else if (branchUp) {
+          tl.fromTo(branchUp, { opacity: 0 }, { opacity: 1, duration: 0.5 }, 1.9);
+        }
+        if (lenDown) {
+          tl.to(branchDown, { strokeDashoffset: 0, duration: 0.7, ease: "power2.out" }, 2.25);
+        } else if (branchDown) {
+          tl.fromTo(branchDown, { opacity: 0 }, { opacity: 1, duration: 0.5 }, 2.25);
+        }
+        if (dotUp) {
+          tl.fromTo(
+            dotUp,
+            { scale: 0, transformOrigin: "462px 102px" },
+            { scale: 1, duration: 0.4, ease: "back.out(2.4)" },
+            2.55,
+          );
+        }
+        if (dotDown) {
+          tl.fromTo(
+            dotDown,
+            { scale: 0, transformOrigin: "462px 636px" },
+            { scale: 1, duration: 0.4, ease: "back.out(2.4)" },
+            2.9,
+          );
+        }
+
+        // ── Scene 3 (3.4–5.6s) — discrete-text-sequence: the two route labels
+        //    resolve in cascade, each springing out of the dot it belongs to.
+        tl.fromTo(
+          routeUp,
+          { scale: 0.86, opacity: 0 },
+          { scale: 1, opacity: 1, duration: 0.6, ease: "back.out(1.9)" },
+          3.5,
+        );
+        tl.fromTo(
+          routeDown,
+          { scale: 0.86, opacity: 0 },
+          { scale: 1, opacity: 1, duration: 0.6, ease: "back.out(1.9)" },
+          3.78,
+        );
+
+        // ── Scene 4 (5.6–6.9s) — the point of the frame, in mono: the deadline
+        //    does not depend on which route was taken.
+        tl.fromTo(
+          pink,
+          { scaleX: 0 },
+          { scaleX: 1, duration: 0.45, ease: "power3.out" },
+          5.7,
+        );
+        tl.fromTo(
+          same,
+          { opacity: 0, y: 14 },
+          { opacity: 1, y: 0, duration: 0.55, ease: "power3.out" },
+          5.85,
+        );
+
+        // ── Scene 5 (6.9–9.0s) — a held, still read. Nothing moves.
+
+        // hold the declared 9s window open without an exit tween
+        tl.to({}, { duration: 0.01 }, 8.99);
+
+        tl.seek(0);
+        window.__timelines = window.__timelines || {};
+        window.__timelines["04-plazo-3-dias"] = tl;
+      })();
+    </script>
+  </div>
+</template>
