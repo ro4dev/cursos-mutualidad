@@ -1,0 +1,30 @@
+[
+  {
+    "id": "01-muestra-como-se-trabaja",
+    "tipo": "gancho",
+    "titulo": "Muestra cómo se trabaja",
+    "duracion": 14.5,
+    "transition_in": "cut"
+  },
+  {
+    "id": "02-dia-uno-o-semanas",
+    "tipo": "par",
+    "titulo": "Día uno o semanas",
+    "duracion": 14.5,
+    "transition_in": "cut"
+  },
+  {
+    "id": "03-las-tres-obligaciones",
+    "tipo": "lista",
+    "titulo": "Las tres obligaciones",
+    "duracion": 14.5,
+    "transition_in": "cut"
+  },
+  {
+    "id": "04-listo-el-primer-dia",
+    "tipo": "cierre",
+    "titulo": "Listo el primer día",
+    "duracion": 14.5,
+    "transition_in": "crossfade"
+  }
+]

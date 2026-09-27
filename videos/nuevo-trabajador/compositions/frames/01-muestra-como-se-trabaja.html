@@ -1,0 +1,174 @@
+<template>
+  <div data-hf-id="hf-skgk" id="01-muestra-como-se-trabaja" data-composition-id="01-muestra-como-se-trabaja" data-start="0" data-duration="14.5" data-width="1920" data-height="1080">
+    <style>
+      /* frame.md typography, resolved to the real woff2 files shipped in
+         capture/assets/fonts. Both are the latin subset variable cuts, so
+         the render host never falls back to a generic family. */
+      @font-face {
+        font-family: 'Source Serif 4';
+        font-style: normal;
+        font-weight: 200 900;
+        font-display: block;
+        src: url('capture/assets/fonts/source-serif-4-latin.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'JetBrains Mono';
+        font-style: normal;
+        font-weight: 100 800;
+        font-display: block;
+        src: url('capture/assets/fonts/jetbrains-mono-latin.woff2') format('woff2');
+      }
+    </style>
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      /* ── Frame root — full 1920x1080 ground box, container-query basis ─── */
+      [id="01-muestra-como-se-trabaja"] {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        container-type: size;
+        isolation: isolate;
+        color: #1a1a17;
+        font-family: var(--font-display);
+      }
+
+      /* ── Full-bleed ground (own clip layer, never the root) ───────────── */
+      [id="01-muestra-como-se-trabaja-bg"] {
+        position: absolute;
+        inset: 0;
+        background: #efe7d4;
+      }
+
+      /* ── El mundo: una camara virtual. Todo lo que se mueve, sube aqui ── */
+      [id="01-muestra-como-se-trabaja-world"] {
+        --accent: #3f6943;
+        --accent-deep: #2f5232;
+        --fg: #1a1a17;
+        --bg: #efe7d4;
+        --font-display: "Source Serif 4", Georgia, serif;
+        --font-mono: "JetBrains Mono", ui-monospace, monospace;
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+      }
+
+[id="01-muestra-como-se-trabaja-rule"] {
+        position: absolute;
+        left: 96px;
+        top: 212px;
+        width: 210px;
+        height: 2px;
+        background: #3f6943;
+        transform-origin: 0% 50%;
+        will-change: transform;
+      }
+
+[id="01-muestra-como-se-trabaja-kicker"] {
+        position: absolute;
+        left: 96px;
+        top: 152px;
+        margin: 0;
+        color: #3a5a36;
+        font-family: var(--font-mono);
+        font-size: 1.1458cqw;
+        font-weight: 500;
+        line-height: 1.25;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        will-change: transform, opacity;
+      }
+
+[id="01-muestra-como-se-trabaja-hero"] {
+        position: absolute;
+        left: 96px;
+        top: 300px;
+        width: 1728px;
+        margin: 0;
+        color: #1a1a17;
+        font-family: var(--font-display);
+        font-size: 7.7083cqw;
+        font-weight: 500;
+        line-height: 1.02;
+        letter-spacing: -0.02em;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.04em 0.28em;
+        will-change: transform, opacity;
+      }
+
+[id="01-muestra-como-se-trabaja-remark"] {
+        position: absolute;
+        left: 96px;
+        top: 797px;
+        width: 1180px;
+        margin: 0;
+        color: #243a21;
+        font-family: var(--font-display);
+        font-size: 1.9792cqw;
+        font-weight: 400;
+        line-height: 1.34;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+    </style>
+
+      <div data-hf-id="hf-ugc4" id="01-muestra-como-se-trabaja-bg" class="clip" data-start="0" data-duration="14.5" data-track-index="0"></div>
+    <div data-hf-id="hf-82fl" id="01-muestra-como-se-trabaja-world" class="clip" data-start="0" data-duration="14.5" data-track-index="1">      <div data-hf-id="hf-t8ku" id="01-muestra-como-se-trabaja-kicker-w">        <span data-hf-id="hf-j6du" id="01-muestra-como-se-trabaja-kicker">INDUCCIÓN AL NUEVO TRABAJADOR</span></div>      <span data-hf-id="hf-7jwl" id="01-muestra-como-se-trabaja-rule"></span>      <div data-hf-id="hf-cxp7" id="01-muestra-como-se-trabaja-hero-w">        <h1 data-hf-id="hf-3xpz" id="01-muestra-como-se-trabaja-hero">        <span data-hf-id="hf-jsaa" id="01-muestra-como-se-trabaja-hl-0">LA INDUCCIÓN</span>        <span data-hf-id="hf-jdz9" id="01-muestra-como-se-trabaja-hl-1">MUESTRA CÓMO</span>        <span data-hf-id="hf-kkwc" id="01-muestra-como-se-trabaja-hl-2">SE TRABAJA AQUÍ</span></h1></div>      <div data-hf-id="hf-cuh3" id="01-muestra-como-se-trabaja-remark-w">        <p data-hf-id="hf-w2oz" id="01-muestra-como-se-trabaja-remark">No es acumular papeles. Es la primera vez que alguien ve cómo se trabaja acá.</p></div></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      (function () {
+        "use strict";
+
+        // Ids and class names carry no custom tokens: every selector is an
+        // attribute or id selector, so sibling frames cannot collide.
+        var byId = function (id) {
+          return document.querySelector('[id="' + id + '"]');
+        };
+
+        // Cada id que este frame anima tiene que existir de verdad. Si falta
+        // uno, el tween seria sobre null y el reveal nunca correria — que es
+        // exactamente el bug que tubo el frame 09 del piloto.
+        var IDS = [
+          "01-muestra-como-se-trabaja-rule",
+          "01-muestra-como-se-trabaja-kicker",
+          "01-muestra-como-se-trabaja-hero",
+          "01-muestra-como-se-trabaja-remark",
+        ];
+        var faltantes = IDS.filter(function (id) { return !byId(id); });
+        if (faltantes.length) {
+          throw new Error(
+            "[01-muestra-como-se-trabaja] ids sin elemento en el DOM: " + faltantes.join(", "),
+          );
+        }
+
+        var tl = gsap.timeline({ paused: true });
+
+
+        // — la regla del sistema entra primero, sin copy.
+        tl.fromTo(byId("01-muestra-como-se-trabaja-rule"), { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power3.out" }, 0.1);
+        tl.fromTo(byId("01-muestra-como-se-trabaja-kicker"), { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.25);
+
+        // — la frase entra de una linea a la vez.
+        var heroLines = Array.prototype.slice.call(byId("01-muestra-como-se-trabaja-hero").querySelectorAll("span"));
+        heroLines.forEach(function (l, i) {
+          tl.fromTo(l, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.62, ease: "power3.out" }, 0.5 + i * 0.16);
+        });
+        tl.fromTo(byId("01-muestra-como-se-trabaja-remark"), { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 1.4);
+
+        // hold the declared 14.5s window open without an exit tween
+        tl.to({}, { duration: 0.01 }, 14.49);
+
+        tl.seek(0);
+        window.__timelines = window.__timelines || {};
+        window.__timelines["01-muestra-como-se-trabaja"] = tl;
+      })();
+    </script>
+  </div>
+</template>
