@@ -1,0 +1,307 @@
+<template>
+  <div data-hf-id="hf-xzid" id="root" data-composition-id="02-el-reloj" data-start="0" data-duration="8.5" data-width="1920" data-height="1080">
+    <style>
+      /* frame.md typography, resolved to the real woff2 files shipped in
+         capture/assets/fonts. Both are the latin subset variable cuts, so
+         the render host never falls back to a generic family. */
+      @font-face {
+        font-family: 'Source Serif 4';
+        font-style: normal;
+        font-weight: 200 900;
+        font-display: block;
+        src: url('capture/assets/fonts/source-serif-4-latin.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'JetBrains Mono';
+        font-style: normal;
+        font-weight: 100 800;
+        font-display: block;
+        src: url('capture/assets/fonts/jetbrains-mono-latin.woff2') format('woff2');
+      }
+    </style>
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      /* ── Frame root — full 1920x1080 ground box, container-query basis ────── */
+      #root {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        container-type: size;
+        isolation: isolate;
+        color: #1a1a17;
+        font-family: "Source Serif 4", Georgia, serif;
+      }
+
+      /* ── Full-bleed ground (own clip layer, never the root) ───────────────── */
+      [id="02-el-reloj-bg"] {
+        position: absolute;
+        inset: 0;
+        background: #efe7d4;
+      }
+
+      /* ── topbar: the system's hairline at the slide pad, no added copy ────── */
+      [id="02-el-reloj-toprule"] {
+        position: absolute;
+        left: 96px;
+        top: 96px;
+        width: 1728px;
+        height: 2px;
+        background: #2e4a2a;
+      }
+
+      /* ── The world IS the camera ────────────────────────────────────────────
+         One oversized canvas (3456px) holds all four stops; the virtual camera
+         is the world's own transform. The background and the topbar live
+         OUTSIDE the world so the ground never travels with the pan. */
+      [id="02-el-reloj-world"] {
+        --brand: #2e4a2a;
+        --accent: #e89cb1;
+        --accent-2: #3a5a36;
+        --fg: #1a1a17;
+        --bg: #efe7d4;
+        --font-display: "Source Serif 4", Georgia, serif;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 3456px;
+        height: 1080px;
+        overflow: hidden;
+        will-change: transform;
+      }
+
+      /* ── Depth layer 2: the faint measuring grid behind the axis ─────────── */
+      [id="02-el-reloj-grid"] {
+        position: absolute;
+        left: 0;
+        top: 611px;
+        width: 3456px;
+        height: 209px;
+        background-image: repeating-linear-gradient(
+          to right,
+          rgba(46, 74, 42, 0.1) 0,
+          rgba(46, 74, 42, 0.1) 2px,
+          rgba(46, 74, 42, 0) 2px,
+          rgba(46, 74, 42, 0) 216px
+        );
+      }
+
+      /* ── Depth layer 3 front: the axis, one 2px hairline across the world ─── */
+      [id="02-el-reloj-axis"] {
+        position: absolute;
+        left: 0;
+        top: 699px;
+        width: 3456px;
+        height: 2px;
+        background: #2e4a2a;
+        transform-origin: 0% 50%;
+        will-change: transform;
+      }
+
+      /* ── Stations: 2 / 3 / 30 / 15, evenly spaced, identical label type ───── */
+      [id^="02-el-reloj-station-"] {
+        position: absolute;
+        top: 688px;
+        width: 160px;
+        text-align: center;
+      }
+
+      [id^="02-el-reloj-tick-"] {
+        display: block;
+        width: 2px;
+        height: 24px;
+        margin: 0 auto;
+        background: #2e4a2a;
+      }
+
+      [id^="02-el-reloj-num-"] {
+        display: block;
+        margin-top: 18px;
+        color: #2e4a2a;
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 1.354cqw; /* 26px */
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: 0.18em;
+        text-indent: 0.18em; /* optically recentre the trailing track */
+        text-transform: uppercase;
+        opacity: 0; /* the axis opens empty; each stop lands by cut */
+      }
+
+      /* The article label is the supporting plane: mono, one step down the
+         ramp, in green-lite so it never competes with the numeral. */
+      [id^="02-el-reloj-art-"] {
+        display: block;
+        margin-top: 14px;
+        color: #3a5a36;
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 1.25cqw; /* caption-mono, 24px */
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: 0.14em;
+        text-indent: 0.14em;
+        text-transform: uppercase;
+        opacity: 0;
+      }
+
+      /* ── The one pink hairline: the frame's only accent ──────────────────── */
+      [id="02-el-reloj-pink"] {
+        position: absolute;
+        left: 1888px;
+        top: 336px;
+        width: 96px;
+        height: 2px;
+        background: #e89cb1;
+        transform-origin: 50% 50%;
+      }
+
+      /* ── The headline, centered over the fourth stop ─────────────────────── */
+      [id="02-el-reloj-headline"] {
+        position: absolute;
+        left: 1136px;
+        top: 386px;
+        width: 1920px;
+        margin: 0;
+        text-align: center;
+        color: #1a1a17;
+        font-family: "Source Serif 4", Georgia, serif;
+        font-size: 4.4cqw; /* headline, 84.5px */
+        font-weight: 500;
+        line-height: 1;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+      }
+    </style>
+
+    <!-- lowest track: the full-bleed cream ground -->
+    <div data-hf-id="hf-nmbo" id="02-el-reloj-bg" class="clip" data-start="0" data-duration="8.5" data-track-index="0"></div>
+
+    <div data-hf-id="hf-tw73" id="02-el-reloj-toprule" class="clip" data-start="0" data-duration="8.5" data-track-index="1"></div>
+
+    <!-- one virtual camera; the axis, the grid, the stations and the headline ride it -->
+    <div data-hf-id="hf-ird1" id="02-el-reloj-world" class="clip" data-start="0" data-duration="8.5" data-track-index="2">
+      <div data-hf-id="hf-lwd7" id="02-el-reloj-grid"></div>
+      <div data-hf-id="hf-ax1o" id="02-el-reloj-axis"></div>
+
+      <div data-hf-id="hf-h58b" id="02-el-reloj-station-1" style="left: 480px;">
+        <span data-hf-id="hf-e32l" id="02-el-reloj-tick-1"></span>
+        <span data-hf-id="hf-o7js" id="02-el-reloj-num-1">2</span>
+        <span data-hf-id="hf-fpzp" id="02-el-reloj-art-1">art. 211-B bis</span>
+      </div>
+      <div data-hf-id="hf-o2ii" id="02-el-reloj-station-2" style="left: 992px;">
+        <span data-hf-id="hf-i16m" id="02-el-reloj-tick-2"></span>
+        <span data-hf-id="hf-3icu" id="02-el-reloj-num-2">3</span>
+        <span data-hf-id="hf-a4jb" id="02-el-reloj-art-2">art. 211-C</span>
+      </div>
+      <div data-hf-id="hf-z5ef" id="02-el-reloj-station-3" style="left: 1504px;">
+        <span data-hf-id="hf-lzan" id="02-el-reloj-tick-3"></span>
+        <span data-hf-id="hf-961n" id="02-el-reloj-num-3">30</span>
+        <span data-hf-id="hf-dpkm" id="02-el-reloj-art-3">art. 211-C</span>
+      </div>
+      <div data-hf-id="hf-d1xv" id="02-el-reloj-station-4" style="left: 2016px;">
+        <span data-hf-id="hf-pxeo" id="02-el-reloj-tick-4"></span>
+        <span data-hf-id="hf-4ti5" id="02-el-reloj-num-4">15</span>
+        <span data-hf-id="hf-t0zj" id="02-el-reloj-art-4">art. 211-E</span>
+      </div>
+
+      <div data-hf-id="hf-f30v" id="02-el-reloj-pink"></div>
+      <h2 data-hf-id="hf-djs1" id="02-el-reloj-headline">LA LEY PUSO<br data-hf-id="hf-x5px">UN RELOJ</h2>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      (function () {
+        "use strict";
+
+        // Ids and class names carry no custom tokens: every selector is an
+        // attribute or id selector, so sibling frames cannot collide.
+        var byId = function (id) {
+          return document.querySelector('[id="' + id + '"]');
+        };
+
+        var world = byId("02-el-reloj-world");
+        var axis = byId("02-el-reloj-axis");
+        var grid = byId("02-el-reloj-grid");
+        var pink = byId("02-el-reloj-pink");
+        var headline = byId("02-el-reloj-headline");
+
+        // Camera x per stop, solved so each station's centre lands on the
+        // frame's optical centre (960px): camera = 960 - (stationLeft + 80).
+        var STOPS = [
+          { x: 400, at: 1.62 },
+          { x: -112, at: 2.62 },
+          { x: -624, at: 3.62 },
+          { x: -624 - 512, at: 4.62 },
+        ];
+
+        var tl = gsap.timeline({ paused: true });
+
+        // ── Scene 1 (0.0–1.6s) — the camera opens on a bare axis. The hairline
+        //    draws left to right (svg-path-draw logic on a scaled element);
+        //    the faint grid resolves underneath it.
+        tl.set(world, { x: 760 });
+        tl.fromTo(
+          grid,
+          { opacity: 0 },
+          { opacity: 1, duration: 0.6, ease: "power2.out" },
+          0.1,
+        );
+        tl.fromTo(
+          axis,
+          { scaleX: 0 },
+          { scaleX: 1, duration: 1.05, ease: "power3.out" },
+          0.15,
+        );
+
+        // ── Scenes 2-5 (1.6–5.6s) — one second per stop. The numeral lands by
+        //    CUT (a zero-duration state change, never a crossfade): the stops
+        //    are not the protagonist yet, they are the clock being named. The
+        //    article label rises and fades in just under it.
+        STOPS.forEach(function (stop, index) {
+          var num = byId("02-el-reloj-num-" + (index + 1));
+          var art = byId("02-el-reloj-art-" + (index + 1));
+
+          tl.to(world, { x: stop.x, duration: 0.75, ease: "power2.inOut" }, stop.at - 0.75);
+          if (num) {
+            tl.set(num, { opacity: 1 }, stop.at);
+          }
+          if (art) {
+            tl.fromTo(
+              art,
+              { opacity: 0, y: 16 },
+              { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" },
+              stop.at + 0.1,
+            );
+          }
+        });
+
+        // ── Scene 6 (5.6–8.0s) — the axis is still. One pink hairline, then the
+        //    single headline slides up and holds until the cut.
+        tl.fromTo(
+          pink,
+          { scaleX: 0, opacity: 0 },
+          { scaleX: 1, opacity: 1, duration: 0.45, ease: "power3.out" },
+          5.7,
+        );
+        tl.fromTo(
+          headline,
+          { opacity: 0, y: 46 },
+          { opacity: 1, y: 0, duration: 0.72, ease: "power3.out" },
+          5.85,
+        );
+
+        // hold the declared 8s window open without an exit tween
+        tl.to({}, { duration: 0.01 }, 7.99);
+
+        tl.seek(0);
+        window.__timelines = window.__timelines || {};
+        window.__timelines["02-el-reloj"] = tl;
+      })();
+    </script>
+  </div>
+</template>
