@@ -1,0 +1,283 @@
+<template data-width="1920" data-height="1080">
+  <style>
+    /* Source Serif 4 (display + body) and JetBrains Mono (chrome) are the two
+       families declared by frame.md. No font file ships with this project, so
+       the faces are resolved locally only; the generic fallback in each stack
+       carries the frame when neither family is installed on the render host. */
+    @font-face {
+      font-family: "Source Serif 4";
+      font-style: normal;
+      font-weight: 400 700;
+      src: local("Source Serif 4"), local("SourceSerif4"),
+        local("Source Serif 4 Variable"), local("SourceSerif4-Variable");
+    }
+    @font-face {
+      font-family: "JetBrains Mono";
+      font-style: normal;
+      font-weight: 500;
+      src: local("JetBrains Mono Medium"), local("JetBrainsMono-Medium"),
+        local("JetBrains Mono"), local("JetBrainsMono-Regular");
+    }
+
+    #root {
+      position: relative;
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      font-family: "Source Serif 4", serif;
+    }
+
+    /* Track 0 — full-bleed cream ground. Doubles as the cqw/cqh container the
+       whole frame is measured against (1cqw = 19.2px, 1cqh = 10.8px). */
+    #01-una-vez-basta-ground {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: #efe7d4;
+      container-type: size;
+    }
+
+    /* Track 1 — the shot: mono rótulo, the token line, the filete, the numeral. */
+    #01-una-vez-basta-scene {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* --- Scene 1 · mono rótulo (the frame's topbar spine, centered) --- */
+    #01-una-vez-basta-label-row {
+      position: absolute;
+      left: 0;
+      top: 7.8cqh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.15cqw;
+    }
+    #01-una-vez-basta-mark {
+      flex: none;
+      width: 14px;
+      height: 14px;
+      border-radius: 3px;
+      background: #e89cb1;
+    }
+    #01-una-vez-basta-label {
+      font-family: "JetBrains Mono", monospace;
+      font-weight: 500;
+      font-size: 26px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      color: #2e4a2a;
+    }
+
+    /* --- Scenes 1-3 · the fixed center anchor, 430px down the canvas --- */
+    #01-una-vez-basta-stage {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 79.6cqh;
+      display: grid;
+      place-items: center;
+    }
+    #01-una-vez-basta-word-stack {
+      display: grid;
+      place-items: center;
+    }
+    #01-una-vez-basta-word-a,
+    #01-una-vez-basta-word-b {
+      grid-area: 1 / 1;
+      font-family: "Source Serif 4", serif;
+      font-weight: 500;
+      font-size: 11.5cqw;
+      line-height: 0.92;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      color: #1a1a17;
+    }
+    #01-una-vez-basta-word-b {
+      opacity: 0;
+    }
+
+    /* --- Scene 2 · the filete: a 2px hairline drawn under the word --- */
+    #01-una-vez-basta-rule {
+      position: absolute;
+      left: 221px;
+      top: 519px;
+      width: 1478px;
+      height: 2px;
+      overflow: visible;
+    }
+    #01-una-vez-basta-rule-path {
+      fill: none;
+      stroke: #2e4a2a;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* --- Scene 4 · the payoff numeral, alone and oversized --- */
+    #01-una-vez-basta-numeral {
+      position: absolute;
+      left: 0;
+      top: 21.9cqh;
+      width: 100%;
+      text-align: center;
+      font-family: "Source Serif 4", serif;
+      font-weight: 500;
+      font-size: 21.9cqw;
+      line-height: 0.92;
+      letter-spacing: -0.03em;
+      color: #1a1a17;
+      opacity: 0;
+    }
+  </style>
+
+  <div
+    id="root"
+    data-composition-id="01-una-vez-basta"
+    data-start="0"
+    data-duration="6"
+    data-width="1920"
+    data-height="1080"
+  >
+    <div
+      class="clip"
+      id="01-una-vez-basta-ground"
+      data-start="0"
+      data-duration="6"
+      data-track-index="0"
+    >
+      <div
+        class="clip"
+        id="01-una-vez-basta-scene"
+        data-start="0"
+        data-duration="6"
+        data-track-index="1"
+      >
+        <div id="01-una-vez-basta-label-row">
+          <span id="01-una-vez-basta-mark"></span>
+          <span id="01-una-vez-basta-label">LEY N° 21.643 · VIGENTE DESDE 01.08.2024</span>
+        </div>
+
+        <div id="01-una-vez-basta-stage">
+          <div id="01-una-vez-basta-word-stack">
+            <span id="01-una-vez-basta-word-a">SISTEMÁTICO</span>
+            <span id="01-una-vez-basta-word-b">UNA VEZ</span>
+          </div>
+        </div>
+
+        <svg
+          id="01-una-vez-basta-rule"
+          width="1478"
+          height="2"
+          viewBox="0 0 1478 2"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path id="01-una-vez-basta-rule-path" d="M 0 1 L 1478 1"></path>
+        </svg>
+
+        <div id="01-una-vez-basta-numeral">1</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <script>
+    (function () {
+      var label = document.getElementById("01-una-vez-basta-label");
+      var mark = document.getElementById("01-una-vez-basta-mark");
+      var stage = document.getElementById("01-una-vez-basta-stage");
+      var wordA = document.getElementById("01-una-vez-basta-word-a");
+      var wordB = document.getElementById("01-una-vez-basta-word-b");
+      var ruleSvg = document.getElementById("01-una-vez-basta-rule");
+      var rulePath = document.getElementById("01-una-vez-basta-rule-path");
+      var numeral = document.getElementById("01-una-vez-basta-numeral");
+
+      /* fit-to-measure — size the display word to 77cqw of the 1920 canvas so the
+         line sits almost to the blood, whichever serif actually resolves.
+         Both words take the same computed size, so the swap keeps one optical size. */
+      var TARGET_W = 1478;
+      var w0 = wordA.getBoundingClientRect().width;
+      if (w0 > 0) {
+        var baseSize = parseFloat(getComputedStyle(wordA).fontSize);
+        var fit = (baseSize * TARGET_W) / w0;
+        wordA.style.fontSize = fit + "px";
+        wordB.style.fontSize = fit + "px";
+      }
+
+      /* the filete lands on the word it annotates — measured, never guessed */
+      var box = wordA.getBoundingClientRect();
+      var stageBox = stage.getBoundingClientRect();
+      if (box.width > 0) {
+        var left = box.left - stageBox.left;
+        var top = box.top - stageBox.top + box.height * 0.8 + 28;
+        var w = box.width;
+        ruleSvg.style.left = left + "px";
+        ruleSvg.style.top = top + "px";
+        ruleSvg.style.width = w + "px";
+        ruleSvg.setAttribute("viewBox", "0 0 " + w + " 2");
+        rulePath.setAttribute("d", "M 0 1 L " + w + " 1");
+      }
+
+      /* svg-path-draw — dasharray/dashoffset from getTotalLength() */
+      var len = rulePath.getTotalLength() * 1.02;
+      rulePath.style.strokeDasharray = len;
+      rulePath.style.strokeDashoffset = len;
+
+      var tl = gsap.timeline({ paused: true });
+
+      /* Scene 1 (0.0-1.4s) — layer reveal, rise and fade: rótulo first, then the word */
+      tl.fromTo(
+        label,
+        { opacity: 0, y: 18 },
+        { opacity: 1, y: 0, duration: 0.36, ease: "power2.out" },
+        0,
+      );
+      tl.fromTo(
+        mark,
+        { opacity: 0, y: 14 },
+        { opacity: 1, y: 0, duration: 0.34, ease: "power2.out" },
+        0.05,
+      );
+      tl.fromTo(
+        wordA,
+        { opacity: 0, y: 46 },
+        { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" },
+        0.1,
+      );
+
+      /* Scene 2 (1.4-3.2s) — sustained read; the only movement is the drawn filete
+         marking SISTEMÁTICO as the old rule */
+      tl.to(rulePath, { strokeDashoffset: 0, duration: 0.72, ease: "power2.out" }, 1.55);
+
+      /* Scene 3 (3.2-4.4s) — the in-place swap: a zero-duration state change, the
+         hard cut, never a crossfade. The filete stays under the new word. */
+      tl.set(wordA, { opacity: 0 }, 3.2);
+      tl.set(wordB, { opacity: 1 }, 3.2);
+
+      /* Scene 4 (4.4-6.0s) — payoff: the numeral springs up from a smaller scale and
+         settles on a single damped overshoot, alone. Then nothing moves. */
+      tl.set(wordB, { opacity: 0 }, 4.4);
+      tl.set(ruleSvg, { opacity: 0 }, 4.4);
+      tl.fromTo(
+        numeral,
+        { opacity: 0, scale: 0.55 },
+        { opacity: 1, scale: 1, duration: 0.78, ease: "back.out(2.2)" },
+        4.4,
+      );
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["01-una-vez-basta"] = tl;
+      tl.seek(0);
+    })();
+  </script>
+</template>
