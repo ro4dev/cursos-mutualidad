@@ -342,4 +342,114 @@ export function cierre(f, { kicker, regla, fuente, nota }) {
   f.line(`tl.fromTo(${qMarca}, { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.out" }, 1.95);`);
 }
 
-export const ARQUETIPOS = { gancho, stat, lista, cierre };
+/* ========================================================================= *
+ * 5. PAR — dos columnas comparadas. Sirve para "A contra B", "hacer contra
+ *    no hacer", "deber del empleador contra deber del trabajador".
+ *    La columna izquierda va en verde macizo (la que gana) y la derecha en
+ *    contour sobre el crema (la que se descarta).
+ * ========================================================================= */
+export function par(f, { kicker, titulo, izq, der }) {
+  const t = f.tokens;
+  const colW = 812;
+  const gap = 104;
+  const colTop = 430;
+  const colH = 470;
+
+  rule(f, '-toprule', { left: PAD, top: 96, width: INNER, color: t.green });
+  block(f, '-kicker', {
+    left: PAD, top: 118, font: mono, size: R.label, weight: 500,
+    ls: '0.18em', color: t.greenLite, transform: 'uppercase',
+  });
+  block(f, '-titulo', {
+    left: PAD, top: 170, width: 1400, font: display, size: R.title,
+    weight: 500, lh: 1.06, ls: '-0.01em', color: t.ink,
+  });
+
+  const cols = [
+    { sfx: '-a', x: PAD, data: izq, solido: true },
+    { sfx: '-b', x: PAD + colW + gap, data: der, solido: false },
+  ];
+
+  const partes = [
+    f.box('-toprule', 'span', {}, '', 6),
+    f.box('-kicker-w', 'div', {}, f.box('-kicker', 'span', {}, kicker, 8), 6),
+    f.box('-titulo-w', 'div', {}, f.box('-titulo', 'h2', {}, titulo, 8), 6),
+  ];
+
+  for (const c of cols) {
+    const fg = c.solido ? t.cream : t.ink;
+    const sub = c.solido ? t.cream2 : t.greenDeep;
+    // el rotulo va en crema sobre el verde macizo: el acento no tendria
+    // contraste suficiente ahi.
+    const lab = c.solido ? t.cream2 : t.accent;
+
+    /* filete vertical de acento, pegado al borde izquierdo de la columna */
+    rule(f, `-${c.sfx}-card`, { left: c.x, top: colTop, width: 4, height: colH, color: c.solido ? t.green : t.accent, origin: '50% 0%' });
+    block(f, `-${c.sfx}-label`, {
+      left: c.x + 40, top: colTop + 44, width: colW - 80, font: mono, size: R.micro,
+      weight: 500, ls: '0.2em', color: lab, transform: 'uppercase',
+    });
+    block(f, `-${c.sfx}-head`, {
+      left: c.x + 40, top: colTop + 90, width: colW - 80, font: display, size: 46,
+      weight: 500, lh: 1.06, ls: '-0.01em', color: fg,
+    });
+    rule(f, `-${c.sfx}-rule`, { left: c.x + 40, top: colTop + 176, width: 110, color: c.solido ? t.cream : t.accent });
+    block(f, `-${c.sfx}-body`, {
+      left: c.x + 40, top: colTop + 214, width: colW - 80, font: display, size: 28,
+      weight: 400, lh: 1.44, color: sub,
+    });
+
+    // el fondo de la columna que gana
+    if (c.solido) {
+      rule(f, `-${c.sfx}-bg`, {
+        left: c.x, top: colTop - 28, width: colW, height: colH + 56, color: t.green,
+      });
+    }
+
+    partes.push(f.box(`${c.sfx}-w`, 'div', {}, [
+      c.solido ? f.box(`${c.sfx}-bg`, 'span', {}, '', 8) : '',
+      f.box(`${c.sfx}-card`, 'span', {}, '', 8),
+      f.box(`${c.sfx}-label`, 'span', {}, c.data.label, 8),
+      f.box(`${c.sfx}-head`, 'h3', {}, c.data.head, 8),
+      f.box(`${c.sfx}-rule`, 'span', {}, '', 8),
+      f.box(`${c.sfx}-body`, 'p', {}, c.data.body, 8),
+    ].join(''), 6));
+  }
+
+  capas(f, partes.join(''));
+
+  const qTop = f.q('-toprule');
+  const qKick = f.q('-kicker');
+  const qTit = f.q('-titulo');
+  f.line('');
+  f.line(`tl.fromTo(${qTop}, { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power3.out" }, 0.1);`);
+  f.line(`tl.fromTo(${qKick}, { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 0.2);`);
+  f.line(`tl.fromTo(${qTit}, { opacity: 0, y: 26 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 0.45);`);
+  f.line('');
+  f.line('// — la columna que gana entra como bloque macizo; la que se descarta,');
+  f.line('// en contour, despues, para que el contraste se lea.');
+
+  /* Un solo recorrido sobre `cols`, que ya sabe que columna va solida. Una
+     lista de motions aparte se desincronizo de la del markup y termino
+     animando un id que no existe — justo lo que caza check-selectors. */
+  cols.forEach((c, i) => {
+    const at = 0.95 + i * 0.5;
+    const card = f.q(`${c.sfx}-card`);
+    const label = f.q(`${c.sfx}-label`);
+    const head = f.q(`${c.sfx}-head`);
+    const ruleS = f.q(`${c.sfx}-rule`);
+    const body = f.q(`${c.sfx}-body`);
+
+    if (c.solido) {
+      const bg = f.q(`${c.sfx}-bg`);
+      f.line(`tl.fromTo(${bg}, { opacity: 0, x: -28 }, { opacity: 1, x: 0, duration: 0.55, ease: "power3.out" }, ${at});`);
+    }
+    f.line(`tl.fromTo(${card}, { scaleY: 0 }, { scaleY: 1, duration: 0.5, ease: "power3.out" }, ${at + 0.05});`);
+    f.line(`tl.fromTo(${label}, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, ${at + 0.16});`);
+    f.line(`tl.fromTo(${head}, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.55, ease: "power3.out" }, ${at + 0.24});`);
+    f.line(`tl.fromTo(${ruleS}, { scaleX: 0 }, { scaleX: 1, duration: 0.4, ease: "power3.out" }, ${at + 0.36});`);
+    f.line(`tl.fromTo(${body}, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, ${at + 0.44});`);
+  });
+}
+
+export const ARQUETIPOS = { gancho, stat, lista, par, cierre };

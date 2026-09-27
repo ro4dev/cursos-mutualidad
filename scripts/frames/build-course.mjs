@@ -40,6 +40,42 @@ if (!existsSync(specPath)) {
 }
 
 const spec = (await import(pathToFileURL(specPath).href)).default;
+
+/* ------------------------------------------------------------------------ *
+ * Guarda de corrupcion del copy.
+ *
+ * Este repo lo escribe una IA y la prosa larga en español sale a veces con
+ * fragmentos de otros alfabetos pegados en medio de la frase. Si eso llega
+ * a pantalla, el video muestra un caracter que no es del texto. Se corta aca
+ * y no despues, cuando ya se renderizo.
+ *
+ * `°` se permite: es notacion legal chilena legitima ("Ley N° 21.643").
+ * ------------------------------------------------------------------------ */
+const NO_LATIN = /[Ѐ-ӿ　-〿぀-ヿ㐀-鿿가-힯]/;
+
+const stringsDelSpec = (v, ruta = 'spec') => {
+  if (typeof v === 'string') return [{ ruta, v }];
+  if (Array.isArray(v)) return v.flatMap((x, i) => stringsDelSpec(x, `${ruta}[${i}]`));
+  if (v && typeof v === 'object') {
+    return Object.entries(v).flatMap(([k, x]) => stringsDelSpec(x, `${ruta}.${k}`));
+  }
+  return [];
+};
+
+/* Sin flag `g`: con `g`, `lastIndex` avanza entre llamadas y el test se
+   salta strings alternados. Seinicalmente dejaria pasar la mitad. */
+const sucias = stringsDelSpec(spec).filter(({ v }) => NO_LATIN.test(v.replace(/N°/g, '')));
+
+if (sucias.length) {
+  console.error(`\nCopy corrupto en ${slug}/frames.spec.mjs — ${sucias.length} string(s):\n`);
+  for (const { ruta, v } of sucias.slice(0, 12)) {
+    const bad = [...v.matchAll(new RegExp(NO_LATIN.source, 'g'))];
+    console.error(`  ${ruta}`);
+    console.error(`    ${JSON.stringify(bad.map((m) => m[0]).join(' '))}  en  ${v.slice(0, 100)}`);
+  }
+  process.exit(1);
+}
+
 const carpeta = proyectoDelCurso(slug);
 const proyecto = join(ROOT, 'videos', carpeta);
 const framesDir = join(proyecto, 'compositions', 'frames');

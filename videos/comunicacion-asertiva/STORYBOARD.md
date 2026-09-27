@@ -1,65 +1,97 @@
-# Storyboard — Comunicacion asertiva
+---
+format: 1920x1080
+duration: 43s
+message: "Comunicar bien no es callarse ni discutir: es decir lo propio reconociendo la postura del otro, y se puede aprender en cuatro pasos."
+arc: concept-explainer with contrast
+audience: "Personal de mutualidades y empresas en Chile"
+mode: autonomous
+music: none
+---
 
-> Borrador de estructura. La composicion final se genera con el skill
-> `faceless-explainer`; este archivo fija el ritmo y el reparto del tiempo.
+# STORYBOARD — Comunicacion asertiva
 
-- **Duración total**: 45s
-- **Aspecto**: 1920x1080
-- **Idioma**: es-CL
-- **Narración**: no (video mudo, tipografia fuerte)
-- **Ángulo**: habito
+## Video direction
 
-## Estructura
+**Estructura:** `concept-explainer with contrast`. El protagonista es una frase que casi todos dicen mal ("te dije que no" / "no me importa"). Se abre con el costo de las dos reacting extremos, se contrasta el estilo correcto contra el agresivo, y se cierra con la estructura de cuatro pasos que lo sostiene.
 
-| Desde | Duración | Movimiento | Nota |
-|---|---|---|---|
-| 0s | 5s | Apertura | Plantea el problema en una frase, sin rodeos. |
-| 5s | 5s | Gancho | Un dato o contraste que fije la atencion. |
-| 10s | 14s | Mecanismo | El cuerpo del curso: el paso a paso o la regla. |
-| 24s | 9s | Ejemplo | Un caso concreto que aterrizar el mecanismo. |
-| 33s | 7s | Cierre | La regla que la persona se lleva. |
-| 40s | 7s | Fuente | Fuente oficial y descargo, en placa quieta. |
+**Mesa de continuidad:** El titulo queda fijo arriba en los cuatro frames y es el unico elemento que no se mueve: es el hilo. `cut` entre frames salvo el paso al cierre, que es un `crossfade` para bajar el ritmo antes de la fuente.
 
-## Composición por frame
+## Frame 1 — No es callarse
 
-### Frame 01 — Apertura (5s)
+- scene: NO ES CALLARSE,NI IMPONERSE
+- voiceover: ""
+- duration: 10.75s
+- poster: 4s
+- transition_in: cut
+- status: animated
+- src: compositions/frames/01-no-es-callarse.html
+- type: gancho
+- narrationRole: Nombra la confusion con la que llega el publico: asertivo se confunde con "decir lo que uno quiere" o con "no contradecir nunca". Separa las dos cosas antes de proponer la tecnica.
+- keyMessage: Comunicar asertivamente no es imponer la propia postura ni ceder en silencio: es reconocer la del otro y expresar la propia.
 
-- Desde 0s hasta 5s
-- Plantea el problema en una frase, sin rodeos.
-- Copy: solo de la lista de hechos verificados de `INVESTIGACION.md`.
+Beats:
+  - 0.0-1.4s: el rotulo mono y la primera frase del titular, a sangre. Entrada con rise-and-fade.
+  - 1.4-3.2s: la segunda frase se suma en el mismo bloque, con el filete de acento al costado.
+  - 3.2-5.2s: la linea de apoyo entra desde mas abajo y desciende el ritmo hacia el corte.
 
-### Frame 02 — Gancho (5s)
+## Frame 2 — Tres posturas
 
-- Desde 5s hasta 10s
-- Un dato o contraste que fije la atencion.
-- Copy: solo de la lista de hechos verificados de `INVESTIGACION.md`.
+- scene: Tres formas de decirlo
+- voiceover: ""
+- duration: 10.75s
+- poster: 6s
+- transition_in: cut
+- status: animated
+- src: compositions/frames/02-tres-posturas.html
+- type: lista
+- narrationRole: Nombra las tres reacting y sus costos, para que el publico se ubique en una. Es la seccion de reconocimiento: verse en la pantalla es lo que hace que la informacion se guarde.
+- keyMessage: Asertivo reconoce al otro y dice lo propio. Agresivo impone. Pasivo cede y acumula.
 
-### Frame 03 — Mecanismo (14s)
+Beats:
+  - 0.0-1.0s: la regla superior, el rotulo y el titulo entran con fade corto.
+  - 1.0-5.5s: los tres items entran de a uno, cada uno con su filete. Ritmo parejo.
+  - 5.5-8.0s: lectura sostenida del bloque, sin movimiento nuevo.
 
-- Desde 10s hasta 24s
-- El cuerpo del curso: el paso a paso o la regla.
-- Copy: solo de la lista de hechos verificados de `INVESTIGACION.md`.
+## Frame 3 — Que funciona y que no
 
-### Frame 04 — Ejemplo (9s)
+- scene: Mismo tema, distinto resultado
+- voiceover: ""
+- duration: 10.75s
+- poster: 5s
+- transition_in: cut
+- status: animated
+- src: compositions/frames/03-que-funciona.html
+- type: par
+- narrationRole: Pone la consecuencia de cada lado en la misma pantalla. El lado izquierdo es el que gana, y el derecho existe para que el contraste sea real.
+- keyMessage: La comunicacion clara reduce malentendidos y acelera la solucion; imponer la postura dana la relacion.
 
-- Desde 24s hasta 33s
-- Un caso concreto que aterrizar el mecanismo.
-- Copy: solo de la lista de hechos verificados de `INVESTIGACION.md`.
+Beats:
+  - 0.0-1.4s: rotulo, titulo y el filete superior entran.
+  - 1.4-3.0s: la columna izquierda entra como bloque macizo, con su filete vertical.
+  - 3.0-5.5s: la columna derecha entra despues, en contour. El retraso de 0.5s hace que la comparison se lea.
 
-### Frame 05 — Cierre (7s)
+## Frame 4 — Los cuatro pasos
 
-- Desde 33s hasta 40s
-- La regla que la persona se lleva.
-- Copy: solo de la lista de hechos verificados de `INVESTIGACION.md`.
+- scene: PRIMERA PERSONA,SOBRE CONDUCTA CONCRETA,Y ESCUCHAR ANTES DE RESPONDER
+- voiceover: ""
+- duration: 10.75s
+- poster: 4s
+- transition_in: crossfade
+- status: animated
+- src: compositions/frames/04-cuatro-pasos.html
+- type: cierre
+- narrationRole: Cierra con la estructura accionable: la parte que el espectador puede aplicar manana. Baja el ritmo y deja la fuente a la vista.
+- keyMessage: Mensajes en primera persona sobre conducta concreta y su efecto, y escuchar antes de responder.
 
-### Frame 06 — Fuente (7s)
+Beats:
+  - 0.0-1.2s: rotulo y filete de acento; la regla entra frase por frase.
+  - 1.2-2.6s: la nota aclara que la fuente no respalda cifras de eficacia.
+  - 2.6-4.0s: el bloque de fuente se dibuja al pie y queda en lectura.
 
-- Desde 40s hasta 47s
-- Fuente oficial y descargo, en placa quieta.
-- Copy: solo de la lista de hechos verificados de `INVESTIGACION.md`.
+## Continuidad
 
-## Reglas de copy
+Transiciones:
 
-- Toda afirmacion en pantalla es rastreable a `INVESTIGACION.md`.
-- Si un dato no está verificado, no aparece.
-- Ningun monto en UTM, ningun plazo sin confirmar, ningun nombre de norma sin citar.
+  - 1 -> 2: cut
+  - 2 -> 3: cut
+  - 3 -> 4: cut

@@ -343,14 +343,14 @@
       "language": "es-CL",
       "angle": "habito",
       "narration": false,
-      "status": "research",
+      "status": "rendered",
       "fuente": "Material de desarrollo de habilidades de comunicacion; guias de trabajo en equipo",
       "video": {
-        "composicion": null,
-        "framesMontadas": 0,
+        "composicion": "/composiciones/comunicacion-asertiva/",
+        "framesMontadas": 4,
         "mp4": "/videos/comunicacion-asertiva.mp4",
-        "disponible": false,
-        "tamano": null
+        "disponible": true,
+        "tamano": 12270144
       }
     },
     {
