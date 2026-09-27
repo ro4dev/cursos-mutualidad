@@ -1,0 +1,14 @@
+{
+  "slug": "nuevo-trabajador",
+  "titulo": "Induccion al nuevo trabajador",
+  "area": "Onboarding",
+  "mensaje": "La primera semana define la cultura que se vive: reglas claras, accesos listos y un acompanamiento real, no un manual.",
+  "duracion": 60,
+  "aspect": "1920x1080",
+  "language": "es-CL",
+  "angle": "proceso",
+  "narration": false,
+  "status": "research",
+  "fuente": "Buenas practicas de induccion laboral; normativa de capacitacion y prevention",
+  "video": null
+}
