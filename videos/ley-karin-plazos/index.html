@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en" data-resolution="landscape">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=1920, height=1080" />
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js" integrity="sha384-sG0Hv1tP1lZCk9KQmrIbY/XNwi+OY84GQqhMscbnsoBFqAz8KNCil1kvfL3Hbbk2" crossorigin="anonymous"></script>
     <style>
       * {
         margin: 0;
@@ -12,25 +12,23 @@
       }
       html,
       body {
-        margin: 0;
         width: 1920px;
         height: 1080px;
         overflow: hidden;
-        background: #0a0a0a;
+        background: #000;
       }
       #root {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #efe7d4;
+      }
+      .scene {
+        position: absolute;
+        inset: 0;
         width: 100%;
         height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
-      }
-      #title {
-        color: #f4f4f5;
-        font-size: 72px;
-        font-weight: 600;
-        letter-spacing: -0.03em;
       }
     </style>
   </head>
@@ -39,17 +37,130 @@
       id="root"
       data-composition-id="main"
       data-start="0"
-      data-duration="10"
+      data-duration="75"
       data-width="1920"
       data-height="1080"
     >
-      <h1 id="title" class="clip" data-start="0" data-duration="10" data-track-index="0">Title</h1>
+      <div
+        id="el-01-una-vez-basta"
+        class="scene"
+        data-composition-id="01-una-vez-basta"
+        data-composition-src="compositions/frames/01-una-vez-basta.html"
+        data-start="0"
+        data-duration="6.5"
+        data-track-index="0"
+      ></div>
+
+      <div
+        id="el-02-el-reloj"
+        class="scene"
+        data-composition-id="02-el-reloj"
+        data-composition-src="compositions/frames/02-el-reloj.html"
+        data-start="6"
+        data-duration="8.5"
+        data-track-index="1"
+      ></div>
+
+      <div
+        id="el-03-plazo-2-dias"
+        class="scene"
+        data-composition-id="03-plazo-2-dias"
+        data-composition-src="compositions/frames/03-plazo-2-dias.html"
+        data-start="14"
+        data-duration="10.5"
+        data-track-index="0"
+      ></div>
+
+      <div
+        id="el-04-plazo-3-dias"
+        class="scene"
+        data-composition-id="04-plazo-3-dias"
+        data-composition-src="compositions/frames/04-plazo-3-dias.html"
+        data-start="24"
+        data-duration="9.5"
+        data-track-index="1"
+      ></div>
+
+      <div
+        id="el-05-plazo-30-dias"
+        class="scene"
+        data-composition-id="05-plazo-30-dias"
+        data-composition-src="compositions/frames/05-plazo-30-dias.html"
+        data-start="33"
+        data-duration="11.5"
+        data-track-index="0"
+      ></div>
+
+      <div
+        id="el-06-plazo-15-dias"
+        class="scene"
+        data-composition-id="06-plazo-15-dias"
+        data-composition-src="compositions/frames/06-plazo-15-dias.html"
+        data-start="44"
+        data-duration="10"
+        data-track-index="1"
+      ></div>
+
+      <div
+        id="el-07-dos-rutas"
+        class="scene"
+        data-composition-id="07-dos-rutas"
+        data-composition-src="compositions/frames/07-dos-rutas.html"
+        data-start="54"
+        data-duration="9.5"
+        data-track-index="0"
+      ></div>
+
+      <div
+        id="el-08-cuatro-principios"
+        class="scene"
+        data-composition-id="08-cuatro-principios"
+        data-composition-src="compositions/frames/08-cuatro-principios.html"
+        data-start="63"
+        data-duration="8.5"
+        data-track-index="1"
+      ></div>
+
+      <div
+        id="el-09-fuente-descargo"
+        class="scene"
+        data-composition-id="09-fuente-descargo"
+        data-composition-src="compositions/frames/09-fuente-descargo.html"
+        data-start="71"
+        data-duration="4"
+        data-track-index="0"
+      ></div>
+
     </div>
+
     <script>
-      const tl = gsap.timeline({ paused: true });
-      // Example: tl.fromTo("#title", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.6 }, 0);
-      window.__timelines["main"] = tl;
-      tl.seek(0);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+      // ── frame transitions (injected by transitions.mjs) ──
+      (function () { var tl = window.__timelines["main"];
+        tl.to("#el-01-una-vez-basta", { opacity: 0, duration: 0.5, ease: "power2.inOut" }, 6);
+        tl.fromTo("#el-02-el-reloj", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.inOut" }, 6);
+        tl.addLabel("hf:transition:01-una-vez-basta:02-el-reloj:crossfade", 6);
+        tl.to("#el-02-el-reloj", { x: 1920, duration: 0.5, ease: "power3.inOut" }, 14);
+        tl.fromTo("#el-03-plazo-2-dias", { x: -1920, opacity: 1 }, { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }, 14);
+        tl.addLabel("hf:transition:02-el-reloj:03-plazo-2-dias:push-slide", 14);
+        tl.to("#el-03-plazo-2-dias", { x: 1920, duration: 0.5, ease: "power3.inOut" }, 24);
+        tl.fromTo("#el-04-plazo-3-dias", { x: -1920, opacity: 1 }, { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }, 24);
+        tl.addLabel("hf:transition:03-plazo-2-dias:04-plazo-3-dias:push-slide", 24);
+        tl.to("#el-04-plazo-3-dias", { x: 1920, duration: 0.5, ease: "power3.inOut" }, 33);
+        tl.fromTo("#el-05-plazo-30-dias", { x: -1920, opacity: 1 }, { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }, 33);
+        tl.addLabel("hf:transition:04-plazo-3-dias:05-plazo-30-dias:push-slide", 33);
+        tl.to("#el-05-plazo-30-dias", { x: 1920, duration: 0.5, ease: "power3.inOut" }, 44);
+        tl.fromTo("#el-06-plazo-15-dias", { x: -1920, opacity: 1 }, { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }, 44);
+        tl.addLabel("hf:transition:05-plazo-30-dias:06-plazo-15-dias:push-slide", 44);
+        tl.to("#el-07-dos-rutas", { opacity: 0, duration: 0.5, ease: "power2.inOut" }, 63);
+        tl.fromTo("#el-08-cuatro-principios", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.inOut" }, 63);
+        tl.addLabel("hf:transition:07-dos-rutas:08-cuatro-principios:crossfade", 63);
+        tl.to("#el-08-cuatro-principios", { opacity: 0, duration: 0.5, ease: "power2.inOut" }, 71);
+        tl.fromTo("#el-09-fuente-descargo", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.inOut" }, 71);
+        tl.addLabel("hf:transition:08-cuatro-principios:09-fuente-descargo:crossfade", 71);
+        tl.to({}, { duration: 75 }, 0); // full-span anchor — main.duration() == composition total (Studio master duration)
+      })();
     </script>
   </body>
 </html>
