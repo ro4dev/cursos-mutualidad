@@ -1,0 +1,30 @@
+[
+  {
+    "id": "01-asumido-y-verificable",
+    "tipo": "gancho",
+    "titulo": "Asumido y verificable",
+    "duracion": 10.75,
+    "transition_in": "cut"
+  },
+  {
+    "id": "02-adentro-y-afuera",
+    "tipo": "par",
+    "titulo": "Adentro y afuera",
+    "duracion": 10.75,
+    "transition_in": "cut"
+  },
+  {
+    "id": "03-las-tres-cosas",
+    "tipo": "lista",
+    "titulo": "Las tres cosas",
+    "duracion": 10.75,
+    "transition_in": "cut"
+  },
+  {
+    "id": "04-sin-transparencia-no-hay",
+    "tipo": "cierre",
+    "titulo": "Sin transparencia no hay",
+    "duracion": 10.75,
+    "transition_in": "crossfade"
+  }
+]
