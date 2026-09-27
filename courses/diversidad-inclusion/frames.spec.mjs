@@ -40,7 +40,7 @@ export default {
         kicker: 'DIVERSIDAD E INCLUSIÓN',
         grande: ['TENER PERSONAS DISTINTAS', 'NO ES LO MISMO QUE INCLUIRLAS'],
         remark:
-          'Una es la variedad de origen, edad, genero, orientación, capacidades o experiencias. La otra es que todas se escuchen.',
+          'Una es la variedad de origen, edad, género, orientación, capacidades o experiencias. La otra es que todas se escuchen.',
       },
     },
 
@@ -65,7 +65,7 @@ export default {
         izq: {
           label: 'Inclusión',
           head: 'Que todas las voces se escuchen',
-          body: 'Garantizar que la variedad de origen, edad, genero, orientación, capacidades o experiencias pueda participar y ser escuchada.',
+          body: 'Garantizar que la variedad de origen, edad, género, orientación, capacidades o experiencias pueda participar y ser escuchada.',
         },
         der: {
           label: 'Diversidad',
