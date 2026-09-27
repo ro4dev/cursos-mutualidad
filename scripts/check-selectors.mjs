@@ -27,9 +27,8 @@
  * Codigo de salida 1 si algo falla, para poder cortarlo en un pipeline.
  */
 
-import { readFileSync, readdirSync, statSync } from 'node:fs';
-import { join, relative } from 'node:path';
-import { dirname } from 'node:path';
+import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
+import { join, relative, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -153,15 +152,18 @@ const args = process.argv.slice(2);
 
 /** Los .html de un directorio de frames, ordenados por nombre. */
 function framesDe(dir) {
-  try {
-    if (!statSync(dir).isDirectory()) return [];
-  } catch {
-    return [];
-  }
   return readdirSync(dir)
     .filter((a) => a.endsWith('.html'))
     .sort()
     .map((a) => join(dir, a));
+}
+
+function esDirectorio(ruta) {
+  try {
+    return statSync(ruta).isDirectory();
+  } catch {
+    return false;
+  }
 }
 
 /** Sin argumentos: recorre todos los proyectos de videos/ y todos sus frames. */
@@ -174,13 +176,53 @@ function descubrir() {
     console.error(`no existe ${relative(ROOT, base)}/`);
     process.exit(1);
   }
-  return proyectos.flatMap((proyecto) => framesDe(join(base, proyecto, 'compositions', 'frames')));
+  return proyectos.flatMap((proyecto) => {
+    const dir = join(base, proyecto, 'compositions', 'frames');
+    // Un proyecto recien scaffoldeado todavia no tiene carpeta de frames: eso
+    // no es un error del guard, es que el proyecto aun no esta compuesto.
+    return esDirectorio(dir) ? framesDe(dir) : [];
+  });
 }
 
-/** Un argumento puede ser un archivo o un directorio de frames. */
-const rutas = args.length > 0 ? args.flatMap((a) => framesDe(a).length > 0 ? framesDe(a) : [a]) : descubrir();
+/**
+ * Un argumento puede ser un archivo o un directorio de frames. Un directorio
+ * se expande aunque este vacio — distinguir "carpeta sin frames" de "ruta que
+ * no existe" importa: lo primero es un proyecto sin escribir, lo segundo es un
+ * argumento mal escrito.
+ */
+function expandir(argumentos) {
+  const rutas = [];
+  const inexistentes = [];
+  for (const a of argumentos) {
+    if (esDirectorio(a)) {
+      const encontrados = framesDe(a);
+      if (encontrados.length === 0) {
+        console.log(`· ${relative(ROOT, a)}/ no tiene frames todavia`);
+      }
+      rutas.push(...encontrados);
+      continue;
+    }
+    if (!existsSync(a)) {
+      inexistentes.push(a);
+      continue;
+    }
+    rutas.push(a);
+  }
+  if (inexistentes.length > 0) {
+    console.error(`no existe: ${inexistentes.join(', ')}`);
+    process.exit(1);
+  }
+  return rutas;
+}
+
+const esLista = args.length > 0;
+const rutas = esLista ? expandir(args) : descubrir();
 if (rutas.length === 0) {
-  console.log('no hay frames que revisar');
+  console.log(
+    esLista
+      ? '\\nnada que revisar: ningun argumento apuntaba a un frame'
+      : '\\nOK: ningun proyecto de videos/ tiene frames todavia',
+  );
   process.exit(0);
 }
 
