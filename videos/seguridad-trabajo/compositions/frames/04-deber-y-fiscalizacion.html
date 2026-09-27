@@ -1,0 +1,342 @@
+<template>
+  <div data-hf-id="hf-jurq" id="04-deber-y-fiscalizacion" data-composition-id="04-deber-y-fiscalizacion" data-start="0" data-duration="12" data-width="1920" data-height="1080">
+    <style>
+      /* frame.md typography, resolved to the real woff2 files shipped in
+         capture/assets/fonts. Both are the latin subset variable cuts, so
+         the render host never falls back to a generic family. */
+      @font-face {
+        font-family: 'Source Serif 4';
+        font-style: normal;
+        font-weight: 200 900;
+        font-display: block;
+        src: url('capture/assets/fonts/source-serif-4-latin.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'JetBrains Mono';
+        font-style: normal;
+        font-weight: 100 800;
+        font-display: block;
+        src: url('capture/assets/fonts/jetbrains-mono-latin.woff2') format('woff2');
+      }
+    </style>
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      /* ── Frame root — full 1920x1080 ground box, container-query basis ─── */
+      [id="04-deber-y-fiscalizacion"] {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        container-type: size;
+        isolation: isolate;
+        color: #1a1a17;
+        font-family: var(--font-display);
+      }
+
+      /* ── Full-bleed ground (own clip layer, never the root) ───────────── */
+      [id="04-deber-y-fiscalizacion-bg"] {
+        position: absolute;
+        inset: 0;
+        background: #efe7d4;
+      }
+
+      /* ── El mundo: una camara virtual. Todo lo que se mueve, sube aqui ── */
+      [id="04-deber-y-fiscalizacion-world"] {
+        --accent: #785c1b;
+        --accent-deep: #5d4610;
+        --fg: #1a1a17;
+        --bg: #efe7d4;
+        --font-display: "Source Serif 4", Georgia, serif;
+        --font-mono: "JetBrains Mono", ui-monospace, monospace;
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+      }
+
+[id="04-deber-y-fiscalizacion-toprule"] {
+        position: absolute;
+        left: 96px;
+        top: 96px;
+        width: 1728px;
+        height: 2px;
+        background: #2e4a2a;
+        transform-origin: 0% 50%;
+        will-change: transform;
+      }
+
+[id="04-deber-y-fiscalizacion-kicker"] {
+        position: absolute;
+        left: 96px;
+        top: 118px;
+        margin: 0;
+        color: #3a5a36;
+        font-family: var(--font-mono);
+        font-size: 1.1458cqw;
+        font-weight: 500;
+        line-height: 1.25;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        will-change: transform, opacity;
+      }
+
+[id="04-deber-y-fiscalizacion-titulo"] {
+        position: absolute;
+        left: 96px;
+        top: 170px;
+        width: 1200px;
+        margin: 0;
+        color: #1a1a17;
+        font-family: var(--font-display);
+        font-size: 2.9167cqw;
+        font-weight: 500;
+        line-height: 1.06;
+        letter-spacing: -0.01em;
+        will-change: transform, opacity;
+      }
+
+[id="04-deber-y-fiscalizacion-i0-rule"] {
+        position: absolute;
+        left: 96px;
+        top: 404px;
+        width: 1688px;
+        height: 2px;
+        background: #3a5a36;
+        transform-origin: 0% 50%;
+        will-change: transform;
+      }
+
+[id="04-deber-y-fiscalizacion-i0-num"] {
+        position: absolute;
+        left: 96px;
+        top: 430px;
+        width: 76px;
+        margin: 0;
+        color: #785c1b;
+        font-family: var(--font-mono);
+        font-size: 1.3542cqw;
+        font-weight: 500;
+        line-height: 1.25;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+
+[id="04-deber-y-fiscalizacion-i0-head"] {
+        position: absolute;
+        left: 196px;
+        top: 420px;
+        width: 470px;
+        margin: 0;
+        color: #1a1a17;
+        font-family: var(--font-display);
+        font-size: 2.0833cqw;
+        font-weight: 500;
+        line-height: 1.1;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+
+[id="04-deber-y-fiscalizacion-i0-gloss"] {
+        position: absolute;
+        left: 716px;
+        top: 424px;
+        width: 1068px;
+        margin: 0;
+        color: #243a21;
+        font-family: var(--font-display);
+        font-size: 1.4063cqw;
+        font-weight: 400;
+        line-height: 1.4;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+
+[id="04-deber-y-fiscalizacion-i1-rule"] {
+        position: absolute;
+        left: 96px;
+        top: 534px;
+        width: 1688px;
+        height: 2px;
+        background: #3a5a36;
+        transform-origin: 0% 50%;
+        will-change: transform;
+      }
+
+[id="04-deber-y-fiscalizacion-i1-num"] {
+        position: absolute;
+        left: 96px;
+        top: 560px;
+        width: 76px;
+        margin: 0;
+        color: #785c1b;
+        font-family: var(--font-mono);
+        font-size: 1.3542cqw;
+        font-weight: 500;
+        line-height: 1.25;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+
+[id="04-deber-y-fiscalizacion-i1-head"] {
+        position: absolute;
+        left: 196px;
+        top: 550px;
+        width: 470px;
+        margin: 0;
+        color: #1a1a17;
+        font-family: var(--font-display);
+        font-size: 2.0833cqw;
+        font-weight: 500;
+        line-height: 1.1;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+
+[id="04-deber-y-fiscalizacion-i1-gloss"] {
+        position: absolute;
+        left: 716px;
+        top: 554px;
+        width: 1068px;
+        margin: 0;
+        color: #243a21;
+        font-family: var(--font-display);
+        font-size: 1.4063cqw;
+        font-weight: 400;
+        line-height: 1.4;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+
+[id="04-deber-y-fiscalizacion-i2-rule"] {
+        position: absolute;
+        left: 96px;
+        top: 664px;
+        width: 1688px;
+        height: 2px;
+        background: #3a5a36;
+        transform-origin: 0% 50%;
+        will-change: transform;
+      }
+
+[id="04-deber-y-fiscalizacion-i2-num"] {
+        position: absolute;
+        left: 96px;
+        top: 690px;
+        width: 76px;
+        margin: 0;
+        color: #785c1b;
+        font-family: var(--font-mono);
+        font-size: 1.3542cqw;
+        font-weight: 500;
+        line-height: 1.25;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+
+[id="04-deber-y-fiscalizacion-i2-head"] {
+        position: absolute;
+        left: 196px;
+        top: 680px;
+        width: 470px;
+        margin: 0;
+        color: #1a1a17;
+        font-family: var(--font-display);
+        font-size: 2.0833cqw;
+        font-weight: 500;
+        line-height: 1.1;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+
+[id="04-deber-y-fiscalizacion-i2-gloss"] {
+        position: absolute;
+        left: 716px;
+        top: 684px;
+        width: 1068px;
+        margin: 0;
+        color: #243a21;
+        font-family: var(--font-display);
+        font-size: 1.4063cqw;
+        font-weight: 400;
+        line-height: 1.4;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+    </style>
+
+      <div data-hf-id="hf-f7t6" id="04-deber-y-fiscalizacion-bg" class="clip" data-start="0" data-duration="12" data-track-index="0"></div>
+    <div data-hf-id="hf-iw7b" id="04-deber-y-fiscalizacion-world" class="clip" data-start="0" data-duration="12" data-track-index="1">      <span data-hf-id="hf-puym" id="04-deber-y-fiscalizacion-toprule"></span>      <div data-hf-id="hf-7mbs" id="04-deber-y-fiscalizacion-kicker-w">        <span data-hf-id="hf-na54" id="04-deber-y-fiscalizacion-kicker">EL OTRO LADO</span></div>      <div data-hf-id="hf-pf4s" id="04-deber-y-fiscalizacion-titulo-w">        <h2 data-hf-id="hf-b4qk" id="04-deber-y-fiscalizacion-titulo">Deber del trabajador y fiscalización</h2></div>      <div data-hf-id="hf-h3p4" id="04-deber-y-fiscalizacion-i0-w">        <span data-hf-id="hf-ukbl" id="04-deber-y-fiscalizacion-i0-rule"></span>        <span data-hf-id="hf-6ba5" id="04-deber-y-fiscalizacion-i0-num">01</span>        <h3 data-hf-id="hf-27ut" id="04-deber-y-fiscalizacion-i0-head">Deber del trabajador</h3>        <p data-hf-id="hf-4c2f" id="04-deber-y-fiscalizacion-i0-gloss">Usar los EPP, informar situaciones peligrosas y colaborar en la investigación de incidentes.</p></div>      <div data-hf-id="hf-5pan" id="04-deber-y-fiscalizacion-i1-w">        <span data-hf-id="hf-utok" id="04-deber-y-fiscalizacion-i1-rule"></span>        <span data-hf-id="hf-e756" id="04-deber-y-fiscalizacion-i1-num">02</span>        <h3 data-hf-id="hf-42do" id="04-deber-y-fiscalizacion-i1-head">Fiscalización</h3>        <p data-hf-id="hf-zcn4" id="04-deber-y-fiscalizacion-i1-gloss">La Dirección del Trabajo y las autoridades de higiene y seguridad pueden fiscalizar.</p></div>      <div data-hf-id="hf-chuy" id="04-deber-y-fiscalizacion-i2-w">        <span data-hf-id="hf-t2xr" id="04-deber-y-fiscalizacion-i2-rule"></span>        <span data-hf-id="hf-8fjr" id="04-deber-y-fiscalizacion-i2-num">03</span>        <h3 data-hf-id="hf-r2yf" id="04-deber-y-fiscalizacion-i2-head">Cultura y respeto</h3>        <p data-hf-id="hf-0i31" id="04-deber-y-fiscalizacion-i2-gloss">La decencia y el respeto se exigen en todos los niveles de la organización.</p></div></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      (function () {
+        "use strict";
+
+        // Ids and class names carry no custom tokens: every selector is an
+        // attribute or id selector, so sibling frames cannot collide.
+        var byId = function (id) {
+          return document.querySelector('[id="' + id + '"]');
+        };
+
+        // Cada id que este frame anima tiene que existir de verdad. Si falta
+        // uno, el tween seria sobre null y el reveal nunca correria — que es
+        // exactamente el bug que tubo el frame 09 del piloto.
+        var IDS = [
+          "04-deber-y-fiscalizacion-toprule",
+          "04-deber-y-fiscalizacion-kicker",
+          "04-deber-y-fiscalizacion-titulo",
+          "04-deber-y-fiscalizacion-i0-rule",
+          "04-deber-y-fiscalizacion-i0-num",
+          "04-deber-y-fiscalizacion-i0-head",
+          "04-deber-y-fiscalizacion-i0-gloss",
+          "04-deber-y-fiscalizacion-i1-rule",
+          "04-deber-y-fiscalizacion-i1-num",
+          "04-deber-y-fiscalizacion-i1-head",
+          "04-deber-y-fiscalizacion-i1-gloss",
+          "04-deber-y-fiscalizacion-i2-rule",
+          "04-deber-y-fiscalizacion-i2-num",
+          "04-deber-y-fiscalizacion-i2-head",
+          "04-deber-y-fiscalizacion-i2-gloss",
+        ];
+        var faltantes = IDS.filter(function (id) { return !byId(id); });
+        if (faltantes.length) {
+          throw new Error(
+            "[04-deber-y-fiscalizacion] ids sin elemento en el DOM: " + faltantes.join(", "),
+          );
+        }
+
+        var tl = gsap.timeline({ paused: true });
+
+
+        tl.fromTo(byId("04-deber-y-fiscalizacion-toprule"), { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power3.out" }, 0.1);
+        tl.fromTo(byId("04-deber-y-fiscalizacion-kicker"), { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 0.2);
+        tl.fromTo(byId("04-deber-y-fiscalizacion-titulo"), { opacity: 0, y: 26 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 0.45);
+
+        // — cada item entra con su filete, de arriba hacia abajo.
+        tl.fromTo(byId("04-deber-y-fiscalizacion-i0-rule"), { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power3.out" }, 0.95);
+        tl.fromTo(byId("04-deber-y-fiscalizacion-i0-num"), { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 1.01);
+        tl.fromTo(byId("04-deber-y-fiscalizacion-i0-head"), { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 1.07);
+        tl.fromTo(byId("04-deber-y-fiscalizacion-i0-gloss"), { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 1.15);
+        tl.fromTo(byId("04-deber-y-fiscalizacion-i1-rule"), { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power3.out" }, 1.29);
+        tl.fromTo(byId("04-deber-y-fiscalizacion-i1-num"), { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 1.35);
+        tl.fromTo(byId("04-deber-y-fiscalizacion-i1-head"), { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 1.41);
+        tl.fromTo(byId("04-deber-y-fiscalizacion-i1-gloss"), { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 1.49);
+        tl.fromTo(byId("04-deber-y-fiscalizacion-i2-rule"), { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power3.out" }, 1.63);
+        tl.fromTo(byId("04-deber-y-fiscalizacion-i2-num"), { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 1.69);
+        tl.fromTo(byId("04-deber-y-fiscalizacion-i2-head"), { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 1.75);
+        tl.fromTo(byId("04-deber-y-fiscalizacion-i2-gloss"), { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 1.83);
+
+        // hold the declared 11.5s window open without an exit tween
+        tl.to({}, { duration: 0.01 }, 11.49);
+
+        tl.seek(0);
+        window.__timelines = window.__timelines || {};
+        window.__timelines["04-deber-y-fiscalizacion"] = tl;
+      })();
+    </script>
+  </div>
+</template>
