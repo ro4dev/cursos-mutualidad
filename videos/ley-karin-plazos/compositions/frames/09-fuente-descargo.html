@@ -22,7 +22,7 @@
     woff2 font files (the project ships no local font files), declared as real
     @font-face rules so neither family can silently fall back.
   -->
-  <div id="root" data-composition-id="09-fuente-descargo" data-duration="4" data-fps="30" data-width="1920" data-height="1080">
+  <div data-hf-id="hf-c407" id="root" data-composition-id="09-fuente-descargo" data-duration="4" data-fps="30" data-width="1920" data-height="1080">
     <style>
       /* Pinned font files — real, verified woff2 assets. Source Serif 4 is the
          variable cut, so one face serves body 400 and display 500 with the
@@ -32,7 +32,7 @@
         font-style: normal;
         font-weight: 200 900;
         font-display: block;
-        src: url("https://fonts.gstatic.com/s/sourceserif4/v14/vEFI2_tTDB4M7-auWDN0ahZJW1gb8tc.woff2")
+        src: url("capture/assets/fonts/source-serif-4-latin.woff2")
           format("woff2");
         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
           U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
@@ -43,7 +43,7 @@
         font-style: normal;
         font-weight: 500;
         font-display: block;
-        src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8-qxTOlOV.woff2")
+        src: url("capture/assets/fonts/jetbrains-mono-latin.woff2")
           format("woff2");
         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
           U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
@@ -186,42 +186,30 @@
     </style>
 
     <!-- Track 0 — full-bleed cream ground. -->
-    <div
-      class="clip fd09-clip fd09-clip-ground" id="fd09-ground"
-      data-start="0"
-      data-duration="4"
-      data-track-index="0"
-    ></div>
+    <div data-hf-id="hf-mo3h" class="clip fd09-clip fd09-clip-ground" id="fd09-ground" data-start="0" data-duration="4" data-track-index="0"></div>
 
     <!-- Track 1 — mono topbar, present from t=0 (establish the opening state). -->
-    <div
-      class="clip fd09-clip" id="fd09-topbar"
-      data-start="0"
-      data-duration="4"
-      data-track-index="1"
-    >
-      <div class="fd09-topbar">
-        <span class="fd09-topbar-label">Fuente y descargo</span>
-        <span class="fd09-topbar-counter">09</span>
+    <div data-hf-id="hf-evm9" class="clip fd09-clip" id="fd09-topbar" data-start="0" data-duration="4" data-track-index="1">
+      <div data-hf-id="hf-duvo" class="fd09-topbar">
+        <span data-hf-id="hf-gdac" class="fd09-topbar-label">Fuente y descargo</span>
+        <span data-hf-id="hf-ucqz" class="fd09-topbar-counter">09</span>
       </div>
     </div>
 
     <!-- Track 2 — the source-and-disclaimer card. -->
-    <div
-      class="clip fd09-clip" data-start="0" data-duration="4" data-track-index="2"
-    >
-      <div id="fd09-card" class="fd09-card">
-        <div class="fd09-card-surface">
-          <div class="fd09-rule"></div>
-          <p class="fd09-tag">Fuente</p>
-          <p class="fd09-hero">Ley N° 21.643</p>
-          <p class="fd09-ref">Diario Oficial del 15 de enero de 2024</p>
-          <div class="fd09-rule"></div>
-          <p class="fd09-tag">Descargo</p>
-          <p class="fd09-disclaimer">
+    <div data-hf-id="hf-cx2u" class="clip fd09-clip" data-start="0" data-duration="4" data-track-index="2">
+      <div data-hf-id="hf-smc2" id="fd09-card" class="fd09-card">
+        <div data-hf-id="hf-dbyw" class="fd09-card-surface">
+          <div data-hf-id="hf-lypm" class="fd09-rule"></div>
+          <p data-hf-id="hf-90vm" class="fd09-tag">Fuente</p>
+          <p data-hf-id="hf-mb87" class="fd09-hero">Ley N° 21.643</p>
+          <p data-hf-id="hf-qx21" class="fd09-ref">Diario Oficial del 15 de enero de 2024</p>
+          <div data-hf-id="hf-8kv2" class="fd09-rule"></div>
+          <p data-hf-id="hf-nsff" class="fd09-tag">Descargo</p>
+          <p data-hf-id="hf-d56e" class="fd09-disclaimer">
             El material es informativo y no reemplaza la lectura de la ley.
           </p>
-          <p class="fd09-marker">No es asesoría legal</p>
+          <p data-hf-id="hf-frpy" class="fd09-marker">No es asesoría legal</p>
         </div>
       </div>
     </div>
@@ -236,7 +224,14 @@
         var root =
           document.querySelector('[data-composition-id="09-fuente-descargo"]') ||
           document.getElementById("root");
-        var card = root.querySelector('[id="09-fuente-descargo-card"]');
+        // El id real del elemento es "fd09-card" (prefijo fd09-, como el resto
+        // del frame). Antes se pedia "09-fuente-descargo-card", que no existe:
+        // el selector devolvia null, GSAP avisaba "target not found" y la
+        // tarjeta se quedaba en su estado estatico, sin el reveal.
+        var card = root.querySelector('[id="fd09-card"]');
+        if (!card) {
+          throw new Error("09-fuente-descargo: no se encontro [id=\"fd09-card\"]");
+        }
 
         var DURATION = 4; // frame length, fixed upstream — never stretched to fill
         var MOVE_IN = 1.45; // Scene 1: the one restrained move, lands inside 0.0–1.6s
