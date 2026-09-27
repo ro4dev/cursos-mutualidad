@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js" integrity="sha384-sG0Hv1tP1lZCk9KQmrIbY/XNwi+OY84GQqhMscbnsoBFqAz8KNCil1kvfL3Hbbk2" crossorigin="anonymous"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #000;
+      }
+      #root {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #efe7d4;
+      }
+      .scene {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="43"
+      data-width="1920"
+      data-height="1080"
+    >
+      <div
+        id="el-01-el-respeto-no-es-un-detalle"
+        class="scene"
+        data-composition-id="01-el-respeto-no-es-un-detalle"
+        data-composition-src="compositions/frames/01-el-respeto-no-es-un-detalle.html"
+        data-start="0"
+        data-duration="10.75"
+        data-track-index="0"
+      ></div>
+
+      <div
+        id="el-02-principio-y-conductas"
+        class="scene"
+        data-composition-id="02-principio-y-conductas"
+        data-composition-src="compositions/frames/02-principio-y-conductas.html"
+        data-start="10.75"
+        data-duration="10.75"
+        data-track-index="1"
+      ></div>
+
+      <div
+        id="el-03-cuando-se-denuncia"
+        class="scene"
+        data-composition-id="03-cuando-se-denuncia"
+        data-composition-src="compositions/frames/03-cuando-se-denuncia.html"
+        data-start="21.5"
+        data-duration="11.25"
+        data-track-index="0"
+      ></div>
+
+      <div
+        id="el-04-el-ambiente-respetuoso"
+        class="scene"
+        data-composition-id="04-el-ambiente-respetuoso"
+        data-composition-src="compositions/frames/04-el-ambiente-respetuoso.html"
+        data-start="32.25"
+        data-duration="10.75"
+        data-track-index="1"
+      ></div>
+
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+      // ── frame transitions (injected by transitions.mjs) ──
+      (function () { var tl = window.__timelines["main"];
+        tl.to("#el-03-cuando-se-denuncia", { opacity: 0, duration: 0.5, ease: "power2.inOut" }, 32.25);
+        tl.fromTo("#el-04-el-ambiente-respetuoso", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.inOut" }, 32.25);
+        tl.addLabel("hf:transition:03-cuando-se-denuncia:04-el-ambiente-respetuoso:crossfade", 32.25);
+        tl.to({}, { duration: 43 }, 0); // full-span anchor — main.duration() == composition total (Studio master duration)
+      })();
+    </script>
+  </body>
+</html>
