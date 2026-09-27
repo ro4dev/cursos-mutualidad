@@ -183,14 +183,14 @@
       "language": "es-CL",
       "angle": "habito",
       "narration": false,
-      "status": "research",
+      "status": "rendered",
       "fuente": "Guia de ergonomia para trabajo de oficina; recomendaciones de salud ocupacional",
       "video": {
-        "composicion": null,
-        "framesMontadas": 0,
+        "composicion": "/composiciones/ergonomia-oficina/",
+        "framesMontadas": 4,
         "mp4": "/videos/ergonomia-oficina.mp4",
-        "disponible": false,
-        "tamano": null
+        "disponible": true,
+        "tamano": 13135110
       }
     },
     {

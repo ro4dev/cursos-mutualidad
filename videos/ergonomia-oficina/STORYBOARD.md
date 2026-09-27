@@ -1,65 +1,97 @@
-# Storyboard — Ergonomia en la oficina
+---
+format: 1920x1080
+duration: 43s
+message: "La postura no se aguanta sola: se sostiene con cinco ajustes concretos que cualquier puesto de trabajo puede hacer hoy."
+arc: concept-explainer with checklist
+audience: "Personal de mutualidades y oficinas en Chile"
+mode: autonomous
+music: none
+---
 
-> Borrador de estructura. La composicion final se genera con el skill
-> `faceless-explainer`; este archivo fija el ritmo y el reparto del tiempo.
+# STORYBOARD — Ergonomia en la oficina
 
-- **Duración total**: 45s
-- **Aspecto**: 1920x1080
-- **Idioma**: es-CL
-- **Narración**: no (video mudo, tipografia fuerte)
-- **Ángulo**: habito
+## Video direction
 
-## Estructura
+**Estructura:** `concept-explainer with checklist`. El protagonista es el cuerpo de quien trabaja, y su mecanismo son cinco ajustes que caben en el mismo dia. Se abre con la idea, se desarrolla el ajuste que mas pesa, se recorre el resto como lista y se cierra con la regla.
 
-| Desde | Duración | Movimiento | Nota |
-|---|---|---|---|
-| 0s | 5s | Apertura | Plantea el problema en una frase, sin rodeos. |
-| 5s | 5s | Gancho | Un dato o contraste que fije la atencion. |
-| 10s | 14s | Mecanismo | El cuerpo del curso: el paso a paso o la regla. |
-| 24s | 9s | Ejemplo | Un caso concreto que aterrizar el mecanismo. |
-| 33s | 7s | Cierre | La regla que la persona se lleva. |
-| 40s | 7s | Fuente | Fuente oficial y descargo, en placa quieta. |
+**Mesa de continuidad:** El plano de la silla esta fijo toda la pieza: es la misma pantalla de principio a fin, y cada frame agrega un ajuste encima. `cut` entre frames, salvo el paso al cierre, que es un `crossfade` corto para bajar el ritmo antes de la fuente.
 
-## Composición por frame
+## Frame 1 — La postura no se aguanta sola
 
-### Frame 01 — Apertura (5s)
+- scene: LA POSTURA,NO SE AGUANTA SOLA
+- voiceover: ""
+- duration: 10.75s
+- poster: 4s
+- transition_in: cut
+- status: animated
+- src: compositions/frames/01-la-postura-no-se-aguanta.html
+- type: gancho
+- narrationRole: Pone el problema con el que llega el publico —"yo me siento mal y es normal"— y abre la promesa: no es un problema de CONSTITUCION, es de disposicion.
+- keyMessage: La postura de trabajo la define como esta armado el puesto, no como se aguanta la persona.
 
-- Desde 0s hasta 5s
-- Plantea el problema en una frase, sin rodeos.
-- Copy: solo de la lista de hechos verificados de `INVESTIGACION.md`.
+Beats:
+  - 0.0-1.4s: solo el rotulo mono y la primera linea de la frase, casi a sangre. Entrada con rise-and-fade.
+  - 1.4-3.2s: la segunda linea se suma en el mismo lugar, con el filete de acento al lado.
+  - 3.2-5.2s: la linea de apoyo entra desde abajo, mas chica, y baja el ritmo antes del corte.
 
-### Frame 02 — Gancho (5s)
+## Frame 2 — La mitad del cuerpo
 
-- Desde 5s hasta 10s
-- Un dato o contraste que fije la atencion.
-- Copy: solo de la lista de hechos verificados de `INVESTIGACION.md`.
+- scene: stat
+- voiceover: ""
+- duration: 10.75s
+- poster: 4s
+- transition_in: cut
+- status: animated
+- src: compositions/frames/02-la-mitad-del-cuerpo.html
+- type: stat
+- narrationRole: Da el dato mas concreto y mas accionable del curso, y lo separa del resto con un filete vertical: a partir de aca la pantalla esta en dos columnas, el numero y la accion.
+- keyMessage: La pantalla debe quedar a un brazo de distancia, con su borde superior a la altura de los ojos.
 
-### Frame 03 — Mecanismo (14s)
+Beats:
+  - 0.0-1.0s: la regla horizontal se dibuja y el rotulo entra. El numero aparece digito a digito.
+  - 1.0-2.2s: la unidad resuelve al lado y el filete vertical cae, partiendo la pantalla en dos.
+  - 2.2-4.5s: la bajada entra, y al final el microcopy de fuente cierra el bloque.
 
-- Desde 10s hasta 24s
-- El cuerpo del curso: el paso a paso o la regla.
-- Copy: solo de la lista de hechos verificados de `INVESTIGACION.md`.
+## Frame 3 — Los cinco ajustes
 
-### Frame 04 — Ejemplo (9s)
+- scene: Cinco ajustes, en orden
+- voiceover: ""
+- duration: 10.75s
+- poster: 6s
+- transition_in: cut
+- status: animated
+- src: compositions/frames/03-los-cinco-ajustes.html
+- type: lista
+- narrationRole: Es el cuerpo del curso: los cinco hechos verificados, en el orden en que se tocan al armar el puesto de arriba hacia abajo.
+- keyMessage: Monitor, silla, apoyos, teclado y una pausa cada 20-30 minutos: el puesto se arma de arriba hacia abajo.
 
-- Desde 24s hasta 33s
-- Un caso concreto que aterrizar el mecanismo.
-- Copy: solo de la lista de hechos verificados de `INVESTIGACION.md`.
+Beats:
+  - 0.0-1.0s: la regla superior y el rotulo entran; el titulo sube con fade corto.
+  - 1.0-5.5s: los cinco items entran de a uno, cada uno con su filete dibujandose. El ritmo es parejo: 0.34s entre items.
+  - 5.5-8.0s: lectura sostenida del bloque completo, sin movimiento nuevo.
 
-### Frame 05 — Cierre (7s)
+## Frame 4 — Lo que no se cita
 
-- Desde 33s hasta 40s
-- La regla que la persona se lleva.
-- Copy: solo de la lista de hechos verificados de `INVESTIGACION.md`.
+- scene: ARMA EL PUESTO,DE ARRIBA HACIA ABAJO,Y ALTERNA CADA 20-30 MINUTOS
+- voiceover: ""
+- duration: 10.75s
+- poster: 4s
+- transition_in: crossfade
+- status: animated
+- src: compositions/frames/04-lo-que-no-se-cita.html
+- type: cierre
+- narrationRole: Cierra con la regla accionable y baja el ritmo a plano de salida. Deja explicito que el curso no inventa cifras, que es lo que hace confiable un video de salud ocupacional.
+- keyMessage: Lo que se lleva: ajustar el puesto de arriba hacia abajo, y alternar cada 20-30 minutos.
 
-### Frame 06 — Fuente (7s)
+Beats:
+  - 0.0-1.2s: rotulo y filete de acento; la regla entra linea por linea.
+  - 1.2-2.6s: la nota aclara el alcance del curso, sin alarmismo.
+  - 2.6-4.0s: el bloque de fuente se dibuja al pie y queda en lectura.
 
-- Desde 40s hasta 47s
-- Fuente oficial y descargo, en placa quieta.
-- Copy: solo de la lista de hechos verificados de `INVESTIGACION.md`.
+## Continuidad
 
-## Reglas de copy
+Transiciones:
 
-- Toda afirmacion en pantalla es rastreable a `INVESTIGACION.md`.
-- Si un dato no está verificado, no aparece.
-- Ningun monto en UTM, ningun plazo sin confirmar, ningun nombre de norma sin citar.
+  - 1 -> 2: cut
+  - 2 -> 3: cut
+  - 3 -> 4: cut

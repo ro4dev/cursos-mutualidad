@@ -1,0 +1,471 @@
+<template>
+  <div data-hf-id="hf-hige" id="03-los-cinco-ajustes" data-composition-id="03-los-cinco-ajustes" data-start="0" data-duration="11.25" data-width="1920" data-height="1080">
+    <style>
+      /* frame.md typography, resolved to the real woff2 files shipped in
+         capture/assets/fonts. Both are the latin subset variable cuts, so
+         the render host never falls back to a generic family. */
+      @font-face {
+        font-family: 'Source Serif 4';
+        font-style: normal;
+        font-weight: 200 900;
+        font-display: block;
+        src: url('capture/assets/fonts/source-serif-4-latin.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'JetBrains Mono';
+        font-style: normal;
+        font-weight: 100 800;
+        font-display: block;
+        src: url('capture/assets/fonts/jetbrains-mono-latin.woff2') format('woff2');
+      }
+    </style>
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      /* ── Frame root — full 1920x1080 ground box, container-query basis ─── */
+      [id="03-los-cinco-ajustes"] {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        container-type: size;
+        isolation: isolate;
+        color: #1a1a17;
+        font-family: var(--font-display);
+      }
+
+      /* ── Full-bleed ground (own clip layer, never the root) ───────────── */
+      [id="03-los-cinco-ajustes-bg"] {
+        position: absolute;
+        inset: 0;
+        background: #efe7d4;
+      }
+
+      /* ── El mundo: una camara virtual. Todo lo que se mueve, sube aqui ── */
+      [id="03-los-cinco-ajustes-world"] {
+        --brand: undefined;
+        --accent: #3f7d6a;
+        --accent-2: undefined;
+        --fg: #1a1a17;
+        --bg: #efe7d4;
+        --font-display: "Source Serif 4", Georgia, serif;
+        --font-mono: "JetBrains Mono", ui-monospace, monospace;
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+      }
+
+[id="03-los-cinco-ajustes-toprule"] {
+        position: absolute;
+        left: 96px;
+        top: 96px;
+        width: 1728px;
+        height: 2px;
+        background: #2e4a2a;
+        transform-origin: 0% 50%;
+        will-change: transform;
+      }
+
+[id="03-los-cinco-ajustes-kicker"] {
+        position: absolute;
+        left: 96px;
+        top: 118px;
+        margin: 0;
+        color: #3a5a36;
+        font-family: var(--font-mono);
+        font-size: 1.1458cqw;
+        font-weight: 500;
+        line-height: 1.25;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        will-change: transform, opacity;
+      }
+
+[id="03-los-cinco-ajustes-titulo"] {
+        position: absolute;
+        left: 96px;
+        top: 170px;
+        width: 1200px;
+        margin: 0;
+        color: #1a1a17;
+        font-family: var(--font-display);
+        font-size: 2.9167cqw;
+        font-weight: 500;
+        line-height: 1.06;
+        letter-spacing: -0.01em;
+        will-change: transform, opacity;
+      }
+
+[id="03-los-cinco-ajustes-i0-rule"] {
+        position: absolute;
+        left: 96px;
+        top: 404px;
+        width: 1688px;
+        height: 2px;
+        background: #3a5a36;
+        transform-origin: 0% 50%;
+        will-change: transform;
+      }
+
+[id="03-los-cinco-ajustes-i0-num"] {
+        position: absolute;
+        left: 96px;
+        top: 430px;
+        width: 76px;
+        margin: 0;
+        color: #3f7d6a;
+        font-family: var(--font-mono);
+        font-size: 1.3542cqw;
+        font-weight: 500;
+        line-height: 1.25;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+
+[id="03-los-cinco-ajustes-i0-head"] {
+        position: absolute;
+        left: 196px;
+        top: 420px;
+        width: 470px;
+        margin: 0;
+        color: #1a1a17;
+        font-family: var(--font-display);
+        font-size: 2.0833cqw;
+        font-weight: 500;
+        line-height: 1.1;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+
+[id="03-los-cinco-ajustes-i0-gloss"] {
+        position: absolute;
+        left: 716px;
+        top: 424px;
+        width: 1068px;
+        margin: 0;
+        color: #243a21;
+        font-family: var(--font-display);
+        font-size: 1.4063cqw;
+        font-weight: 400;
+        line-height: 1.4;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+
+[id="03-los-cinco-ajustes-i1-rule"] {
+        position: absolute;
+        left: 96px;
+        top: 534px;
+        width: 1688px;
+        height: 2px;
+        background: #3a5a36;
+        transform-origin: 0% 50%;
+        will-change: transform;
+      }
+
+[id="03-los-cinco-ajustes-i1-num"] {
+        position: absolute;
+        left: 96px;
+        top: 560px;
+        width: 76px;
+        margin: 0;
+        color: #3f7d6a;
+        font-family: var(--font-mono);
+        font-size: 1.3542cqw;
+        font-weight: 500;
+        line-height: 1.25;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+
+[id="03-los-cinco-ajustes-i1-head"] {
+        position: absolute;
+        left: 196px;
+        top: 550px;
+        width: 470px;
+        margin: 0;
+        color: #1a1a17;
+        font-family: var(--font-display);
+        font-size: 2.0833cqw;
+        font-weight: 500;
+        line-height: 1.1;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+
+[id="03-los-cinco-ajustes-i1-gloss"] {
+        position: absolute;
+        left: 716px;
+        top: 554px;
+        width: 1068px;
+        margin: 0;
+        color: #243a21;
+        font-family: var(--font-display);
+        font-size: 1.4063cqw;
+        font-weight: 400;
+        line-height: 1.4;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+
+[id="03-los-cinco-ajustes-i2-rule"] {
+        position: absolute;
+        left: 96px;
+        top: 664px;
+        width: 1688px;
+        height: 2px;
+        background: #3a5a36;
+        transform-origin: 0% 50%;
+        will-change: transform;
+      }
+
+[id="03-los-cinco-ajustes-i2-num"] {
+        position: absolute;
+        left: 96px;
+        top: 690px;
+        width: 76px;
+        margin: 0;
+        color: #3f7d6a;
+        font-family: var(--font-mono);
+        font-size: 1.3542cqw;
+        font-weight: 500;
+        line-height: 1.25;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+
+[id="03-los-cinco-ajustes-i2-head"] {
+        position: absolute;
+        left: 196px;
+        top: 680px;
+        width: 470px;
+        margin: 0;
+        color: #1a1a17;
+        font-family: var(--font-display);
+        font-size: 2.0833cqw;
+        font-weight: 500;
+        line-height: 1.1;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+
+[id="03-los-cinco-ajustes-i2-gloss"] {
+        position: absolute;
+        left: 716px;
+        top: 684px;
+        width: 1068px;
+        margin: 0;
+        color: #243a21;
+        font-family: var(--font-display);
+        font-size: 1.4063cqw;
+        font-weight: 400;
+        line-height: 1.4;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+
+[id="03-los-cinco-ajustes-i3-rule"] {
+        position: absolute;
+        left: 96px;
+        top: 794px;
+        width: 1688px;
+        height: 2px;
+        background: #3a5a36;
+        transform-origin: 0% 50%;
+        will-change: transform;
+      }
+
+[id="03-los-cinco-ajustes-i3-num"] {
+        position: absolute;
+        left: 96px;
+        top: 820px;
+        width: 76px;
+        margin: 0;
+        color: #3f7d6a;
+        font-family: var(--font-mono);
+        font-size: 1.3542cqw;
+        font-weight: 500;
+        line-height: 1.25;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+
+[id="03-los-cinco-ajustes-i3-head"] {
+        position: absolute;
+        left: 196px;
+        top: 810px;
+        width: 470px;
+        margin: 0;
+        color: #1a1a17;
+        font-family: var(--font-display);
+        font-size: 2.0833cqw;
+        font-weight: 500;
+        line-height: 1.1;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+
+[id="03-los-cinco-ajustes-i3-gloss"] {
+        position: absolute;
+        left: 716px;
+        top: 814px;
+        width: 1068px;
+        margin: 0;
+        color: #243a21;
+        font-family: var(--font-display);
+        font-size: 1.4063cqw;
+        font-weight: 400;
+        line-height: 1.4;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+
+[id="03-los-cinco-ajustes-i4-rule"] {
+        position: absolute;
+        left: 96px;
+        top: 924px;
+        width: 1688px;
+        height: 2px;
+        background: #3a5a36;
+        transform-origin: 0% 50%;
+        will-change: transform;
+      }
+
+[id="03-los-cinco-ajustes-i4-num"] {
+        position: absolute;
+        left: 96px;
+        top: 950px;
+        width: 76px;
+        margin: 0;
+        color: #3f7d6a;
+        font-family: var(--font-mono);
+        font-size: 1.3542cqw;
+        font-weight: 500;
+        line-height: 1.25;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+
+[id="03-los-cinco-ajustes-i4-head"] {
+        position: absolute;
+        left: 196px;
+        top: 940px;
+        width: 470px;
+        margin: 0;
+        color: #1a1a17;
+        font-family: var(--font-display);
+        font-size: 2.0833cqw;
+        font-weight: 500;
+        line-height: 1.1;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+
+[id="03-los-cinco-ajustes-i4-gloss"] {
+        position: absolute;
+        left: 716px;
+        top: 944px;
+        width: 1068px;
+        margin: 0;
+        color: #243a21;
+        font-family: var(--font-display);
+        font-size: 1.4063cqw;
+        font-weight: 400;
+        line-height: 1.4;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+    </style>
+
+      <div data-hf-id="hf-1ec2" id="03-los-cinco-ajustes-bg" class="clip" data-start="0" data-duration="11.25" data-track-index="0"></div>
+    <div data-hf-id="hf-lwov" id="03-los-cinco-ajustes-world" class="clip" data-start="0" data-duration="11.25" data-track-index="1">      <span data-hf-id="hf-htkm" id="03-los-cinco-ajustes-toprule"></span>      <div data-hf-id="hf-pje8" id="03-los-cinco-ajustes-kicker-w">        <span data-hf-id="hf-zk1c" id="03-los-cinco-ajustes-kicker">DE ARRIBA HACIA ABAJO</span></div>      <div data-hf-id="hf-v1l0" id="03-los-cinco-ajustes-titulo-w">        <h2 data-hf-id="hf-4ed0" id="03-los-cinco-ajustes-titulo">Cinco ajustes, en orden</h2></div>      <div data-hf-id="hf-xork" id="03-los-cinco-ajustes-i0-w">        <span data-hf-id="hf-aumh" id="03-los-cinco-ajustes-i0-rule"></span>        <span data-hf-id="hf-tuw5" id="03-los-cinco-ajustes-i0-num">01</span>        <h3 data-hf-id="hf-gkst" id="03-los-cinco-ajustes-i0-head">Monitor</h3>        <p data-hf-id="hf-wkpr" id="03-los-cinco-ajustes-i0-gloss">A un brazo de distancia, borde superior a la altura de los ojos.</p></div>      <div data-hf-id="hf-bexj" id="03-los-cinco-ajustes-i1-w">        <span data-hf-id="hf-y6zw" id="03-los-cinco-ajustes-i1-rule"></span>        <span data-hf-id="hf-e8sy" id="03-los-cinco-ajustes-i1-num">02</span>        <h3 data-hf-id="hf-sq2c" id="03-los-cinco-ajustes-i1-head">Silla</h3>        <p data-hf-id="hf-mnd4" id="03-los-cinco-ajustes-i1-gloss">Altura de asiento con los pies bien apoyados y las rodillas a 90 grados.</p></div>      <div data-hf-id="hf-fij6" id="03-los-cinco-ajustes-i2-w">        <span data-hf-id="hf-xa5j" id="03-los-cinco-ajustes-i2-rule"></span>        <span data-hf-id="hf-uekf" id="03-los-cinco-ajustes-i2-num">03</span>        <h3 data-hf-id="hf-5j5r" id="03-los-cinco-ajustes-i2-head">Apoyos</h3>        <p data-hf-id="hf-nq8l" id="03-los-cinco-ajustes-i2-gloss">Antebrazos apoyados, codos a 90 grados, pies que no alcancen el suelo.</p></div>      <div data-hf-id="hf-1t3l" id="03-los-cinco-ajustes-i3-w">        <span data-hf-id="hf-nls2" id="03-los-cinco-ajustes-i3-rule"></span>        <span data-hf-id="hf-zsgs" id="03-los-cinco-ajustes-i3-num">04</span>        <h3 data-hf-id="hf-vfj2" id="03-los-cinco-ajustes-i3-head">Teclado</h3>        <p data-hf-id="hf-nb1y" id="03-los-cinco-ajustes-i3-gloss">Pegado a la mesa, para que el alcance no cargue el hombro.</p></div>      <div data-hf-id="hf-h9ho" id="03-los-cinco-ajustes-i4-w">        <span data-hf-id="hf-3sq5" id="03-los-cinco-ajustes-i4-rule"></span>        <span data-hf-id="hf-3xup" id="03-los-cinco-ajustes-i4-num">05</span>        <h3 data-hf-id="hf-kt49" id="03-los-cinco-ajustes-i4-head">Alternancia</h3>        <p data-hf-id="hf-fitn" id="03-los-cinco-ajustes-i4-gloss">Cambiar de postura cada 20-30 minutos mantiene el cuerpo alerta.</p></div></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      (function () {
+        "use strict";
+
+        // Ids and class names carry no custom tokens: every selector is an
+        // attribute or id selector, so sibling frames cannot collide.
+        var byId = function (id) {
+          return document.querySelector('[id="' + id + '"]');
+        };
+
+        // Cada id que este frame anima tiene que existir de verdad. Si falta
+        // uno, el tween seria sobre null y el reveal nunca correria — que es
+        // exactamente el bug que tubo el frame 09 del piloto.
+        var IDS = [
+          "03-los-cinco-ajustes-toprule",
+          "03-los-cinco-ajustes-kicker",
+          "03-los-cinco-ajustes-titulo",
+          "03-los-cinco-ajustes-i0-rule",
+          "03-los-cinco-ajustes-i0-num",
+          "03-los-cinco-ajustes-i0-head",
+          "03-los-cinco-ajustes-i0-gloss",
+          "03-los-cinco-ajustes-i1-rule",
+          "03-los-cinco-ajustes-i1-num",
+          "03-los-cinco-ajustes-i1-head",
+          "03-los-cinco-ajustes-i1-gloss",
+          "03-los-cinco-ajustes-i2-rule",
+          "03-los-cinco-ajustes-i2-num",
+          "03-los-cinco-ajustes-i2-head",
+          "03-los-cinco-ajustes-i2-gloss",
+          "03-los-cinco-ajustes-i3-rule",
+          "03-los-cinco-ajustes-i3-num",
+          "03-los-cinco-ajustes-i3-head",
+          "03-los-cinco-ajustes-i3-gloss",
+          "03-los-cinco-ajustes-i4-rule",
+          "03-los-cinco-ajustes-i4-num",
+          "03-los-cinco-ajustes-i4-head",
+          "03-los-cinco-ajustes-i4-gloss",
+        ];
+        var faltantes = IDS.filter(function (id) { return !byId(id); });
+        if (faltantes.length) {
+          throw new Error(
+            "[03-los-cinco-ajustes] ids sin elemento en el DOM: " + faltantes.join(", "),
+          );
+        }
+
+        var tl = gsap.timeline({ paused: true });
+
+
+        tl.fromTo(byId("03-los-cinco-ajustes-toprule"), { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power3.out" }, 0.1);
+        tl.fromTo(byId("03-los-cinco-ajustes-kicker"), { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 0.2);
+        tl.fromTo(byId("03-los-cinco-ajustes-titulo"), { opacity: 0, y: 26 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 0.45);
+
+        // — cada item entra con su filete, de arriba hacia abajo.
+        tl.fromTo(byId("03-los-cinco-ajustes-i0-rule"), { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power3.out" }, 0.95);
+        tl.fromTo(byId("03-los-cinco-ajustes-i0-num"), { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 1.01);
+        tl.fromTo(byId("03-los-cinco-ajustes-i0-head"), { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 1.07);
+        tl.fromTo(byId("03-los-cinco-ajustes-i0-gloss"), { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 1.15);
+        tl.fromTo(byId("03-los-cinco-ajustes-i1-rule"), { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power3.out" }, 1.29);
+        tl.fromTo(byId("03-los-cinco-ajustes-i1-num"), { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 1.35);
+        tl.fromTo(byId("03-los-cinco-ajustes-i1-head"), { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 1.41);
+        tl.fromTo(byId("03-los-cinco-ajustes-i1-gloss"), { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 1.49);
+        tl.fromTo(byId("03-los-cinco-ajustes-i2-rule"), { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power3.out" }, 1.63);
+        tl.fromTo(byId("03-los-cinco-ajustes-i2-num"), { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 1.69);
+        tl.fromTo(byId("03-los-cinco-ajustes-i2-head"), { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 1.75);
+        tl.fromTo(byId("03-los-cinco-ajustes-i2-gloss"), { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 1.83);
+        tl.fromTo(byId("03-los-cinco-ajustes-i3-rule"), { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power3.out" }, 1.97);
+        tl.fromTo(byId("03-los-cinco-ajustes-i3-num"), { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 2.03);
+        tl.fromTo(byId("03-los-cinco-ajustes-i3-head"), { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 2.09);
+        tl.fromTo(byId("03-los-cinco-ajustes-i3-gloss"), { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 2.17);
+        tl.fromTo(byId("03-los-cinco-ajustes-i4-rule"), { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power3.out" }, 2.31);
+        tl.fromTo(byId("03-los-cinco-ajustes-i4-num"), { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 2.37);
+        tl.fromTo(byId("03-los-cinco-ajustes-i4-head"), { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 2.43);
+        tl.fromTo(byId("03-los-cinco-ajustes-i4-gloss"), { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 2.51);
+
+        // hold the declared 10.75s window open without an exit tween
+        tl.to({}, { duration: 0.01 }, 10.74);
+
+        tl.seek(0);
+        window.__timelines = window.__timelines || {};
+        window.__timelines["03-los-cinco-ajustes"] = tl;
+      })();
+    </script>
+  </div>
+</template>
