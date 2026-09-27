@@ -1,65 +1,97 @@
-# Storyboard — Pausas activas: por que el cuerpo necesita moverse
+---
+format: 1920x1080
+duration: 43s
+message: "La carga se acumula mientras la posición no cambia. Alternar posturas y cortar seguido rinde más que descansar una sola vez y por mucho tiempo."
+arc: concept-explainer with a number
+audience: "Personal de mutualidades y empresas en Chile"
+mode: autonomous
+music: none
+---
 
-> Borrador de estructura. La composicion final se genera con el skill
-> `faceless-explainer`; este archivo fija el ritmo y el reparto del tiempo.
+# STORYBOARD — Pausas activas: por qué el cuerpo necesita moverse
 
-- **Duración total**: 45s
-- **Aspecto**: 1920x1080
-- **Idioma**: es-CL
-- **Narración**: no (video mudo, tipografia fuerte)
-- **Ángulo**: habito
+## Video direction
 
-## Estructura
+**Estructura:** `concept-explainer with a number`. Se abre con la idea de que la postura no se aguanta sola. Se da el número concreto que ordena todo lo demás, y después se recorre carga por carga: columna, vista, hidratación. Se cierra con el criterio que decide cuándo parar, que es frecuencia y no duración.
 
-| Desde | Duración | Movimiento | Nota |
-|---|---|---|---|
-| 0s | 5s | Apertura | Plantea el problema en una frase, sin rodeos. |
-| 5s | 5s | Gancho | Un dato o contraste que fije la atencion. |
-| 10s | 14s | Mecanismo | El cuerpo del curso: el paso a paso o la regla. |
-| 24s | 9s | Ejemplo | Un caso concreto que aterrizar el mecanismo. |
-| 33s | 7s | Cierre | La regla que la persona se lleva. |
-| 40s | 7s | Fuente | Fuente oficial y descargo, en placa quieta. |
+**Mesa de continuidad:** undefined
 
-## Composición por frame
+## Frame 1 — El cuerpo no aguanta solo
 
-### Frame 01 — Apertura (5s)
+- scene: EL CUERPO,NO SE MANTIENE SOLO
+- voiceover: ""
+- duration: 10.75s
+- poster: 4s
+- transition_in: cut
+- status: animated
+- src: compositions/frames/01-el-cuerpo-no-aguanta-solo.html
+- type: gancho
+- narrationRole: Saca las pausas del registro de "un descanso a la tarde". El público entra pensando que descansar es un premio y sale entendiendo que la carga se va acumulando mientras trabaja.
+- keyMessage: La posición estática prolongada carga la columna cervical y lumbar.
 
-- Desde 0s hasta 5s
-- Plantea el problema en una frase, sin rodeos.
-- Copy: solo de la lista de hechos verificados de `INVESTIGACION.md`.
+Beats:
+  - 0.0-1.4s: rótulo mono y la primera frase del titular, a sangre. Entrada con rise-and-fade.
+  - 1.4-3.2s: la segunda frase se suma en el mismo bloque, con el filete de acento al costado.
+  - 3.2-5.2s: la línea de apoyo entra desde abajo y desciende el ritmo hacia el corte.
 
-### Frame 02 — Gancho (5s)
+## Frame 2 — El número que alcanza
 
-- Desde 5s hasta 10s
-- Un dato o contraste que fije la atencion.
-- Copy: solo de la lista de hechos verificados de `INVESTIGACION.md`.
+- scene: stat
+- voiceover: ""
+- duration: 10.75s
+- poster: 5s
+- transition_in: cut
+- status: animated
+- src: compositions/frames/02-el-numero-que-alcanza.html
+- type: stat
+- narrationRole: Separa el dato concreto del resto con un filete vertical. Es el número que hace el resto de la lista accionable: si dos minutos alcanzan, no hace falta reservar media hora.
+- keyMessage: 2 a 5 minutos de movimiento bastan para restaurar la circulación y la postura.
 
-### Frame 03 — Mecanismo (14s)
+Beats:
+  - 0.0-1.0s: la regla horizontal se dibuja y el rótulo entra. El número aparece dígito a dígito.
+  - 1.0-2.2s: la unidad resuelve al lado y el filete vertical cae, partiendo la pantalla en dos.
+  - 2.2-4.5s: la bajada entra, y al final el microcopy de fuente cierra el bloque.
 
-- Desde 10s hasta 24s
-- El cuerpo del curso: el paso a paso o la regla.
-- Copy: solo de la lista de hechos verificados de `INVESTIGACION.md`.
+## Frame 3 — Las tres cargas
 
-### Frame 04 — Ejemplo (9s)
+- scene: Tres cargas, tres descargas
+- voiceover: ""
+- duration: 10.75s
+- poster: 6s
+- transition_in: cut
+- status: animated
+- src: compositions/frames/03-las-tres-cargas.html
+- type: lista
+- narrationRole: El bloque accionable, ordenado de lo más físico a lo más fino. Cada item dice qué carga se acumula y cuál es su descarga, para que la pausa se elija sola.
+- keyMessage: Columna, vista y concentración son tres cargas distintas, y cada una se alivia distinto.
 
-- Desde 24s hasta 33s
-- Un caso concreto que aterrizar el mecanismo.
-- Copy: solo de la lista de hechos verificados de `INVESTIGACION.md`.
+Beats:
+  - 0.0-1.0s: rótulo y titulo entran con fade corto.
+  - 1.0-4.5s: los tres items entran de a uno, cada uno con su filete dibujándose.
+  - 4.5-8.0s: lectura sostenida del bloque, sin movimiento nuevo.
 
-### Frame 05 — Cierre (7s)
+## Frame 4 — Frecuencia, no duración
 
-- Desde 33s hasta 40s
-- La regla que la persona se lleva.
-- Copy: solo de la lista de hechos verificados de `INVESTIGACION.md`.
+- scene: DESCANSOS CORTOS,Y FRECUENTES,RINDEN MÁS QUE UNO LARGO Y ÚNICO
+- voiceover: ""
+- duration: 10.75s
+- poster: 7s
+- transition_in: crossfade
+- status: animated
+- src: compositions/frames/04-frecuencia-no-duracion.html
+- type: cierre
+- narrationRole: Cierra bajando el ritmo con el criterio que decide cuando parar. Es lo que separa la pausa que rinde de la pausa que se pierde.
+- keyMessage: Descansos cortos y frecuentes rinden más que un descanso largo y único.
 
-### Frame 06 — Fuente (7s)
+Beats:
+  - 0.0-1.2s: rótulo y filete de acento; la regla entra frase por frase.
+  - 1.2-2.6s: la nota aclara que la decisión es de frecuencia, no de duración.
+  - 2.6-4.0s: el bloque de fuente se dibuja al pie y queda en lectura.
 
-- Desde 40s hasta 47s
-- Fuente oficial y descargo, en placa quieta.
-- Copy: solo de la lista de hechos verificados de `INVESTIGACION.md`.
+## Continuidad
 
-## Reglas de copy
+Transiciones:
 
-- Toda afirmacion en pantalla es rastreable a `INVESTIGACION.md`.
-- Si un dato no está verificado, no aparece.
-- Ningun monto en UTM, ningun plazo sin confirmar, ningun nombre de norma sin citar.
+  - 1 -> 2: cut
+  - 2 -> 3: cut
+  - 3 -> 4: cut
