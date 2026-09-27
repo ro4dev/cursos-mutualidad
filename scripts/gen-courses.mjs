@@ -48,8 +48,8 @@ export const PLAN = [
       ['Principios', 'Art. 211-B: confidencialidad, imparcialidad, celeridad y perspectiva de genero.'],
     ],
     no_verificado: [
-      'Multas en UTM por tipo de infracción: no se encontró tabla oficial vigente; el video NO debe citar montos.',
-      'Cantidad mínima de prenatalidades para considerar acoso sexual: el texto no fija un número.',
+      'Multas en UTM por tipo de infraccion: no se encontro tabla oficial vigente; el video NO debe citar montos.',
+      'Cantidad minima de conductas para configurar acoso sexual: el texto no fija un numero.',
     ],
   },
   {
@@ -93,7 +93,7 @@ export const PLAN = [
       ['Capacitacion', 'La implementacion debe incluir formacion para ambas partes.'],
     ],
     no_verificado: [
-      'Multas asociadas al incumplimiento delacctele trabajo: no se citan montos.',
+      'Multas asociadas al incumplimiento de la ley de teletrabajo: no se citan montos.',
     ],
   },
   {
@@ -199,7 +199,7 @@ export const PLAN = [
       ['Prevencion', 'No bloquear pasillos ni salidas; revisar cableado y equipos de calefaccion.'],
     ],
     no_verificado: [
-      'Numero unico de emergencias y plazos exactos de evacuacion: verificar con la unidad de Prevention local.',
+      'Numero unico de emergencias y plazos exactos de evacuacion: verificar con la unidad de prevencion de riesgos local.',
     ],
   },
   {
@@ -213,7 +213,7 @@ export const PLAN = [
     duracion: 60,
     fuente_principal: 'Ley N° 21.668 (salud mental y bienestar); orientaciones de salud mental laboral',
     facts: [
-      ['Derecho', 'La proteccion de la salud mental en el trabajo es un derecho, no una concession.'],
+      ['Derecho', 'La proteccion de la salud mental en el trabajo es un derecho, no una concesion.'],
       ['Riesgos', 'Carga excessiva, falta de control sobre el trabajo y trato hostil pueden afectar el bienestar.'],
       ['Factores', 'Descanso, apoyo social y claridad de roles son factores protectores.'],
       ['Prevencion', 'Medidas organizacionales: distribucion de carga, horarios, pausas y apoyo.'],
@@ -233,7 +233,7 @@ export const PLAN = [
       'Un codigo de conducta escrito no protege a nadie si no se conoce: la etica se juega en decisiones pequenas y cotidianas.',
     angle: 'normativa',
     duracion: 60,
-    fuente_principal: 'Ley N° 20.026 sobre probidad y conductafuncionaria; politica interna de la organizacion',
+    fuente_principal: 'Ley N° 20.026 sobre probidad y conducta funcionaria; politica interna de la organizacion',
     facts: [
       ['Objetivo', 'El codigo fija expectativas de conducta aceptables y no aceptables.'],
       ['Conflictos', 'Se declara todo conflicto de interés real o potencial.'],
@@ -293,7 +293,7 @@ export const PLAN = [
       'La primera semana define la cultura que se vive: reglas claras, accesos listos y un acompanamiento real, no un manual.',
     angle: 'proceso',
     duracion: 60,
-    fuente_principal: 'Buenas practicas de induccion laboral; normativa de capacitacion y prevention',
+    fuente_principal: 'Buenas practicas de induccion laboral; normativa de capacitacion y prevencion de riesgos',
     facts: [
       ['Objetivo', 'La induccion integra al nuevo colaborador: le muestra como se trabaja aqui.'],
       ['Informacion clave', 'Politicas de seguridad, conducta y horario se explican el primer dia.'],
@@ -412,7 +412,7 @@ export const PLAN = [
       'La responsabilidad social no es un eslogan: es el compromiso concreto con los trabajadores, la comunidad y el entorno, y se puede medir.',
     angle: 'normativa',
     duracion: 45,
-    fuente_principal: 'Conceptos de responsabilidad social empresarial; normativa de sustainability corporativa',
+    fuente_principal: 'Conceptos de responsabilidad social empresarial; normativa de sostenibilidad corporativa',
     facts: [
       ['Definicion', 'RSE es el compromiso de la empresa con su entorno, asumido y verificable.'],
       ['Trabajadores', 'El compromiso empieza por las condiciones de trabajo de la propia empresa.'],
@@ -431,7 +431,7 @@ export const PLAN = [
       'Un trabajo mas limpio no cuesta mas: ordenar, apagar y separar reduce costos y residuos. Lo pequeno suma cuando es sostenido.',
     angle: 'habito',
     duracion: 45,
-    fuente_principal: 'Ley N° 20.920 (residuos y economia circular); guias de sustainability operativa',
+    fuente_principal: 'Ley N° 20.920 (residuos y economia circular); guias de sostenibilidad operativa',
     facts: [
       ['Residuos', 'Separar y reciclar evita que lo que se puede recuperar termine en vertederos.'],
       ['Reuso', 'Reparar y reutilizar extiende la vida util de los equipos.'],
