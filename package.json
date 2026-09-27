@@ -11,9 +11,10 @@
     "catalog:check": "node scripts/validate-courses.mjs",
     "catalog:build": "node scripts/validate-courses.mjs && node scripts/build-catalog.mjs",
     "course:gen": "node scripts/gen-courses.mjs",
+    "frames:check": "node scripts/check-selectors.mjs",
     "video:build": "node scripts/render-all.mjs",
     "video:render": "node scripts/render-all.mjs",
-    "check": "npm run catalog:check && npm run catalog:build"
+    "check": "npm run catalog:check && node scripts/check-selectors.mjs && npm run catalog:build"
   },
   "dependencies": {
     "next": "16.3.6",
