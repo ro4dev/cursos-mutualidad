@@ -25,3 +25,4 @@ renders/
 .DS_Store
 Thumbs.db
 *.swp
+tsconfig.tsbuildinfo
