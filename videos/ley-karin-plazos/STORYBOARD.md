@@ -77,7 +77,7 @@ los repasos atmosféricos.
 - duration: 6s
 - poster: 4s
 - transition_in: cut
-- status: outline
+- status: animated
 - src: compositions/frames/01-una-vez-basta.html
 - type: hook
 - persuasion: Common-belief vs reality
@@ -116,7 +116,7 @@ corte: sin deriva, sin respiración.
 - duration: 8s
 - poster: 6s
 - transition_in: crossfade
-- status: outline
+- status: animated
 - src: compositions/frames/02-el-reloj.html
 - type: product_intro
 - persuasion: Concretization (abstracto → objeto tangible: un reloj)
@@ -155,7 +155,7 @@ slide-up y queda leído: "LA LEY PUSO UN RELOJ". Cámara estática hasta el cort
 - duration: 10s
 - poster: 8s
 - transition_in: push-slide RIGHT
-- status: outline
+- status: animated
 - src: compositions/frames/03-plazo-2-dias.html
 - type: feature_showcase
 - persuasion: Worked example with real numbers + Citation
@@ -195,7 +195,7 @@ estación como la primera que se agota — el único uso del acento en el cuerpo
 - duration: 9s
 - poster: 7s
 - transition_in: push-slide RIGHT
-- status: outline
+- status: animated
 - src: compositions/frames/04-plazo-3-dias.html
 - type: feature_showcase
 - persuasion: Numbered enumeration
@@ -232,7 +232,7 @@ firme bajo la estación.
 - duration: 11s
 - poster: 9s
 - transition_in: push-slide RIGHT
-- status: outline
+- status: animated
 - src: compositions/frames/05-plazo-30-dias.html
 - type: feature_showcase
 - persuasion: Rule of three + Concretization
@@ -242,9 +242,16 @@ firme bajo la estación.
 - roles: numeral = foreground subject · tira de cinco cajas = supporting (es la que hace la abstracción concreta) · tarjeta = supporting
 
 narrativeRole: El plazo que gobierna todo el proceso, y añade la trampa operativa
-que el público no espera: **es en días hábiles administrativos** y no se suspende.
-keyMessage: La investigación debe **concluir en 30 días hábiles administrativos**, y
-el reloj no se detiene por feriado ni por licencia.
+que el público no espera: **es en días hábiles administrativos** y se cuenta desde
+la notificación, no desde la denuncia.
+keyMessage: La investigación debe **concluir en 30 días hábiles administrativos**,
+contados desde la notificación.
+
+> Nota de verificación: la versión anterior de este bloque pedía "el reloj no se
+> detiene por feriado legal ni por licencia". Esa regla **no está en
+> `INVESTIGACION.md`** (art. 211-C no la enuncia) y se eliminó del guion antes de
+> componer. La línea de pantalla que quedó en su lugar —"y el plazo corre desde la
+> notificación"— sí está verificada: art. 211-C, "contados desde la notificacion".
 
 Adapt: la parada más ancha del eje — el espaciado entre estaciones no cambia, pero
 esta estación recibe un bloque de detalle más profundo, porque es la que más
@@ -260,8 +267,8 @@ ADMINISTRATIVOS".
 Scene 5 (6.8–8.4s): la abstracción se vuelve concreta — una tira de siete cajas
 aparece: cinco encendidas (L–V) y dos apagadas (S–D). La tira es el dato, no la
 decoración: es lo que el espectador no tenía claro.
-Scene 6 (8.4–9.6s): línea de advertencia, revelada por capa: "el reloj no se detiene
-por feriado legal ni por licencia".
+Scene 6 (8.4–9.6s): la trampa operativa, revelada por capa: "y el plazo corre desde
+la notificación".
 Scene 7 (9.6–11.0s): lectura sostenida, quieta.
 
 ## Frame 6 — Parada 4 · Aplicar en 15 días
@@ -271,10 +278,10 @@ Scene 7 (9.6–11.0s): lectura sostenida, quieta.
 - duration: 10s
 - poster: 8s
 - transition_in: push-slide RIGHT
-- status: outline
+- status: animated
 - src: compositions/frames/06-plazo-15-dias.html
 - type: benefit_highlight
-- persuasion: Causal chain (informe → medida → aplicada)
+- persuasion: Causal chain (concluida → 15 días → aplicada)
 - beat: foresight + conviction
 - blueprint: spatial-pan-stations (Adapt — Scene N terminal)
 - focal: el numeral "15" y la cadena de tres pasos
@@ -283,8 +290,13 @@ Scene 7 (9.6–11.0s): lectura sostenida, quieta.
 narrativeRole: Cierra el recorrido del eje donde la investigación se convierte en
 **consecuencia**. Una investigación que termina y no sanciona no cumple: los 15
 días son lo que convierten el deber en acto.
-keyMessage: Recibido el informe, el empleador debe **disponer y aplicar** las
-medidas o sanciones en **15 días**.
+keyMessage: Concluida la investigación, la empresa tiene **15 días hábiles** para
+aplicar medidas o sanciones.
+
+> Nota de verificación: la versión anterior pedía "disponer y aplicar" y una cadena
+> "informe → medida → aplicada". El paso "recibido el informe" no figura en
+> `INVESTIGACION.md` (art. 211-E solo dice "una vez concluida la investigacion"), asi
+> que la cadena se recompuso con las tres palabras que si estan verificadas.
 
 Adapt: es la parada terminal del blueprint, así que su firma es el **sostenimiento
 en la última estación** — pero la cámara retrocede una vez, al final, para mostrar
@@ -292,9 +304,10 @@ el eje completo. Es el único retroceso del video y ocurre después de que la
 información ya se entendió.
 
 Scene 1 (0.0–1.6s): PAN a la cuarta parada; `count-up` cuenta 0→15 y aterriza.
-Scene 2 (1.6–3.4s): la tarjeta entra con spring-pop-entrance: "DISPONER Y APLICAR".
+Scene 2 (1.6–3.4s): la tarjeta entra con spring-pop-entrance: "CONCLUIDA LA
+INVESTIGACION" — los 15 dias solo empiezan cuando la investigacion se cierra.
 Scene 3 (3.4–5.2s): una cadena causal de tres pasos se revela de izquierda a
-derecha (discrete-text-sequence): INFORME → MEDIDA → APLICADA.
+derecha (discrete-text-sequence): 15 DIAS → MEDIDAS O SANCIONES → APLICADAS.
 Scene 4 (5.2–6.8s): la cámara retrocede y las cuatro estaciones vuelven a verse
 juntas — el recorrido completo como una sola imagen.
 Scene 5 (6.8–10.0s): lectura sostenida, cámara estática. La última parada queda
@@ -307,7 +320,7 @@ centrada; la etapa terminal del blueprint asienta aquí.
 - duration: 9s
 - poster: 7s
 - transition_in: cut
-- status: outline
+- status: animated
 - src: compositions/frames/07-dos-rutas.html
 - type: social_proof
 - persuasion: Counterexample (esto es cuando se rompe)
@@ -348,7 +361,7 @@ Scene 6 (7.6–9.0s): lectura sostenida, quieta.
 - duration: 8s
 - poster: 7s
 - transition_in: crossfade
-- status: outline
+- status: animated
 - src: compositions/frames/08-cuatro-principios.html
 - type: branding
 - persuasion: Distillation
@@ -383,7 +396,7 @@ por abajo. Ningún movimiento en este último tramo: la quietud **es** el mensaj
 - duration: 4s
 - poster: 3s
 - transition_in: crossfade
-- status: outline
+- status: animated
 - src: compositions/frames/09-fuente-descargo.html
 - type: cta
 - persuasion: Citation / source
