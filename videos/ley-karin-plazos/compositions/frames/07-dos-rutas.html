@@ -1,37 +1,21 @@
 <template>
   <style>
-    /* --- fonts: the two families declared in frame.md, @font-face declared here --- */
+    /* --- fonts: the two families declared in frame.md, resolved to the real
+       woff2 files shipped in capture/assets/fonts. Both are the latin subset
+       variable cuts, so the render host never falls back to a generic family. --- */
     @font-face {
       font-family: 'Source Serif 4';
       font-style: normal;
-      font-weight: 400 700;
+      font-weight: 200 900;
       font-display: block;
-      src: url(https://fonts.gstatic.com/s/sourceserif4/v14/vEFI2_tTDB4M7-auWDN0ahZJW1gb8tc.woff2) format('woff2');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    }
-    @font-face {
-      font-family: 'Source Serif 4';
-      font-style: normal;
-      font-weight: 400 700;
-      font-display: block;
-      src: url(https://fonts.gstatic.com/s/sourceserif4/v14/vEFI2_tTDB4M7-auWDN0ahZJW1gV8tenXg.woff2) format('woff2');
-      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      src: url('capture/assets/fonts/source-serif-4-latin.woff2') format('woff2');
     }
     @font-face {
       font-family: 'JetBrains Mono';
       font-style: normal;
-      font-weight: 400 700;
+      font-weight: 100 800;
       font-display: block;
-      src: url(https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxDcwg.woff2) format('woff2');
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    }
-    @font-face {
-      font-family: 'JetBrains Mono';
-      font-style: normal;
-      font-weight: 400 700;
-      font-display: block;
-      src: url(https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPx7cwhsk.woff2) format('woff2');
-      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      src: url('capture/assets/fonts/jetbrains-mono-latin.woff2') format('woff2');
     }
 
     /* --- frame root: 1920x1080 landscape, container law from frame.md --- */
@@ -44,180 +28,213 @@
       background: transparent;
     }
 
+    /* ── Stack vertical. Todo el frame se mide contra 1920x1080, asi que
+       1cqw = 19.2px y 1cqh = 10.8px. Los cinco bloques van apilados sin
+       solaparse, y cada caja es al menos tan alta como su contenido:
+
+         filete superior     55.0 ..  57.0
+         plato (cream-2)     78.0 .. 297.0     la carta vive adentro
+         banda (green)      306.0 .. 486.0
+         pie (mono)         492.0 .. 511.1
+
+       La carta mide 720 x 189 y sus hijos se miden con cqh, o sea en px de
+       canvas: 189px de carta son 17.5cqh, no 12.7. Ahi estaba el error. --- */
+
     /* full-bleed ground: cream, painted on a clip layer (never on #root) */
-    #07-dos-rutas-bg { position: absolute; inset: 0; background: #efe7d4; }
-    /* cream-2 split-screen plate behind the card row: y 148 -> 464 (320) */
-    #07-dos-rutas-plate {
-      position: absolute; left: 0; top: 7.708cqh; width: 100cqw; height: 16.667cqh; background: #e6dcc4;
+    [id="07-dos-rutas-bg"] { position: absolute; inset: 0; background: #efe7d4; }
+    /* cream-2 split-screen plate behind the card row: 78 -> 297 (219) */
+    [id="07-dos-rutas-plate"] {
+      position: absolute; left: 0; top: 7.222cqh; width: 100cqw; height: 20.278cqh; background: #e6dcc4;
     }
-    #07-dos-rutas-platerule {
-      position: absolute; left: 0; top: 24.167cqh; width: 100cqw; height: 2px; background: #2e4a2a;
+    [id="07-dos-rutas-platerule"] {
+      position: absolute; left: 0; top: 27.315cqh; width: 100cqw; height: 2px; background: #2e4a2a;
     }
     /* the 50% symmetry axis: the book's spine / the fork line */
-    #07-dos-rutas-seam {
-      position: absolute; left: 50cqw; top: 7.708cqh; width: 2px; height: 16.667cqh; background: #e89cb1;
+    [id="07-dos-rutas-seam"] {
+      position: absolute; left: 50cqw; top: 7.222cqh; width: 2px; height: 20.278cqh; background: #e89cb1;
     }
 
     /* --- chrome: mono topbar, mark only (no invented copy) --- */
-    #07-dos-rutas-toprule {
+    [id="07-dos-rutas-toprule"] {
       position: absolute; left: 5cqw; top: 5.417cqh; width: 90cqw; height: 2px; background: #e89cb1;
     }
-    #07-dos-rutas-topmark {
+    [id="07-dos-rutas-topmark"] {
       position: absolute; left: 5cqw; top: 5.104cqh; width: 0.625cqw; height: 0.625cqw; background: #e89cb1;
     }
 
     /* --- the shared perspective stage: both cards + both badges --- */
-    #07-dos-rutas-stage { position: absolute; inset: 0; perspective: 93.75cqw; }
+    [id="07-dos-rutas-stage"] { position: absolute; inset: 0; perspective: 93.75cqw; }
 
-    /* wing = entry layer (x / scale) */
-    #07-dos-rutas-wing-l { position: absolute; left: 5cqw;      top: 9.583cqh; width: 37.5cqw; height: 12.708cqh; transform-style: preserve-3d; }
-    #07-dos-rutas-wing-r { position: absolute; left: 57.5cqw;   top: 9.583cqh; width: 37.5cqw; height: 12.708cqh; transform-style: preserve-3d; }
+    /* wing = entry layer (x / scale). 720 x 189, dentro del plato con 17px
+       de aire arriba y 13px abajo. */
+    [id="07-dos-rutas-wing-l"] { position: absolute; left: 5cqw;    top: 8.796cqh; width: 37.5cqw; height: 17.5cqh; transform-style: preserve-3d; }
+    [id="07-dos-rutas-wing-r"] { position: absolute; left: 57.5cqw; top: 8.796cqh; width: 37.5cqw; height: 17.5cqh; transform-style: preserve-3d; }
     /* tilt = the mirrored 3D book-open rotationY */
-    #07-dos-rutas-tilt-l, #07-dos-rutas-tilt-r,
+    [id="07-dos-rutas-tilt-l"], [id="07-dos-rutas-tilt-r"],
     /* idle = the phase-opposed float layer (kept off the entry alias) */
-    #07-dos-rutas-idle-l, #07-dos-rutas-idle-r { position: absolute; inset: 0; transform-style: preserve-3d; }
+    [id="07-dos-rutas-idle-l"], [id="07-dos-rutas-idle-r"] { position: absolute; inset: 0; transform-style: preserve-3d; }
 
     /* step-tile: cream card on the cream-2 plate, 2.5px green border, 8px radius */
-    .07-dos-rutas-card {
+    .r07-card {
       position: absolute; inset: 0;
       background: #efe7d4;
       border: 2.5px solid #2e4a2a;
       border-radius: 8px;
     }
-    /* step-tile top rule, mirroring across the spread */
-    #07-dos-rutas-truerule-l { position: absolute; left: 3.75cqw;  top: 1.979cqh; width: 8.333cqw; height: 2px; background: #2e4a2a; }
-    #07-dos-rutas-truerule-r { position: absolute; right: 3.75cqw; top: 1.979cqh; width: 8.333cqw; height: 2px; background: #2e4a2a; }
+    /* step-tile top rule, mirroring across the spread. 18px bajo el borde. */
+    [id="07-dos-rutas-truerule-l"] { position: absolute; left: 3.75cqw;  top: 1.667cqh; width: 8.333cqw; height: 2px; background: #2e4a2a; }
+    [id="07-dos-rutas-truerule-r"] { position: absolute; right: 3.75cqw; top: 1.667cqh; width: 8.333cqw; height: 2px; background: #2e4a2a; }
 
-    /* the label itself — Source Serif 4 500, title-card, negative-tracked */
-    #07-dos-rutas-title-l {
-      position: absolute; left: 3.75cqw; top: 2.812cqh; width: 26cqw; height: 7.292cqh;
-      font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: 3.5cqw;
-      line-height: 3.646cqw; letter-spacing: -0.01em; color: #2e4a2a; text-align: left;
+    /* the label itself — Source Serif 4 500, title-card, negative-tracked.
+       Dos lineas. OJO con las unidades: el cuerpo se mide con cqw (ancho del
+       lienzo, 1cqw = 19.2px) y el interlineado tambien con cqw, porque es un
+       multiple del cuerpo — 3.190cqw = 61.25px = 1.45em. Si el interlineado
+       fuera cqh (1cqh = 10.8px) saldria 29px para 42px de cuerpo y las dos
+       lineas se montarian una encima de otra. --- */
+    [id="07-dos-rutas-title-l"] {
+      position: absolute; left: 3.75cqw; top: 2.778cqh; width: 26cqw; height: 11.343cqh;
+      font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: 2.2cqw;
+      line-height: 3.190cqw; letter-spacing: -0.01em; color: #2e4a2a; text-align: left;
     }
-    #07-dos-rutas-title-r {
-      position: absolute; right: 3.75cqw; top: 2.812cqh; width: 26cqw; height: 7.292cqh;
-      font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: 3.5cqw;
-      line-height: 3.646cqw; letter-spacing: -0.01em; color: #2e4a2a; text-align: right;
+    [id="07-dos-rutas-title-r"] {
+      position: absolute; right: 3.75cqw; top: 2.778cqh; width: 26cqw; height: 11.343cqh;
+      font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: 2.2cqw;
+      line-height: 3.190cqw; letter-spacing: -0.01em; color: #2e4a2a; text-align: right;
     }
-    .07-dos-rutas-titleline { display: block; white-space: nowrap; }
+    .r07-titleline { display: block; white-space: nowrap; }
 
-    /* the route hairline + its terminus dot, mirrored */
-    #07-dos-rutas-route-l { position: absolute; left: 8.75cqw;  top: 20.833cqh; width: 11.458cqw; height: 2px; background: #2e4a2a; }
-    #07-dos-rutas-dot-l   { position: absolute; left: 19.896cqw; top: 20.573cqh; width: 0.625cqw; height: 0.625cqw; background: #2e4a2a; }
-    #07-dos-rutas-route-r { position: absolute; left: 79.792cqw; top: 20.833cqh; width: 11.458cqw; height: 2px; background: #2e4a2a; }
-    #07-dos-rutas-dot-r   { position: absolute; left: 79.479cqw; top: 20.573cqh; width: 0.625cqw; height: 0.625cqw; background: #2e4a2a; }
+    /* the route hairline + its terminus dot, mirrored. El lado derecho se
+       ancla con `right`, no con `left`: los hijos se miden contra la carta
+       (720px), no contra el lienzo (1920px). */
+    [id="07-dos-rutas-route-l"] { position: absolute; left: 8.75cqw;  top: 15.370cqh; width: 11.458cqw; height: 2px; background: #2e4a2a; }
+    [id="07-dos-rutas-dot-l"]   { position: absolute; left: 20.521cqw; top: 14.907cqh; width: 0.625cqw; height: 0.625cqw; background: #2e4a2a; }
+    [id="07-dos-rutas-route-r"] { position: absolute; right: 8.75cqw; top: 15.370cqh; width: 11.458cqw; height: 2px; background: #2e4a2a; }
+    [id="07-dos-rutas-dot-r"]   { position: absolute; right: 19.896cqw; top: 14.907cqh; width: 0.625cqw; height: 0.625cqw; background: #2e4a2a; }
 
-    /* the pink spine on each card's inner edge — the flat, shadowless read of the tilt */
-    #07-dos-rutas-spine-l { position: absolute; left: 41.354cqw; top: 10.625cqh; width: 2px; height: 10.625cqh; background: #e89cb1; }
-    #07-dos-rutas-spine-r { position: absolute; left: 58.542cqw; top: 10.625cqh; width: 2px; height: 10.625cqh; background: #e89cb1; }
+    /* the pink spine on each card's inner edge — the flat, shadowless read of
+       the tilt. Hijo de la carta, no del ala: asi gira con ella. */
+    [id="07-dos-rutas-spine-l"] { position: absolute; right: 0; top: 0; width: 2px; height: 100%; background: #e89cb1; }
+    [id="07-dos-rutas-spine-r"] { position: absolute; left: 0; top: 0; width: 2px; height: 100%; background: #e89cb1; }
 
-    /* the one overshoot: a badge on each card's inner edge, overlapping ~15% of the card */
-    .07-dos-rutas-badge {
-      position: absolute; top: 13.958cqh; width: 6.771cqw; height: 3.958cqh;
+    /* the one overshoot: a badge on each card's inner edge, overlapping ~15%
+       of the card. Los badges son hijos del escenario, no de la carta, asi que
+       sus offsets SI son en px de lienzo. Centrado en la carta: 95 + 189/2
+       = 189.5, menos la mitad de los 42.75px del badge = 168. */
+    .r07-badge {
+      position: absolute; top: 15.556cqh; width: 6.771cqw; height: 3.958cqh;
       background: #e89cb1; border: 2px solid #243a21; border-radius: 8px;
       display: flex; align-items: center; justify-content: center;
     }
-    #07-dos-rutas-badge-l { left: 37.240cqw; }
-    #07-dos-rutas-badge-r { left: 55.990cqw; }
-    .07-dos-rutas-badge svg { display: block; }
+    [id="07-dos-rutas-badge-l"] { left: 37.240cqw; }
+    [id="07-dos-rutas-badge-r"] { left: 55.990cqw; }
+    .r07-badge svg { display: block; }
 
-    /* --- the disqualifying rule: the payload, solid green, cream type --- */
-    #07-dos-rutas-band {
-      position: absolute; left: 5cqw; top: 26.667cqh; width: 90cqw; height: 14.583cqh; background: #2e4a2a;
+    /* --- the disqualifying rule: the payload, solid green, cream type ---
+       Banda 306 -> 509.6 (203.6px). El texto arranca 24px mas abajo, o sea
+       330, y son tres lineas de 59.85px = 179.6px, o sea termina en 509.6:
+       justo el borde inferior de la banda. --- */
+    [id="07-dos-rutas-band"] {
+      position: absolute; left: 5cqw; top: 28.333cqh; width: 90cqw; height: 18.847cqh; background: #2e4a2a;
     }
-    #07-dos-rutas-bandrule {
+    [id="07-dos-rutas-bandrule"] {
       position: absolute; left: 3.333cqw; top: 0; width: 83.333cqw; height: 2px; background: #e89cb1;
       transform-origin: left center;
     }
-    #07-dos-rutas-bandtext {
-      position: absolute; left: 3.333cqw; top: 2.760cqh; width: 83.333cqw; height: 9.063cqh;
-      font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: 2.6cqw;
-      line-height: 3.021cqw; letter-spacing: -0.01em; color: #efe7d4; text-align: left;
+    [id="07-dos-rutas-bandtext"] {
+      position: absolute; left: 3.333cqw; top: 2.222cqh; width: 83.333cqw; height: 16.625cqh;
+      font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: 2.15cqw;
+      line-height: 3.117cqw; letter-spacing: -0.01em; color: #efe7d4; text-align: left;
     }
-    .07-dos-rutas-bandline { display: block; white-space: nowrap; }
-    .07-dos-rutas-always {
-      display: inline-block; padding-bottom: 3px; border-bottom: 2px solid #e89cb1; line-height: 1;
+    .r07-bandline { display: block; white-space: nowrap; }
+    /* SIEMPRE: inline-block con 4px de cola (2px de padding + 2px de filete),
+       que es lo que cabe en el line-box de 59.85px. Un pixel mas y la tercera
+       linea empuja la caja del texto fuera de la banda. */
+    .r07-always {
+      display: inline-block; padding-bottom: 2px; border-bottom: 2px solid #e89cb1; line-height: 1;
     }
 
-    /* --- the subcontract footnote: caption-mono, secondary --- */
-    #07-dos-rutas-footrule { position: absolute; left: 5cqw; top: 44.010cqh; width: 2.5cqw; height: 2px; background: #2e4a2a; }
-    #07-dos-rutas-foot {
-      position: absolute; left: 8.75cqw; top: 43.229cqh; width: 86cqw; height: 1.771cqh;
+    /* --- the subcontract footnote: caption-mono, secondary. 523.8 -> 543,
+       con 14px de aire bajo el borde de la banda. --- */
+    [id="07-dos-rutas-footrule"] { position: absolute; left: 5cqw; top: 49.056cqh; width: 2.5cqw; height: 2px; background: #2e4a2a; }
+    [id="07-dos-rutas-foot"] {
+      position: absolute; left: 8.75cqw; top: 48.500cqh; width: 86cqw; height: 1.771cqh;
       font-family: 'JetBrains Mono', ui-monospace, monospace; font-weight: 500; font-size: 24px;
       line-height: 34px; letter-spacing: 0.14em; text-transform: uppercase; color: #2e4a2a; white-space: nowrap;
     }
   </style>
 
-  <div id="root" data-composition-id="07-dos-rutas" data-width="1920" data-height="1080">
+  <div data-hf-id="hf-0jif" id="root" data-composition-id="07-dos-rutas" data-width="1920" data-height="1080" data-duration="9.5">
     <!-- layer 1: the ground field -->
-    <div class="clip" id="07-dos-rutas-bg" data-start="0" data-duration="9" data-track-index="0">
-      <div id="07-dos-rutas-plate"></div>
-      <div id="07-dos-rutas-platerule"></div>
-      <div id="07-dos-rutas-seam"></div>
-      <div id="07-dos-rutas-toprule"></div>
-      <div id="07-dos-rutas-topmark"></div>
+    <div data-hf-id="hf-alcy" class="clip" id="07-dos-rutas-bg" data-start="0" data-duration="9.5" data-track-index="0">
+      <div data-hf-id="hf-pp7m" id="07-dos-rutas-plate"></div>
+      <div data-hf-id="hf-bpvk" id="07-dos-rutas-platerule"></div>
+      <div data-hf-id="hf-g7o0" id="07-dos-rutas-seam"></div>
+      <div data-hf-id="hf-gpul" id="07-dos-rutas-toprule"></div>
+      <div data-hf-id="hf-k6no" id="07-dos-rutas-topmark"></div>
     </div>
 
     <!-- layer 2: the split-screen — two equal cards, mirrored book-open, two inner-edge badges -->
-    <div class="clip" id="07-dos-rutas-stage" data-start="0" data-duration="9" data-track-index="1">
-      <div id="07-dos-rutas-wing-l">
-        <div id="07-dos-rutas-tilt-l">
-          <div id="07-dos-rutas-idle-l">
-            <div class="07-dos-rutas-card" id="07-dos-rutas-card-l">
-              <div id="07-dos-rutas-truerule-l"></div>
-              <div id="07-dos-rutas-title-l">
-                <span class="07-dos-rutas-titleline">investigación</span>
-                <span class="07-dos-rutas-titleline">interna</span>
+    <div data-hf-id="hf-3u9q" class="clip" id="07-dos-rutas-stage" data-start="0" data-duration="9.5" data-track-index="1">
+      <div data-hf-id="hf-cyno" id="07-dos-rutas-wing-l">
+        <div data-hf-id="hf-zw9g" id="07-dos-rutas-tilt-l">
+          <div data-hf-id="hf-9rrf" id="07-dos-rutas-idle-l">
+            <div data-hf-id="hf-v4sn" class="r07-card" id="07-dos-rutas-card-l">
+              <div data-hf-id="hf-sp0l" id="07-dos-rutas-spine-l"></div>
+              <div data-hf-id="hf-blkv" id="07-dos-rutas-truerule-l"></div>
+              <div data-hf-id="hf-aevv" id="07-dos-rutas-title-l">
+                <span data-hf-id="hf-c2sz" class="r07-titleline">investigación</span>
+                <span data-hf-id="hf-46md" class="r07-titleline">interna</span>
               </div>
-              <div id="07-dos-rutas-route-l"></div>
-              <div id="07-dos-rutas-dot-l"></div>
+              <div data-hf-id="hf-43wq" id="07-dos-rutas-route-l"></div>
+              <div data-hf-id="hf-ipro" id="07-dos-rutas-dot-l"></div>
             </div>
           </div>
         </div>
       </div>
 
-      <div id="07-dos-rutas-wing-r">
-        <div id="07-dos-rutas-tilt-r">
-          <div id="07-dos-rutas-idle-r">
-            <div class="07-dos-rutas-card" id="07-dos-rutas-card-r">
-              <div id="07-dos-rutas-truerule-r"></div>
-              <div id="07-dos-rutas-title-r">
-                <span class="07-dos-rutas-titleline">a la Dirección</span>
-                <span class="07-dos-rutas-titleline">del Trabajo</span>
+      <div data-hf-id="hf-6stu" id="07-dos-rutas-wing-r">
+        <div data-hf-id="hf-vy1e" id="07-dos-rutas-tilt-r">
+          <div data-hf-id="hf-vmc5" id="07-dos-rutas-idle-r">
+            <div data-hf-id="hf-pjrt" class="r07-card" id="07-dos-rutas-card-r">
+              <div data-hf-id="hf-sp0r" id="07-dos-rutas-spine-r"></div>
+              <div data-hf-id="hf-str5" id="07-dos-rutas-truerule-r"></div>
+              <div data-hf-id="hf-07gl" id="07-dos-rutas-title-r">
+                <span data-hf-id="hf-tpi6" class="r07-titleline">a la Dirección</span>
+                <span data-hf-id="hf-kg5s" class="r07-titleline">del Trabajo</span>
               </div>
-              <div id="07-dos-rutas-route-r"></div>
-              <div id="07-dos-rutas-dot-r"></div>
+              <div data-hf-id="hf-x2xo" id="07-dos-rutas-route-r"></div>
+              <div data-hf-id="hf-cjxu" id="07-dos-rutas-dot-r"></div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="07-dos-rutas-badge" id="dos-rutas-badge-l">
-        <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
-          <path d="M7 7 L25 25 M25 7 L7 25" stroke="#243a21" stroke-width="4.5" stroke-linecap="round" fill="none"></path>
+      <div data-hf-id="hf-g085" class="r07-badge" id="07-dos-rutas-badge-l">
+        <svg data-hf-id="hf-f9xt" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
+          <path data-hf-id="hf-e8no" d="M7 7 L25 25 M25 7 L7 25" stroke="#243a21" stroke-width="4.5" stroke-linecap="round" fill="none" />
         </svg>
       </div>
-      <div class="07-dos-rutas-badge" id="dos-rutas-badge-r">
-        <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
-          <path d="M6 17 L13 24 L26 8" stroke="#243a21" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+      <div data-hf-id="hf-q7nf" class="r07-badge" id="07-dos-rutas-badge-r">
+        <svg data-hf-id="hf-svot" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
+          <path data-hf-id="hf-ezu9" d="M6 17 L13 24 L26 8" stroke="#243a21" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
         </svg>
       </div>
     </div>
 
     <!-- layer 3: the rule that separates the two routes -->
-    <div class="clip" id="07-dos-rutas-band" data-start="0" data-duration="9" data-track-index="2">
-      <div id="07-dos-rutas-bandrule"></div>
-      <div id="07-dos-rutas-bandtext">
-        <span class="07-dos-rutas-bandline" id="dos-rutas-line1">si el denunciado es gerente o tiene poder de</span>
-        <span class="07-dos-rutas-bandline" id="dos-rutas-line2">representación, la investigación va</span>
-        <span class="07-dos-rutas-bandline" id="dos-rutas-line3"><span class="07-dos-rutas-always" id="dos-rutas-always">SIEMPRE</span> a la Dirección del Trabajo</span>
+    <div data-hf-id="hf-hph0" class="clip" id="07-dos-rutas-band" data-start="0" data-duration="9.5" data-track-index="2">
+      <div data-hf-id="hf-7el5" id="07-dos-rutas-bandrule"></div>
+      <div data-hf-id="hf-kdaq" id="07-dos-rutas-bandtext">
+        <span data-hf-id="hf-kd8r" class="r07-bandline" id="07-dos-rutas-line1">si el denunciado es gerente o tiene poder de</span>
+        <span data-hf-id="hf-aifn" class="r07-bandline" id="07-dos-rutas-line2">representación, la investigación va</span>
+        <span data-hf-id="hf-aqkx" class="r07-bandline" id="07-dos-rutas-line3"><span data-hf-id="hf-1kqw" class="r07-always" id="07-dos-rutas-always">SIEMPRE</span> a la Dirección del Trabajo</span>
       </div>
     </div>
 
     <!-- layer 4: the subcontract footnote -->
-    <div class="clip" id="dos-rutas-foot" data-start="0" data-duration="9" data-track-index="3">
-      <div id="dos-rutas-footrule"></div>
-      <div id="dos-rutas-foot">en subcontrato o servicios transitorios conduce la principal, y se le informa en 3 días</div>
+    <div data-hf-id="hf-jwu4" class="clip" id="07-dos-rutas-footclip" data-start="0" data-duration="9.5" data-track-index="3">
+      <div data-hf-id="hf-x9de" id="07-dos-rutas-footrule"></div>
+      <div data-hf-id="hf-vqxh" id="07-dos-rutas-foot">en subcontrato o servicios transitorios conduce la principal, y se le informa en 3 días</div>
     </div>
   </div>
 
