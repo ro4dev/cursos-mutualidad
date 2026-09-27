@@ -1,0 +1,432 @@
+<template>
+  <div data-hf-id="hf-czb0" id="root" data-composition-id="06-plazo-15-dias" data-start="0" data-duration="10" data-width="1920" data-height="1080">
+    <style>
+      /* frame.md typography, resolved to the real woff2 files shipped in
+         capture/assets/fonts. Both are the latin subset variable cuts, so
+         the render host never falls back to a generic family. */
+      @font-face {
+        font-family: 'Source Serif 4';
+        font-style: normal;
+        font-weight: 200 900;
+        font-display: block;
+        src: url('capture/assets/fonts/source-serif-4-latin.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'JetBrains Mono';
+        font-style: normal;
+        font-weight: 100 800;
+        font-display: block;
+        src: url('capture/assets/fonts/jetbrains-mono-latin.woff2') format('woff2');
+      }
+    </style>
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      /* ── Frame root — full 1920x1080 ground box, container-query basis ────── */
+      #root {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        container-type: size;
+        isolation: isolate;
+        color: #1a1a17;
+        font-family: "Source Serif 4", Georgia, serif;
+      }
+
+      /* ── Full-bleed ground (own clip layer, never the root) ───────────────── */
+      [id="06-plazo-15-dias-bg"] {
+        position: absolute;
+        inset: 0;
+        background: #efe7d4;
+      }
+
+      /* ── topbar: the system's hairline at the slide pad, no added copy ────── */
+      [id="06-plazo-15-dias-toprule"] {
+        position: absolute;
+        left: 96px;
+        top: 96px;
+        width: 1728px;
+        height: 2px;
+        background: #2e4a2a;
+      }
+
+      /* ── The world IS the camera (viewport-change, PAN mode) ────────────────
+         Preset tokens ride as custom properties so the mounted count-up is
+         token-native: --brand drives the count, --fg tints its affix. */
+      [id="06-plazo-15-dias-world"] {
+        --brand: #2e4a2a;
+        --accent: #e89cb1;
+        --accent-2: #3a5a36;
+        --fg: #1a1a17;
+        --bg: #efe7d4;
+        --font-display: "Source Serif 4", Georgia, serif;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 3456px;
+        height: 1080px;
+        overflow: hidden;
+      }
+
+      /* ── The axis: one 2px hairline, the shared object of all four stops ──── */
+      [id="06-plazo-15-dias-axis"] {
+        position: absolute;
+        left: 0;
+        top: 699px;
+        width: 3456px;
+        height: 2px;
+        background: #2e4a2a;
+      }
+
+      /* ── Stations: all four carry their citation, so the closing pull-back
+         can hand the audience the whole route as one legible image. ───────── */
+      [id^="06-plazo-15-dias-station-"] {
+        position: absolute;
+        top: 688px;
+        width: 200px;
+        text-align: center;
+        will-change: transform, opacity;
+      }
+
+      [id^="06-plazo-15-dias-tick-"] {
+        display: block;
+        width: 2px;
+        height: 24px;
+        margin: 0 auto;
+        background: #2e4a2a;
+      }
+
+      [id^="06-plazo-15-dias-num-"] {
+        display: block;
+        margin-top: 18px;
+        color: #2e4a2a;
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 1.354cqw; /* 26px */
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: 0.18em;
+        text-indent: 0.18em;
+        text-transform: uppercase;
+      }
+
+      [id^="06-plazo-15-dias-art-"] {
+        display: block;
+        margin-top: 14px;
+        color: #3a5a36;
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 1.25cqw; /* caption-mono, 24px */
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: 0.14em;
+        text-indent: 0.14em;
+        text-transform: uppercase;
+        white-space: nowrap;
+        opacity: 0;
+      }
+
+      /* ── Hero host: the mounted count-up composition ───────────────────────── */
+      [id="06-plazo-15-dias-counter"] {
+        position: absolute;
+        left: 1200px;
+        top: 120px;
+        width: 1000px;
+        height: 400px;
+        container-type: size;
+        color: #1a1a17;
+        font-family: "Source Serif 4", Georgia, serif;
+      }
+
+      /* Preset atoms on the mounted primitive: display weight 500 (never 600),
+         ramp tracking, and the unit set in mono per the label ramp. */
+      [id="06-plazo-15-dias-counter"] .cu-stage {
+        font-weight: 500;
+        letter-spacing: -0.02em;
+      }
+
+      [id="06-plazo-15-dias-counter"] .cu-suffix {
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        opacity: 0;
+      }
+
+      /* ── Callout: flat green tile, 8px step-tile radius, no shadow ────────── */
+      [id="06-plazo-15-dias-card"] {
+        position: absolute;
+        left: 2280px;
+        top: 190px;
+        width: 700px;
+        height: 280px;
+        display: flex;
+        align-items: center;
+        padding: 0 44px;
+        border-radius: 8px;
+        background: #2e4a2a;
+        color: #efe7d4;
+        transform-origin: -1080px 210px; /* the station point it answers */
+        will-change: transform, opacity;
+      }
+
+      [id="06-plazo-15-dias-card-title"] {
+        margin: 0;
+        color: #efe7d4;
+        font-family: "Source Serif 4", Georgia, serif;
+        font-size: 2.9cqw; /* title-card-sm, 55.7px */
+        font-weight: 500;
+        line-height: 0.96;
+        letter-spacing: -0.01em;
+        text-transform: uppercase;
+      }
+
+      /* ── Causal chain: three plates and two drawn arrows, one row ─────────── */
+      [id="06-plazo-15-dias-links"] {
+        position: absolute;
+        left: 1500px;
+        top: 800px;
+        width: 1500px;
+        height: 120px;
+        overflow: visible;
+      }
+
+      [id^="06-plazo-15-dias-link-"] {
+        fill: none;
+        stroke: #2e4a2a;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      [id^="06-plazo-15-dias-step-"] {
+        position: absolute;
+        top: 800px;
+        width: 460px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 32px;
+        border: 2px solid #2e4a2a;
+        border-radius: 8px;
+        background: #e6dcc4;
+        color: #2e4a2a;
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 1.354cqw; /* label, 26px */
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: 0.18em;
+        text-align: center;
+        text-transform: uppercase;
+        will-change: transform, opacity;
+      }
+
+      [id="06-plazo-15-dias-step-1"] {
+        left: 1500px;
+      }
+
+      [id="06-plazo-15-dias-step-2"] {
+        left: 2020px;
+      }
+
+      [id="06-plazo-15-dias-step-3"] {
+        left: 2540px;
+      }
+    </style>
+
+    <!-- lowest track: the full-bleed cream ground -->
+    <div data-hf-id="hf-f8x9" id="06-plazo-15-dias-bg" class="clip" data-start="0" data-duration="10" data-track-index="0"></div>
+
+    <div data-hf-id="hf-639m" id="06-plazo-15-dias-toprule" class="clip" data-start="0" data-duration="10" data-track-index="1"></div>
+
+    <!-- one virtual camera; every station, the numeral, the card and the chain
+         ride it. The pull-back at the end is the only retreat in the video. -->
+    <div data-hf-id="hf-iy3i" id="06-plazo-15-dias-world" class="clip" data-start="0" data-duration="10" data-track-index="2">
+      <!-- Hero: the registry count-up primitive, mounted as a sub-composition.
+           First in the world so its ground never occludes the axis. -->
+      <div data-hf-id="hf-d86d" id="06-plazo-15-dias-counter" class="clip" data-composition-id="count-up" data-composition-src="compositions/components/count-up.html" data-variable-values="{&quot;start&quot;:0,&quot;end&quot;:15,&quot;prefix&quot;:&quot;&quot;,&quot;suffix&quot;:&quot;DÍAS HÁBILES&quot;,&quot;accent&quot;:&quot;green&quot;,&quot;glow&quot;:false,&quot;exit&quot;:&quot;none&quot;}" data-start="0" data-duration="10" data-track-index="3"></div>
+
+      <div data-hf-id="hf-8dzt" id="06-plazo-15-dias-axis"></div>
+
+      <div data-hf-id="hf-28pc" id="06-plazo-15-dias-station-1" style="left: 460px;">
+        <span data-hf-id="hf-bst2" id="06-plazo-15-dias-tick-1"></span>
+        <span data-hf-id="hf-nkcf" id="06-plazo-15-dias-num-1">2</span>
+        <span data-hf-id="hf-1ju8" id="06-plazo-15-dias-art-1">art. 211-B bis</span>
+      </div>
+      <div data-hf-id="hf-4wp5" id="06-plazo-15-dias-station-2" style="left: 972px;">
+        <span data-hf-id="hf-7up1" id="06-plazo-15-dias-tick-2"></span>
+        <span data-hf-id="hf-bf4d" id="06-plazo-15-dias-num-2">3</span>
+        <span data-hf-id="hf-eouq" id="06-plazo-15-dias-art-2">art. 211-C</span>
+      </div>
+      <div data-hf-id="hf-gdaz" id="06-plazo-15-dias-station-3" style="left: 1484px;">
+        <span data-hf-id="hf-7318" id="06-plazo-15-dias-tick-3"></span>
+        <span data-hf-id="hf-zckm" id="06-plazo-15-dias-num-3">30</span>
+        <span data-hf-id="hf-7ybn" id="06-plazo-15-dias-art-3">art. 211-C</span>
+      </div>
+      <div data-hf-id="hf-dug8" id="06-plazo-15-dias-station-4" style="left: 1996px;">
+        <span data-hf-id="hf-ukir" id="06-plazo-15-dias-tick-4"></span>
+        <span data-hf-id="hf-w0j8" id="06-plazo-15-dias-num-4">15</span>
+        <span data-hf-id="hf-2pg6" id="06-plazo-15-dias-art-4">art. 211-E</span>
+      </div>
+
+      <div data-hf-id="hf-f72c" id="06-plazo-15-dias-card">
+        <h3 data-hf-id="hf-i3ef" id="06-plazo-15-dias-card-title">CONCLUIDA<br data-hf-id="hf-x5px">LA INVESTIGACIÓN</h3>
+      </div>
+
+      <svg data-hf-id="hf-b9bh" id="06-plazo-15-dias-links" width="1500" height="120" viewBox="0 0 1500 120" aria-hidden="true" focusable="false">
+        <path data-hf-id="hf-f4s8" id="06-plazo-15-dias-link-1" d="M 466 60 L 512 60" />
+        <path data-hf-id="hf-0xnk" id="06-plazo-15-dias-link-1-head" d="M 504 52 L 512 60 L 504 68" />
+        <path data-hf-id="hf-au2e" id="06-plazo-15-dias-link-2" d="M 986 60 L 1032 60" />
+        <path data-hf-id="hf-o9cz" id="06-plazo-15-dias-link-2-head" d="M 1024 52 L 1032 60 L 1024 68" />
+      </svg>
+
+      <div data-hf-id="hf-uipn" id="06-plazo-15-dias-step-1">15 DÍAS</div>
+      <div data-hf-id="hf-d0ee" id="06-plazo-15-dias-step-2">MEDIDAS O SANCIONES</div>
+      <div data-hf-id="hf-lw3u" id="06-plazo-15-dias-step-3">APLICADAS</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      (function () {
+        "use strict";
+
+        // Ids and class names carry no custom tokens: every selector is an
+        // attribute or id selector, so sibling frames cannot collide.
+        var byId = function (id) {
+          return document.querySelector('[id="' + id + '"]');
+        };
+
+        var world = byId("06-plazo-15-dias-world");
+        var station4 = byId("06-plazo-15-dias-station-4");
+        var support = [
+          byId("06-plazo-15-dias-station-1"),
+          byId("06-plazo-15-dias-station-2"),
+          byId("06-plazo-15-dias-station-3"),
+        ];
+        var cited = [
+          byId("06-plazo-15-dias-art-1"),
+          byId("06-plazo-15-dias-art-2"),
+          byId("06-plazo-15-dias-art-3"),
+        ];
+        var counter = byId("06-plazo-15-dias-counter");
+        var suffix = document.querySelector(
+          '[id="06-plazo-15-dias-counter"] .cu-suffix',
+        );
+        var card = byId("06-plazo-15-dias-card");
+        var steps = [
+          byId("06-plazo-15-dias-step-1"),
+          byId("06-plazo-15-dias-step-2"),
+          byId("06-plazo-15-dias-step-3"),
+        ];
+        var links = [
+          byId("06-plazo-15-dias-link-1"),
+          byId("06-plazo-15-dias-link-1-head"),
+          byId("06-plazo-15-dias-link-2"),
+          byId("06-plazo-15-dias-link-2-head"),
+        ];
+
+        // svg-path-draw — dasharray/dashoffset from getTotalLength(), guarded so
+        // a host that cannot measure geometry still plays the rest of the frame.
+        function armDraw(path) {
+          if (!path || typeof path.getTotalLength !== "function") {
+            return null;
+          }
+          var len = path.getTotalLength();
+          if (!(len > 0)) {
+            return null;
+          }
+          path.style.strokeDasharray = len;
+          path.style.strokeDashoffset = len;
+          return len;
+        }
+
+        links.forEach(armDraw);
+
+        var tl = gsap.timeline({ paused: true });
+
+        // ── Scene 1 (0.0–1.6s) — the camera arrives at the fourth stop and the
+        //    other three drop to a dimmed supporting plane. The mounted count-up
+        //    runs its own 0→15 count and lands at 1.72s.
+        tl.fromTo(
+          world,
+          { x: -624 },
+          { x: -1136, duration: 1.15, ease: "power2.inOut" },
+          0.1,
+        );
+        tl.fromTo(
+          support,
+          { opacity: 1 },
+          { opacity: 0.34, duration: 1.1, ease: "power2.inOut" },
+          0.25,
+        );
+        tl.fromTo(
+          station4,
+          { opacity: 0, y: -8 },
+          { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" },
+          0.5,
+        );
+
+        // ── Scene 2 (1.6–3.4s) — the unit resolves, then the callout springs
+        //    out of the station point: the 15 days only start once the
+        //    investigation is closed.
+        if (suffix) {
+          tl.fromTo(
+            suffix,
+            { opacity: 0, x: -16 },
+            { opacity: 1, x: 0, duration: 0.6, ease: "power3.out" },
+            1.8,
+          );
+        }
+        tl.fromTo(
+          card,
+          { scale: 0, opacity: 0, y: 24 },
+          { scale: 1, opacity: 1, y: 0, duration: 0.7, ease: "power3.out" },
+          2.05,
+        );
+
+        // ── Scene 3 (3.4–5.2s) — the causal chain resolves left to right. Each
+        //    arrow is drawn before the plate it points at lands.
+        links.forEach(function (link, index) {
+          tl.to(link, { strokeDashoffset: 0, duration: 0.4, ease: "power2.out" }, 3.5 + index * 0.16);
+        });
+        steps.forEach(function (step, index) {
+          tl.fromTo(
+            step,
+            { opacity: 0, x: -22 },
+            { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" },
+            3.72 + index * 0.2,
+          );
+        });
+
+        // ── Scene 4 (5.2–6.8s) — the only retreat in the video. The camera pulls
+        //    back far enough to hold all four stops at once, the close reading
+        //    ghosts down, and every citation comes up to full so the whole
+        //    route lands as a single legible image.
+        tl.to(world, { x: -368, duration: 1.2, ease: "power2.inOut" }, 5.3);
+        tl.to(support, { opacity: 1, duration: 0.9, ease: "power2.inOut" }, 5.5);
+        tl.to([counter, card].concat(steps), { opacity: 0.16, duration: 0.9, ease: "power2.inOut" }, 5.5);
+        cited.forEach(function (label, index) {
+          tl.fromTo(
+            label,
+            { opacity: 0 },
+            { opacity: 1, duration: 0.6, ease: "power2.out" },
+            5.7 + index * 0.08,
+          );
+        });
+
+        // ── Scene 5 (6.8–10.0s) — the terminal hold. The camera is static and
+        //    nothing moves: the route is on screen to be read and re-read.
+
+        // hold the declared 10s window open without an exit tween
+        tl.to({}, { duration: 0.01 }, 9.99);
+
+        tl.seek(0);
+        window.__timelines = window.__timelines || {};
+        window.__timelines["06-plazo-15-dias"] = tl;
+      })();
+    </script>
+  </div>
+</template>
