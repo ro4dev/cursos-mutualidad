@@ -12,9 +12,18 @@ renders/
 *.mov
 *.webm
 
-# cache de hyperframes y medios resueltos
-.hyperframes/cache/
-.media/
+# mp4 ya renderizados, en el directorio que sirve el visor
+public/videos/
+
+# cache de hyperframes y medios resueltos. Los patrones llevan **/ porque cada
+# proyecto de videos/<slug>/ tiene su propio .hyperframes/, y un patron con
+# "/" en el medio queda anclado a la raiz del repo y no matchea ninguno.
+**/.hyperframes/cache/
+**/.hyperframes/preview/
+**/.hyperframes/history-id
+**/.hyperframes/hf-ids-stamped.json
+**/.thumbnails/
+**/.media/
 
 # credenciales
 .env
