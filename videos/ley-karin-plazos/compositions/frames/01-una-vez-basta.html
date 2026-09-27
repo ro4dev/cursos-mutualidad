@@ -8,15 +8,13 @@
       font-family: "Source Serif 4";
       font-style: normal;
       font-weight: 400 700;
-      src: local("Source Serif 4"), local("SourceSerif4"),
-        local("Source Serif 4 Variable"), local("SourceSerif4-Variable");
+      src: url('capture/assets/fonts/source-serif-4-latin.woff2') format('woff2');
     }
     @font-face {
       font-family: "JetBrains Mono";
       font-style: normal;
       font-weight: 500;
-      src: local("JetBrains Mono Medium"), local("JetBrainsMono-Medium"),
-        local("JetBrains Mono"), local("JetBrainsMono-Regular");
+      src: url('capture/assets/fonts/jetbrains-mono-latin.woff2') format('woff2');
     }
 
     #root {
@@ -29,7 +27,7 @@
 
     /* Track 0 — full-bleed cream ground. Doubles as the cqw/cqh container the
        whole frame is measured against (1cqw = 19.2px, 1cqh = 10.8px). */
-    #01-una-vez-basta-ground {
+    [id="01-una-vez-basta-ground"] {
       position: absolute;
       left: 0;
       top: 0;
@@ -40,7 +38,7 @@
     }
 
     /* Track 1 — the shot: mono rótulo, the token line, the filete, the numeral. */
-    #01-una-vez-basta-scene {
+    [id="01-una-vez-basta-scene"] {
       position: absolute;
       left: 0;
       top: 0;
@@ -49,7 +47,7 @@
     }
 
     /* --- Scene 1 · mono rótulo (the frame's topbar spine, centered) --- */
-    #01-una-vez-basta-label-row {
+    [id="01-una-vez-basta-label-row"] {
       position: absolute;
       left: 0;
       top: 7.8cqh;
@@ -59,14 +57,14 @@
       justify-content: center;
       gap: 1.15cqw;
     }
-    #01-una-vez-basta-mark {
+    [id="01-una-vez-basta-mark"] {
       flex: none;
       width: 14px;
       height: 14px;
       border-radius: 3px;
       background: #e89cb1;
     }
-    #01-una-vez-basta-label {
+    [id="01-una-vez-basta-label"] {
       font-family: "JetBrains Mono", monospace;
       font-weight: 500;
       font-size: 26px;
@@ -77,7 +75,7 @@
     }
 
     /* --- Scenes 1-3 · the fixed center anchor, 430px down the canvas --- */
-    #01-una-vez-basta-stage {
+    [id="01-una-vez-basta-stage"] {
       position: absolute;
       left: 0;
       top: 0;
@@ -86,12 +84,12 @@
       display: grid;
       place-items: center;
     }
-    #01-una-vez-basta-word-stack {
+    [id="01-una-vez-basta-word-stack"] {
       display: grid;
       place-items: center;
     }
-    #01-una-vez-basta-word-a,
-    #01-una-vez-basta-word-b {
+    [id="01-una-vez-basta-word-a"],
+    [id="01-una-vez-basta-word-b"] {
       grid-area: 1 / 1;
       font-family: "Source Serif 4", serif;
       font-weight: 500;
@@ -102,12 +100,12 @@
       white-space: nowrap;
       color: #1a1a17;
     }
-    #01-una-vez-basta-word-b {
+    [id="01-una-vez-basta-word-b"] {
       opacity: 0;
     }
 
     /* --- Scene 2 · the filete: a 2px hairline drawn under the word --- */
-    #01-una-vez-basta-rule {
+    [id="01-una-vez-basta-rule"] {
       position: absolute;
       left: 221px;
       top: 519px;
@@ -115,7 +113,7 @@
       height: 2px;
       overflow: visible;
     }
-    #01-una-vez-basta-rule-path {
+    [id="01-una-vez-basta-rule-path"] {
       fill: none;
       stroke: #2e4a2a;
       stroke-width: 2;
@@ -124,7 +122,7 @@
     }
 
     /* --- Scene 4 · the payoff numeral, alone and oversized --- */
-    #01-una-vez-basta-numeral {
+    [id="01-una-vez-basta-numeral"] {
       position: absolute;
       left: 0;
       top: 21.9cqh;
@@ -140,52 +138,26 @@
     }
   </style>
 
-  <div
-    id="root"
-    data-composition-id="01-una-vez-basta"
-    data-start="0"
-    data-duration="6"
-    data-width="1920"
-    data-height="1080"
-  >
-    <div
-      class="clip"
-      id="01-una-vez-basta-ground"
-      data-start="0"
-      data-duration="6"
-      data-track-index="0"
-    >
-      <div
-        class="clip"
-        id="01-una-vez-basta-scene"
-        data-start="0"
-        data-duration="6"
-        data-track-index="1"
-      >
-        <div id="01-una-vez-basta-label-row">
-          <span id="01-una-vez-basta-mark"></span>
-          <span id="01-una-vez-basta-label">LEY N° 21.643 · VIGENTE DESDE 01.08.2024</span>
+  <div data-hf-id="hf-nzco" id="root" data-composition-id="01-una-vez-basta" data-start="0" data-duration="6.5" data-width="1920" data-height="1080">
+    <div data-hf-id="hf-mwzn" class="clip" id="01-una-vez-basta-ground" data-start="0" data-duration="6.5" data-track-index="0">
+      <div data-hf-id="hf-nqav" class="clip" id="01-una-vez-basta-scene" data-start="0" data-duration="6.5" data-track-index="1">
+        <div data-hf-id="hf-cckn" id="01-una-vez-basta-label-row">
+          <span data-hf-id="hf-n2w8" id="01-una-vez-basta-mark"></span>
+          <span data-hf-id="hf-5340" id="01-una-vez-basta-label">LEY N° 21.643 · VIGENTE DESDE 01.08.2024</span>
         </div>
 
-        <div id="01-una-vez-basta-stage">
-          <div id="01-una-vez-basta-word-stack">
-            <span id="01-una-vez-basta-word-a">SISTEMÁTICO</span>
-            <span id="01-una-vez-basta-word-b">UNA VEZ</span>
+        <div data-hf-id="hf-shvg" id="01-una-vez-basta-stage">
+          <div data-hf-id="hf-o56x" id="01-una-vez-basta-word-stack">
+            <span data-hf-id="hf-vtnq" id="01-una-vez-basta-word-a">SISTEMÁTICO</span>
+            <span data-hf-id="hf-07w5" id="01-una-vez-basta-word-b">UNA VEZ</span>
           </div>
         </div>
 
-        <svg
-          id="01-una-vez-basta-rule"
-          width="1478"
-          height="2"
-          viewBox="0 0 1478 2"
-          preserveAspectRatio="none"
-          aria-hidden="true"
-        >
-          <path id="01-una-vez-basta-rule-path" d="M 0 1 L 1478 1"></path>
+        <svg data-hf-id="hf-0tcw" id="01-una-vez-basta-rule" width="1478" height="2" viewBox="0 0 1478 2" preserveAspectRatio="none" aria-hidden="true">
+          <path data-hf-id="hf-qq5a" id="01-una-vez-basta-rule-path" d="M 0 1 L 1478 1" />
         </svg>
 
-        <div id="01-una-vez-basta-numeral">1</div>
+        <div data-hf-id="hf-51y3" id="01-una-vez-basta-numeral">1</div>
       </div>
     </div>
   </div>

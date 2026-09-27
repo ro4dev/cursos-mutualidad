@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
   count-up: HyperFrames video primitive (proof and stats / prove)
 
@@ -31,27 +31,22 @@
   box, establishes the container query basis, has no data-width or data-height,
   and registers one paused timeline under the literal count-up key.
 -->
-<html
-  lang="en"
-  data-composition-id="count-up"
-  data-composition-duration="3"
-  data-composition-variables='[
-    { "id": "start", "type": "number", "role": "content", "label": "Start value", "description": "First value shown by the count.", "default": 0, "step": 1 },
-    { "id": "end", "type": "number", "role": "content", "label": "End value", "description": "Final value where the count lands.", "default": 100, "step": 1 },
-    { "id": "prefix", "type": "string", "role": "content", "label": "Prefix", "description": "Optional text shown before the value.", "default": "" },
-    { "id": "suffix", "type": "string", "role": "content", "label": "Suffix", "description": "Optional text shown after the value.", "default": "%" },
-    { "id": "accent", "type": "enum", "role": "style", "label": "Accent", "description": "Color used by the count.", "default": "green", "options": [{ "value": "green", "label": "Green" }, { "value": "blue", "label": "Blue" }, { "value": "violet", "label": "Violet" }] },
-    { "id": "glow", "type": "boolean", "role": "style", "label": "Glow", "description": "Optional soft accent glow under the count. Off by default.", "default": false },
-    { "id": "exit", "type": "enum", "role": "timing", "label": "Exit", "description": "Optional departure. Default none: the landed value holds until the frame cuts.", "default": "none", "options": [{ "value": "none", "label": "None" }, { "value": "fade", "label": "Fade" }, { "value": "up", "label": "Up" }] }
-  ]'
->
+<html lang="en" data-composition-id="count-up" data-composition-duration="3" data-composition-variables="[
+    { &quot;id&quot;: &quot;start&quot;, &quot;type&quot;: &quot;number&quot;, &quot;role&quot;: &quot;content&quot;, &quot;label&quot;: &quot;Start value&quot;, &quot;description&quot;: &quot;First value shown by the count.&quot;, &quot;default&quot;: 0, &quot;step&quot;: 1 },
+    { &quot;id&quot;: &quot;end&quot;, &quot;type&quot;: &quot;number&quot;, &quot;role&quot;: &quot;content&quot;, &quot;label&quot;: &quot;End value&quot;, &quot;description&quot;: &quot;Final value where the count lands.&quot;, &quot;default&quot;: 100, &quot;step&quot;: 1 },
+    { &quot;id&quot;: &quot;prefix&quot;, &quot;type&quot;: &quot;string&quot;, &quot;role&quot;: &quot;content&quot;, &quot;label&quot;: &quot;Prefix&quot;, &quot;description&quot;: &quot;Optional text shown before the value.&quot;, &quot;default&quot;: &quot;&quot; },
+    { &quot;id&quot;: &quot;suffix&quot;, &quot;type&quot;: &quot;string&quot;, &quot;role&quot;: &quot;content&quot;, &quot;label&quot;: &quot;Suffix&quot;, &quot;description&quot;: &quot;Optional text shown after the value.&quot;, &quot;default&quot;: &quot;%&quot; },
+    { &quot;id&quot;: &quot;accent&quot;, &quot;type&quot;: &quot;enum&quot;, &quot;role&quot;: &quot;style&quot;, &quot;label&quot;: &quot;Accent&quot;, &quot;description&quot;: &quot;Color used by the count.&quot;, &quot;default&quot;: &quot;green&quot;, &quot;options&quot;: [{ &quot;value&quot;: &quot;green&quot;, &quot;label&quot;: &quot;Green&quot; }, { &quot;value&quot;: &quot;blue&quot;, &quot;label&quot;: &quot;Blue&quot; }, { &quot;value&quot;: &quot;violet&quot;, &quot;label&quot;: &quot;Violet&quot; }] },
+    { &quot;id&quot;: &quot;glow&quot;, &quot;type&quot;: &quot;boolean&quot;, &quot;role&quot;: &quot;style&quot;, &quot;label&quot;: &quot;Glow&quot;, &quot;description&quot;: &quot;Optional soft accent glow under the count. Off by default.&quot;, &quot;default&quot;: false },
+    { &quot;id&quot;: &quot;exit&quot;, &quot;type&quot;: &quot;enum&quot;, &quot;role&quot;: &quot;timing&quot;, &quot;label&quot;: &quot;Exit&quot;, &quot;description&quot;: &quot;Optional departure. Default none: the landed value holds until the frame cuts.&quot;, &quot;default&quot;: &quot;none&quot;, &quot;options&quot;: [{ &quot;value&quot;: &quot;none&quot;, &quot;label&quot;: &quot;None&quot; }, { &quot;value&quot;: &quot;fade&quot;, &quot;label&quot;: &quot;Fade&quot; }, { &quot;value&quot;: &quot;up&quot;, &quot;label&quot;: &quot;Up&quot; }] }
+  ]">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>Count Up</title>
   </head>
   <body>
     <template>
-      <div id="root" data-composition-id="count-up" data-duration="3" data-fps="30">
+      <div data-hf-id="hf-fbml" id="root" data-composition-id="count-up" data-duration="3" data-fps="30">
         <style>
           *,
           *::before,
@@ -132,17 +127,11 @@
           }
         </style>
 
-        <div
-          id="count-up-clip"
-          class="cu-clip clip"
-          data-start="0"
-          data-duration="3"
-          data-track-index="0"
-        >
-          <div class="cu-stage" role="img">
-            <span class="cu-affix cu-prefix" aria-hidden="true"></span>
-            <span class="cu-value" aria-hidden="true"></span>
-            <span class="cu-affix cu-suffix" aria-hidden="true"></span>
+        <div data-hf-id="hf-fxcy" id="count-up-clip" class="cu-clip clip" data-start="0" data-duration="3" data-track-index="0">
+          <div data-hf-id="hf-qsmn" class="cu-stage" role="img">
+            <span data-hf-id="hf-p6ya" class="cu-affix cu-prefix" aria-hidden="true"></span>
+            <span data-hf-id="hf-onaa" class="cu-value" aria-hidden="true"></span>
+            <span data-hf-id="hf-jbkd" class="cu-affix cu-suffix" aria-hidden="true"></span>
           </div>
         </div>
 
