@@ -47,9 +47,25 @@ const BROKEN = [
   [/\s+$/, 'espacio al final de linea'],
 ];
 
-/* Palabras en ingles que aparecen cuando la prosa se rompe. `workflow` queda
-   fuera a proposito: es una clave de frontmatter legitima. */
-const ANGLO = /\b(Capabilities|experiences|Equipment|Comments|Stretch|builtin|outreach|deadline|checklist)\b/;
+/* Palabras en ingles que se cuelan cuando la prosa se rompe. La lista esta
+   calibrada contra el corpus: solo incluye palabras que (a) no son validas en
+   espanol y (b) NO aparecen en ningun documento legitimo de courses/. Palabras
+   del vocabulario tecnico de HyperFrames (frame, video, source, render, status,
+   language, destination, content, design, layout, template, build, module,
+   project, file, ...) se omiten a proposito: son scaffolding de produccion.
+   Este es el unico lugar donde la prosa de los cursos se separa del English de
+   las herramientas. */
+const ANGLO = new RegExp(
+  '\\b(' +
+    [
+      'sustainability', 'concession', 'manager', 'managers', 'feedback',
+      'training', 'meetings', 'deadline', 'deadlines', 'schedule', 'compliance',
+      'policies', 'manage', 'handle', 'review', 'updates', 'outreach',
+      'checklist', 'builtin', 'experiences', 'Equipment', 'Comments', 'Stretch',
+      'Capabilities', 'support', 'lesson', 'config', 'input',
+    ].join('|') +
+  ')\\b'
+);
 
 function checkText(file, text) {
   const lines = text.split('\n');
