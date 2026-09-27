@@ -4,6 +4,23 @@
 # El grupo -cion/-sion NO aparece aqui: lo cubre una regla en acentos.mjs.
 # Solo lo inequivoco. Si una palabra puede ir con o sin tilde segun el
 # contexto, queda fuera (aun, solo, esta). Si duda, no la agregues.
+#
+# ANTES DE AGREGAR UN PLURAL, LEER ESTO. Es el error que mas se repite:
+#
+#   esdrujula  -> el plural sigue esdrujula y MANTIENE la tilde
+#                xisito / exitos, metodo / metodos, telefono / telefonos
+#   llana      -> el plural sigue llana y NO lleva tilde
+#                util / utiles, facil / faciles, debiles, generos
+#   aguda      -> el plural pasa a ser llana y PIERDE la tilde
+#                guia / guias, via / vias, interes / intereses
+#
+# O sea: una entrada de plural solo es valida si el singular es esdrujula.
+# "guias" y "vias" estuvieron en esta lista y no debian: son el plural de una
+# aguda, asi que van sin tilde. "generos" si la lleva, porque "genero" es
+# esdrujula.
+#
+# La enie es un caso aparte y siempre cambia: ano/anos, dana/danas, senal/senales.
+# Esas entradas son correctas porque lo que se agrega es la enie, no una tilde.
 
 # --- hiatos en -ia: el acento cae en la i cerrada ---
 autonomia=autonomía
@@ -244,10 +261,8 @@ senalizacion=señalización
 
 # --- segundo pase: hiatos y esdrujulas que faltaban ---
 guia=guía
-guias=guías
 galeria=galería
 via=vía
-vias=vías
 bateria=batería
 baterias=baterías
 parrafo=párrafo
@@ -275,3 +290,16 @@ biografia=biografía
 fotografia=fotografía
 caligrafia=caligrafía
 demografia=demografía
+
+# --- cuarto pase: esdrujulas y agudas de frecuencia media ---
+genero=género
+generos=géneros
+exito=éxito
+exitos=éxitos
+ambito=ámbito
+ambitos=ámbitos
+debito=débito
+indice=índice
+indices=índices
+catastrofe=catástrofe
+catastrofes=catástrofes

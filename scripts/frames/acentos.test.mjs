@@ -159,7 +159,58 @@ for (const palabra of ['condiciones', 'relaciones', 'presiones', 'recomendacione
 ok('el plural no lleva tilde y no se reporta');
 
 /* --------------------------------------------------------------------- *
- * 5. La lista de permitidas no puede filtrar palabras que si van con tilde.
+ * 5. Plulares: solo los esdrujulas conservan la tilde.
+ *
+ * Este es el error que mas se repite en la lista, y la invariante de letras no
+ * lo ve: "guias" -> "guias" con tilde son las mismas letras. La invariante
+ * protege contra perder letras, no contra inventar una tilde de mas, asi que
+ * hace falta una lista explicita.
+ * --------------------------------------------------------------------- */
+console.log('\nplurales que NO deben llevar tilde:');
+
+const PLURALES_SIN_TILDE = [
+  // el plural de una AGUDA pasa a llana y pierde la tilde.
+  // "guia" y "via" son agudas, y por eso "guias" y "vias" no van acentuadas:
+  // estuvieron en la lista y no debian.
+  "guias", "vias", "intereses", "series", "compases",
+  // el plural de una LLANA sigue llano.
+  "paises", "criterios", "escenarios", "ingleses", "deportes",
+  "proceses", "informes", "mapas", "campanas",
+  // plural de -cion: la misma regla, resuelta por el sufijo de acentos.mjs.
+  "condiciones", "relaciones", "presiones", "recomendaciones", "decisiones",
+  "conversaciones", "informaciones", "capacitaciones", "prevenciones",
+  "situaciones", "evaluaciones", "organizaciones", "participaciones",
+  "constituciones", "atenciones", "confusiones",
+];
+for (const palabra of PLURALES_SIN_TILDE) {
+  pruebas++;
+  const h = sinTildes(palabra);
+  if (h.length) falla(`el plural "${palabra}" no lleva tilde pero se reporto como ${h[0].deberia}`);
+}
+ok(`${PLURALES_SIN_TILDE.length} plurales sin tilde, ninguno reportado`);
+
+/* Y el otro lado: los esdrujulas si la conservan. */
+const PLURALES_CON_TILDE = [
+  ['exitos', 'éxitos'], ['metodos', 'métodos'], ['numeros', 'números'],
+  ['telefonos', 'teléfonos'], ['generos', 'géneros'], ['indices', 'índices'],
+  ['catastrofes', 'catástrofes'], ['especificos', 'específicos'],
+  ['ergonomicos', 'ergonómicos'], ['acompanados', 'acompañados'],
+  ['garantias', 'garantías'], ['baterias', 'baterías'], ['policias', 'policías'],
+];
+
+for (const [planoPalabra, acentuada] of PLURALES_CON_TILDE) {
+  pruebas++;
+  if (plano(acentuada) !== plano(planoPalabra)) {
+    falla(`par mal escrito: ${planoPalabra} / ${acentuada}`);
+    continue;
+  }
+  const h = sinTildes(planoPalabra);
+  if (h.length || acentuada !== planoPalabra) ok(`${planoPalabra} -> ${acentuada}`);
+  else falla(`el plural esdrujulo "${planoPalabra}" no se reporto y deberia ser ${acentuada}`);
+}
+
+/* --------------------------------------------------------------------- *
+ * 6. La lista de permitidas no puede filtrar palabras que si van con tilde.
  * --------------------------------------------------------------------- */
 console.log('\nla lista de permitidas no tapa palabras con tilde:');
 
