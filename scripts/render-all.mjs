@@ -102,17 +102,13 @@ for (const slug of lista) {
   }
 
   // Etapa 1: componer. El orden importa: el guard ve los selectores de los
-  // frames sueltos (y caza los que el linter no ve), lint despues, assemble
-  // arma index.html, transitions inyecta los cortes y verify los comprueba, y
-  // check es la puerta final sobre el index ya montado.
+  // frames sueltos (y caza los que el linter no ve), assemble arma index.html,
+  // y recien ahi corre lint — `hyperframes lint` exige que exista un index y
+  // aborta si no, asi que lint antes de assemble solo funciona en proyectos que
+  // ya quedaron armados de una corrida anterior. Despues transitions inyecta
+  // los cortes, verify los comprueba, y check es la puerta final.
   if (!paso('node', [GUARD, dirFrames], cwd)) {
     console.log(`  hay selectores rotos en ${slug}, se omite.`);
-    fallos += 1;
-    continue;
-  }
-
-  if (!paso('npx', ['hyperframes', 'lint'], cwd)) {
-    console.log(`  lint fallo en ${slug}, se omite.`);
     fallos += 1;
     continue;
   }
@@ -120,6 +116,12 @@ for (const slug of lista) {
   const storyboard = join(cwd, 'STORYBOARD.md');
   if (!paso('node', [ASSEMBLE, '--storyboard', storyboard, '--hyperframes', cwd], cwd)) {
     console.log(`  ensamblado fallo en ${slug}, se omite.`);
+    fallos += 1;
+    continue;
+  }
+
+  if (!paso('npx', ['hyperframes', 'lint'], cwd)) {
+    console.log(`  lint fallo en ${slug}, se omite.`);
     fallos += 1;
     continue;
   }
