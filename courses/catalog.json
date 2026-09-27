@@ -26,11 +26,11 @@
       "status": "rendered",
       "fuente": "Ley N° 21.643, Diario Oficial 15-01-2024, arts. 211-C, 211-D, 211-E, 211-B",
       "video": {
-        "composicion": null,
-        "framesMontadas": 0,
+        "composicion": "/composiciones/ley-karin-plazos/",
+        "framesMontadas": 9,
         "mp4": "/videos/ley-karin.mp4",
         "disponible": true,
-        "tamano": 31576
+        "tamano": 7831688
       }
     },
     {
