@@ -51,7 +51,7 @@ Estos datos están respaldados por la fuente oficial. Ver `INVESTIGACION.md`.
 
 ## Hechos que el video NO puede afirmar
 
-- Numero unico de emergencias y plazos exactos de evacuacion: verificar con la unidad de Prevention local.
+- Numero unico de emergencias y plazos exactos de evacuacion: verificar con la unidad de prevencion de riesgos local.
 
 ## Notes
 

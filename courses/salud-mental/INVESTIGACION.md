@@ -15,7 +15,7 @@ Ley N° 21.668 (salud mental y bienestar); orientaciones de salud mental laboral
 
 ### Derecho
 
-La proteccion de la salud mental en el trabajo es un derecho, no una concession.
+La proteccion de la salud mental en el trabajo es un derecho, no una concesion.
 
 ### Riesgos
 

@@ -5,7 +5,7 @@
 
 ## Fuente principal
 
-Ley N° 20.920 (residuos y economia circular); guias de sustainability operativa
+Ley N° 20.920 (residuos y economia circular); guias de sostenibilidad operativa
 
 ## Fecha de revisión
 

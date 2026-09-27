@@ -42,7 +42,7 @@ No bloquear pasillos ni salidas; revisar cableado y equipos de calefaccion.
 Estas afirmaciones se evitaron a propósito. No volver a escribirlas sin una
 fuente oficial citada:
 
-- Numero unico de emergencias y plazos exactos de evacuacion: verificar con la unidad de Prevention local.
+- Numero unico de emergencias y plazos exactos de evacuacion: verificar con la unidad de prevencion de riesgos local.
 
 ## Método
 

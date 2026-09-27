@@ -52,8 +52,8 @@ Estos datos están respaldados por la fuente oficial. Ver `INVESTIGACION.md`.
 
 ## Hechos que el video NO puede afirmar
 
-- Multas en UTM por tipo de infracción: no se encontró tabla oficial vigente; el video NO debe citar montos.
-- Cantidad mínima de prenatalidades para considerar acoso sexual: el texto no fija un número.
+- Multas en UTM por tipo de infraccion: no se encontro tabla oficial vigente; el video NO debe citar montos.
+- Cantidad minima de conductas para configurar acoso sexual: el texto no fija un numero.
 
 ## Notes
 
