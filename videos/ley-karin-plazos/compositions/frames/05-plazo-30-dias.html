@@ -1,0 +1,459 @@
+<template>
+  <div data-hf-id="hf-wxf8" id="root" data-composition-id="05-plazo-30-dias" data-start="0" data-duration="11.5" data-width="1920" data-height="1080">
+    <style>
+      /* frame.md typography, resolved to the real woff2 files shipped in
+         capture/assets/fonts. Both are the latin subset variable cuts, so
+         the render host never falls back to a generic family. */
+      @font-face {
+        font-family: 'Source Serif 4';
+        font-style: normal;
+        font-weight: 200 900;
+        font-display: block;
+        src: url('capture/assets/fonts/source-serif-4-latin.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'JetBrains Mono';
+        font-style: normal;
+        font-weight: 100 800;
+        font-display: block;
+        src: url('capture/assets/fonts/jetbrains-mono-latin.woff2') format('woff2');
+      }
+    </style>
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      /* ── Frame root — full 1920x1080 ground box, container-query basis ────── */
+      #root {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        container-type: size;
+        isolation: isolate;
+        color: #1a1a17;
+        font-family: "Source Serif 4", Georgia, serif;
+      }
+
+      /* ── Full-bleed ground (own clip layer, never the root) ───────────────── */
+      [id="05-plazo-30-dias-bg"] {
+        position: absolute;
+        inset: 0;
+        background: #efe7d4;
+      }
+
+      /* ── topbar: the system's hairline at the slide pad, no added copy ────── */
+      [id="05-plazo-30-dias-toprule"] {
+        position: absolute;
+        left: 96px;
+        top: 96px;
+        width: 1728px;
+        height: 2px;
+        background: #2e4a2a;
+      }
+
+      /* ── The world IS the camera (viewport-change, PAN mode) ────────────────
+         Preset tokens ride as custom properties so the mounted count-up is
+         token-native: --brand drives the count, --fg tints its affix. */
+      [id="05-plazo-30-dias-world"] {
+        --brand: #2e4a2a;
+        --accent: #e89cb1;
+        --accent-2: #3a5a36;
+        --fg: #1a1a17;
+        --bg: #efe7d4;
+        --font-display: "Source Serif 4", Georgia, serif;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 3456px;
+        height: 1080px;
+        overflow: hidden;
+      }
+
+      /* ── The axis: one 2px hairline, the shared object of all four stops ──── */
+      [id="05-plazo-30-dias-axis"] {
+        position: absolute;
+        left: 0;
+        top: 699px;
+        width: 3456px;
+        height: 2px;
+        background: #2e4a2a;
+      }
+
+      /* ── Stations: the focused stop keeps the numeral and the citation ───── */
+      [id^="05-plazo-30-dias-station-"] {
+        position: absolute;
+        top: 688px;
+        width: 160px;
+        text-align: center;
+        will-change: transform, opacity;
+      }
+
+      [id^="05-plazo-30-dias-tick-"] {
+        display: block;
+        width: 2px;
+        height: 24px;
+        margin: 0 auto;
+        background: #2e4a2a;
+      }
+
+      [id^="05-plazo-30-dias-num-"] {
+        display: block;
+        margin-top: 18px;
+        color: #2e4a2a;
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 1.354cqw; /* 26px */
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: 0.18em;
+        text-indent: 0.18em;
+        text-transform: uppercase;
+      }
+
+      [id="05-plazo-30-dias-art"] {
+        display: block;
+        margin-top: 14px;
+        color: #3a5a36;
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 1.25cqw; /* caption-mono, 24px */
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: 0.14em;
+        text-indent: 0.14em;
+        text-transform: uppercase;
+      }
+
+      /* ── Hero host: the mounted count-up composition ─────────────────────────
+         Left column. The suffix is held back by CSS so the landed 30 reads
+         alone before the unit resolves. */
+      [id="05-plazo-30-dias-counter"] {
+        position: absolute;
+        left: 700px;
+        top: 150px;
+        width: 940px;
+        height: 440px;
+        container-type: size;
+        color: #1a1a17;
+        font-family: "Source Serif 4", Georgia, serif;
+      }
+
+      /* Preset atoms on the mounted primitive: display weight 500 (never 600),
+         ramp tracking, and the unit set in mono per the label ramp. */
+      [id="05-plazo-30-dias-counter"] .cu-stage {
+        font-weight: 500;
+        letter-spacing: -0.02em;
+      }
+
+      [id="05-plazo-30-dias-counter"] .cu-suffix {
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        opacity: 0;
+      }
+
+      /* ── Callout: flat green tile, 8px step-tile radius, no shadow ────────── */
+      [id="05-plazo-30-dias-card"] {
+        position: absolute;
+        left: 1700px;
+        top: 190px;
+        width: 800px;
+        height: 280px;
+        display: flex;
+        align-items: center;
+        padding: 0 44px;
+        border-radius: 8px;
+        background: #2e4a2a;
+        color: #efe7d4;
+        transform-origin: -1080px 210px; /* the station point it answers */
+        will-change: transform, opacity;
+      }
+
+      [id="05-plazo-30-dias-card-title"] {
+        margin: 0;
+        color: #efe7d4;
+        font-family: "Source Serif 4", Georgia, serif;
+        font-size: 2.9cqw; /* title-card-sm, 55.7px */
+        font-weight: 500;
+        line-height: 0.96;
+        letter-spacing: -0.01em;
+        text-transform: uppercase;
+      }
+
+      /* ── The definition, in mono, under the numeral it qualifies ──────────── */
+      [id="05-plazo-30-dias-def"] {
+        position: absolute;
+        left: 700px;
+        top: 556px;
+        margin: 0;
+        color: #2e4a2a;
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 1.25cqw; /* caption-mono, 24px */
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      /* ── The week strip: the abstraction made concrete. Five lit (L-V), two
+         off (S-D). Flat plates, 6px step-tile radius, no shadow. ─────────── */
+      [id="05-plazo-30-dias-strip"] {
+        position: absolute;
+        left: 1080px;
+        top: 800px;
+        width: 1020px;
+        display: flex;
+        gap: 16px;
+      }
+
+      [id^="05-plazo-30-dias-day-"] {
+        flex: 1 1 0;
+        height: 132px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid rgba(46, 74, 42, 0.28);
+        border-radius: 6px;
+        color: #2e4a2a;
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 1.354cqw; /* label, 26px */
+        font-weight: 500;
+        line-height: 1;
+        letter-spacing: 0.18em;
+        text-indent: 0.18em;
+      }
+
+      /* A lit day is a solid green plate; an off day is the same plate with the
+         fill pulled out, so the pair reads as the same object in two states. */
+      [id^="05-plazo-30-dias-day-on"] {
+        border-color: #2e4a2a;
+        background: #2e4a2a;
+        color: #efe7d4;
+      }
+
+      /* ── The single pink hairline plus the line it annotates ──────────────── */
+      [id="05-plazo-30-dias-pink"] {
+        position: absolute;
+        left: 1080px;
+        top: 1014px;
+        width: 96px;
+        height: 2px;
+        background: #e89cb1;
+        transform-origin: 0% 50%;
+      }
+
+      [id="05-plazo-30-dias-from"] {
+        position: absolute;
+        left: 1200px;
+        top: 1000px;
+        margin: 0;
+        color: #2e4a2a;
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 1.25cqw; /* caption-mono, 24px */
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      [id^="05-plazo-30-dias-from-"] {
+        display: inline-block;
+        will-change: transform, opacity;
+      }
+    </style>
+
+    <!-- lowest track: the full-bleed cream ground -->
+    <div data-hf-id="hf-6cjl" id="05-plazo-30-dias-bg" class="clip" data-start="0" data-duration="11.5" data-track-index="0"></div>
+
+    <div data-hf-id="hf-xgwi" id="05-plazo-30-dias-toprule" class="clip" data-start="0" data-duration="11.5" data-track-index="1"></div>
+
+    <!-- one virtual camera; the numeral, the callout and the strip all ride it -->
+    <div data-hf-id="hf-oqp2" id="05-plazo-30-dias-world" class="clip" data-start="0" data-duration="11.5" data-track-index="2">
+      <!-- Hero: the registry count-up primitive, mounted as a sub-composition.
+           First in the world so its ground never occludes the axis. -->
+      <div data-hf-id="hf-6o0u" id="05-plazo-30-dias-counter" class="clip" data-composition-id="count-up" data-composition-src="compositions/components/count-up.html" data-variable-values="{&quot;start&quot;:0,&quot;end&quot;:30,&quot;prefix&quot;:&quot;&quot;,&quot;suffix&quot;:&quot;DÍAS&quot;,&quot;accent&quot;:&quot;green&quot;,&quot;glow&quot;:false,&quot;exit&quot;:&quot;none&quot;}" data-start="0" data-duration="11.5" data-track-index="3"></div>
+
+      <div data-hf-id="hf-d8x7" id="05-plazo-30-dias-axis"></div>
+
+      <div data-hf-id="hf-yv5s" id="05-plazo-30-dias-station-1" style="left: 480px;">
+        <span data-hf-id="hf-1z7k" id="05-plazo-30-dias-tick-1"></span>
+        <span data-hf-id="hf-31k1" id="05-plazo-30-dias-num-1">2</span>
+      </div>
+      <div data-hf-id="hf-lj7u" id="05-plazo-30-dias-station-3" style="left: 1504px;">
+        <span data-hf-id="hf-8wl6" id="05-plazo-30-dias-tick-3"></span>
+        <span data-hf-id="hf-8t48" id="05-plazo-30-dias-num-3">30</span>
+        <span data-hf-id="hf-2vqt" id="05-plazo-30-dias-art">art. 211-C</span>
+      </div>
+      <div data-hf-id="hf-ih86" id="05-plazo-30-dias-station-4" style="left: 2016px;">
+        <span data-hf-id="hf-q4vh" id="05-plazo-30-dias-tick-4"></span>
+        <span data-hf-id="hf-ibri" id="05-plazo-30-dias-num-4">15</span>
+      </div>
+
+      <div data-hf-id="hf-26pe" id="05-plazo-30-dias-card">
+        <h3 data-hf-id="hf-94cw" id="05-plazo-30-dias-card-title">
+          LA INVESTIGACIÓN<br data-hf-id="hf-x5px">DEBE CONCLUIR
+        </h3>
+      </div>
+
+      <p data-hf-id="hf-9occ" id="05-plazo-30-dias-def">días hábiles administrativos</p>
+
+      <div data-hf-id="hf-3mpe" id="05-plazo-30-dias-strip">
+        <div data-hf-id="hf-uk1u" id="05-plazo-30-dias-day-on-1">L</div>
+        <div data-hf-id="hf-6xvw" id="05-plazo-30-dias-day-on-2">M</div>
+        <div data-hf-id="hf-ms20" id="05-plazo-30-dias-day-on-3">X</div>
+        <div data-hf-id="hf-r57j" id="05-plazo-30-dias-day-on-4">J</div>
+        <div data-hf-id="hf-qtlk" id="05-plazo-30-dias-day-on-5">V</div>
+        <div data-hf-id="hf-era8" id="05-plazo-30-dias-day-off-6">S</div>
+        <div data-hf-id="hf-fe5u" id="05-plazo-30-dias-day-off-7">D</div>
+      </div>
+
+      <div data-hf-id="hf-26fw" id="05-plazo-30-dias-pink"></div>
+      <p data-hf-id="hf-0jnv" id="05-plazo-30-dias-from">
+        <span data-hf-id="hf-3ym6" id="05-plazo-30-dias-from-1">y el plazo corre</span>
+        <span data-hf-id="hf-g8ei" id="05-plazo-30-dias-from-2">desde la notificación</span>
+      </p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      (function () {
+        "use strict";
+
+        // Ids and class names carry no custom tokens: every selector is an
+        // attribute or id selector, so sibling frames cannot collide.
+        var byId = function (id) {
+          return document.querySelector('[id="' + id + '"]');
+        };
+
+        var world = byId("05-plazo-30-dias-world");
+        var station3 = byId("05-plazo-30-dias-station-3");
+        var support = [
+          byId("05-plazo-30-dias-station-1"),
+          byId("05-plazo-30-dias-station-4"),
+        ];
+        var suffix = document.querySelector(
+          '[id="05-plazo-30-dias-counter"] .cu-suffix',
+        );
+        var card = byId("05-plazo-30-dias-card");
+        var def = byId("05-plazo-30-dias-def");
+        var lit = [
+          byId("05-plazo-30-dias-day-on-1"),
+          byId("05-plazo-30-dias-day-on-2"),
+          byId("05-plazo-30-dias-day-on-3"),
+          byId("05-plazo-30-dias-day-on-4"),
+          byId("05-plazo-30-dias-day-on-5"),
+        ];
+        var off = [
+          byId("05-plazo-30-dias-day-off-6"),
+          byId("05-plazo-30-dias-day-off-7"),
+        ];
+        var pink = byId("05-plazo-30-dias-pink");
+        var from = byId("05-plazo-30-dias-from");
+        var layers = [
+          byId("05-plazo-30-dias-from-1"),
+          byId("05-plazo-30-dias-from-2"),
+        ];
+
+        var tl = gsap.timeline({ paused: true });
+
+        // ── Scene 1 (0.0–1.6s) — the camera arrives at the third stop and the
+        //    neighbours drop to a dimmed supporting plane. The mounted count-up
+        //    runs its own 0→30 count and lands at 1.72s.
+        tl.fromTo(
+          world,
+          { x: -112 },
+          { x: -624, duration: 1.15, ease: "power2.inOut" },
+          0.1,
+        );
+        tl.fromTo(
+          support,
+          { opacity: 1 },
+          { opacity: 0.34, duration: 1.1, ease: "power2.inOut" },
+          0.25,
+        );
+        tl.fromTo(
+          station3,
+          { opacity: 0, y: -8 },
+          { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" },
+          0.5,
+        );
+
+        // ── Scene 2 (1.6–3.2s) — the unit resolves beside the landed count, so
+        //    the 30 owns the frame for a beat before it is qualified.
+        if (suffix) {
+          tl.fromTo(
+            suffix,
+            { opacity: 0, x: -16 },
+            { opacity: 1, x: 0, duration: 0.6, ease: "power3.out" },
+            1.85,
+          );
+        }
+
+        // ── Scene 3 (3.2–5.0s) — spring-pop-entrance, origin at the station
+        //    point, so the callout emerges out of the stop it belongs to.
+        tl.fromTo(
+          card,
+          { scale: 0, opacity: 0, y: 24 },
+          { scale: 1, opacity: 1, y: 0, duration: 0.7, ease: "power3.out" },
+          3.3,
+        );
+
+        // ── Scene 4 (5.0–6.8s) — the definition arrives in mono, under the
+        //    numeral it qualifies and nowhere else.
+        tl.fromTo(
+          def,
+          { opacity: 0, y: 14 },
+          { opacity: 1, y: 0, duration: 0.55, ease: "power3.out" },
+          5.1,
+        );
+
+        // ── Scene 5 (6.8–8.4s) — the abstraction becomes concrete: five lit days
+        //    in sequence, then the two that are not.
+        lit.forEach(function (day, index) {
+          tl.fromTo(
+            day,
+            { opacity: 0, y: 22 },
+            { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" },
+            6.9 + index * 0.07,
+          );
+        });
+        off.forEach(function (day, index) {
+          tl.fromTo(
+            day,
+            { opacity: 0, y: 22 },
+            { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" },
+            7.5 + index * 0.07,
+          );
+        });
+
+        // ── Scene 6 (8.4–9.6s) — the operative detail, revealed layer by layer:
+        //    the thirty days are counted from the notice.
+        tl.fromTo(
+          pink,
+          { scaleX: 0 },
+          { scaleX: 1, duration: 0.45, ease: "power3.out" },
+          8.5,
+        );
+        layers.forEach(function (layer, index) {
+          tl.fromTo(
+            layer,
+            { opacity: 0, y: 14 },
+            { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" },
+            8.62 + index * 0.11,
+          );
+        });
+
+        // ── Scene 7 (9.6–11.0s) — a held, still read. Nothing moves.
+
+        // hold the declared 11s window open without an exit tween
+        tl.to({}, { duration: 0.01 }, 10.99);
+
+        tl.seek(0);
+        window.__timelines = window.__timelines || {};
+        window.__timelines["05-plazo-30-dias"] = tl;
+      })();
+    </script>
+  </div>
+</template>
