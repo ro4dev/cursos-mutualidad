@@ -1,65 +1,97 @@
-# Storyboard — Diversidad e inclusion
+---
+format: 1920x1080
+duration: 43s
+message: "Tener personas distintas en la organization no es Inclusión: la Inclusión es que todas esas voces puedan participar y ser escuchadas."
+arc: concept-explainer with contrast
+audience: "Personal de mutualidades y empresas en Chile"
+mode: autonomous
+music: none
+---
 
-> Borrador de estructura. La composicion final se genera con el skill
-> `faceless-explainer`; este archivo fija el ritmo y el reparto del tiempo.
+# STORYBOARD — Diversidad e inclusión
 
-- **Duración total**: 45s
-- **Aspecto**: 1920x1080
-- **Idioma**: es-CL
-- **Narración**: no (video mudo, tipografia fuerte)
-- **Ángulo**: normativa
+## Video direction
 
-## Estructura
+**Estructura:** `concept-explainer with contrast`. El protagonista es la confusión más común del tema: creer que inclusión y diversidad son lo mismo. Se abre nombrando esa confusión, se separan los dos conceptos, y se cierra con lo que aporta cuando se trabaja de verdad.
 
-| Desde | Duración | Movimiento | Nota |
-|---|---|---|---|
-| 0s | 5s | Apertura | Plantea el problema en una frase, sin rodeos. |
-| 5s | 5s | Gancho | Un dato o contraste que fije la atencion. |
-| 10s | 14s | Mecanismo | El cuerpo del curso: el paso a paso o la regla. |
-| 24s | 9s | Ejemplo | Un caso concreto que aterrizar el mecanismo. |
-| 33s | 7s | Cierre | La regla que la persona se lleva. |
-| 40s | 7s | Fuente | Fuente oficial y descargo, en placa quieta. |
+**Mesa de continuidad:** undefined
 
-## Composición por frame
+## Frame 1 — No es lo mismo
 
-### Frame 01 — Apertura (5s)
+- scene: TENER PERSONAS DISTINTAS,NO ES LO MISMO QUE INCLUIRLAS
+- voiceover: ""
+- duration: 10.75s
+- poster: 4s
+- transition_in: cut
+- status: animated
+- src: compositions/frames/01-no-es-lo-mismo.html
+- type: gancho
+- narrationRole: Abre con el error de partida: tratar diversidad e inclusión como sinonimo. El público se queda con la sensación de que la inclusión es un extra, no la base.
+- keyMessage: Diversidad es que haya variedad de personas. Inclusión es garantizar que todas esas voces puedan participar y ser escuchadas.
 
-- Desde 0s hasta 5s
-- Plantea el problema en una frase, sin rodeos.
-- Copy: solo de la lista de hechos verificados de `INVESTIGACION.md`.
+Beats:
+  - 0.0-1.4s: rótulo mono y la primera frase del titular, a sangre. Entrada con rise-and-fade.
+  - 1.4-3.2s: la segunda frase se suma en el mismo bloque, con el filete de acento al costado.
+  - 3.2-5.2s: la línea de apoyo entra desde abajo y desciende el ritmo hacia el corte.
 
-### Frame 02 — Gancho (5s)
+## Frame 2 — Dos conceptos
 
-- Desde 5s hasta 10s
-- Un dato o contraste que fije la atencion.
-- Copy: solo de la lista de hechos verificados de `INVESTIGACION.md`.
+- scene: Dos cosas que no se sustituyen
+- voiceover: ""
+- duration: 10.75s
+- poster: 5s
+- transition_in: cut
+- status: animated
+- src: compositions/frames/02-dos-conceptos.html
+- type: par
+- narrationRole: Separa los dos conceptos en la misma pantalla. La columna izquierda es la que gana: es la que el público tiene que llevarse.
+- keyMessage: Diversidad es tener variedad. Inclusión es garantizar que todas esas voces puedan participar y ser escuchadas.
 
-### Frame 03 — Mecanismo (14s)
+Beats:
+  - 0.0-1.4s: rótulo, titulo y filete superior entran.
+  - 1.4-3.0s: la columna izquierda, en verde macizo, con su filete vertical.
+  - 3.0-5.5s: la columna derecha entra después en contour. El retraso hace que el contraste se lea.
 
-- Desde 10s hasta 24s
-- El cuerpo del curso: el paso a paso o la regla.
-- Copy: solo de la lista de hechos verificados de `INVESTIGACION.md`.
+## Frame 3 — Por que importa
 
-### Frame 04 — Ejemplo (9s)
+- scene: Tres razones concretas
+- voiceover: ""
+- duration: 10.75s
+- poster: 6s
+- transition_in: cut
+- status: animated
+- src: compositions/frames/03-por-que-importa.html
+- type: lista
+- narrationRole: El bloque de motivos: los sesgos que operan sin que uno lo note, la accesibilidad como medida concreta, y el efecto en la calidad de las decisiones.
+- keyMessage: Los sesgos inconscientes influyen en contratación y evaluación; la accesibilidad permite la participación plena; la variedad de perspectivas mejora las decisiones.
 
-- Desde 24s hasta 33s
-- Un caso concreto que aterrizar el mecanismo.
-- Copy: solo de la lista de hechos verificados de `INVESTIGACION.md`.
+Beats:
+  - 0.0-1.0s: rótulo y titulo entran con fade corto.
+  - 1.0-4.5s: los tres items entran de a uno, cada uno con su filete dibujandose.
+  - 4.5-8.0s: lectura sostenida del bloque, sin movimiento nuevo.
 
-### Frame 05 — Cierre (7s)
+## Frame 4 — La regla
 
-- Desde 33s hasta 40s
-- La regla que la persona se lleva.
-- Copy: solo de la lista de hechos verificados de `INVESTIGACION.md`.
+- scene: SI LAS VOCES NO ENTRAN,A LA DECISIÓN, NO HAY INCLUSIÓN
+- voiceover: ""
+- duration: 10.75s
+- poster: 4s
+- transition_in: crossfade
+- status: animated
+- src: compositions/frames/04-la-regla.html
+- type: cierre
+- narrationRole: Cierra bajando el ritmo a plano de salida y deja la acción en una sola frase, del lado de quien organiza el trabajo.
+- keyMessage: La inclusión se demuestra en que las decisiones toman en cuenta a todas las voces, no en como se ve la mesa.
 
-### Frame 06 — Fuente (7s)
+Beats:
+  - 0.0-1.2s: rótulo y filete de acento; la regla entra frase por frase.
+  - 1.2-2.6s: la nota aclara que el curso no enuncia acciones afirmativas concretas, porque la fuente no las entrega.
+  - 2.6-4.0s: el bloque de fuente se dibuja al pie y queda en lectura.
 
-- Desde 40s hasta 47s
-- Fuente oficial y descargo, en placa quieta.
-- Copy: solo de la lista de hechos verificados de `INVESTIGACION.md`.
+## Continuidad
 
-## Reglas de copy
+Transiciones:
 
-- Toda afirmacion en pantalla es rastreable a `INVESTIGACION.md`.
-- Si un dato no está verificado, no aparece.
-- Ningun monto en UTM, ningun plazo sin confirmar, ningun nombre de norma sin citar.
+  - 1 -> 2: cut
+  - 2 -> 3: cut
+  - 3 -> 4: cut

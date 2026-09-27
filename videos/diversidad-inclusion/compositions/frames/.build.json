@@ -1,0 +1,30 @@
+[
+  {
+    "id": "01-no-es-lo-mismo",
+    "tipo": "gancho",
+    "titulo": "No es lo mismo",
+    "duracion": 10.75,
+    "transition_in": "cut"
+  },
+  {
+    "id": "02-dos-conceptos",
+    "tipo": "par",
+    "titulo": "Dos conceptos",
+    "duracion": 10.75,
+    "transition_in": "cut"
+  },
+  {
+    "id": "03-por-que-importa",
+    "tipo": "lista",
+    "titulo": "Por que importa",
+    "duracion": 10.75,
+    "transition_in": "cut"
+  },
+  {
+    "id": "04-la-regla",
+    "tipo": "cierre",
+    "titulo": "La regla",
+    "duracion": 10.75,
+    "transition_in": "crossfade"
+  }
+]
