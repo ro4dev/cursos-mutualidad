@@ -1,0 +1,309 @@
+<template>
+  <style>
+    /* --- fonts: the two families declared in frame.md, @font-face declared here --- */
+    @font-face {
+      font-family: 'Source Serif 4';
+      font-style: normal;
+      font-weight: 400 700;
+      font-display: block;
+      src: url(https://fonts.gstatic.com/s/sourceserif4/v14/vEFI2_tTDB4M7-auWDN0ahZJW1gb8tc.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    @font-face {
+      font-family: 'Source Serif 4';
+      font-style: normal;
+      font-weight: 400 700;
+      font-display: block;
+      src: url(https://fonts.gstatic.com/s/sourceserif4/v14/vEFI2_tTDB4M7-auWDN0ahZJW1gV8tenXg.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    @font-face {
+      font-family: 'JetBrains Mono';
+      font-style: normal;
+      font-weight: 400 700;
+      font-display: block;
+      src: url(https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxDcwg.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    @font-face {
+      font-family: 'JetBrains Mono';
+      font-style: normal;
+      font-weight: 400 700;
+      font-display: block;
+      src: url(https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPx7cwhsk.woff2) format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
+    /* --- frame root: 1920x1080 landscape, container law from frame.md --- */
+    #root {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      container-type: size;
+      background: transparent;
+    }
+
+    /* full-bleed ground: cream, painted on a clip layer (never on #root) */
+    #07-dos-rutas-bg { position: absolute; inset: 0; background: #efe7d4; }
+    /* cream-2 split-screen plate behind the card row: y 148 -> 464 (320) */
+    #07-dos-rutas-plate {
+      position: absolute; left: 0; top: 7.708cqh; width: 100cqw; height: 16.667cqh; background: #e6dcc4;
+    }
+    #07-dos-rutas-platerule {
+      position: absolute; left: 0; top: 24.167cqh; width: 100cqw; height: 2px; background: #2e4a2a;
+    }
+    /* the 50% symmetry axis: the book's spine / the fork line */
+    #07-dos-rutas-seam {
+      position: absolute; left: 50cqw; top: 7.708cqh; width: 2px; height: 16.667cqh; background: #e89cb1;
+    }
+
+    /* --- chrome: mono topbar, mark only (no invented copy) --- */
+    #07-dos-rutas-toprule {
+      position: absolute; left: 5cqw; top: 5.417cqh; width: 90cqw; height: 2px; background: #e89cb1;
+    }
+    #07-dos-rutas-topmark {
+      position: absolute; left: 5cqw; top: 5.104cqh; width: 0.625cqw; height: 0.625cqw; background: #e89cb1;
+    }
+
+    /* --- the shared perspective stage: both cards + both badges --- */
+    #07-dos-rutas-stage { position: absolute; inset: 0; perspective: 93.75cqw; }
+
+    /* wing = entry layer (x / scale) */
+    #07-dos-rutas-wing-l { position: absolute; left: 5cqw;      top: 9.583cqh; width: 37.5cqw; height: 12.708cqh; transform-style: preserve-3d; }
+    #07-dos-rutas-wing-r { position: absolute; left: 57.5cqw;   top: 9.583cqh; width: 37.5cqw; height: 12.708cqh; transform-style: preserve-3d; }
+    /* tilt = the mirrored 3D book-open rotationY */
+    #07-dos-rutas-tilt-l, #07-dos-rutas-tilt-r,
+    /* idle = the phase-opposed float layer (kept off the entry alias) */
+    #07-dos-rutas-idle-l, #07-dos-rutas-idle-r { position: absolute; inset: 0; transform-style: preserve-3d; }
+
+    /* step-tile: cream card on the cream-2 plate, 2.5px green border, 8px radius */
+    .07-dos-rutas-card {
+      position: absolute; inset: 0;
+      background: #efe7d4;
+      border: 2.5px solid #2e4a2a;
+      border-radius: 8px;
+    }
+    /* step-tile top rule, mirroring across the spread */
+    #07-dos-rutas-truerule-l { position: absolute; left: 3.75cqw;  top: 1.979cqh; width: 8.333cqw; height: 2px; background: #2e4a2a; }
+    #07-dos-rutas-truerule-r { position: absolute; right: 3.75cqw; top: 1.979cqh; width: 8.333cqw; height: 2px; background: #2e4a2a; }
+
+    /* the label itself — Source Serif 4 500, title-card, negative-tracked */
+    #07-dos-rutas-title-l {
+      position: absolute; left: 3.75cqw; top: 2.812cqh; width: 26cqw; height: 7.292cqh;
+      font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: 3.5cqw;
+      line-height: 3.646cqw; letter-spacing: -0.01em; color: #2e4a2a; text-align: left;
+    }
+    #07-dos-rutas-title-r {
+      position: absolute; right: 3.75cqw; top: 2.812cqh; width: 26cqw; height: 7.292cqh;
+      font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: 3.5cqw;
+      line-height: 3.646cqw; letter-spacing: -0.01em; color: #2e4a2a; text-align: right;
+    }
+    .07-dos-rutas-titleline { display: block; white-space: nowrap; }
+
+    /* the route hairline + its terminus dot, mirrored */
+    #07-dos-rutas-route-l { position: absolute; left: 8.75cqw;  top: 20.833cqh; width: 11.458cqw; height: 2px; background: #2e4a2a; }
+    #07-dos-rutas-dot-l   { position: absolute; left: 19.896cqw; top: 20.573cqh; width: 0.625cqw; height: 0.625cqw; background: #2e4a2a; }
+    #07-dos-rutas-route-r { position: absolute; left: 79.792cqw; top: 20.833cqh; width: 11.458cqw; height: 2px; background: #2e4a2a; }
+    #07-dos-rutas-dot-r   { position: absolute; left: 79.479cqw; top: 20.573cqh; width: 0.625cqw; height: 0.625cqw; background: #2e4a2a; }
+
+    /* the pink spine on each card's inner edge — the flat, shadowless read of the tilt */
+    #07-dos-rutas-spine-l { position: absolute; left: 41.354cqw; top: 10.625cqh; width: 2px; height: 10.625cqh; background: #e89cb1; }
+    #07-dos-rutas-spine-r { position: absolute; left: 58.542cqw; top: 10.625cqh; width: 2px; height: 10.625cqh; background: #e89cb1; }
+
+    /* the one overshoot: a badge on each card's inner edge, overlapping ~15% of the card */
+    .07-dos-rutas-badge {
+      position: absolute; top: 13.958cqh; width: 6.771cqw; height: 3.958cqh;
+      background: #e89cb1; border: 2px solid #243a21; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    #07-dos-rutas-badge-l { left: 37.240cqw; }
+    #07-dos-rutas-badge-r { left: 55.990cqw; }
+    .07-dos-rutas-badge svg { display: block; }
+
+    /* --- the disqualifying rule: the payload, solid green, cream type --- */
+    #07-dos-rutas-band {
+      position: absolute; left: 5cqw; top: 26.667cqh; width: 90cqw; height: 14.583cqh; background: #2e4a2a;
+    }
+    #07-dos-rutas-bandrule {
+      position: absolute; left: 3.333cqw; top: 0; width: 83.333cqw; height: 2px; background: #e89cb1;
+      transform-origin: left center;
+    }
+    #07-dos-rutas-bandtext {
+      position: absolute; left: 3.333cqw; top: 2.760cqh; width: 83.333cqw; height: 9.063cqh;
+      font-family: 'Source Serif 4', Georgia, serif; font-weight: 500; font-size: 2.6cqw;
+      line-height: 3.021cqw; letter-spacing: -0.01em; color: #efe7d4; text-align: left;
+    }
+    .07-dos-rutas-bandline { display: block; white-space: nowrap; }
+    .07-dos-rutas-always {
+      display: inline-block; padding-bottom: 3px; border-bottom: 2px solid #e89cb1; line-height: 1;
+    }
+
+    /* --- the subcontract footnote: caption-mono, secondary --- */
+    #07-dos-rutas-footrule { position: absolute; left: 5cqw; top: 44.010cqh; width: 2.5cqw; height: 2px; background: #2e4a2a; }
+    #07-dos-rutas-foot {
+      position: absolute; left: 8.75cqw; top: 43.229cqh; width: 86cqw; height: 1.771cqh;
+      font-family: 'JetBrains Mono', ui-monospace, monospace; font-weight: 500; font-size: 24px;
+      line-height: 34px; letter-spacing: 0.14em; text-transform: uppercase; color: #2e4a2a; white-space: nowrap;
+    }
+  </style>
+
+  <div id="root" data-composition-id="07-dos-rutas" data-width="1920" data-height="1080">
+    <!-- layer 1: the ground field -->
+    <div class="clip" id="07-dos-rutas-bg" data-start="0" data-duration="9" data-track-index="0">
+      <div id="07-dos-rutas-plate"></div>
+      <div id="07-dos-rutas-platerule"></div>
+      <div id="07-dos-rutas-seam"></div>
+      <div id="07-dos-rutas-toprule"></div>
+      <div id="07-dos-rutas-topmark"></div>
+    </div>
+
+    <!-- layer 2: the split-screen — two equal cards, mirrored book-open, two inner-edge badges -->
+    <div class="clip" id="07-dos-rutas-stage" data-start="0" data-duration="9" data-track-index="1">
+      <div id="07-dos-rutas-wing-l">
+        <div id="07-dos-rutas-tilt-l">
+          <div id="07-dos-rutas-idle-l">
+            <div class="07-dos-rutas-card" id="07-dos-rutas-card-l">
+              <div id="07-dos-rutas-truerule-l"></div>
+              <div id="07-dos-rutas-title-l">
+                <span class="07-dos-rutas-titleline">investigación</span>
+                <span class="07-dos-rutas-titleline">interna</span>
+              </div>
+              <div id="07-dos-rutas-route-l"></div>
+              <div id="07-dos-rutas-dot-l"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="07-dos-rutas-wing-r">
+        <div id="07-dos-rutas-tilt-r">
+          <div id="07-dos-rutas-idle-r">
+            <div class="07-dos-rutas-card" id="07-dos-rutas-card-r">
+              <div id="07-dos-rutas-truerule-r"></div>
+              <div id="07-dos-rutas-title-r">
+                <span class="07-dos-rutas-titleline">a la Dirección</span>
+                <span class="07-dos-rutas-titleline">del Trabajo</span>
+              </div>
+              <div id="07-dos-rutas-route-r"></div>
+              <div id="07-dos-rutas-dot-r"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="07-dos-rutas-badge" id="dos-rutas-badge-l">
+        <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
+          <path d="M7 7 L25 25 M25 7 L7 25" stroke="#243a21" stroke-width="4.5" stroke-linecap="round" fill="none"></path>
+        </svg>
+      </div>
+      <div class="07-dos-rutas-badge" id="dos-rutas-badge-r">
+        <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
+          <path d="M6 17 L13 24 L26 8" stroke="#243a21" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+        </svg>
+      </div>
+    </div>
+
+    <!-- layer 3: the rule that separates the two routes -->
+    <div class="clip" id="07-dos-rutas-band" data-start="0" data-duration="9" data-track-index="2">
+      <div id="07-dos-rutas-bandrule"></div>
+      <div id="07-dos-rutas-bandtext">
+        <span class="07-dos-rutas-bandline" id="dos-rutas-line1">si el denunciado es gerente o tiene poder de</span>
+        <span class="07-dos-rutas-bandline" id="dos-rutas-line2">representación, la investigación va</span>
+        <span class="07-dos-rutas-bandline" id="dos-rutas-line3"><span class="07-dos-rutas-always" id="dos-rutas-always">SIEMPRE</span> a la Dirección del Trabajo</span>
+      </div>
+    </div>
+
+    <!-- layer 4: the subcontract footnote -->
+    <div class="clip" id="dos-rutas-foot" data-start="0" data-duration="9" data-track-index="3">
+      <div id="dos-rutas-footrule"></div>
+      <div id="dos-rutas-foot">en subcontrato o servicios transitorios conduce la principal, y se le informa en 3 días</div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <script>
+    (function () {
+      var q = function (id) { return document.getElementById(id); };
+
+      var wingL = q('07-dos-rutas-wing-l'), wingR = q('07-dos-rutas-wing-r');
+      var tiltL = q('07-dos-rutas-tilt-l'), tiltR = q('07-dos-rutas-tilt-r');
+      var idleL = q('07-dos-rutas-idle-l'), idleR = q('07-dos-rutas-idle-r');
+      var badgeL = q('07-dos-rutas-badge-l'), badgeR = q('07-dos-rutas-badge-r');
+      var band = q('07-dos-rutas-band'), bandRule = q('07-dos-rutas-bandrule');
+      var line1 = q('07-dos-rutas-line1'), line2 = q('07-dos-rutas-line2');
+      var line3 = q('07-dos-rutas-line3'), always = q('07-dos-rutas-always');
+      var foot = q('07-dos-rutas-foot'), footRule = q('07-dos-rutas-footrule');
+
+      var tl = gsap.timeline({ paused: true });
+      window.__timelines = window.__timelines || {};
+      window.__timelines['07-dos-rutas'] = tl;
+
+      /* --- initial states (applied on build; entrances below are all fromTo) --- */
+      tl.set([wingL, wingR, badgeL, badgeR, band, line1, line2, line3, always, foot, footRule],
+        { autoAlpha: 0 }, 0);
+
+      /* --- Scene 1 (0.0-1.8s): two cards enter from opposite wings, still FLAT --- */
+      tl.fromTo(wingL,
+        { x: -420, scale: 0.85, autoAlpha: 0 },
+        { x: 0, scale: 1, autoAlpha: 1, duration: 1.15, ease: 'power3.out' }, 0.05);
+      tl.fromTo(wingR,
+        { x: 420, scale: 0.85, autoAlpha: 0 },
+        { x: 0, scale: 1, autoAlpha: 1, duration: 1.15, ease: 'power3.out' }, 0.25);
+
+      /* --- Scene 2 (1.8-3.4s): the mirrored 3D book-open tilt settles them side by side --- */
+      tl.fromTo(tiltL, { rotationY: 0 },
+        { rotationY: -14, duration: 1.05, ease: 'power3.inOut' }, 1.85);
+      tl.fromTo(tiltR, { rotationY: 0 },
+        { rotationY: 14, duration: 1.05, ease: 'power3.inOut' }, 2.00);
+      /* the pair closes the last of the gap as the pages open */
+      tl.to(wingL, { x: -8, duration: 0.9, ease: 'power2.inOut' }, 1.85);
+      tl.to(wingR, { x: 8, duration: 0.9, ease: 'power2.inOut' }, 2.00);
+
+      /* --- phase-opposed idle float: left sin(t), right sin(t+PI), never synchronised --- */
+      function idleFloat(el, phase) {
+        var start = 2.6, span = 6.4, amp = 5, N = 8, kf = [], i;
+        for (i = 0; i <= N; i++) {
+          kf.push({
+            y: Math.sin((i / N) * Math.PI * 2 + phase) * amp,
+            duration: span / N,
+            ease: 'sine.inOut'
+          });
+        }
+        tl.to(el, { keyframes: kf, duration: span }, start);
+      }
+      idleFloat(idleL, 0);
+      idleFloat(idleR, Math.PI);
+
+      /* --- Scene 3 (3.4-4.8s): the inner-edge badges spring-pop, left then right --- */
+      tl.fromTo(badgeL,
+        { autoAlpha: 0, scale: 0.2, rotation: -8 },
+        { autoAlpha: 1, scale: 1, rotation: 0, duration: 0.62, ease: 'back.out(3.2)' }, 3.50);
+      tl.fromTo(badgeR,
+        { autoAlpha: 0, scale: 0.2, rotation: -8 },
+        { autoAlpha: 1, scale: 1, rotation: 0, duration: 0.62, ease: 'back.out(3.2)' }, 3.86);
+
+      /* --- Scene 4 (4.8-6.6s): the disqualifying rule reveals in layers --- */
+      tl.fromTo(bandRule, { scaleX: 0 },
+        { scaleX: 1, duration: 0.5, ease: 'power3.inOut' }, 4.85);
+      tl.fromTo(band, { autoAlpha: 0, y: 20 },
+        { autoAlpha: 1, y: 0, duration: 0.55, ease: 'power3.out' }, 4.95);
+      tl.fromTo(line1, { autoAlpha: 0, y: 14 },
+        { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 5.35);
+      tl.fromTo(line2, { autoAlpha: 0, y: 14 },
+        { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 5.62);
+      tl.fromTo(line3, { autoAlpha: 0, y: 14 },
+        { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 5.89);
+      tl.fromTo(always, { autoAlpha: 0, y: 8 },
+        { autoAlpha: 1, y: 0, duration: 0.42, ease: 'power2.out' }, 6.05);
+
+      /* --- Scene 5 (6.6-7.6s): the subcontract footnote --- */
+      tl.fromTo(footRule, { autoAlpha: 0, scaleX: 0 },
+        { autoAlpha: 1, scaleX: 1, duration: 0.4, ease: 'power2.out', transformOrigin: 'left center' }, 6.62);
+      tl.fromTo(foot, { autoAlpha: 0, y: 12 },
+        { autoAlpha: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 6.78);
+
+      /* --- Scene 6 (7.6-9.0s): held read. No exit — the root transition is the exit. --- */
+    })();
+  </script>
+</template>
