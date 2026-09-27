@@ -7,16 +7,19 @@
  * script, no editar JSON a mano.
  *
  * Detecta el estado real de cada curso en disco, sin asumir nada:
- *  - `composicion`: solo si existe videos/<slug>/index.html Y ese archivo
+ *  - `composicion`: solo si existe videos/<carpeta>/index.html Y ese archivo
  *    referencia los frames. El scaffold que crea `hyperframes init` tambien
  *    deja un index.html, pero vacio, y apuntar ahi seria mostrar un
- *    placeholder como si fuera el video.
+ *    placeholder como si fuera el video. La carpeta no es el slug: se resuelve
+ *    con scripts/proyectos.mjs y la URL lleva la carpeta, que es lo que la
+ *    ruta /composiciones/ sabe servir.
  *  - `disponible`: solo si el MP4 existe de verdad en public/videos/.
  */
 
 import { readFileSync, readdirSync, writeFileSync, existsSync, statSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { proyectoDelCurso } from './proyectos.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const COURSES_DIR = join(ROOT, 'courses');
@@ -36,7 +39,9 @@ const AREA_ORDER = [
 ];
 
 function composicionReal(slug) {
-  const proyecto = join(PROJECTS_DIR, slug);
+  const carpeta = proyectoDelCurso(slug);
+  if (!carpeta) return null;
+  const proyecto = join(PROJECTS_DIR, carpeta);
   const indexPath = join(proyecto, 'index.html');
   if (!existsSync(indexPath)) return null;
 
@@ -50,7 +55,7 @@ function composicionReal(slug) {
   const montadas = frames.filter((f) => html.includes(f.replace(/\.html$/, '')));
   if (montadas.length === 0) return null;
 
-  return { ruta: `/composiciones/${slug}/`, frames: montadas.length, de: frames.length };
+  return { ruta: `/composiciones/${carpeta}/`, frames: montadas.length, de: frames.length };
 }
 
 if (!existsSync(COURSES_DIR)) {
