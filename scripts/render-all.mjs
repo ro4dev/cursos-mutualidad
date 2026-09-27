@@ -80,17 +80,32 @@ mkdirSync(PUBLIC_VIDEOS, { recursive: true });
 
 let ok = 0;
 let fallos = 0;
+let sinFrames = 0;
 
 for (const slug of lista) {
   const cwd = join(PROJECTS_DIR, slug);
   const curso = slugDelCurso(slug);
   console.log(`\n=== ${slug} -> curso ${curso} ===`);
 
+  // Un proyecto recien scaffoldeado tiene BRIEF, INVESTIGACION y frame.md pero
+  // ningun frame. No es un error: todavia no hay nada que componer. Se avisa y
+  // se sigue con el siguiente, en vez de correr lint sobre un index.html que
+  // ni existe.
+  const dirFrames = join(cwd, 'compositions', 'frames');
+  const hayFrames =
+    existsSync(dirFrames) && readdirSync(dirFrames).some((f) => f.endsWith('.html'));
+  if (!hayFrames) {
+    console.log(`  sin frames todavia. Se omite.`);
+    console.log(`    Siguiente: escribir compositions/frames/01-*.html y su STORYBOARD.md`);
+    sinFrames += 1;
+    continue;
+  }
+
   // Etapa 1: componer. El orden importa: el guard ve los selectores de los
   // frames sueltos (y caza los que el linter no ve), lint despues, assemble
   // arma index.html, transitions inyecta los cortes y verify los comprueba, y
   // check es la puerta final sobre el index ya montado.
-  if (!paso('node', [GUARD, join(cwd, 'compositions', 'frames')], cwd)) {
+  if (!paso('node', [GUARD, dirFrames], cwd)) {
     console.log(`  hay selectores rotos en ${slug}, se omite.`);
     fallos += 1;
     continue;
@@ -145,7 +160,15 @@ for (const slug of lista) {
   ok += 1;
 }
 
-console.log(`\n${ok} ok, ${fallos} con problemas.`);
+console.log(
+  `\n${ok} ok, ${fallos} con problemas` +
+    (sinFrames > 0 ? `, ${sinFrames} sin frames todavia` : '') +
+    '.',
+);
+
+if (sinFrames > 0) {
+  console.log('Un proyecto sin frames no es un fallo: es un curso sin componer aun.');
+}
 
 if (!soloAssemble && ok > 0) {
   console.log('Regenerando el catalogo para que el visor muestre las descargas...');
