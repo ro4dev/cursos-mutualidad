@@ -11,27 +11,36 @@
  * Divide el trabajo en etapas explicitas, porque son cosas distintas y
  * conviene poder correr solo la primera:
  *
- *   compose  — lint, assemble-index, transitions inject + verify, check
+ *   compose  — guard de selectores, lint, assemble-index, transitions
+ *              inject + verify, check
  *   render   — hyperframes render -> renders/video.mp4, copiado a
- *              public/videos/<slug>.mp4 para que el visor lo ofrezca
+ *              public/videos/<curso>.mp4 para que el visor lo ofrezca
  *
  * Un curso sin carpeta en videos/ se salta: todavia esta en etapa de
  * investigacion y no hay nada que componer.
+ *
+ * El nombre de la carpeta del proyecto y el slug del curso NO son lo mismo:
+ * el proyecto se llama `ley-karin-plazos` porque asi se lee dentro del
+ * composition, y el curso se llama `ley-karin` porque asi se ve en el
+ * catalogo. El puente es el campo "course" de meta.json. Sin el, el mp4
+ * aterrizaba en public/videos/ley-karin-plazos.mp4 y el visor, que busca
+ * /videos/<slug>.mp4, no lo encontraba.
  */
 
 import { spawnSync } from 'node:child_process';
 import { existsSync, mkdirSync, copyFileSync, readdirSync, statSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { slugDelCurso, proyectos as todosLosProyectos } from './proyectos.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PROJECTS_DIR = join(ROOT, 'videos');
-const COURSES_DIR = join(ROOT, 'courses');
 const PUBLIC_VIDEOS = join(ROOT, 'public', 'videos');
 
-/* Scripts del skill faceless-explainer. El CLI de hyperframes no tiene un
-   comando de ensamblado: assemble-index.mjs y transitions.mjs son los que
-   escriben index.html. */
+/* Scripts del repo y del skill faceless-explainer. El CLI de hyperframes no
+   tiene un comando de ensamblado: assemble-index.mjs y transitions.mjs son
+   los que escriben index.html. */
+const GUARD = join(ROOT, 'scripts', 'check-selectors.mjs');
 const SKILL = join(ROOT, '.agents', 'skills', 'faceless-explainer', 'scripts');
 const ASSEMBLE = join(SKILL, 'assemble-index.mjs');
 const TRANSITIONS = join(SKILL, 'transitions.mjs');
@@ -48,8 +57,7 @@ const paso = (cmd, cmdArgs, cwd) => {
 };
 
 function proyectos() {
-  if (!existsSync(PROJECTS_DIR)) return [];
-  const todos = readdirSync(PROJECTS_DIR).filter((s) => statSync(join(PROJECTS_DIR, s)).isDirectory());
+  const todos = todosLosProyectos();
   if (pedidos.length === 0) return todos;
   const faltan = pedidos.filter((p) => !todos.includes(p));
   if (faltan.length) {
@@ -75,11 +83,19 @@ let fallos = 0;
 
 for (const slug of lista) {
   const cwd = join(PROJECTS_DIR, slug);
-  console.log(`\n=== ${slug} ===`);
+  const curso = slugDelCurso(slug);
+  console.log(`\n=== ${slug} -> curso ${curso} ===`);
 
-  // Etapa 1: componer. El orden importa: lint ve los frames sueltos,
-  // assemble arma index.html, transitions inyecta los cortes y verify los
-  // comprueba, y check es la puerta final sobre el index ya montado.
+  // Etapa 1: componer. El orden importa: el guard ve los selectores de los
+  // frames sueltos (y caza los que el linter no ve), lint despues, assemble
+  // arma index.html, transitions inyecta los cortes y verify los comprueba, y
+  // check es la puerta final sobre el index ya montado.
+  if (!paso('node', [GUARD, join(cwd, 'compositions', 'frames')], cwd)) {
+    console.log(`  hay selectores rotos en ${slug}, se omite.`);
+    fallos += 1;
+    continue;
+  }
+
   if (!paso('npx', ['hyperframes', 'lint'], cwd)) {
     console.log(`  lint fallo en ${slug}, se omite.`);
     fallos += 1;
@@ -124,8 +140,8 @@ for (const slug of lista) {
     continue;
   }
 
-  copyFileSync(mp4, join(PUBLIC_VIDEOS, `${slug}.mp4`));
-  console.log(`  ${slug}: mp4 en public/videos/${slug}.mp4`);
+  copyFileSync(mp4, join(PUBLIC_VIDEOS, `${curso}.mp4`));
+  console.log(`  ${slug}: mp4 en public/videos/${curso}.mp4`);
   ok += 1;
 }
 
