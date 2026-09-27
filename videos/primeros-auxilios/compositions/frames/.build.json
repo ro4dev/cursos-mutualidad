@@ -1,0 +1,30 @@
+[
+  {
+    "id": "01-la-escena-primero",
+    "tipo": "gancho",
+    "titulo": "La escena primero",
+    "duracion": 14.5,
+    "transition_in": "cut"
+  },
+  {
+    "id": "02-lo-que-si-y-lo-que-no",
+    "tipo": "par",
+    "titulo": "Lo que sí y lo que no",
+    "duracion": 14.5,
+    "transition_in": "cut"
+  },
+  {
+    "id": "03-los-tres-pasos",
+    "tipo": "lista",
+    "titulo": "Los tres pasos",
+    "duracion": 14.5,
+    "transition_in": "cut"
+  },
+  {
+    "id": "04-sin-abandonar",
+    "tipo": "cierre",
+    "titulo": "Sin abandonar",
+    "duracion": 14.5,
+    "transition_in": "crossfade"
+  }
+]

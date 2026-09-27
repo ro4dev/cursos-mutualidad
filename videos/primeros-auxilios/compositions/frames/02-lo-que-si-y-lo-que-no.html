@@ -1,0 +1,320 @@
+<template>
+  <div data-hf-id="hf-wupe" id="02-lo-que-si-y-lo-que-no" data-composition-id="02-lo-que-si-y-lo-que-no" data-start="0" data-duration="14.5" data-width="1920" data-height="1080">
+    <style>
+      /* frame.md typography, resolved to the real woff2 files shipped in
+         capture/assets/fonts. Both are the latin subset variable cuts, so
+         the render host never falls back to a generic family. */
+      @font-face {
+        font-family: 'Source Serif 4';
+        font-style: normal;
+        font-weight: 200 900;
+        font-display: block;
+        src: url('capture/assets/fonts/source-serif-4-latin.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'JetBrains Mono';
+        font-style: normal;
+        font-weight: 100 800;
+        font-display: block;
+        src: url('capture/assets/fonts/jetbrains-mono-latin.woff2') format('woff2');
+      }
+    </style>
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      /* ── Frame root — full 1920x1080 ground box, container-query basis ─── */
+      [id="02-lo-que-si-y-lo-que-no"] {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        container-type: size;
+        isolation: isolate;
+        color: #1a1a17;
+        font-family: var(--font-display);
+      }
+
+      /* ── Full-bleed ground (own clip layer, never the root) ───────────── */
+      [id="02-lo-que-si-y-lo-que-no-bg"] {
+        position: absolute;
+        inset: 0;
+        background: #efe7d4;
+      }
+
+      /* ── El mundo: una camara virtual. Todo lo que se mueve, sube aqui ── */
+      [id="02-lo-que-si-y-lo-que-no-world"] {
+        --accent: #785c1b;
+        --accent-deep: #5d4610;
+        --fg: #1a1a17;
+        --bg: #efe7d4;
+        --font-display: "Source Serif 4", Georgia, serif;
+        --font-mono: "JetBrains Mono", ui-monospace, monospace;
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+      }
+
+[id="02-lo-que-si-y-lo-que-no-toprule"] {
+        position: absolute;
+        left: 96px;
+        top: 96px;
+        width: 1728px;
+        height: 2px;
+        background: #2e4a2a;
+        transform-origin: 0% 50%;
+        will-change: transform;
+      }
+
+[id="02-lo-que-si-y-lo-que-no-kicker"] {
+        position: absolute;
+        left: 96px;
+        top: 118px;
+        margin: 0;
+        color: #3a5a36;
+        font-family: var(--font-mono);
+        font-size: 1.1458cqw;
+        font-weight: 500;
+        line-height: 1.25;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        will-change: transform, opacity;
+      }
+
+[id="02-lo-que-si-y-lo-que-no-titulo"] {
+        position: absolute;
+        left: 96px;
+        top: 170px;
+        width: 1400px;
+        margin: 0;
+        color: #1a1a17;
+        font-family: var(--font-display);
+        font-size: 2.9167cqw;
+        font-weight: 500;
+        line-height: 1.06;
+        letter-spacing: -0.01em;
+        will-change: transform, opacity;
+      }
+
+[id="02-lo-que-si-y-lo-que-no-a-card"] {
+        position: absolute;
+        left: 96px;
+        top: 430px;
+        width: 4px;
+        height: 470px;
+        background: #2e4a2a;
+        transform-origin: 50% 0%;
+        will-change: transform;
+      }
+
+[id="02-lo-que-si-y-lo-que-no-a-label"] {
+        position: absolute;
+        left: 136px;
+        top: 474px;
+        width: 732px;
+        margin: 0;
+        color: #e6dcc4;
+        font-family: var(--font-mono);
+        font-size: 0.8854cqw;
+        font-weight: 500;
+        line-height: 1.25;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        will-change: transform, opacity;
+      }
+
+[id="02-lo-que-si-y-lo-que-no-a-head"] {
+        position: absolute;
+        left: 136px;
+        top: 520px;
+        width: 732px;
+        margin: 0;
+        color: #efe7d4;
+        font-family: var(--font-display);
+        font-size: 2.3958cqw;
+        font-weight: 500;
+        line-height: 1.06;
+        letter-spacing: -0.01em;
+        will-change: transform, opacity;
+      }
+
+[id="02-lo-que-si-y-lo-que-no-a-rule"] {
+        position: absolute;
+        left: 136px;
+        top: 606px;
+        width: 110px;
+        height: 2px;
+        background: #efe7d4;
+        transform-origin: 0% 50%;
+        will-change: transform;
+      }
+
+[id="02-lo-que-si-y-lo-que-no-a-body"] {
+        position: absolute;
+        left: 136px;
+        top: 644px;
+        width: 732px;
+        margin: 0;
+        color: #e6dcc4;
+        font-family: var(--font-display);
+        font-size: 1.4583cqw;
+        font-weight: 400;
+        line-height: 1.44;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+
+[id="02-lo-que-si-y-lo-que-no-a-bg"] {
+        position: absolute;
+        left: 96px;
+        top: 402px;
+        width: 812px;
+        height: 526px;
+        background: #2e4a2a;
+        transform-origin: 0% 50%;
+        will-change: transform;
+      }
+
+[id="02-lo-que-si-y-lo-que-no-b-card"] {
+        position: absolute;
+        left: 1012px;
+        top: 430px;
+        width: 4px;
+        height: 470px;
+        background: #785c1b;
+        transform-origin: 50% 0%;
+        will-change: transform;
+      }
+
+[id="02-lo-que-si-y-lo-que-no-b-label"] {
+        position: absolute;
+        left: 1052px;
+        top: 474px;
+        width: 732px;
+        margin: 0;
+        color: #785c1b;
+        font-family: var(--font-mono);
+        font-size: 0.8854cqw;
+        font-weight: 500;
+        line-height: 1.25;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        will-change: transform, opacity;
+      }
+
+[id="02-lo-que-si-y-lo-que-no-b-head"] {
+        position: absolute;
+        left: 1052px;
+        top: 520px;
+        width: 732px;
+        margin: 0;
+        color: #1a1a17;
+        font-family: var(--font-display);
+        font-size: 2.3958cqw;
+        font-weight: 500;
+        line-height: 1.06;
+        letter-spacing: -0.01em;
+        will-change: transform, opacity;
+      }
+
+[id="02-lo-que-si-y-lo-que-no-b-rule"] {
+        position: absolute;
+        left: 1052px;
+        top: 606px;
+        width: 110px;
+        height: 2px;
+        background: #785c1b;
+        transform-origin: 0% 50%;
+        will-change: transform;
+      }
+
+[id="02-lo-que-si-y-lo-que-no-b-body"] {
+        position: absolute;
+        left: 1052px;
+        top: 644px;
+        width: 732px;
+        margin: 0;
+        color: #243a21;
+        font-family: var(--font-display);
+        font-size: 1.4583cqw;
+        font-weight: 400;
+        line-height: 1.44;
+        letter-spacing: 0;
+        will-change: transform, opacity;
+      }
+    </style>
+
+      <div data-hf-id="hf-ud2m" id="02-lo-que-si-y-lo-que-no-bg" class="clip" data-start="0" data-duration="14.5" data-track-index="0"></div>
+    <div data-hf-id="hf-aju3" id="02-lo-que-si-y-lo-que-no-world" class="clip" data-start="0" data-duration="14.5" data-track-index="1">      <span data-hf-id="hf-1h22" id="02-lo-que-si-y-lo-que-no-toprule"></span>      <div data-hf-id="hf-ig6k" id="02-lo-que-si-y-lo-que-no-kicker-w">        <span data-hf-id="hf-khik" id="02-lo-que-si-y-lo-que-no-kicker">EL GESTO Y EL LÍMITE</span></div>      <div data-hf-id="hf-v9ww" id="02-lo-que-si-y-lo-que-no-titulo-w">        <h2 data-hf-id="hf-lpyo" id="02-lo-que-si-y-lo-que-no-titulo">Lo que se hace y lo que no</h2></div>      <div data-hf-id="hf-qwj8" id="02-lo-que-si-y-lo-que-no-a-w">        <span data-hf-id="hf-simc" id="02-lo-que-si-y-lo-que-no-a-bg"></span>        <span data-hf-id="hf-2h6l" id="02-lo-que-si-y-lo-que-no-a-card"></span>        <span data-hf-id="hf-kmqr" id="02-lo-que-si-y-lo-que-no-a-label">Lo que sí</span>        <h3 data-hf-id="hf-14a9" id="02-lo-que-si-y-lo-que-no-a-head">Compresiones</h3>        <span data-hf-id="hf-4hxx" id="02-lo-que-si-y-lo-que-no-a-rule"></span>        <p data-hf-id="hf-u54j" id="02-lo-que-si-y-lo-que-no-a-body">En el centro del pecho, firmes y rítmadas, si no hay respiración normal.</p></div>      <div data-hf-id="hf-7qo5" id="02-lo-que-si-y-lo-que-no-b-w">        <span data-hf-id="hf-z6ha" id="02-lo-que-si-y-lo-que-no-b-card"></span>        <span data-hf-id="hf-2xfy" id="02-lo-que-si-y-lo-que-no-b-label">Lo que nunca</span>        <h3 data-hf-id="hf-a1xu" id="02-lo-que-si-y-lo-que-no-b-head">Mover ni alimentar</h3>        <span data-hf-id="hf-gyq6" id="02-lo-que-si-y-lo-que-no-b-rule"></span>        <p data-hf-id="hf-94rg" id="02-lo-que-si-y-lo-que-no-b-body">Si hay riesgo de lesión de columna no se mueve. Y no se da de comer ni de beber.</p></div></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      (function () {
+        "use strict";
+
+        // Ids and class names carry no custom tokens: every selector is an
+        // attribute or id selector, so sibling frames cannot collide.
+        var byId = function (id) {
+          return document.querySelector('[id="' + id + '"]');
+        };
+
+        // Cada id que este frame anima tiene que existir de verdad. Si falta
+        // uno, el tween seria sobre null y el reveal nunca correria — que es
+        // exactamente el bug que tubo el frame 09 del piloto.
+        var IDS = [
+          "02-lo-que-si-y-lo-que-no-toprule",
+          "02-lo-que-si-y-lo-que-no-kicker",
+          "02-lo-que-si-y-lo-que-no-titulo",
+          "02-lo-que-si-y-lo-que-no-a-card",
+          "02-lo-que-si-y-lo-que-no-a-label",
+          "02-lo-que-si-y-lo-que-no-a-head",
+          "02-lo-que-si-y-lo-que-no-a-rule",
+          "02-lo-que-si-y-lo-que-no-a-body",
+          "02-lo-que-si-y-lo-que-no-a-bg",
+          "02-lo-que-si-y-lo-que-no-b-card",
+          "02-lo-que-si-y-lo-que-no-b-label",
+          "02-lo-que-si-y-lo-que-no-b-head",
+          "02-lo-que-si-y-lo-que-no-b-rule",
+          "02-lo-que-si-y-lo-que-no-b-body",
+        ];
+        var faltantes = IDS.filter(function (id) { return !byId(id); });
+        if (faltantes.length) {
+          throw new Error(
+            "[02-lo-que-si-y-lo-que-no] ids sin elemento en el DOM: " + faltantes.join(", "),
+          );
+        }
+
+        var tl = gsap.timeline({ paused: true });
+
+
+        tl.fromTo(byId("02-lo-que-si-y-lo-que-no-toprule"), { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power3.out" }, 0.1);
+        tl.fromTo(byId("02-lo-que-si-y-lo-que-no-kicker"), { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 0.2);
+        tl.fromTo(byId("02-lo-que-si-y-lo-que-no-titulo"), { opacity: 0, y: 26 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 0.45);
+
+        // — la columna que gana entra como bloque macizo; la que se descarta,
+        // en contour, despues, para que el contraste se lea.
+        tl.fromTo(byId("02-lo-que-si-y-lo-que-no-a-bg"), { opacity: 0, x: -28 }, { opacity: 1, x: 0, duration: 0.55, ease: "power3.out" }, 0.95);
+        tl.fromTo(byId("02-lo-que-si-y-lo-que-no-a-card"), { scaleY: 0 }, { scaleY: 1, duration: 0.5, ease: "power3.out" }, 1);
+        tl.fromTo(byId("02-lo-que-si-y-lo-que-no-a-label"), { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 1.1099999999999999);
+        tl.fromTo(byId("02-lo-que-si-y-lo-que-no-a-head"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.55, ease: "power3.out" }, 1.19);
+        tl.fromTo(byId("02-lo-que-si-y-lo-que-no-a-rule"), { scaleX: 0 }, { scaleX: 1, duration: 0.4, ease: "power3.out" }, 1.31);
+        tl.fromTo(byId("02-lo-que-si-y-lo-que-no-a-body"), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 1.39);
+        tl.fromTo(byId("02-lo-que-si-y-lo-que-no-b-card"), { scaleY: 0 }, { scaleY: 1, duration: 0.5, ease: "power3.out" }, 1.5);
+        tl.fromTo(byId("02-lo-que-si-y-lo-que-no-b-label"), { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 1.6099999999999999);
+        tl.fromTo(byId("02-lo-que-si-y-lo-que-no-b-head"), { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.55, ease: "power3.out" }, 1.69);
+        tl.fromTo(byId("02-lo-que-si-y-lo-que-no-b-rule"), { scaleX: 0 }, { scaleX: 1, duration: 0.4, ease: "power3.out" }, 1.81);
+        tl.fromTo(byId("02-lo-que-si-y-lo-que-no-b-body"), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 1.89);
+
+        // hold the declared 14.5s window open without an exit tween
+        tl.to({}, { duration: 0.01 }, 14.49);
+
+        tl.seek(0);
+        window.__timelines = window.__timelines || {};
+        window.__timelines["02-lo-que-si-y-lo-que-no"] = tl;
+      })();
+    </script>
+  </div>
+</template>
