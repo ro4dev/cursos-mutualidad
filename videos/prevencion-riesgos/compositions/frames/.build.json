@@ -1,0 +1,30 @@
+[
+  {
+    "id": "01-probabilidad-y-dano",
+    "tipo": "gancho",
+    "titulo": "Probabilidad y daño",
+    "duracion": 14.5,
+    "transition_in": "cut"
+  },
+  {
+    "id": "02-identificar-o-comite",
+    "tipo": "par",
+    "titulo": "Identificar o comité",
+    "duracion": 14.5,
+    "transition_in": "cut"
+  },
+  {
+    "id": "03-lo-que-se-descarta",
+    "tipo": "lista",
+    "titulo": "Lo que se descarta",
+    "duracion": 14.5,
+    "transition_in": "cut"
+  },
+  {
+    "id": "04-primero-se-elimina",
+    "tipo": "cierre",
+    "titulo": "Primero se elimina",
+    "duracion": 14.5,
+    "transition_in": "crossfade"
+  }
+]
