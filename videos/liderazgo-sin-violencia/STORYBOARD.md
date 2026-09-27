@@ -1,65 +1,97 @@
-# Storyboard — Liderazgo sin violencia
+---
+format: 1920x1080
+duration: 58s
+message: "Los límites claros son la principal protección frente al exceso de autoridad. Y el ejemplo del jefe fija la norma real del equipo."
+arc: concept-explainer with a contrast
+audience: "Personal de mutualidades y empresas en Chile"
+mode: autonomous
+music: none
+---
 
-> Borrador de estructura. La composicion final se genera con el skill
-> `faceless-explainer`; este archivo fija el ritmo y el reparto del tiempo.
+# STORYBOARD — Liderazgo sin violencia
 
-- **Duración total**: 60s
-- **Aspecto**: 1920x1080
-- **Idioma**: es-CL
-- **Narración**: no (video mudo, tipografia fuerte)
-- **Ángulo**: normativa
+## Video direction
 
-## Estructura
+**Estructura:** `concept-explainer with a contrast`. Se abre con el hecho que más pesa en la práctica diaria, que es que el ejemplo del jefe termina mandando sobre la norma. El par del segundo frame pone los límites al lado de la capacidad de cuestionar, porque uno sin el otro no alcanza. La lista recorre el modelo, el apoyo y la responsabilidad, y el cierre vuelve sobre quién responde.
 
-| Desde | Duración | Movimiento | Nota |
-|---|---|---|---|
-| 0s | 6s | Apertura | Plantea el problema en una frase, sin rodeos. |
-| 6s | 6s | Gancho | Un dato o contraste que fije la atencion. |
-| 12s | 18s | Mecanismo | El cuerpo del curso: el paso a paso o la regla. |
-| 30s | 12s | Ejemplo | Un caso concreto que aterrizar el mecanismo. |
-| 42s | 9s | Cierre | La regla que la persona se lleva. |
-| 51s | 9s | Fuente | Fuente oficial y descargo, en placa quieta. |
+**Mesa de continuidad:** undefined
 
-## Composición por frame
+## Frame 1 — El jefe manda
 
-### Frame 01 — Apertura (6s)
+- scene: EL EJEMPLO,DEL JEFE
+- voiceover: ""
+- duration: 14.5s
+- poster: 4s
+- transition_in: cut
+- status: animated
+- src: compositions/frames/01-el-jefe-manda.html
+- type: gancho
+- narrationRole: Saca el liderazgo del registro de las declamaciones. El público entra pensando que la norma la escribe la empresa y sale entendiendo que la fija quien dirige.
+- keyMessage: El ejemplo del jefe fija la norma real del equipo.
 
-- Desde 0s hasta 6s
-- Plantea el problema en una frase, sin rodeos.
-- Copy: solo de la lista de hechos verificados de `INVESTIGACION.md`.
+Beats:
+  - 0.0-1.4s: rótulo mono y la primera frase del titular, a sangre. Entrada con rise-and-fade.
+  - 1.4-3.2s: la segunda frase se suma en el mismo bloque, con el filete de acento al costado.
+  - 3.2-5.2s: la línea de apoyo entra desde abajo y desciende el ritmo hacia el corte.
 
-### Frame 02 — Gancho (6s)
+## Frame 2 — Límites y cuestionamiento
 
-- Desde 6s hasta 12s
-- Un dato o contraste que fije la atencion.
-- Copy: solo de la lista de hechos verificados de `INVESTIGACION.md`.
+- scene: El límite y lo que lo sostiene
+- voiceover: ""
+- duration: 14.5s
+- poster: 5s
+- transition_in: cut
+- status: animated
+- src: compositions/frames/02-limites-y-cuestionamiento.html
+- type: par
+- narrationRole: Pone al lado las dos piezas que se necesitan juntas. La columna izquierda es la protección; la derecha es lo que la sostiene.
+- keyMessage: Los límites claros son la principal protección frente al exceso de autoridad.
 
-### Frame 03 — Mecanismo (18s)
+Beats:
+  - 0.0-1.4s: rótulo, titulo y filete superior entran.
+  - 1.4-3.0s: la columna izquierda, en verde macizo, con su filete vertical.
+  - 3.0-5.5s: la columna derecha entra después en contour. El retraso hace que el contraste se lea.
 
-- Desde 12s hasta 30s
-- El cuerpo del curso: el paso a paso o la regla.
-- Copy: solo de la lista de hechos verificados de `INVESTIGACION.md`.
+## Frame 3 — Lo que sostiene
 
-### Frame 04 — Ejemplo (12s)
+- scene: Modelo, apoyo y responsabilidad
+- voiceover: ""
+- duration: 14.5s
+- poster: 6s
+- transition_in: cut
+- status: animated
+- src: compositions/frames/03-lo-que-sostiene.html
+- type: lista
+- narrationRole: El bloque accionable, en el orden en que se construye el liderazgo: primero el modelo, después el apoyo, y al final la responsabilidad que no se delega.
+- keyMessage: El liderazgo se apoya en el ejemplo, la consistencia y el respeto, y da recursos, formación y defensa al equipo.
 
-- Desde 30s hasta 42s
-- Un caso concreto que aterrizar el mecanismo.
-- Copy: solo de la lista de hechos verificados de `INVESTIGACION.md`.
+Beats:
+  - 0.0-1.0s: rótulo y titulo entran con fade corto.
+  - 1.0-4.5s: los items entran de a uno, cada uno con su filete dibujandose.
+  - 4.5-8.0s: lectura sostenida del bloque, sin movimiento nuevo.
 
-### Frame 05 — Cierre (9s)
+## Frame 4 — De quien dirige
 
-- Desde 42s hasta 51s
-- La regla que la persona se lleva.
-- Copy: solo de la lista de hechos verificados de `INVESTIGACION.md`.
+- scene: LA RESPONSABILIDAD,FINAL ANTE EL EQUIPO,ES DE QUIEN DIRIGE
+- voiceover: ""
+- duration: 14.5s
+- poster: 7s
+- transition_in: crossfade
+- status: animated
+- src: compositions/frames/04-de-quien-dirige.html
+- type: cierre
+- narrationRole: Cierra bajando el ritmo sobre la parte que no se puede delegar. Es lo que el público se lleva del vídeo.
+- keyMessage: La responsabilidad final ante el equipo es de quien dirige.
 
-### Frame 06 — Fuente (9s)
+Beats:
+  - 0.0-1.2s: rótulo y filete de acento; la regla entra frase por frase.
+  - 1.2-2.6s: la nota aclara que el límite sin poder cuestionarlo no se sostiene.
+  - 2.6-4.0s: el bloque de fuente se dibuja al pie y queda en lectura.
 
-- Desde 51s hasta 60s
-- Fuente oficial y descargo, en placa quieta.
-- Copy: solo de la lista de hechos verificados de `INVESTIGACION.md`.
+## Continuidad
 
-## Reglas de copy
+Transiciones:
 
-- Toda afirmacion en pantalla es rastreable a `INVESTIGACION.md`.
-- Si un dato no está verificado, no aparece.
-- Ningun monto en UTM, ningun plazo sin confirmar, ningun nombre de norma sin citar.
+  - 1 -> 2: cut
+  - 2 -> 3: cut
+  - 3 -> 4: cut

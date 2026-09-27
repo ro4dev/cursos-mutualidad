@@ -1,0 +1,30 @@
+[
+  {
+    "id": "01-el-jefe-manda",
+    "tipo": "gancho",
+    "titulo": "El jefe manda",
+    "duracion": 14.5,
+    "transition_in": "cut"
+  },
+  {
+    "id": "02-limites-y-cuestionamiento",
+    "tipo": "par",
+    "titulo": "Límites y cuestionamiento",
+    "duracion": 14.5,
+    "transition_in": "cut"
+  },
+  {
+    "id": "03-lo-que-sostiene",
+    "tipo": "lista",
+    "titulo": "Lo que sostiene",
+    "duracion": 14.5,
+    "transition_in": "cut"
+  },
+  {
+    "id": "04-de-quien-dirige",
+    "tipo": "cierre",
+    "titulo": "De quien dirige",
+    "duracion": 14.5,
+    "transition_in": "crossfade"
+  }
+]
