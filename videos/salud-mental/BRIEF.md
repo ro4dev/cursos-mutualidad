@@ -42,7 +42,7 @@ Todos los visuales se inventan en la composición.
 
 Estos datos están respaldados por la fuente oficial. Ver `INVESTIGACION.md`.
 
-- **Derecho** — La proteccion de la salud mental en el trabajo es un derecho, no una concession.
+- **Derecho** — La proteccion de la salud mental en el trabajo es un derecho, no una concesion.
 - **Riesgos** — Carga excessiva, falta de control sobre el trabajo y trato hostil pueden afectar el bienestar.
 - **Factores** — Descanso, apoyo social y claridad de roles son factores protectores.
 - **Prevencion** — Medidas organizacionales: distribucion de carga, horarios, pausas y apoyo.

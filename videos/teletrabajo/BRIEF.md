@@ -51,7 +51,7 @@ Estos datos están respaldados por la fuente oficial. Ver `INVESTIGACION.md`.
 
 ## Hechos que el video NO puede afirmar
 
-- Multas asociadas al incumplimiento delacctele trabajo: no se citan montos.
+- Multas asociadas al incumplimiento de la ley de teletrabajo: no se citan montos.
 
 ## Notes
 

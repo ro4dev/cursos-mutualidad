@@ -5,7 +5,7 @@
 
 ## Fuente principal
 
-Ley N° 20.026 sobre probidad y conductafuncionaria; politica interna de la organizacion
+Ley N° 20.026 sobre probidad y conducta funcionaria; politica interna de la organizacion
 
 ## Fecha de revisión
 

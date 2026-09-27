@@ -42,7 +42,7 @@ La implementacion debe incluir formacion para ambas partes.
 Estas afirmaciones se evitaron a propósito. No volver a escribirlas sin una
 fuente oficial citada:
 
-- Multas asociadas al incumplimiento delacctele trabajo: no se citan montos.
+- Multas asociadas al incumplimiento de la ley de teletrabajo: no se citan montos.
 
 ## Método
 

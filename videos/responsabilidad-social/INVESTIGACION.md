@@ -5,7 +5,7 @@
 
 ## Fuente principal
 
-Conceptos de responsabilidad social empresarial; normativa de sustainability corporativa
+Conceptos de responsabilidad social empresarial; normativa de sostenibilidad corporativa
 
 ## Fecha de revisión
 

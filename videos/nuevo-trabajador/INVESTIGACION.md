@@ -5,7 +5,7 @@
 
 ## Fuente principal
 
-Buenas practicas de induccion laboral; normativa de capacitacion y prevention
+Buenas practicas de induccion laboral; normativa de capacitacion y prevencion de riesgos
 
 ## Fecha de revisión
 
