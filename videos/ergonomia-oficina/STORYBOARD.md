@@ -80,7 +80,7 @@ Beats:
 - status: animated
 - src: compositions/frames/04-lo-que-no-se-cita.html
 - type: cierre
-- narrationRole: Cierra con la regla accionable y baja el ritmo a plano de salida. Deja explicito que el curso no inventa cifras, que es lo que hace confiable un vídeo de salud ocupacional.
+- narrationRole: Cierra con la regla accionable y baja el ritmo a plano de salida. Deja explicito que el curso no inventa cifras, que es lo que hace confiable un video de salud ocupacional.
 - keyMessage: Lo que se lleva: ajustar el puesto de arriba hacia abajo, y alternar cada 20-30 minutos.
 
 Beats:

@@ -54,7 +54,7 @@ Beats:
 
 ## Frame 3 — Cuando se denuncia
 
-- scene: El camino una vez que ocurrio
+- scene: El camino una vez que ocurrió
 - voiceover: ""
 - duration: 10.75s
 - poster: 6s
@@ -85,7 +85,7 @@ Beats:
 
 Beats:
   - 0.0-1.2s: rótulo y filete de acento; la regla entra frase por frase.
-  - 1.2-2.6s: la nota aclara el alcance: el vídeo no distingue hostil de acoso en terminos juridicos.
+  - 1.2-2.6s: la nota aclara el alcance: el video no distingue hostil de acoso en terminos juridicos.
   - 2.6-4.0s: el bloque de fuente se dibuja al pie y queda en lectura.
 
 ## Continuidad

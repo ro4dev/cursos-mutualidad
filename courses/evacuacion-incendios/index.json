@@ -1,14 +1,14 @@
 {
   "slug": "evacuacion-incendios",
-  "titulo": "Incendios y evacuacion",
+  "titulo": "Incendios y evacuación",
   "area": "Seguridad",
-  "mensaje": "En un incendio decides en 30 segundos: la evacuacion no se improvisa, se entrena. Salida, punto de encuentro, y el numero al que llamar.",
-  "duracion": 45,
+  "mensaje": "En un incendio decides en 30 segundos: la evacuación no se improvisa, se entrena. Salida, punto de encuentro, y el número al que llamar.",
+  "duración": 45,
   "aspect": "1920x1080",
   "language": "es-CL",
   "angle": "proceso",
   "narration": false,
   "status": "research",
-  "fuente": "Ley N° 19.587 sobre prevencion y atencion de incendios; NCh 2502 y normativa de evacuacion",
+  "fuente": "Ley N° 19.587 sobre prevención y atención de incendios; NCh 2502 y normativa de evacuación",
   "video": null
 }

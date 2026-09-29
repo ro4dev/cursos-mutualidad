@@ -42,16 +42,16 @@ Todos los visuales se inventan en la composición.
 
 Estos datos están respaldados por la fuente oficial. Ver `INVESTIGACION.md`.
 
-- **EPP** — El empleador debe proveer, mantener y exigir el uso de elementos de proteccion personal adecuados al riesgo.
-- **Condiciones** — Debe mantener condiciones ambientales seguras: iluminacion, ventilacion, temperatura, ruido y vibraciones dentro de los limites legales.
-- **Retirada** — El trabajador puede retirarse ante riesgo grave e inminente, con restauracion de las condiciones de seguridad y sin perdida de jornada.
-- **Deber del trabajador** — Usar los EPP, informar situaciones peligrosas y colaborar en la investigacion de incidentes.
-- **Fiscalizacion** — La Direccion del Trabajo y las autoridades de higiene y seguridad pueden fiscalizar.
-- **Cultura y respeto** — La decencia y el respeto se exigen en todos los niveles de la organizacion.
+- **EPP** — El empleador debe proveer, mantener y exigir el uso de elementos de protección personal adecuados al riesgo.
+- **Condiciones** — Debe mantener condiciones ambientales seguras: iluminación, ventilación, temperatura, ruido y vibraciones dentro de los límites legales.
+- **Retirada** — El trabajador puede retirarse ante riesgo grave e inminente, con restauración de las condiciones de seguridad y sin perdida de jornada.
+- **Deber del trabajador** — Usar los EPP, informar situaciones peligrosas y colaborar en la investigación de incidentes.
+- **Fiscalización** — La Dirección del Trabajo y las autoridades de higiene y seguridad pueden fiscalizar.
+- **Cultura y respeto** — La decencia y el respeto se exigen en todos los niveles de la organización.
 
 ## Hechos que el video NO puede afirmar
 
-- Montos especificos de multas: no se citan. El curso convence con obligaciones, no con cifras.
+- Montos específicos de multas: no se citan. El curso convence con obligaciones, no con cifras.
 
 ## Notes
 

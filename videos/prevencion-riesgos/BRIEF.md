@@ -2,7 +2,7 @@
 workflow: faceless-explainer
 flow: automation
 storyboard: no
-slug: prevencion-riesgos
+slug: prevención-riesgos
 titulo: "Prevencion de riesgos: antes del incidente"
 area: Seguridad
 message: "La quase-accidente es la mejor noticia: informa de un riesgo real antes de que haga dano. Reportar no es hacer ruido, es prevenir."
@@ -43,15 +43,15 @@ Todos los visuales se inventan en la composición.
 Estos datos están respaldados por la fuente oficial. Ver `INVESTIGACION.md`.
 
 - **Que es** — Un riesgo es la probabilidad de que ocurra un evento indeseado con dano.
-- **Cuasi-accidente** — Un incidente sin lesion ni dano material tambien es informacion valuable de riesgo.
-- **Identificacion** — La identificacion de peligros es la primera fase y se hace por puesto de trabajo.
-- **Medida** — La jerarquia de controles va de eliminacion a EPP: primero se elimina, al final se protege.
-- **Reporte** — Reportar incidentes y cuasi-accidentes alimenta la investigacion y la planificacion.
+- **Cuasi-accidente** — Un incidente sin lesión ni dano material también es información valuable de riesgo.
+- **Identificación** — La identificacion de peligros es la primera fase y se hace por puesto de trabajo.
+- **Medida** — La jerarquía de controles va de eliminación a EPP: primero se elimina, al final se protege.
+- **Reporte** — Reportar incidentes y cuasi-accidentes alimenta la investigación y la planificación.
 - **Comite** — Cuando corresponde, el comite paritario participa en la identificacion y en las medidas.
 
 ## Hechos que el video NO puede afirmar
 
-- Porcentajes de reduccion de accidentes: no se citan.
+- Porcentajes de reducción de accidentes: no se citan.
 
 ## Notes
 

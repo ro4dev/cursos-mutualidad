@@ -3,9 +3,9 @@ workflow: faceless-explainer
 flow: automation
 storyboard: no
 slug: nuevo-trabajador
-titulo: "Induccion al nuevo trabajador"
+titulo: "Inducción al nuevo trabajador"
 area: Onboarding
-message: "La primera semana define la cultura que se vive: reglas claras, accesos listos y un acompanamiento real, no un manual."
+message: "La primera semana define la cultura que se vive: reglas claras, accesos listos y un acompañamiento real, no un manual."
 destination: youtube
 aspect: 1920x1080
 language: es-CL
@@ -17,12 +17,12 @@ music: none
 status: research
 ---
 
-# Induccion al nuevo trabajador
+# Inducción al nuevo trabajador
 
 ## Intent
 
 Curso del catálogo `cursos-mutualidad`. Video de capacitación en español de Chile
-sobre **Induccion al nuevo trabajador**, dirigido a personal de mutualidades y empresas.
+sobre **Inducción al nuevo trabajador**, dirigido a personal de mutualidades y empresas.
 
 Tono: claro, sobrio, sin alarmismo y sin cansar a quien ya sabe
 la teoría. El objetivo es que la persona salga sabiendo **qué hacer**, no solamente
@@ -42,12 +42,12 @@ Todos los visuales se inventan en la composición.
 
 Estos datos están respaldados por la fuente oficial. Ver `INVESTIGACION.md`.
 
-- **Objetivo** — La induccion integra al nuevo colaborador: le muestra como se trabaja aqui.
-- **Informacion clave** — Politicas de seguridad, conducta y horario se explican el primer dia.
-- **Accesos** — Cuentas, permisos y equipos listos desde el primer dia.
-- **Acompanamiento** — Una persona de referencia acompaña la adaptacion durante las primeras semanas.
-- **Capacitacion** — La formacion obligatoria (seguridad, salud) se realiza en los plazos legales.
-- **Evaluacion** — Se hace seguimiento de la adaptacion y se recoge la retroalimentacion.
+- **Objetivo** — La induccion integra al nuevo colaborador: le muestra como se trabaja aquí.
+- **Información clave** — Políticas de seguridad, conducta y horario se explican el primer día.
+- **Accesos** — Cuentas, permisos y equipos listos desde el primer día.
+- **Acompanamiento** — Una persona de referencia acompaña la adaptación durante las primeras semanas.
+- **Capacitación** — La formación obligatoria (seguridad, salud) se realiza en los plazos legales.
+- **Evaluación** — Se hace seguimiento de la adaptación y se recoge la retroalimentación.
 
 ## Hechos que el video NO puede afirmar
 

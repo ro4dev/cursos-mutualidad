@@ -15,7 +15,7 @@ Ley N° 21.668 (salud mental y bienestar); orientaciones de salud mental laboral
 
 ### Derecho
 
-La proteccion de la salud mental en el trabajo es un derecho, no una concesion.
+La protección de la salud mental en el trabajo es un derecho, no una concesión.
 
 ### Riesgos
 
@@ -25,13 +25,13 @@ Carga excessiva, falta de control sobre el trabajo y trato hostil pueden afectar
 
 Descanso, apoyo social y claridad de roles son factores protectores.
 
-### Prevencion
+### Prevención
 
-Medidas organizacionales: distribucion de carga, horarios, pausas y apoyo.
+Medidas organizacionales: distribución de carga, horarios, pausas y apoyo.
 
 ### Consulta
 
-Existe derecho a solicitar evaluacion y orientacion en salud mental.
+Existe derecho a solicitar evaluación y orientación en salud mental.
 
 ### Red
 
@@ -46,13 +46,13 @@ fuente oficial citada:
 
 ## Método
 
-1. Se identifico la fuente oficial primaria (texto legal, protocolo o guia sectorial).
+1. Se identifico la fuente oficial primaria (texto legal, protocolo o guía sectorial).
 2. Se copiaron los articulos o recomendaciones aplicables al caso de una mutualidad.
 3. Se descarto toda cifra que no apareciera en la fuente.
 4. Se registro explicitamente lo no verificable, para que el copy no lo invente.
 
-## Pendiente de confirmacion por la organizacion
+## Pendiente de confirmación por la organización
 
-- Politica interna aplicable (si existe) y diferencias con la norma general.
-- Numeros de emergencia y contactos internos vigentes.
-- Plazos o montos que la organizacion aplique por sobre la norma.
+- Política interna aplicable (si existe) y diferencias con la norma general.
+- Números de emergencia y contactos internos vigentes.
+- Plazos o montos que la organización aplique por sobre la norma.

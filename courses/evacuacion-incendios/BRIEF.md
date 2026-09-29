@@ -2,10 +2,10 @@
 workflow: faceless-explainer
 flow: automation
 storyboard: no
-slug: evacuacion-incendios
-titulo: "Incendios y evacuacion"
+slug: evacuación-incendios
+titulo: "Incendios y evacuación"
 area: Seguridad
-message: "En un incendio decides en 30 segundos: la evacuacion no se improvisa, se entrena. Salida, punto de encuentro, y el numero al que llamar."
+message: "En un incendio decides en 30 segundos: la evacuación no se improvisa, se entrena. Salida, punto de encuentro, y el número al que llamar."
 destination: youtube
 aspect: 1920x1080
 language: es-CL
@@ -17,12 +17,12 @@ music: none
 status: research
 ---
 
-# Incendios y evacuacion
+# Incendios y evacuación
 
 ## Intent
 
 Curso del catálogo `cursos-mutualidad`. Video de capacitación en español de Chile
-sobre **Incendios y evacuacion**, dirigido a personal de mutualidades y empresas.
+sobre **Incendios y evacuación**, dirigido a personal de mutualidades y empresas.
 
 Tono: claro, sobrio, sin alarmismo y sin cansar a quien ya sabe
 la teoría. El objetivo es que la persona salga sabiendo **qué hacer**, no solamente
@@ -42,16 +42,16 @@ Todos los visuales se inventan en la composición.
 
 Estos datos están respaldados por la fuente oficial. Ver `INVESTIGACION.md`.
 
-- **Alarma** — Ante la alarma de incendio la evacuacion es inmediata y ordenada.
-- **Ruta** — Se usa la salida mas cercana y segura, nunca el ascensor.
+- **Alarma** — Ante la alarma de incendio la evacuación es inmediata y ordenada.
+- **Ruta** — Se usa la salida más cercana y segura, nunca el ascensor.
 - **Punto de encuentro** — Todos se reunen en el punto de encuentro definido para confirmar quienes salieron.
 - **Cuenta** — La cuenta de personas permite detectar faltantes y dar aviso.
-- **Equipo** — Extintor solo si hay salida libre y la llama es pequena: el escape es prioridad.
-- **Prevencion** — No bloquear pasillos ni salidas; revisar cableado y equipos de calefaccion.
+- **Equipo** — Extintor solo si hay salida libre y la llama es pequeña: el escape es prioridad.
+- **Prevención** — No bloquear pasillos ni salidas; revisar cableado y equipos de calefacción.
 
 ## Hechos que el video NO puede afirmar
 
-- Numero unico de emergencias y plazos exactos de evacuacion: verificar con la unidad de prevencion de riesgos local.
+- Numero único de emergencias y plazos exactos de evacuación: verificar con la unidad de prevencion de riesgos local.
 
 ## Notes
 

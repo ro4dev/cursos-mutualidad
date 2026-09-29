@@ -5,7 +5,7 @@
 
 ## Fuente principal
 
-Guia de primeros auxilios; recomendaciones de la Cruz Roja y de salud de emergencia
+Guía de primeros auxilios; recomendaciones de la Cruz Roja y de salud de emergencia
 
 ## Fecha de revisión
 
@@ -19,9 +19,9 @@ Antes de atender, revisar que la escena sea segura para no sumarse al accidente.
 
 ### Aviso
 
-Pedir ayuda y llamar a la emergencia; comunicar ubicacion exacta.
+Pedir ayuda y llamar a la emergencia; comunicar ubicación exacta.
 
-### Respiracion
+### Respiración
 
 Verificar la respiracion antes de iniciar compresiones.
 
@@ -31,7 +31,7 @@ Compresiones en el centro del pecho, firmes y ritmadas, si no hay respiracion no
 
 ### No hacer dano
 
-No mover a la persona si hay riesgo de lesion de columna; no dar de comer ni de beber.
+No mover a la persona si hay riesgo de lesión de columna; no dar de comer ni de beber.
 
 ### Traslado
 
@@ -51,8 +51,8 @@ fuente oficial citada:
 3. Se descarto toda cifra que no apareciera en la fuente.
 4. Se registro explicitamente lo no verificable, para que el copy no lo invente.
 
-## Pendiente de confirmacion por la organizacion
+## Pendiente de confirmación por la organización
 
-- Politica interna aplicable (si existe) y diferencias con la norma general.
-- Numeros de emergencia y contactos internos vigentes.
-- Plazos o montos que la organizacion aplique por sobre la norma.
+- Política interna aplicable (si existe) y diferencias con la norma general.
+- Números de emergencia y contactos internos vigentes.
+- Plazos o montos que la organización aplique por sobre la norma.

@@ -80,7 +80,7 @@ Beats:
 - status: animated
 - src: compositions/frames/04-de-quien-dirige.html
 - type: cierre
-- narrationRole: Cierra bajando el ritmo sobre la parte que no se puede delegar. Es lo que el público se lleva del vídeo.
+- narrationRole: Cierra bajando el ritmo sobre la parte que no se puede delegar. Es lo que el público se lleva del video.
 - keyMessage: La responsabilidad final ante el equipo es de quien dirige.
 
 Beats:

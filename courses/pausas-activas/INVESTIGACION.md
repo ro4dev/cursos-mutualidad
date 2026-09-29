@@ -5,7 +5,7 @@
 
 ## Fuente principal
 
-Guia de pausas activas y higiene postural; recomendaciones de salud ocupacional
+Guía de pausas activas y higiene postural; recomendaciones de salud ocupacional
 
 ## Fecha de revisión
 
@@ -15,30 +15,30 @@ Guia de pausas activas y higiene postural; recomendaciones de salud ocupacional
 
 ### Postura
 
-La posicion estatica prolongada carga la columna cervical y lumbar; alternar posturas reduce la carga.
+La posición estatica prolongada carga la columna cervical y lumbar; alternar posturas reduce la carga.
 
-### Vision
+### Visión
 
 La vision cercana prolongada causa fatiga visual; la regla 20-20-20 ayuda a descansarla.
 
-### Concentracion
+### Concentración
 
-Descansos cortos y frecuentes rinden mas que un descanso largo y unico.
+Descansos cortos y frecuentes rinden más que un descanso largo y único.
 
-### Hidratacion
+### Hidratación
 
-Beber agua con regularidad sostiene la atencion y evita la cefalea por deshidratacion.
+Beber agua con regularidad sostiene la atención y evita la cefalea por deshidratación.
 
 ### Microdescansos
 
-2 a 5 minutos de movimiento bastan para restaurar la circulacion y la postura.
+2 a 5 minutos de movimiento bastan para restaurar la circulación y la postura.
 
 ## Lo que NO se pudo verificar
 
 Estas afirmaciones se evitaron a propósito. No volver a escribirlas sin una
 fuente oficial citada:
 
-- Cifras exactas de reduccion de sintomatologia: variable por estudio; el video no cita porcentajes.
+- Cifras exactas de reducción de sintomatología: variable por estudio; el video no cita porcentajes.
 
 ## Método
 
@@ -47,8 +47,8 @@ fuente oficial citada:
 3. Se descarto toda cifra que no apareciera en la fuente.
 4. Se registro explicitamente lo no verificable, para que el copy no lo invente.
 
-## Pendiente de confirmacion por la organizacion
+## Pendiente de confirmación por la organización
 
-- Politica interna aplicable (si existe) y diferencias con la norma general.
-- Numeros de emergencia y contactos internos vigentes.
-- Plazos o montos que la organizacion aplique por sobre la norma.
+- Política interna aplicable (si existe) y diferencias con la norma general.
+- Números de emergencia y contactos internos vigentes.
+- Plazos o montos que la organización aplique por sobre la norma.

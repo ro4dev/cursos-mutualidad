@@ -3,7 +3,7 @@ workflow: faceless-explainer
 flow: automation
 storyboard: no
 slug: teletrabajo
-titulo: "Teletrabajo: derechos y limites"
+titulo: "Teletrabajo: derechos y límites"
 area: Derecho Laboral
 message: "Teletrabajo no es trabajar donde quieras, cuando quieras: hay condiciones de salud, seguridad, equipos y desconexion que la ley fija."
 destination: youtube
@@ -17,12 +17,12 @@ music: none
 status: research
 ---
 
-# Teletrabajo: derechos y limites
+# Teletrabajo: derechos y límites
 
 ## Intent
 
 Curso del catálogo `cursos-mutualidad`. Video de capacitación en español de Chile
-sobre **Teletrabajo: derechos y limites**, dirigido a personal de mutualidades y empresas.
+sobre **Teletrabajo: derechos y límites**, dirigido a personal de mutualidades y empresas.
 
 Tono: claro, sobrio, sin alarmismo y sin cansar a quien ya sabe
 la teoría. El objetivo es que la persona salga sabiendo **qué hacer**, no solamente
@@ -42,12 +42,12 @@ Todos los visuales se inventan en la composición.
 
 Estos datos están respaldados por la fuente oficial. Ver `INVESTIGACION.md`.
 
-- **Definicion** — El teletrabajo es una modalidad en que la prestacion se realiza a distancia mediante medios digitales.
+- **Definición** — El teletrabajo es una modalidad en que la prestación se realiza a distancia mediante medios digitales.
 - **Voluntariedad** — La modalidad debe ser acordada y predeterminada entre las partes; no puede imponerse unilateralmente.
-- **Herramientas** — El empleador debe proveer los elementos y herramientas necesarios para la ejecucion del trabajo y para garantizar la seguridad.
+- **Herramientas** — El empleador debe proveer los elementos y herramientas necesarios para la ejecución del trabajo y para garantizar la seguridad.
 - **Condiciones de salud** — Debe garantizarse un espacio de trabajo con condiciones de salud y seguridad adecuadas.
-- **Derecho a la desconexion** — La jornada se rige por la duracion maxima legal y existe derecho a la desconexion fuera de la jornada.
-- **Capacitacion** — La implementacion debe incluir formacion para ambas partes.
+- **Derecho a la desconexion** — La jornada se rige por la duración máxima legal y existe derecho a la desconexion fuera de la jornada.
+- **Capacitación** — La implementación debe incluir formación para ambas partes.
 
 ## Hechos que el video NO puede afirmar
 

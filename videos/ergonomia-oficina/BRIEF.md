@@ -2,10 +2,10 @@
 workflow: faceless-explainer
 flow: automation
 storyboard: no
-slug: ergonomia-oficina
+slug: ergonomía-oficina
 titulo: "Ergonomia en la oficina"
 area: Bienestar
-message: "La silla, el monitor y la altura de la mesa deciden cuanto tensiona tu cuerpo: tres ajustes de 5 minutos evitan la mayoria de las molestias."
+message: "La silla, el monitor y la altura de la mesa deciden cuanto tensiona tu cuerpo: tres ajustes de 5 minutos evitan la mayoría de las molestias."
 destination: youtube
 aspect: 1920x1080
 language: es-CL

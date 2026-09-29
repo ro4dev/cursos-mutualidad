@@ -42,11 +42,11 @@ Todos los visuales se inventan en la composición.
 
 Estos datos están respaldados por la fuente oficial. Ver `INVESTIGACION.md`.
 
-- **Definicion** — RSE es el compromiso de la empresa con su entorno, asumido y verificable.
+- **Definición** — RSE es el compromiso de la empresa con su entorno, asumido y verificable.
 - **Trabajadores** — El compromiso empieza por las condiciones de trabajo de la propia empresa.
-- **Comunidad** — La contribucion a la comunidad se mide por su continuidad, no por el slogan.
-- **Ambiente** — La sustentabilidad ambiental se refleja en la operacion diaria.
-- **Transparencia** — La comunicacion de resultados debe ser transparente y verificable.
+- **Comunidad** — La contribución a la comunidad se mide por su continuidad, no por el slogan.
+- **Ambiente** — La sustentabilidad ambiental se refleja en la operación diaria.
+- **Transparencia** — La comunicación de resultados debe ser transparente y verificable.
 
 ## Hechos que el video NO puede afirmar
 

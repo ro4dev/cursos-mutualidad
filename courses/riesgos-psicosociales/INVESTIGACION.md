@@ -5,7 +5,7 @@
 
 ## Fuente principal
 
-Protocolo de identificacion y gestion de riesgos psicosociales (-sector salud); orientaciones de salud ocupacional
+Protocolo de identificación y gestion de riesgos psicosociales (-sector salud); orientaciones de salud ocupacional
 
 ## Fecha de revisión
 
@@ -13,29 +13,29 @@ Protocolo de identificacion y gestion de riesgos psicosociales (-sector salud); 
 
 ## Hechos verificados
 
-### Definicion
+### Definición
 
-Riesgo psicosocial es aquel derivado de la organizacion del trabajo que puede afectar la salud.
+Riesgo psicosocial es aquel derivado de la organización del trabajo que puede afectar la salud.
 
 ### Factores
 
 Carga de trabajo, falta de control, ambiguedad de roles e insuficiente apoyo.
 
-### Sintomas
+### Síntomas
 
-Estrés sostenido puede manifestarse en sueño, animo y concentracion.
+Estrés sostenido puede manifestarse en sueño, ánimo y concentración.
 
 ### Identificacion
 
 Los riesgos psicosociales se identifican y evaluan formalmente.
 
-### Prevencion
+### Prevención
 
 Medidas organizacionales: cambiar la causa, no solo el efecto.
 
 ### Apoyo
 
-Atencion y redes de apoyo disponibles para las personas afectadas.
+Atención y redes de apoyo disponibles para las personas afectadas.
 
 ## Lo que NO se pudo verificar
 
@@ -46,13 +46,13 @@ fuente oficial citada:
 
 ## Método
 
-1. Se identifico la fuente oficial primaria (texto legal, protocolo o guia sectorial).
+1. Se identifico la fuente oficial primaria (texto legal, protocolo o guía sectorial).
 2. Se copiaron los articulos o recomendaciones aplicables al caso de una mutualidad.
 3. Se descarto toda cifra que no apareciera en la fuente.
 4. Se registro explicitamente lo no verificable, para que el copy no lo invente.
 
-## Pendiente de confirmacion por la organizacion
+## Pendiente de confirmación por la organización
 
-- Politica interna aplicable (si existe) y diferencias con la norma general.
-- Numeros de emergencia y contactos internos vigentes.
-- Plazos o montos que la organizacion aplique por sobre la norma.
+- Política interna aplicable (si existe) y diferencias con la norma general.
+- Números de emergencia y contactos internos vigentes.
+- Plazos o montos que la organización aplique por sobre la norma.

@@ -5,7 +5,7 @@
 
 ## Fuente principal
 
-Material de desarrollo de equipos; guias de colaboracion laboral
+Material de desarrollo de equipos; guias de colaboración laboral
 
 ## Fecha de revisión
 
@@ -13,7 +13,7 @@ Material de desarrollo de equipos; guias de colaboracion laboral
 
 ## Hechos verificados
 
-### Objetivo comun
+### Objetivo común
 
 El equipo comparte un resultado, no tareas aisladas.
 
@@ -25,9 +25,9 @@ Cada rol tiene responsabilidades claras y conocidos.
 
 La confianza permite pedir ayuda y exponer problemas a tiempo.
 
-### Comunicacion
+### Comunicación
 
-Reuniones breves y focalizadas, no mas largas de lo necesario.
+Reuniones breves y focalizadas, no más largas de lo necesario.
 
 ### Conflicto
 
@@ -35,7 +35,7 @@ El conflicto se aborda de frente y se resuelve con reglas comunes.
 
 ### Reconocimiento
 
-El reconocimiento oportuno sostiene la motivacion.
+El reconocimiento oportuno sostiene la motivación.
 
 ## Lo que NO se pudo verificar
 
@@ -46,13 +46,13 @@ fuente oficial citada:
 
 ## Método
 
-1. Se identifico la fuente oficial primaria (texto legal, protocolo o guia sectorial).
+1. Se identifico la fuente oficial primaria (texto legal, protocolo o guía sectorial).
 2. Se copiaron los articulos o recomendaciones aplicables al caso de una mutualidad.
 3. Se descarto toda cifra que no apareciera en la fuente.
 4. Se registro explicitamente lo no verificable, para que el copy no lo invente.
 
-## Pendiente de confirmacion por la organizacion
+## Pendiente de confirmación por la organización
 
-- Politica interna aplicable (si existe) y diferencias con la norma general.
-- Numeros de emergencia y contactos internos vigentes.
-- Plazos o montos que la organizacion aplique por sobre la norma.
+- Política interna aplicable (si existe) y diferencias con la norma general.
+- Números de emergencia y contactos internos vigentes.
+- Plazos o montos que la organización aplique por sobre la norma.

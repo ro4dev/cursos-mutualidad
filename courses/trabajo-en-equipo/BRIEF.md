@@ -5,7 +5,7 @@ storyboard: no
 slug: trabajo-en-equipo
 titulo: "Trabajo en equipo"
 area: Habilidades
-message: "Un equipo no es un grupo de personas haciendo tareas: es un grupo con un objetivo comun, roles claros y confianza para hablar."
+message: "Un equipo no es un grupo de personas haciendo tareas: es un grupo con un objetivo común, roles claros y confianza para hablar."
 destination: youtube
 aspect: 1920x1080
 language: es-CL
@@ -42,12 +42,12 @@ Todos los visuales se inventan en la composición.
 
 Estos datos están respaldados por la fuente oficial. Ver `INVESTIGACION.md`.
 
-- **Objetivo comun** — El equipo comparte un resultado, no tareas aisladas.
+- **Objetivo común** — El equipo comparte un resultado, no tareas aisladas.
 - **Roles** — Cada rol tiene responsabilidades claras y conocidos.
 - **Confianza** — La confianza permite pedir ayuda y exponer problemas a tiempo.
-- **Comunicacion** — Reuniones breves y focalizadas, no mas largas de lo necesario.
+- **Comunicación** — Reuniones breves y focalizadas, no más largas de lo necesario.
 - **Conflicto** — El conflicto se aborda de frente y se resuelve con reglas comunes.
-- **Reconocimiento** — El reconocimiento oportuno sostiene la motivacion.
+- **Reconocimiento** — El reconocimiento oportuno sostiene la motivación.
 
 ## Hechos que el video NO puede afirmar
 

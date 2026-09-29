@@ -1,12 +1,12 @@
 # Storyboard — Ley Karin: una sola conducta basta
 
-> Borrador de estructura. La composicion final se genera con el skill
+> Borrador de estructura. La composición final se genera con el skill
 > `faceless-explainer`; este archivo fija el ritmo y el reparto del tiempo.
 
 - **Duración total**: 75s
 - **Aspecto**: 1920x1080
 - **Idioma**: es-CL
-- **Narración**: no (video mudo, tipografia fuerte)
+- **Narración**: no (video mudo, tipografía fuerte)
 - **Ángulo**: plazos
 
 ## Estructura
@@ -14,7 +14,7 @@
 | Desde | Duración | Movimiento | Nota |
 |---|---|---|---|
 | 0s | 8s | Apertura | Plantea el problema en una frase, sin rodeos. |
-| 8s | 8s | Gancho | Un dato o contraste que fije la atencion. |
+| 8s | 8s | Gancho | Un dato o contraste que fije la atención. |
 | 16s | 23s | Mecanismo | El cuerpo del curso: el paso a paso o la regla. |
 | 39s | 15s | Ejemplo | Un caso concreto que aterrizar el mecanismo. |
 | 54s | 11s | Cierre | La regla que la persona se lleva. |
@@ -31,7 +31,7 @@
 ### Frame 02 — Gancho (8s)
 
 - Desde 8s hasta 16s
-- Un dato o contraste que fije la atencion.
+- Un dato o contraste que fije la atención.
 - Copy: solo de la lista de hechos verificados de `INVESTIGACION.md`.
 
 ### Frame 03 — Mecanismo (23s)
@@ -60,6 +60,6 @@
 
 ## Reglas de copy
 
-- Toda afirmacion en pantalla es rastreable a `INVESTIGACION.md`.
+- Toda afirmación en pantalla es rastreable a `INVESTIGACION.md`.
 - Si un dato no está verificado, no aparece.
-- Ningun monto en UTM, ningun plazo sin confirmar, ningun nombre de norma sin citar.
+- Ningún monto en UTM, ningun plazo sin confirmar, ningun nombre de norma sin citar.

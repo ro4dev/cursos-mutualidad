@@ -5,7 +5,7 @@ storyboard: no
 slug: salud-mental
 titulo: "Salud mental en el trabajo"
 area: Bienestar
-message: "La salud mental tambien es un riesgo laboral: se protege con limites claros, escucha y una cultura donde pedir ayuda no es un problema."
+message: "La salud mental también es un riesgo laboral: se protege con límites claros, escucha y una cultura donde pedir ayuda no es un problema."
 destination: youtube
 aspect: 1920x1080
 language: es-CL
@@ -42,11 +42,11 @@ Todos los visuales se inventan en la composición.
 
 Estos datos están respaldados por la fuente oficial. Ver `INVESTIGACION.md`.
 
-- **Derecho** — La proteccion de la salud mental en el trabajo es un derecho, no una concesion.
+- **Derecho** — La protección de la salud mental en el trabajo es un derecho, no una concesión.
 - **Riesgos** — Carga excessiva, falta de control sobre el trabajo y trato hostil pueden afectar el bienestar.
 - **Factores** — Descanso, apoyo social y claridad de roles son factores protectores.
-- **Prevencion** — Medidas organizacionales: distribucion de carga, horarios, pausas y apoyo.
-- **Consulta** — Existe derecho a solicitar evaluacion y orientacion en salud mental.
+- **Prevención** — Medidas organizacionales: distribución de carga, horarios, pausas y apoyo.
+- **Consulta** — Existe derecho a solicitar evaluación y orientación en salud mental.
 - **Red** — Contar con canales de apoyo internos y externos es parte de la prevencion.
 
 ## Hechos que el video NO puede afirmar

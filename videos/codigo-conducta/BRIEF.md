@@ -2,10 +2,10 @@
 workflow: faceless-explainer
 flow: automation
 storyboard: no
-slug: codigo-conducta
-titulo: "Codigo de conducta y etica"
+slug: código-conducta
+titulo: "Codigo de conducta y ética"
 area: Cultura
-message: "Un codigo de conducta escrito no protege a nadie si no se conoce: la etica se juega en decisiones pequenas y cotidianas."
+message: "Un código de conducta escrito no protege a nadie si no se conoce: la ética se juega en decisiones pequenas y cotidianas."
 destination: youtube
 aspect: 1920x1080
 language: es-CL
@@ -17,12 +17,12 @@ music: none
 status: research
 ---
 
-# Codigo de conducta y etica
+# Codigo de conducta y ética
 
 ## Intent
 
 Curso del catálogo `cursos-mutualidad`. Video de capacitación en español de Chile
-sobre **Codigo de conducta y etica**, dirigido a personal de mutualidades y empresas.
+sobre **Codigo de conducta y ética**, dirigido a personal de mutualidades y empresas.
 
 Tono: claro, sobrio, sin alarmismo y sin cansar a quien ya sabe
 la teoría. El objetivo es que la persona salga sabiendo **qué hacer**, no solamente
@@ -42,16 +42,16 @@ Todos los visuales se inventan en la composición.
 
 Estos datos están respaldados por la fuente oficial. Ver `INVESTIGACION.md`.
 
-- **Objetivo** — El codigo fija expectativas de conducta aceptables y no aceptables.
+- **Objetivo** — El código fija expectativas de conducta aceptables y no aceptables.
 - **Conflictos** — Se declara todo conflicto de interés real o potencial.
-- **Informacion** — La informacion de la organizacion y de terceros se maneja con confidencialidad.
+- **Información** — La informacion de la organización y de terceros se maneja con confidencialidad.
 - **Regalos** — Regalos y atenciones que puedan intentar influenciar decisiones se rechazan o se declaran.
-- **Denuncia** — Existe una via para denunciar practicas indebidas, con proteccion del denunciante.
-- **Consecuencias** — El incumplimiento tiene consecuencias segun la gravedad.
+- **Denuncia** — Existe una vía para denunciar prácticas indebidas, con protección del denunciante.
+- **Consecuencias** — El incumplimiento tiene consecuencias según la gravedad.
 
 ## Hechos que el video NO puede afirmar
 
-- Normativa interna concreta de la organizacion: el video habla en general.
+- Normativa interna concreta de la organización: el video habla en general.
 
 ## Notes
 

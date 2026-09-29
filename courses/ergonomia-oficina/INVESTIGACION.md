@@ -1,11 +1,11 @@
-# Investigación — Ergonomia en la oficina
+# Investigación — Ergonomía en la oficina
 
 > Documento de trabajo. Sirve como fuente de verdad del copy del video
 > `ergonomia-oficina`. Si algo no aparece acá, no se dice en pantalla.
 
 ## Fuente principal
 
-Guia de ergonomia para trabajo de oficina; recomendaciones de salud ocupacional
+Guía de ergonomia para trabajo de oficina; recomendaciones de salud ocupacional
 
 ## Fecha de revisión
 
@@ -47,8 +47,8 @@ fuente oficial citada:
 3. Se descarto toda cifra que no apareciera en la fuente.
 4. Se registro explicitamente lo no verificable, para que el copy no lo invente.
 
-## Pendiente de confirmacion por la organizacion
+## Pendiente de confirmación por la organización
 
-- Politica interna aplicable (si existe) y diferencias con la norma general.
-- Numeros de emergencia y contactos internos vigentes.
-- Plazos o montos que la organizacion aplique por sobre la norma.
+- Política interna aplicable (si existe) y diferencias con la norma general.
+- Números de emergencia y contactos internos vigentes.
+- Plazos o montos que la organización aplique por sobre la norma.

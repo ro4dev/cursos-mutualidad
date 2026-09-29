@@ -2,10 +2,10 @@
 workflow: faceless-explainer
 flow: automation
 storyboard: no
-slug: igualdad-no-discriminacion
-titulo: "Igualdad y no discriminacion"
+slug: igualdad-no-discriminación
+titulo: "Igualdad y no discriminación"
 area: Legal / Derechos
-message: "Ninguna diferencia por edad, sexo, orientacion, etnia o discapacidad da derecho a un trato distinto en el acceso al empleo o en su desarrollo."
+message: "Ninguna diferencia por edad, sexo, orientación, etnia o discapacidad da derecho a un trato distinto en el acceso al empleo o en su desarrollo."
 destination: youtube
 aspect: 1920x1080
 language: es-CL
@@ -17,12 +17,12 @@ music: none
 status: research
 ---
 
-# Igualdad y no discriminacion
+# Igualdad y no discriminación
 
 ## Intent
 
 Curso del catálogo `cursos-mutualidad`. Video de capacitación en español de Chile
-sobre **Igualdad y no discriminacion**, dirigido a personal de mutualidades y empresas.
+sobre **Igualdad y no discriminación**, dirigido a personal de mutualidades y empresas.
 
 Tono: claro, sobrio, sin alarmismo y sin cansar a quien ya sabe
 la teoría. El objetivo es que la persona salga sabiendo **qué hacer**, no solamente
@@ -43,11 +43,11 @@ Todos los visuales se inventan en la composición.
 Estos datos están respaldados por la fuente oficial. Ver `INVESTIGACION.md`.
 
 - **Principio** — La igualdad es un principio activo, no solo la ausencia de discriminación.
-- **Atributos** — El ambito de proteccion incluye sexo, edad, orientacion sexual, identidad de genero, etnia, religion y situacion de discapacidad.
-- **Discriminacion directa** — Tratar distinto por un atributo protegido sin justificacion valida.
+- **Atributos** — El ámbito de protección incluye sexo, edad, orientación sexual, identidad de género, etnia, religion y situación de discapacidad.
+- **Discriminacion directa** — Tratar distinto por un atributo protegido sin justificación valida.
 - **Discriminacion indirecta** — Una regla aparentemente neutra que produce un efecto desigual.
-- **Hostigamiento** — El hostigamiento laboral y la discriminacion estan prohibidos explicitamente.
-- **Accion afirmativa** — Medidas para alcanzar la igualdad real se consideran legitimas.
+- **Hostigamiento** — El hostigamiento laboral y la discriminación estan prohibidos explicitamente.
+- **Acción afirmativa** — Medidas para alcanzar la igualdad real se consideran legitimas.
 
 ## Hechos que el video NO puede afirmar
 

@@ -1,14 +1,14 @@
 {
   "slug": "ergonomia-oficina",
-  "titulo": "Ergonomia en la oficina",
+  "titulo": "Ergonomía en la oficina",
   "area": "Bienestar",
-  "mensaje": "La silla, el monitor y la altura de la mesa deciden cuanto tensiona tu cuerpo: tres ajustes de 5 minutos evitan la mayoria de las molestias.",
-  "duracion": 45,
+  "mensaje": "La silla, el monitor y la altura de la mesa deciden cuanto tensiona tu cuerpo: tres ajustes de 5 minutos evitan la mayoría de las molestias.",
+  "duración": 45,
   "aspect": "1920x1080",
   "language": "es-CL",
   "angle": "habito",
   "narration": false,
   "status": "research",
-  "fuente": "Guia de ergonomia para trabajo de oficina; recomendaciones de salud ocupacional",
+  "fuente": "Guía de ergonomía para trabajo de oficina; recomendaciones de salud ocupacional",
   "video": null
 }

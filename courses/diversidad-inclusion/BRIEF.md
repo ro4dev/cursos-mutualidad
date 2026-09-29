@@ -2,8 +2,8 @@
 workflow: faceless-explainer
 flow: automation
 storyboard: no
-slug: diversidad-inclusion
-titulo: "Diversidad e inclusion"
+slug: diversidad-inclusión
+titulo: "Diversidad e inclusión"
 area: Legal / Derechos
 message: "Un equipo diverso no es un adorno: la variedad de experiencias mejora las decisiones. Inclusion significa que esa variedad pueda opinar."
 destination: youtube
@@ -17,12 +17,12 @@ music: none
 status: research
 ---
 
-# Diversidad e inclusion
+# Diversidad e inclusión
 
 ## Intent
 
 Curso del catálogo `cursos-mutualidad`. Video de capacitación en español de Chile
-sobre **Diversidad e inclusion**, dirigido a personal de mutualidades y empresas.
+sobre **Diversidad e inclusión**, dirigido a personal de mutualidades y empresas.
 
 Tono: claro, sobrio, sin alarmismo y sin cansar a quien ya sabe
 la teoría. El objetivo es que la persona salga sabiendo **qué hacer**, no solamente
@@ -42,10 +42,10 @@ Todos los visuales se inventan en la composición.
 
 Estos datos están respaldados por la fuente oficial. Ver `INVESTIGACION.md`.
 
-- **Diversidad** — La variedad de origen, edad, genero, orientacion, capacidades o experiencias.
+- **Diversidad** — La variedad de origen, edad, género, orientación, capacidades o experiencias.
 - **Inclusion** — Garantizar que todas esas voces puedan participar y ser escuchadas.
-- **Sesgos** — Los sesgos inconscientes influyen en decisiones de contratacion y evaluacion.
-- **Accesibilidad** — Las medidas de accesibilidad permiten la participacion plena.
+- **Sesgos** — Los sesgos inconscientes influyen en decisiones de contratación y evaluación.
+- **Accesibilidad** — Las medidas de accesibilidad permiten la participación plena.
 - **Valor** — La diversidad de perspectivas mejora la calidad de las decisiones del grupo.
 
 ## Hechos que el video NO puede afirmar

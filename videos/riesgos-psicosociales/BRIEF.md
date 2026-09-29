@@ -5,7 +5,7 @@ storyboard: no
 slug: riesgos-psicosociales
 titulo: "Riesgos psicosociales"
 area: Bienestar
-message: "Estrés, burnout y mobbing no son 'ser debil': son riesgos laborales que se pueden medir, prevenir y tratar como lo que son."
+message: "Estrés, burnout y mobbing no son 'ser débil': son riesgos laborales que se pueden medir, prevenir y tratar como lo que son."
 destination: youtube
 aspect: 1920x1080
 language: es-CL
@@ -42,12 +42,12 @@ Todos los visuales se inventan en la composición.
 
 Estos datos están respaldados por la fuente oficial. Ver `INVESTIGACION.md`.
 
-- **Definicion** — Riesgo psicosocial es aquel derivado de la organizacion del trabajo que puede afectar la salud.
+- **Definición** — Riesgo psicosocial es aquel derivado de la organización del trabajo que puede afectar la salud.
 - **Factores** — Carga de trabajo, falta de control, ambiguedad de roles e insuficiente apoyo.
-- **Sintomas** — Estrés sostenido puede manifestarse en sueño, animo y concentracion.
-- **Identificacion** — Los riesgos psicosociales se identifican y evaluan formalmente.
-- **Prevencion** — Medidas organizacionales: cambiar la causa, no solo el efecto.
-- **Apoyo** — Atencion y redes de apoyo disponibles para las personas afectadas.
+- **Síntomas** — Estrés sostenido puede manifestarse en sueño, ánimo y concentración.
+- **Identificación** — Los riesgos psicosociales se identifican y evaluan formalmente.
+- **Prevención** — Medidas organizacionales: cambiar la causa, no solo el efecto.
+- **Apoyo** — Atención y redes de apoyo disponibles para las personas afectadas.
 
 ## Hechos que el video NO puede afirmar
 

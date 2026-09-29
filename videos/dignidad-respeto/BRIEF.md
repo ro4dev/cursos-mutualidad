@@ -42,12 +42,12 @@ Todos los visuales se inventan en la composición.
 
 Estos datos están respaldados por la fuente oficial. Ver `INVESTIGACION.md`.
 
-- **Base** — La dignidad de la persona es un principio que ordena toda relacion laboral.
-- **Conductas** — Insultos, burlas y otras conductas hostiles vulneran el respeto basico.
-- **Testigos** — La conducta abusiva frente a terceros tambien vulnera el respeto.
+- **Base** — La dignidad de la persona es un principio que ordena toda relación laboral.
+- **Conductas** — Insultos, burlas y otras conductas hostiles vulneran el respeto básico.
+- **Testigos** — La conducta abusiva frente a terceros también vulnera el respeto.
 - **Denuncia** — Las conductas de hostigamiento o trato irrespetuoso se pueden denunciar y se investigan.
-- **Reparacion** — La investigacion termina en medidas o sanciones cuando corresponde.
-- **Ambiente** — Un ambiente respetuoso es la base de la colaboracion y la productividad.
+- **Reparación** — La investigación termina en medidas o sanciones cuando corresponde.
+- **Ambiente** — Un ambiente respetuoso es la base de la colaboración y la productividad.
 
 ## Hechos que el video NO puede afirmar
 

@@ -1,12 +1,12 @@
-# Storyboard — Ergonomia en la oficina
+# Storyboard — Ergonomía en la oficina
 
-> Borrador de estructura. La composicion final se genera con el skill
+> Borrador de estructura. La composición final se genera con el skill
 > `faceless-explainer`; este archivo fija el ritmo y el reparto del tiempo.
 
 - **Duración total**: 45s
 - **Aspecto**: 1920x1080
 - **Idioma**: es-CL
-- **Narración**: no (video mudo, tipografia fuerte)
+- **Narración**: no (video mudo, tipografía fuerte)
 - **Ángulo**: habito
 
 ## Estructura
@@ -14,7 +14,7 @@
 | Desde | Duración | Movimiento | Nota |
 |---|---|---|---|
 | 0s | 5s | Apertura | Plantea el problema en una frase, sin rodeos. |
-| 5s | 5s | Gancho | Un dato o contraste que fije la atencion. |
+| 5s | 5s | Gancho | Un dato o contraste que fije la atención. |
 | 10s | 14s | Mecanismo | El cuerpo del curso: el paso a paso o la regla. |
 | 24s | 9s | Ejemplo | Un caso concreto que aterrizar el mecanismo. |
 | 33s | 7s | Cierre | La regla que la persona se lleva. |
@@ -31,7 +31,7 @@
 ### Frame 02 — Gancho (5s)
 
 - Desde 5s hasta 10s
-- Un dato o contraste que fije la atencion.
+- Un dato o contraste que fije la atención.
 - Copy: solo de la lista de hechos verificados de `INVESTIGACION.md`.
 
 ### Frame 03 — Mecanismo (14s)
@@ -60,6 +60,6 @@
 
 ## Reglas de copy
 
-- Toda afirmacion en pantalla es rastreable a `INVESTIGACION.md`.
+- Toda afirmación en pantalla es rastreable a `INVESTIGACION.md`.
 - Si un dato no está verificado, no aparece.
-- Ningun monto en UTM, ningun plazo sin confirmar, ningun nombre de norma sin citar.
+- Ningún monto en UTM, ningun plazo sin confirmar, ningun nombre de norma sin citar.

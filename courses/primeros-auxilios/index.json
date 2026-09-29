@@ -3,12 +3,12 @@
   "titulo": "Primeros auxilios: los 5 primeros minutos",
   "area": "Seguridad",
   "mensaje": "En los primeros minutos decides el resultado: avisar, proteger, atender. La cadena de supervivencia empieza antes que la ambulancia.",
-  "duracion": 60,
+  "duración": 60,
   "aspect": "1920x1080",
   "language": "es-CL",
   "angle": "proceso",
   "narration": false,
   "status": "research",
-  "fuente": "Guia de primeros auxilios; recomendaciones de la Cruz Roja y de salud de emergencia",
+  "fuente": "Guía de primeros auxilios; recomendaciones de la Cruz Roja y de salud de emergencia",
   "video": null
 }

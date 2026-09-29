@@ -1,11 +1,11 @@
-# Investigación — Diversidad e inclusion
+# Investigación — Diversidad e inclusión
 
 > Documento de trabajo. Sirve como fuente de verdad del copy del video
 > `diversidad-inclusion`. Si algo no aparece acá, no se dice en pantalla.
 
 ## Fuente principal
 
-Ley N° 20.584; guias de inclusion y diversidad laboral
+Ley N° 20.584; guias de inclusión y diversidad laboral
 
 ## Fecha de revisión
 
@@ -15,7 +15,7 @@ Ley N° 20.584; guias de inclusion y diversidad laboral
 
 ### Diversidad
 
-La variedad de origen, edad, genero, orientacion, capacidades o experiencias.
+La variedad de origen, edad, género, orientación, capacidades o experiencias.
 
 ### Inclusion
 
@@ -23,11 +23,11 @@ Garantizar que todas esas voces puedan participar y ser escuchadas.
 
 ### Sesgos
 
-Los sesgos inconscientes influyen en decisiones de contratacion y evaluacion.
+Los sesgos inconscientes influyen en decisiones de contratación y evaluación.
 
 ### Accesibilidad
 
-Las medidas de accesibilidad permiten la participacion plena.
+Las medidas de accesibilidad permiten la participación plena.
 
 ### Valor
 
@@ -42,13 +42,13 @@ fuente oficial citada:
 
 ## Método
 
-1. Se identifico la fuente oficial primaria (texto legal, protocolo o guia sectorial).
+1. Se identifico la fuente oficial primaria (texto legal, protocolo o guía sectorial).
 2. Se copiaron los articulos o recomendaciones aplicables al caso de una mutualidad.
 3. Se descarto toda cifra que no apareciera en la fuente.
 4. Se registro explicitamente lo no verificable, para que el copy no lo invente.
 
-## Pendiente de confirmacion por la organizacion
+## Pendiente de confirmación por la organización
 
-- Politica interna aplicable (si existe) y diferencias con la norma general.
-- Numeros de emergencia y contactos internos vigentes.
-- Plazos o montos que la organizacion aplique por sobre la norma.
+- Política interna aplicable (si existe) y diferencias con la norma general.
+- Números de emergencia y contactos internos vigentes.
+- Plazos o montos que la organización aplique por sobre la norma.

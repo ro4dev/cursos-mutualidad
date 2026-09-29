@@ -5,7 +5,7 @@ storyboard: no
 slug: liderazgo-sin-violencia
 titulo: "Liderazgo sin violencia"
 area: Liderazgo
-message: "El liderazgo no se impone con miedo: se sostiene en respeto, limites claros y coherencia entre lo que se dice y lo que se hace."
+message: "El liderazgo no se impone con miedo: se sostiene en respeto, límites claros y coherencia entre lo que se dice y lo que se hace."
 destination: youtube
 aspect: 1920x1080
 language: es-CL
@@ -43,15 +43,15 @@ Todos los visuales se inventan en la composición.
 Estos datos están respaldados por la fuente oficial. Ver `INVESTIGACION.md`.
 
 - **Modelo** — El liderazgo se apoya en el ejemplo, la consistencia y el respeto.
-- **Limites** — Los limites claros son la principal proteccion frente al exceso de autoridad.
-- **Cuestionamiento** — El equipo debe poder cuestionar una decision de su jefe.
-- **Apoyo** — El lider da recursos, formacion y defensa al equipo.
+- **Limites** — Los límites claros son la principal protección frente al exceso de autoridad.
+- **Cuestionamiento** — El equipo debe poder cuestionar una decisión de su jefe.
+- **Apoyo** — El lider da recursos, formación y defensa al equipo.
 - **Ejemplo** — El ejemplo del jefe fija la norma real del equipo.
 - **Responsabilidad** — La responsabilidad final ante el equipo es de quien dirige.
 
 ## Hechos que el video NO puede afirmar
 
-- Normativa legal especifica del cargo: se trata como practica, no como obligacion legal.
+- Normativa legal especifica del cargo: se trata como práctica, no como obligación legal.
 
 ## Notes
 

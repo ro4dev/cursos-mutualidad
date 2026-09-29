@@ -5,7 +5,7 @@
 
 ## Fuente principal
 
-Ley N° 20.920 (residuos y economia circular); guias de sostenibilidad operativa
+Ley N° 20.920 (residuos y economía circular); guias de sostenibilidad operativa
 
 ## Fecha de revisión
 
@@ -19,9 +19,9 @@ Separar y reciclar evita que lo que se puede recuperar termine en vertederos.
 
 ### Reuso
 
-Reparar y reutilizar extiende la vida util de los equipos.
+Reparar y reutilizar extiende la vida útil de los equipos.
 
-### Energia
+### Energía
 
 Apagar equipos y luces evita el gasto de energia en horas sin actividad.
 
@@ -31,7 +31,7 @@ Imprimir y consumir menos papel y materiales reduce el impacto.
 
 ### Compromiso
 
-Las acciones pequenas y sostenidas pesan mas que las grandes campanas aisladas.
+Las acciones pequenas y sostenidas pesan más que las grandes campanas aisladas.
 
 ## Lo que NO se pudo verificar
 
@@ -42,13 +42,13 @@ fuente oficial citada:
 
 ## Método
 
-1. Se identifico la fuente oficial primaria (texto legal, protocolo o guia sectorial).
+1. Se identifico la fuente oficial primaria (texto legal, protocolo o guía sectorial).
 2. Se copiaron los articulos o recomendaciones aplicables al caso de una mutualidad.
 3. Se descarto toda cifra que no apareciera en la fuente.
 4. Se registro explicitamente lo no verificable, para que el copy no lo invente.
 
-## Pendiente de confirmacion por la organizacion
+## Pendiente de confirmación por la organización
 
-- Politica interna aplicable (si existe) y diferencias con la norma general.
-- Numeros de emergencia y contactos internos vigentes.
-- Plazos o montos que la organizacion aplique por sobre la norma.
+- Política interna aplicable (si existe) y diferencias con la norma general.
+- Números de emergencia y contactos internos vigentes.
+- Plazos o montos que la organización aplique por sobre la norma.

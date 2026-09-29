@@ -5,7 +5,7 @@ storyboard: no
 slug: sostenibilidad-ambiental
 titulo: "Sostenibilidad ambiental en el trabajo"
 area: Bienestar
-message: "Un trabajo mas limpio no cuesta mas: ordenar, apagar y separar reduce costos y residuos. Lo pequeno suma cuando es sostenido."
+message: "Un trabajo más limpio no cuesta más: ordenar, apagar y separar reduce costos y residuos. Lo pequeño suma cuando es sostenido."
 destination: youtube
 aspect: 1920x1080
 language: es-CL
@@ -43,10 +43,10 @@ Todos los visuales se inventan en la composición.
 Estos datos están respaldados por la fuente oficial. Ver `INVESTIGACION.md`.
 
 - **Residuos** — Separar y reciclar evita que lo que se puede recuperar termine en vertederos.
-- **Reuso** — Reparar y reutilizar extiende la vida util de los equipos.
-- **Energia** — Apagar equipos y luces evita el gasto de energia en horas sin actividad.
+- **Reuso** — Reparar y reutilizar extiende la vida útil de los equipos.
+- **Energía** — Apagar equipos y luces evita el gasto de energia en horas sin actividad.
 - **Consumo** — Imprimir y consumir menos papel y materiales reduce el impacto.
-- **Compromiso** — Las acciones pequenas y sostenidas pesan mas que las grandes campanas aisladas.
+- **Compromiso** — Las acciones pequenas y sostenidas pesan más que las grandes campanas aisladas.
 
 ## Hechos que el video NO puede afirmar
 

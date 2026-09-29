@@ -5,7 +5,7 @@ storyboard: no
 slug: pausas-activas
 titulo: "Pausas activas: por que el cuerpo necesita moverse"
 area: Bienestar
-message: "Concentrar la atencion 8 horas seguidas degrada la postura, la vision y la concentracion: la pausa activa no es un recreo, es parte del trabajo."
+message: "Concentrar la atención 8 horas seguidas degrada la postura, la visión y la concentración: la pausa activa no es un recreo, es parte del trabajo."
 destination: youtube
 aspect: 1920x1080
 language: es-CL
@@ -42,15 +42,15 @@ Todos los visuales se inventan en la composición.
 
 Estos datos están respaldados por la fuente oficial. Ver `INVESTIGACION.md`.
 
-- **Postura** — La posicion estatica prolongada carga la columna cervical y lumbar; alternar posturas reduce la carga.
-- **Vision** — La vision cercana prolongada causa fatiga visual; la regla 20-20-20 ayuda a descansarla.
-- **Concentracion** — Descansos cortos y frecuentes rinden mas que un descanso largo y unico.
-- **Hidratacion** — Beber agua con regularidad sostiene la atencion y evita la cefalea por deshidratacion.
-- **Microdescansos** — 2 a 5 minutos de movimiento bastan para restaurar la circulacion y la postura.
+- **Postura** — La posición estatica prolongada carga la columna cervical y lumbar; alternar posturas reduce la carga.
+- **Vision** — La visión cercana prolongada causa fatiga visual; la regla 20-20-20 ayuda a descansarla.
+- **Concentracion** — Descansos cortos y frecuentes rinden más que un descanso largo y único.
+- **Hidratación** — Beber agua con regularidad sostiene la atención y evita la cefalea por deshidratación.
+- **Microdescansos** — 2 a 5 minutos de movimiento bastan para restaurar la circulación y la postura.
 
 ## Hechos que el video NO puede afirmar
 
-- Cifras exactas de reduccion de sintomatologia: variable por estudio; el video no cita porcentajes.
+- Cifras exactas de reducción de sintomatología: variable por estudio; el video no cita porcentajes.
 
 ## Notes
 

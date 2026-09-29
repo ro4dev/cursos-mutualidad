@@ -2,10 +2,10 @@
 workflow: faceless-explainer
 flow: automation
 storyboard: no
-slug: comunicacion-asertiva
+slug: comunicación-asertiva
 titulo: "Comunicacion asertiva"
 area: Habilidades
-message: "Puedes expresar lo que te molesta sin gritar ni ceder: decir la molestia con claridad protege la relacion y el trabajo."
+message: "Puedes expresar lo que te molesta sin gritar ni ceder: decir la molestia con claridad protege la relación y el trabajo."
 destination: youtube
 aspect: 1920x1080
 language: es-CL
@@ -43,15 +43,15 @@ Todos los visuales se inventan en la composición.
 Estos datos están respaldados por la fuente oficial. Ver `INVESTIGACION.md`.
 
 - **Asertivo** — Expresar la propia postura reconociendo la del otro.
-- **Agresivo** — Imponer la propia postura sin considerar al otro: daña la relacion.
+- **Agresivo** — Imponer la propia postura sin considerar al otro: daña la relación.
 - **Pasivo** — Evitar el conflicto cediendo: la molestia se acumula.
 - **Estructura** — Mensajes en primera persona sobre conducta concreta y su efecto.
-- **Escucha** — Preguntar y confirmar la comprension antes de responder.
-- **Resultado** — La comunicacion clara reduce malentendidos y acelera la solucion.
+- **Escucha** — Preguntar y confirmar la comprensión antes de responder.
+- **Resultado** — La comunicación clara reduce malentendidos y acelera la solución.
 
 ## Hechos que el video NO puede afirmar
 
--  tecnicas psicologicas con evidencia cuantitativa: no se citan.
+-  técnicas psicológicas con evidencia cuantitativa: no se citan.
 
 ## Notes
 

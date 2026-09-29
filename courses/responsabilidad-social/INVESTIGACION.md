@@ -13,7 +13,7 @@ Conceptos de responsabilidad social empresarial; normativa de sostenibilidad cor
 
 ## Hechos verificados
 
-### Definicion
+### Definición
 
 RSE es el compromiso de la empresa con su entorno, asumido y verificable.
 
@@ -23,15 +23,15 @@ El compromiso empieza por las condiciones de trabajo de la propia empresa.
 
 ### Comunidad
 
-La contribucion a la comunidad se mide por su continuidad, no por el slogan.
+La contribución a la comunidad se mide por su continuidad, no por el slogan.
 
 ### Ambiente
 
-La sustentabilidad ambiental se refleja en la operacion diaria.
+La sustentabilidad ambiental se refleja en la operación diaria.
 
 ### Transparencia
 
-La comunicacion de resultados debe ser transparente y verificable.
+La comunicación de resultados debe ser transparente y verificable.
 
 ## Lo que NO se pudo verificar
 
@@ -42,13 +42,13 @@ fuente oficial citada:
 
 ## Método
 
-1. Se identifico la fuente oficial primaria (texto legal, protocolo o guia sectorial).
+1. Se identifico la fuente oficial primaria (texto legal, protocolo o guía sectorial).
 2. Se copiaron los articulos o recomendaciones aplicables al caso de una mutualidad.
 3. Se descarto toda cifra que no apareciera en la fuente.
 4. Se registro explicitamente lo no verificable, para que el copy no lo invente.
 
-## Pendiente de confirmacion por la organizacion
+## Pendiente de confirmación por la organización
 
-- Politica interna aplicable (si existe) y diferencias con la norma general.
-- Numeros de emergencia y contactos internos vigentes.
-- Plazos o montos que la organizacion aplique por sobre la norma.
+- Política interna aplicable (si existe) y diferencias con la norma general.
+- Números de emergencia y contactos internos vigentes.
+- Plazos o montos que la organización aplique por sobre la norma.

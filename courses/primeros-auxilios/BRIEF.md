@@ -43,10 +43,10 @@ Todos los visuales se inventan en la composición.
 Estos datos están respaldados por la fuente oficial. Ver `INVESTIGACION.md`.
 
 - **Seguridad** — Antes de atender, revisar que la escena sea segura para no sumarse al accidente.
-- **Aviso** — Pedir ayuda y llamar a la emergencia; comunicar ubicacion exacta.
-- **Respiracion** — Verificar la respiracion antes de iniciar compresiones.
+- **Aviso** — Pedir ayuda y llamar a la emergencia; comunicar ubicación exacta.
+- **Respiración** — Verificar la respiracion antes de iniciar compresiones.
 - **Compresiones** — Compresiones en el centro del pecho, firmes y ritmadas, si no hay respiracion normal.
-- **No hacer dano** — No mover a la persona si hay riesgo de lesion de columna; no dar de comer ni de beber.
+- **No hacer dano** — No mover a la persona si hay riesgo de lesión de columna; no dar de comer ni de beber.
 - **Traslado** — Aislar y esperar al equipo de salud sin abandonar a la persona.
 
 ## Hechos que el video NO puede afirmar

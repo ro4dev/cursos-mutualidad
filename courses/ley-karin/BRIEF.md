@@ -42,18 +42,18 @@ Todos los visuales se inventan en la composición.
 
 Estos datos están respaldados por la fuente oficial. Ver `INVESTIGACION.md`.
 
-- **Ambito** — La Ley Karin (Ley N° 21.643) modifica el Codigo del Trabajo; entro en vigencia el 1 de agosto de 2024.
-- **Activacion** — Una denuncia puede investigarse aunque la conducta ocurra una sola vez: no se exige sistematicidad.
-- **Plazo 1** — Art. 211-C: la empresa tiene 3 dias habiles para iniciar la investigacion interna o remitir el caso a la Inspeccion del Trabajo.
-- **Plazo 2** — Art. 211-C: la investigacion debe concluir dentro de 30 dias habiles administrativos contados desde la notificacion.
-- **Resguardo** — Art. 211-B bis: medidas de resguardo se adoptan de inmediato, con aviso al organo competente dentro de 2 dias habiles.
-- **Medidas** — Art. 211-E: la empresa tiene 15 dias habiles para aplicar medidas o sanciones una vez concluida la investigacion.
-- **Principios** — Art. 211-B: confidencialidad, imparcialidad, celeridad y perspectiva de genero.
+- **Ámbito** — La Ley Karin (Ley N° 21.643) modifica el Código del Trabajo; entro en vigencia el 1 de agosto de 2024.
+- **Activación** — Una denuncia puede investigarse aunque la conducta ocurra una sola vez: no se exige sistematicidad.
+- **Plazo 1** — Art. 211-C: la empresa tiene 3 días habiles para iniciar la investigación interna o remitir el caso a la Inspección del Trabajo.
+- **Plazo 2** — Art. 211-C: la investigación debe concluir dentro de 30 días habiles administrativos contados desde la notificación.
+- **Resguardo** — Art. 211-B bis: medidas de resguardo se adoptan de inmediato, con aviso al organo competente dentro de 2 días habiles.
+- **Medidas** — Art. 211-E: la empresa tiene 15 días habiles para aplicar medidas o sanciones una vez concluida la investigación.
+- **Principios** — Art. 211-B: confidencialidad, imparcialidad, celeridad y perspectiva de género.
 
 ## Hechos que el video NO puede afirmar
 
-- Multas en UTM por tipo de infraccion: no se encontro tabla oficial vigente; el video NO debe citar montos.
-- Cantidad minima de conductas para configurar acoso sexual: el texto no fija un numero.
+- Multas en UTM por tipo de infracción: no se encontro tabla oficial vigente; el video NO debe citar montos.
+- Cantidad mínima de conductas para configurar acoso sexual: el texto no fija un número.
 
 ## Notes
 

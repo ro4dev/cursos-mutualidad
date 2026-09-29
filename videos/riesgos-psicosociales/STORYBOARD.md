@@ -98,7 +98,7 @@ Beats:
 - status: animated
 - src: compositions/frames/05-la-causa-manda.html
 - type: cierre
-- narrationRole: Cierra bajando el ritmo sobre el criterio que ordena todo el vídeo. Es lo que el público se lleva.
+- narrationRole: Cierra bajando el ritmo sobre el criterio que ordena todo el video. Es lo que el público se lleva.
 - keyMessage: Si la medida no cambia la causa, no es prevención: es atención del efecto.
 
 Beats:
