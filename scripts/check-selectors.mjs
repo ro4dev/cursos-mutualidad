@@ -298,14 +298,34 @@ async function revisarDuraciones() {
     }
 
     const malos_ = [];
-    for (const archivo of archivos) {
+    let extendidos = 0;
+    const ultimo = archivos.length - 1;
+    for (const [i, archivo] of archivos.entries()) {
       const d = duracionDe(archivo);
-      if (d === null) malos_.push(`${nombreArchivo(archivo)}: sin data-duration`);
-      else if (d !== esperado) malos_.push(`${nombreArchivo(archivo)}: ${d}s en vez de ${esperado}s`);
+      const nombre = nombreArchivo(archivo);
+      if (d === null) {
+        malos_.push(`${nombre}: sin data-duration`);
+        continue;
+      }
+      if (d === esperado) continue;
+      /* transitions.mjs reescribe el frame en disco y estira 0.5s el que tiene
+         crossfade saliente, para que el entrante arranque medio segundo antes.
+         Ese frame queda con data-duration = esperado + 0.5, y solo puede ser el
+         penultimo: es el unico con una transicion de salida. */
+      if (d === +(esperado + 0.5).toFixed(2) && i === ultimo - 1) {
+        extendidos += 1;
+        continue;
+      }
+      const nota = d === +(esperado + 0.5).toFixed(2) ? ' (+0.5 solo vale en el penultimo)' : '';
+      malos_.push(`${nombre}: ${d}s en vez de ${esperado}s${nota}`);
+    }
+    if (extendidos > 1) {
+      malos_.push(`${extendidos} frames estirados: solo el penultimo puede estarlo`);
     }
 
     if (malos_.length === 0) {
-      console.log(`✓ ${slug}: ${archivos.length} x ${esperado}s`);
+      const extra = extendidos ? `, penultimo estirado a ${esperado + 0.5}s por la transicion` : '';
+      console.log(`✓ ${slug}: ${archivos.length} x ${esperado}s${extra}`);
       continue;
     }
     malos += 1;
