@@ -76,9 +76,17 @@ for (const linea of readFileSync(join(AQUI, 'acentos-lista.txt'), 'utf8').split(
 }
 
 /**
- * Formas que van sin tilde y que la lista podria confundir. "aun" es la
- * unica realmente en riesgo: "aun asi" y "aun cuando" van con tilde, pero
- * "aun" por si solo no, y el costo de exigirla seria ruido constante.
+ * Palabras que el detector NO debe exigir tilde. Entran por dos motivos
+ * distintos y conviene no mezclarlos al leer:
+ *
+ * 1. La palabra va sin tilde y la lista la podria confundir. "aun" es la
+ *    unica realmente en riesgo: "aun asi" y "aun cuando" van con tilde, pero
+ *    "aun" por si solo no, y el costo de exigirla seria ruido constante. El
+ *    resto (solo, esta, como, cuando, donde...) casi nunca se confunde, pero
+ *    dejarlas listadas es la red que las atrapa si la lista crece de mas.
+ *
+ * 2. La lista se equivoco. "video" es el unico caso, y no por confusion sino
+ *    por dialecto: ver el comentario de la entrada.
  *
  * "mas" NO esta aqui a proposito. "mas" como conjunction casi no aparece en
  * este corpus; "mas de N personas" y "lo mas importante" si, y esos van con
@@ -89,6 +97,12 @@ export const SIN_TILDE_PERMITIDO = new Set([
   'aun', 'solo', 'esta', 'este', 'esto', 'esa', 'ese', 'eso', 'estos', 'esos',
   'como', 'cuando', 'donde', 'contra', 'durante', 'mediante', 'tampoco',
   'tanto', 'sin', 'sobre', 'solo', 'esta', 'cuanto', 'cuantos', 'cuantas',
+  /* "video" no es una palabra que la lista confunda: es una entrada que la
+     lista tenia mal. La RAE acepta las dos formas y en Espana manda la
+     acentuada, pero Chile escribe "video" sin tilde y el repositorio es
+     es-CL. Exigirla metia "vídeo" en 970 lugares, casi todos prosa interna
+     y no copy en pantalla. */
+  'video', 'videos',
 ]);
 
 /* ------------------------------------------------------------------ *

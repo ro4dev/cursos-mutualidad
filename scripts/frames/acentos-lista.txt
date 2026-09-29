@@ -245,8 +245,32 @@ ningun=ningún
 estandar=estándar
 trafico=tráfico
 traficos=tráficos
-video=vídeo
-videos=vídeos
+# --- "video" NO va aqui ---
+# La RAE acepta "video" y "vídeo", y la forma con tilde es la preferida en
+# España. En Chile la forma establecida es "video" sin tilde, y el repositorio
+# es es-CL. Meterla en CON_TILDE obligaba a escribir "vídeo" en 970 lugares
+# distintos. Va en SIN_TILDE_PERMITIDO, que es donde el detector deja de
+# exigirla.
+#
+# --- agudas de hiato: el acento cae en la vocal cerrada y siempre lleva tilde ---
+# El guard de acentos es tan bueno como esta lista: solo ve lo que hay aqui.
+# "ocurrio" se escapo de un titulo en pantalla y llego renderizado, porque
+# ninguna de las dos reglas de sufijo (-cion/-sion) lo cubre y nadie lo
+# escribio en la lista. Se encontro auditando a mano el vocabulario visible de
+# los 88 frames, no confiando en el guard: por eso esta seccion.
+#
+# OJO: el plural de una aguda de hiato PIERDE la tilde ("ocurrieron" es
+# llana), asi que no se agrega entrada de plural para estas.
+ocurrio=ocurrió
+frio=frío
+frios=fríos
+pais=país
+paises=países
+hipotesis=hipótesis
+sintesis=síntesis
+portico=pórtico
+tunica=túnica
+
 # --- enie: no se puede deducir de la forma sin tilde ---
 acompanamiento=acompañamiento
 acompanada=acompañada

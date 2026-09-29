@@ -107,7 +107,7 @@ export default {
       poster: 4,
       transition_in: 'crossfade',
       narrativeRole:
-        'Cierra con la regla accionable y baja el ritmo a plano de salida. Deja explicito que el curso no inventa cifras, que es lo que hace confiable un vídeo de salud ocupacional.',
+        'Cierra con la regla accionable y baja el ritmo a plano de salida. Deja explicito que el curso no inventa cifras, que es lo que hace confiable un video de salud ocupacional.',
       keyMessage:
         'Lo que se lleva: ajustar el puesto de arriba hacia abajo, y alternar cada 20-30 minutos.',
       beats: [

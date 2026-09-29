@@ -109,7 +109,7 @@ export default {
       poster: 7,
       transition_in: 'crossfade',
       narrativeRole:
-        'Cierra bajando el ritmo sobre la parte que no se puede delegar. Es lo que el público se lleva del vídeo.',
+        'Cierra bajando el ritmo sobre la parte que no se puede delegar. Es lo que el público se lleva del video.',
       keyMessage:
         'La responsabilidad final ante el equipo es de quien dirige.',
       beats: [

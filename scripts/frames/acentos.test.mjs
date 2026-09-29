@@ -174,7 +174,15 @@ const PLURALES_SIN_TILDE = [
   // estuvieron en la lista y no debian.
   "guias", "vias", "intereses", "series", "compases",
   // el plural de una LLANA sigue llano.
-  "paises", "criterios", "escenarios", "ingleses", "deportes",
+  //
+  // El plural de "países" SI lleva tilde, y antes se afirmaba lo
+  // contrario. "países" estaba en esta lista agrupado con "criterios" y
+  // "deportes", bajo la suposicion de que el plural de una llana sigue llano.
+  // Pero el singular es agudo de hiato, y su plural tiene tres silabas con el
+  // acento en la antepenultima: es esdrujulo. La forma correcta es "países",
+  // y la prueba de hiatos de mas abajo la cubre. Dejarla aqui contradecia esa
+  // prueba, y las dos no pueden ser ciertas a la vez.
+  "criterios", "escenarios", "ingleses", "deportes",
   "proceses", "informes", "mapas", "campanas",
   // plural de -cion: la misma regla, resuelta por el sufijo de acentos.mjs.
   "condiciones", "relaciones", "presiones", "recomendaciones", "decisiones",
@@ -221,6 +229,78 @@ for (const palabra of SIN_TILDE_PERMITIDO) {
   }
 }
 ok(`${SIN_TILDE_PERMITIDO.size} permitidas`);
+
+/* --------------------------------------------------------------------- *
+ * 7. Regresion de "video": el detector tiene que ser indiferente a las
+ *    dos formas.
+ *
+ *    Es una prueba en dos direcciones a proposito. Si el detector se
+ *    cambiara para exigir la tilde, "video"|reportaria. Si la entrada volviera
+ *    a CON_TILDE, "video" volveria a exigirla. Y en ningun caso el detector
+ *    puede "corregir" una forma que ya viene acentuada.
+ * --------------------------------------------------------------------- */
+console.log('\n"video" es indiferente a las dos formas (es-CL):');
+
+for (const forma of ['video', 'videos', 'Video', 'VIDEO', 'vídeo', 'vídeos']) {
+  pruebas++;
+  const h = sinTildes(forma);
+  if (h.length) falla(`"${forma}" se reporto como ${h[0].deberia}`);
+}
+ok('"video" nunca se reporta, acentuada o sin acentuar');
+
+pruebas++;
+if (CON_TILDE.has('video') || CON_TILDE.has('videos')) {
+  falla('"video" quedo de nuevo en CON_TILDE y vuelve a exigir la tilde');
+} else ok('y no quedo en CON_TILDE');
+
+/* --------------------------------------------------------------------- *
+ * 8. Las agudas de hiato no las cubre ninguna regla de sufijo.
+ *
+ *    "ocurrio" llego renderizado a un titulo en pantalla: el guard no lo ve
+ *    porque no es -cion ni -sion y nadie lo habia puesto en la lista. Este
+ *    bloque fija la clase entera, no el caso, y ademas mira las dos
+ *    direcciones: que la palabra se reporte sin tilde, y que el plural
+ *    (llano) NO se reporte.
+ * --------------------------------------------------------------------- */
+console.log('\nlas agudas de hiato se reportan y su plural no:');
+
+const HIATOS = [
+  ['ocurrio', 'ocurrió'], ['frio', 'frío'], ['pais', 'país'],
+  ['hipotesis', 'hipótesis'], ['sintesis', 'síntesis'],
+  ['portico', 'pórtico'], ['tunica', 'túnica'],
+];
+for (const [mal, bien] of HIATOS) {
+  pruebas++;
+  const h = sinTildes(mal);
+  if (h.length && h[0].deberia === bien) ok(`${mal} -> ${bien}`);
+  else falla(`"${mal}" no se reporto como "${bien}" (${h.length ? h[0].deberia : 'nada'})`);
+}
+
+/* El plural NO sigue una sola regla, y por eso no conviene inventar una. Se
+   comporta distinto segun la clase de la palabra, y el encabezado de la lista
+   ya lo explica: la esdrujula lo conserva, la aguda lo pierde, y hay plurales
+   donde lo que cambia es la enie. Se prueban los tres casos con las palabras
+   reales, porque un plural armado a mano ("frio" + "n" = "frion") no
+   comprobaria nada. */
+const PLURALES_DE_HIATO = [
+  // [plural, forma acentuada esperada, debe reportarse]
+  ['ocurrieron', null, false],  // aguda -> llano, pierde la tilde
+  ['porticos', null, false],    // esdrujula de tres sílabas, pero aguda al_pluralizar
+  ['frios', 'fríos', true],    // "frío" es esdrujula de dos sílabas: la conserva
+  ['paises', 'países', true],   // lo que cambia es la enie, no la tilde
+];
+for (const [mal, bien, debe] of PLURALES_DE_HIATO) {
+  pruebas++;
+  const h = sinTildes(mal);
+  if (!debe) {
+    if (h.length) falla(`"${mal}" se reporto como "${h[0].deberia}": ese plural va sin tilde`);
+  } else if (h.length && h[0].deberia === bien) {
+    ok(`${mal} -> ${bien}`);
+  } else {
+    falla(`"${mal}" deberia reportarse como "${bien}"`);
+  }
+}
+ok(`${PLURALES_DE_HIATO.length} plurales de hiato, cada uno con su regla`);
 
 console.log(`\n${pruebas - fallos}/${pruebas} pruebas ok\n`);
 process.exit(fallos ? 1 : 0);

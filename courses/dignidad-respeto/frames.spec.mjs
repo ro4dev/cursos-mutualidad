@@ -90,7 +90,7 @@ export default {
       ],
       datos: {
         kicker: 'DESPUÉS DE LA CONDUCTA',
-        titulo: 'El camino una vez que ocurrio',
+        titulo: 'El camino una vez que ocurrió',
         items: [
           { n: '01', head: 'Denuncia', gloss: 'Las conductas de hostigamiento o trato irrespetuoso se pueden denunciar.' },
           { n: '02', head: 'Investigación', gloss: 'Lo denunciado se investiga: no queda en la intención de quien lo cuenta.' },
@@ -111,7 +111,7 @@ export default {
         'Un ambiente respetuoso es la base de la colaboración y la productividad.',
       beats: [
         '0.0-1.2s: rótulo y filete de acento; la regla entra frase por frase.',
-        '1.2-2.6s: la nota aclara el alcance: el vídeo no distingue hostil de acoso en terminos juridicos.',
+        '1.2-2.6s: la nota aclara el alcance: el video no distingue hostil de acoso en terminos juridicos.',
         '2.6-4.0s: el bloque de fuente se dibuja al pie y queda en lectura.',
       ],
       datos: {
