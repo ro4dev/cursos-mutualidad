@@ -1,6 +1,6 @@
 ---
 format: 1920x1080
-duration: 43s
+duration: 45s
 message: "La carga se acumula mientras la posición no cambia. Alternar posturas y cortar seguido rinde más que descansar una sola vez y por mucho tiempo."
 arc: concept-explainer with a number
 audience: "Personal de mutualidades y empresas en Chile"
@@ -20,7 +20,7 @@ music: none
 
 - scene: EL CUERPO,NO SE MANTIENE SOLO
 - voiceover: ""
-- duration: 10.75s
+- duration: 11.25s
 - poster: 4s
 - transition_in: cut
 - status: animated
@@ -38,7 +38,7 @@ Beats:
 
 - scene: stat
 - voiceover: ""
-- duration: 10.75s
+- duration: 11.25s
 - poster: 5s
 - transition_in: cut
 - status: animated
@@ -56,7 +56,7 @@ Beats:
 
 - scene: Tres cargas, tres descargas
 - voiceover: ""
-- duration: 10.75s
+- duration: 11.25s
 - poster: 6s
 - transition_in: cut
 - status: animated
@@ -74,7 +74,7 @@ Beats:
 
 - scene: DESCANSOS CORTOS,Y FRECUENTES,RINDEN MÁS QUE UNO LARGO Y ÚNICO
 - voiceover: ""
-- duration: 10.75s
+- duration: 11.25s
 - poster: 7s
 - transition_in: crossfade
 - status: animated

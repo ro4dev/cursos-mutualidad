@@ -3,28 +3,28 @@
     "id": "01-el-cuerpo-no-aguanta-solo",
     "tipo": "gancho",
     "titulo": "El cuerpo no aguanta solo",
-    "duracion": 10.75,
+    "duracion": 11.25,
     "transition_in": "cut"
   },
   {
     "id": "02-el-numero-que-alcanza",
     "tipo": "stat",
     "titulo": "El número que alcanza",
-    "duracion": 10.75,
+    "duracion": 11.25,
     "transition_in": "cut"
   },
   {
     "id": "03-las-tres-cargas",
     "tipo": "lista",
     "titulo": "Las tres cargas",
-    "duracion": 10.75,
+    "duracion": 11.25,
     "transition_in": "cut"
   },
   {
     "id": "04-frecuencia-no-duracion",
     "tipo": "cierre",
     "titulo": "Frecuencia, no duración",
-    "duracion": 10.75,
+    "duracion": 11.25,
     "transition_in": "crossfade"
   }
 ]

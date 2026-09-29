@@ -198,15 +198,24 @@ if (!existsSync(proyecto)) {
   process.exit(1);
 }
 
-/* La duracion se parte en partes iguales. El piloto usa 10.5s por frame con
-   9.5s de ventana visible; aqui se deja 0.5s de aire al final de cada uno
-   para que la transicion entrante tenga donde entrar. */
+/* La duracion se parte en partes iguales.
+ *
+ * El frame mide lo que dura, sin restar nada. Antes se restaban 0.5s por
+ * frame "para que la transicion entrante tuviera donde entrar", y eso hacia
+ * que el video saliera mas corto de lo que dice la spec: el total es la suma
+ * de las duraciones (assemble-index.mjs acumula `acc += m.durationSeconds`),
+ * asi que con n frames el video duraba `duracion - n * 0.5`. Para un curso de
+ * cuatro frames a 45s eran 43s, dos segundos de menos en cada uno de los 19.
+ *
+ * El solape de la transicion NO se paga encogiendo el frame: transitions.mjs
+ * lo crea extendiendo el clip anterior 0.5s y arrancando el entrante medio
+ * segundo antes. El timeline no se acorta, se superpone. Asi que el frame se
+ * emite largo y el total da exactamente `duracion`. */
 const n = spec.frames.length;
-const duracion = +(spec.duracion / n).toFixed(2);
-const ventana = +(duracion - 0.5).toFixed(2);
+const ventana = +(spec.duracion / n).toFixed(2);
 
 console.log(`\n${slug}  ->  videos/${carpeta}`);
-console.log(`  ${n} frames x ${duracion}s  (ventana ${ventana}s)\n`);
+console.log(`  ${n} frames x ${ventana}s  (total ${spec.duracion}s)\n`);
 
 /* Los frames viejos se borran: si un frame se renumera, el html anterior
    quedaria huerfano y el catálogo lo contaria como montaje. */

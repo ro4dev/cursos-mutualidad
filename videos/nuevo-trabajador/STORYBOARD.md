@@ -1,6 +1,6 @@
 ---
 format: 1920x1080
-duration: 58s
+duration: 60s
 message: "La inducción integra: muestra cómo se trabaja acá. El primer día es información y accesos, y las primeras semanas son acompañamiento."
 arc: concept-explainer with a contrast
 audience: "Personal de mutualidades y empresas en Chile"
@@ -20,7 +20,7 @@ music: none
 
 - scene: LA INDUCCIÓN,MUESTRA CÓMO,SE TRABAJA AQUÍ
 - voiceover: ""
-- duration: 14.5s
+- duration: 15s
 - poster: 4s
 - transition_in: cut
 - status: animated
@@ -38,7 +38,7 @@ Beats:
 
 - scene: El día uno y las semanas
 - voiceover: ""
-- duration: 14.5s
+- duration: 15s
 - poster: 5s
 - transition_in: cut
 - status: animated
@@ -56,7 +56,7 @@ Beats:
 
 - scene: Accesos, formación, seguimiento
 - voiceover: ""
-- duration: 14.5s
+- duration: 15s
 - poster: 6s
 - transition_in: cut
 - status: animated
@@ -74,7 +74,7 @@ Beats:
 
 - scene: CUENTAS, PERMISOS,Y EQUIPOS,DESDE EL PRIMER DÍA
 - voiceover: ""
-- duration: 14.5s
+- duration: 15s
 - poster: 7s
 - transition_in: crossfade
 - status: animated

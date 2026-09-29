@@ -3,28 +3,28 @@
     "id": "01-la-postura-no-se-aguanta",
     "tipo": "gancho",
     "titulo": "La postura no se aguanta sola",
-    "duracion": 10.75,
+    "duracion": 11.25,
     "transition_in": "cut"
   },
   {
     "id": "02-la-mitad-del-cuerpo",
     "tipo": "stat",
     "titulo": "La mitad del cuerpo",
-    "duracion": 10.75,
+    "duracion": 11.25,
     "transition_in": "cut"
   },
   {
     "id": "03-los-cinco-ajustes",
     "tipo": "lista",
     "titulo": "Los cinco ajustes",
-    "duracion": 10.75,
+    "duracion": 11.25,
     "transition_in": "cut"
   },
   {
     "id": "04-lo-que-no-se-cita",
     "tipo": "cierre",
     "titulo": "Lo que no se cita",
-    "duracion": 10.75,
+    "duracion": 11.25,
     "transition_in": "crossfade"
   }
 ]

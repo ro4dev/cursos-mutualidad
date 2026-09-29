@@ -3,28 +3,28 @@
     "id": "01-no-es-callarse",
     "tipo": "gancho",
     "titulo": "No es callarse",
-    "duracion": 10.75,
+    "duracion": 11.25,
     "transition_in": "cut"
   },
   {
     "id": "02-tres-posturas",
     "tipo": "lista",
     "titulo": "Tres posturas",
-    "duracion": 10.75,
+    "duracion": 11.25,
     "transition_in": "cut"
   },
   {
     "id": "03-que-funciona",
     "tipo": "par",
     "titulo": "Que funciona y que no",
-    "duracion": 10.75,
+    "duracion": 11.25,
     "transition_in": "cut"
   },
   {
     "id": "04-cuatro-pasos",
     "tipo": "cierre",
     "titulo": "Los cuatro pasos",
-    "duracion": 10.75,
+    "duracion": 11.25,
     "transition_in": "crossfade"
   }
 ]

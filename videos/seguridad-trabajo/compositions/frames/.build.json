@@ -3,35 +3,35 @@
     "id": "01-proveer-mantener-exigir",
     "tipo": "gancho",
     "titulo": "Proveer, mantener, exigir",
-    "duracion": 11.5,
+    "duracion": 12,
     "transition_in": "cut"
   },
   {
     "id": "02-cinco-condiciones",
     "tipo": "stat",
     "titulo": "Cinco condiciones",
-    "duracion": 11.5,
+    "duracion": 12,
     "transition_in": "cut"
   },
   {
     "id": "03-proteger-o-retirarse",
     "tipo": "par",
     "titulo": "Proteger o retirarse",
-    "duracion": 11.5,
+    "duracion": 12,
     "transition_in": "cut"
   },
   {
     "id": "04-deber-y-fiscalizacion",
     "tipo": "lista",
     "titulo": "Deber y fiscalización",
-    "duracion": 11.5,
+    "duracion": 12,
     "transition_in": "cut"
   },
   {
     "id": "05-en-todos-los-niveles",
     "tipo": "cierre",
     "titulo": "En todos los niveles",
-    "duracion": 11.5,
+    "duracion": 12,
     "transition_in": "crossfade"
   }
 ]

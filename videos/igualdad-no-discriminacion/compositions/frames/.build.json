@@ -3,35 +3,35 @@
     "id": "01-un-principio-activo",
     "tipo": "gancho",
     "titulo": "Un principio activo",
-    "duracion": 11.5,
+    "duracion": 12,
     "transition_in": "cut"
   },
   {
     "id": "02-lo-que-cubre",
     "tipo": "stat",
     "titulo": "Lo que cubre",
-    "duracion": 11.5,
+    "duracion": 12,
     "transition_in": "cut"
   },
   {
     "id": "03-directa-e-indirecta",
     "tipo": "par",
     "titulo": "Directa e indirecta",
-    "duracion": 11.5,
+    "duracion": 12,
     "transition_in": "cut"
   },
   {
     "id": "04-lo-que-ya-esta",
     "tipo": "lista",
     "titulo": "Lo que ya esta",
-    "duracion": 11.5,
+    "duracion": 12,
     "transition_in": "cut"
   },
   {
     "id": "05-mira-el-efecto",
     "tipo": "cierre",
     "titulo": "Mira el efecto",
-    "duracion": 11.5,
+    "duracion": 12,
     "transition_in": "crossfade"
   }
 ]

@@ -3,35 +3,35 @@
     "id": "01-viene-de-la-organizacion",
     "tipo": "gancho",
     "titulo": "Viene de la organización",
-    "duracion": 11.5,
+    "duracion": 12,
     "transition_in": "cut"
   },
   {
     "id": "02-los-cuatro-factores",
     "tipo": "stat",
     "titulo": "Los cuatro factores",
-    "duracion": 11.5,
+    "duracion": 12,
     "transition_in": "cut"
   },
   {
     "id": "03-causa-o-efecto",
     "tipo": "par",
     "titulo": "Causa o efecto",
-    "duracion": 11.5,
+    "duracion": 12,
     "transition_in": "cut"
   },
   {
     "id": "04-deteccion-y-apoyo",
     "tipo": "lista",
     "titulo": "Detección y apoyo",
-    "duracion": 11.5,
+    "duracion": 12,
     "transition_in": "cut"
   },
   {
     "id": "05-la-causa-manda",
     "tipo": "cierre",
     "titulo": "La causa manda",
-    "duracion": 11.5,
+    "duracion": 12,
     "transition_in": "crossfade"
   }
 ]

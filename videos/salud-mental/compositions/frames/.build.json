@@ -3,28 +3,28 @@
     "id": "01-es-un-derecho",
     "tipo": "gancho",
     "titulo": "Es un derecho",
-    "duracion": 14.5,
+    "duracion": 15,
     "transition_in": "cut"
   },
   {
     "id": "02-riesgo-y-proteccion",
     "tipo": "par",
     "titulo": "Riesgo y protección",
-    "duracion": 14.5,
+    "duracion": 15,
     "transition_in": "cut"
   },
   {
     "id": "03-medidas-consulta-y-red",
     "tipo": "lista",
     "titulo": "Medidas, consulta y red",
-    "duracion": 14.5,
+    "duracion": 15,
     "transition_in": "cut"
   },
   {
     "id": "04-no-es-una-concesion",
     "tipo": "cierre",
     "titulo": "No es una concesión",
-    "duracion": 14.5,
+    "duracion": 15,
     "transition_in": "crossfade"
   }
 ]

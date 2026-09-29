@@ -1,6 +1,6 @@
 ---
 format: 1920x1080
-duration: 57.5s
+duration: 60s
 message: "El riesgo psicosocial no está en la persona: está en cómo está organizado el trabajo. Se previene cambiando la causa, no solo el efecto."
 arc: concept-explainer with a count and a contrast
 audience: "Personal de mutualidades y empresas en Chile"
@@ -20,7 +20,7 @@ music: none
 
 - scene: EL RIESGO,VIENE DEL TRABAJO
 - voiceover: ""
-- duration: 11.5s
+- duration: 12s
 - poster: 4s
 - transition_in: cut
 - status: animated
@@ -38,7 +38,7 @@ Beats:
 
 - scene: stat
 - voiceover: ""
-- duration: 11.5s
+- duration: 12s
 - poster: 5s
 - transition_in: cut
 - status: animated
@@ -56,7 +56,7 @@ Beats:
 
 - scene: La causa o el efecto
 - voiceover: ""
-- duration: 11.5s
+- duration: 12s
 - poster: 6s
 - transition_in: cut
 - status: animated
@@ -74,7 +74,7 @@ Beats:
 
 - scene: Identificar, reconocer, apoyar
 - voiceover: ""
-- duration: 11.5s
+- duration: 12s
 - poster: 7s
 - transition_in: cut
 - status: animated
@@ -92,7 +92,7 @@ Beats:
 
 - scene: EL RIESGO VIENE,DE LA ORGANIZACIÓN,DEL TRABAJO
 - voiceover: ""
-- duration: 11.5s
+- duration: 12s
 - poster: 8s
 - transition_in: crossfade
 - status: animated

@@ -3,28 +3,28 @@
     "id": "01-un-resultado",
     "tipo": "gancho",
     "titulo": "Un resultado",
-    "duracion": 10.75,
+    "duracion": 11.25,
     "transition_in": "cut"
   },
   {
     "id": "02-compartido-o-aislado",
     "tipo": "par",
     "titulo": "Compartido o aislado",
-    "duracion": 10.75,
+    "duracion": 11.25,
     "transition_in": "cut"
   },
   {
     "id": "03-las-tres-conductas",
     "tipo": "lista",
     "titulo": "Las tres conductas",
-    "duracion": 10.75,
+    "duracion": 11.25,
     "transition_in": "cut"
   },
   {
     "id": "04-el-conflicto-de-frente",
     "tipo": "cierre",
     "titulo": "El conflicto, de frente",
-    "duracion": 10.75,
+    "duracion": 11.25,
     "transition_in": "crossfade"
   }
 ]

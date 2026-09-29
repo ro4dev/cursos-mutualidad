@@ -1,6 +1,6 @@
 ---
 format: 1920x1080
-duration: 43s
+duration: 45s
 message: "La dignidad de la persona ordena toda relación laboral: no es un detalle de buena onda, es el punto de partida."
 arc: concept-explainer with contrast
 audience: "Personal de mutualidades y empresas en Chile"
@@ -20,7 +20,7 @@ music: none
 
 - scene: EL RESPETO NO ES,UN DETALLE DE BUENA ONDA
 - voiceover: ""
-- duration: 10.75s
+- duration: 11.25s
 - poster: 4s
 - transition_in: cut
 - status: animated
@@ -38,7 +38,7 @@ Beats:
 
 - scene: Lo que ordena, y lo que lo contradice
 - voiceover: ""
-- duration: 10.75s
+- duration: 11.25s
 - poster: 5s
 - transition_in: cut
 - status: animated
@@ -56,7 +56,7 @@ Beats:
 
 - scene: El camino una vez que ocurrió
 - voiceover: ""
-- duration: 10.75s
+- duration: 11.25s
 - poster: 6s
 - transition_in: cut
 - status: animated
@@ -74,7 +74,7 @@ Beats:
 
 - scene: UN AMBIENTE RESPETUOSO,ES LA BASE DE LA,COLABORACIÓN Y LA PRODUCTIVIDAD
 - voiceover: ""
-- duration: 10.75s
+- duration: 11.25s
 - poster: 4s
 - transition_in: crossfade
 - status: animated

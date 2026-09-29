@@ -1,6 +1,6 @@
 ---
 format: 1920x1080
-duration: 57.5s
+duration: 60s
 message: "La igualdad es un principio activo, no solo la ausencia de discriminación. La forma indirecta es la que no se ve en la regla, y por eso es la que hay que mirar."
 arc: concept-explainer with a contrast and a count
 audience: "Personal de mutualidades y empresas en Chile"
@@ -20,7 +20,7 @@ music: none
 
 - scene: LA IGUALDAD,ES ACTIVA
 - voiceover: ""
-- duration: 11.5s
+- duration: 12s
 - poster: 4s
 - transition_in: cut
 - status: animated
@@ -38,7 +38,7 @@ Beats:
 
 - scene: stat
 - voiceover: ""
-- duration: 11.5s
+- duration: 12s
 - poster: 5s
 - transition_in: cut
 - status: animated
@@ -56,7 +56,7 @@ Beats:
 
 - scene: La que se ve y la que no
 - voiceover: ""
-- duration: 11.5s
+- duration: 12s
 - poster: 6s
 - transition_in: cut
 - status: animated
@@ -74,7 +74,7 @@ Beats:
 
 - scene: Prohibido, y legítimo
 - voiceover: ""
-- duration: 11.5s
+- duration: 12s
 - poster: 7s
 - transition_in: cut
 - status: animated
@@ -92,7 +92,7 @@ Beats:
 
 - scene: UNA REGLA NEUTRA,NO BASTA,SI PRODUCE UN EFECTO DESIGUAL
 - voiceover: ""
-- duration: 11.5s
+- duration: 12s
 - poster: 8s
 - transition_in: crossfade
 - status: animated

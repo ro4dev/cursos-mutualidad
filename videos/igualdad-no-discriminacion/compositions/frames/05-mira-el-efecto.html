@@ -1,5 +1,5 @@
 <template>
-  <div data-hf-id="hf-msv5" id="05-mira-el-efecto" data-composition-id="05-mira-el-efecto" data-start="0" data-duration="11.5" data-width="1920" data-height="1080">
+  <div data-hf-id="hf-msv5" id="05-mira-el-efecto" data-composition-id="05-mira-el-efecto" data-start="0" data-duration="12" data-width="1920" data-height="1080">
     <style>
       /* frame.md typography, resolved to the real woff2 files shipped in
          capture/assets/fonts. Both are the latin subset variable cuts, so
@@ -160,8 +160,8 @@
       }
     </style>
 
-      <div data-hf-id="hf-p0r3" id="05-mira-el-efecto-bg" class="clip" data-start="0" data-duration="11.5" data-track-index="0"></div>
-    <div data-hf-id="hf-ckv4" id="05-mira-el-efecto-world" class="clip" data-start="0" data-duration="11.5" data-track-index="1">      <div data-hf-id="hf-gxjx" id="05-mira-el-efecto-kicker-w">        <span data-hf-id="hf-12rp" id="05-mira-el-efecto-kicker">LA REGLA QUE SE LLEVAN</span></div>      <span data-hf-id="hf-3xqy" id="05-mira-el-efecto-rule"></span>      <div data-hf-id="hf-27h1" id="05-mira-el-efecto-regla-w">        <h2 data-hf-id="hf-ny99" id="05-mira-el-efecto-regla">        <span data-hf-id="hf-a77z" id="05-mira-el-efecto-rl-0">UNA REGLA NEUTRA</span>        <span data-hf-id="hf-alj0" id="05-mira-el-efecto-rl-1">NO BASTA</span>        <span data-hf-id="hf-9elx" id="05-mira-el-efecto-rl-2">SI PRODUCE UN EFECTO DESIGUAL</span></h2></div>      <div data-hf-id="hf-p470" id="05-mira-el-efecto-nota-w">        <p data-hf-id="hf-t7fg" id="05-mira-el-efecto-nota">La forma indirecta sobrevive porque nadie la escribe. Por eso la igualdad tiene que ser activa: para mirar el efecto, no solo la intención.</p></div>      <span data-hf-id="hf-4lnk" id="05-mira-el-efecto-frule"></span>      <div data-hf-id="hf-dtah" id="05-mira-el-efecto-fuente-w">        <p data-hf-id="hf-1135" id="05-mira-el-efecto-fuente">IGUALDAD Y NO DISCRIMINACIÓN · FUENTE INTERNA</p></div>      <div data-hf-id="hf-0coc" id="05-mira-el-efecto-marca-w">        <p data-hf-id="hf-vylo" id="05-mira-el-efecto-marca">CURSOS DE MUTUALIDAD</p></div></div>
+      <div data-hf-id="hf-p0r3" id="05-mira-el-efecto-bg" class="clip" data-start="0" data-duration="12" data-track-index="0"></div>
+    <div data-hf-id="hf-ckv4" id="05-mira-el-efecto-world" class="clip" data-start="0" data-duration="12" data-track-index="1">      <div data-hf-id="hf-gxjx" id="05-mira-el-efecto-kicker-w">        <span data-hf-id="hf-12rp" id="05-mira-el-efecto-kicker">LA REGLA QUE SE LLEVAN</span></div>      <span data-hf-id="hf-3xqy" id="05-mira-el-efecto-rule"></span>      <div data-hf-id="hf-27h1" id="05-mira-el-efecto-regla-w">        <h2 data-hf-id="hf-ny99" id="05-mira-el-efecto-regla">        <span data-hf-id="hf-a77z" id="05-mira-el-efecto-rl-0">UNA REGLA NEUTRA</span>        <span data-hf-id="hf-alj0" id="05-mira-el-efecto-rl-1">NO BASTA</span>        <span data-hf-id="hf-9elx" id="05-mira-el-efecto-rl-2">SI PRODUCE UN EFECTO DESIGUAL</span></h2></div>      <div data-hf-id="hf-p470" id="05-mira-el-efecto-nota-w">        <p data-hf-id="hf-t7fg" id="05-mira-el-efecto-nota">La forma indirecta sobrevive porque nadie la escribe. Por eso la igualdad tiene que ser activa: para mirar el efecto, no solo la intención.</p></div>      <span data-hf-id="hf-4lnk" id="05-mira-el-efecto-frule"></span>      <div data-hf-id="hf-dtah" id="05-mira-el-efecto-fuente-w">        <p data-hf-id="hf-1135" id="05-mira-el-efecto-fuente">IGUALDAD Y NO DISCRIMINACIÓN · FUENTE INTERNA</p></div>      <div data-hf-id="hf-0coc" id="05-mira-el-efecto-marca-w">        <p data-hf-id="hf-vylo" id="05-mira-el-efecto-marca">CURSOS DE MUTUALIDAD</p></div></div>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
     <script>
@@ -210,8 +210,8 @@
         tl.fromTo(byId("05-mira-el-efecto-fuente"), { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.out" }, 1.85);
         tl.fromTo(byId("05-mira-el-efecto-marca"), { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.out" }, 1.95);
 
-        // hold the declared 11.5s window open without an exit tween
-        tl.to({}, { duration: 0.01 }, 11.49);
+        // hold the declared 12s window open without an exit tween
+        tl.to({}, { duration: 0.01 }, 11.99);
 
         tl.seek(0);
         window.__timelines = window.__timelines || {};

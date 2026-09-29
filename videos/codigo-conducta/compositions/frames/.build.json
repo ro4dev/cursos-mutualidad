@@ -3,28 +3,28 @@
     "id": "01-que-fija",
     "tipo": "gancho",
     "titulo": "Que fija",
-    "duracion": 14.5,
+    "duracion": 15,
     "transition_in": "cut"
   },
   {
     "id": "02-declarar-o-rechazar",
     "tipo": "par",
     "titulo": "Declarar o rechazar",
-    "duracion": 14.5,
+    "duracion": 15,
     "transition_in": "cut"
   },
   {
     "id": "03-lo-que-hay-que-cuidar",
     "tipo": "lista",
     "titulo": "Lo que hay que cuidar",
-    "duracion": 14.5,
+    "duracion": 15,
     "transition_in": "cut"
   },
   {
     "id": "04-la-linea-no-es-el-papel",
     "tipo": "cierre",
     "titulo": "La línea no es el papel",
-    "duracion": 14.5,
+    "duracion": 15,
     "transition_in": "crossfade"
   }
 ]

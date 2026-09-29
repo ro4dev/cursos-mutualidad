@@ -3,28 +3,28 @@
     "id": "01-el-respeto-no-es-un-detalle",
     "tipo": "gancho",
     "titulo": "El respeto no es un detalle",
-    "duracion": 10.75,
+    "duracion": 11.25,
     "transition_in": "cut"
   },
   {
     "id": "02-principio-y-conductas",
     "tipo": "par",
     "titulo": "Principio y conductas",
-    "duracion": 10.75,
+    "duracion": 11.25,
     "transition_in": "cut"
   },
   {
     "id": "03-cuando-se-denuncia",
     "tipo": "lista",
     "titulo": "Cuando se denuncia",
-    "duracion": 10.75,
+    "duracion": 11.25,
     "transition_in": "cut"
   },
   {
     "id": "04-el-ambiente-respetuoso",
     "tipo": "cierre",
     "titulo": "El ambiente respetuoso",
-    "duracion": 10.75,
+    "duracion": 11.25,
     "transition_in": "crossfade"
   }
 ]

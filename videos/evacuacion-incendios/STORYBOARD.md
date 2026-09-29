@@ -1,6 +1,6 @@
 ---
 format: 1920x1080
-duration: 43s
+duration: 45s
 message: "Ante la alarma, la evacuación es inmediata y ordenada. Lo que hace que funcione es el orden de las acciones, y ese orden se entrena."
 arc: how-to with priority contrast
 audience: "Personal de mutualidades y empresas en Chile"
@@ -20,7 +20,7 @@ music: none
 
 - scene: LA EVACUACIÓN,NO ESPERA
 - voiceover: ""
-- duration: 10.75s
+- duration: 11.25s
 - poster: 4s
 - transition_in: cut
 - status: animated
@@ -38,7 +38,7 @@ Beats:
 
 - scene: Dos acciones, un orden
 - voiceover: ""
-- duration: 10.75s
+- duration: 11.25s
 - poster: 5s
 - transition_in: cut
 - status: animated
@@ -56,7 +56,7 @@ Beats:
 
 - scene: En orden, y sin saltos
 - voiceover: ""
-- duration: 10.75s
+- duration: 11.25s
 - poster: 6s
 - transition_in: cut
 - status: animated
@@ -74,7 +74,7 @@ Beats:
 
 - scene: NO BLOQUEAR NI UN PASILLO,NI UNA SALIDA,Y REVISAR CABLEADO Y CALEFACCIÓN
 - voiceover: ""
-- duration: 10.75s
+- duration: 11.25s
 - poster: 7s
 - transition_in: crossfade
 - status: animated

@@ -252,8 +252,9 @@ for (const ruta of rutas) {
  *
  *    No basta con pedir que sean iguales entre si: el valor esperado se
  *    deriva de la spec, que es la fuente de verdad. build-course.mjs parte
- *    `duracion` en partes iguales y descuenta 0.5s de superposicion por
- *    frame, y eso es lo que emite.
+ *    `duracion` en partes iguales y emite el frame entero; el solape de la
+ *    transicion lo crea transitions.mjs extendiendo el clip anterior, asi
+ *    que no descuenta nada del frame y la suma da `duracion` exacto.
  * --------------------------------------------------------------------- */
 
 /** El data-duration de un frame, o null si el archivo no lo trae. */
@@ -271,7 +272,7 @@ async function duracionEsperada(slug, cantidad) {
     return { esperado: null, motivo: 'la spec no declara duracion' };
   }
   const porFrame = spec.duracion / cantidad;
-  return { esperado: +(porFrame - 0.5).toFixed(2), motivo: null };
+  return { esperado: +porFrame.toFixed(2), motivo: null };
 }
 
 async function revisarDuraciones() {

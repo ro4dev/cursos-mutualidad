@@ -1,6 +1,6 @@
 ---
 format: 1920x1080
-duration: 43s
+duration: 45s
 message: "La postura no se aguanta sola: se sostiene con cinco ajustes concretos que cualquier puesto de trabajo puede hacer hoy."
 arc: concept-explainer with checklist
 audience: "Personal de mutualidades y oficinas en Chile"
@@ -20,7 +20,7 @@ music: none
 
 - scene: LA POSTURA,NO SE AGUANTA SOLA
 - voiceover: ""
-- duration: 10.75s
+- duration: 11.25s
 - poster: 4s
 - transition_in: cut
 - status: animated
@@ -38,7 +38,7 @@ Beats:
 
 - scene: stat
 - voiceover: ""
-- duration: 10.75s
+- duration: 11.25s
 - poster: 4s
 - transition_in: cut
 - status: animated
@@ -56,7 +56,7 @@ Beats:
 
 - scene: Cinco ajustes, en orden
 - voiceover: ""
-- duration: 10.75s
+- duration: 11.25s
 - poster: 6s
 - transition_in: cut
 - status: animated
@@ -74,7 +74,7 @@ Beats:
 
 - scene: ARMA EL PUESTO,DE ARRIBA HACIA ABAJO,Y ALTERNA CADA 20-30 MINUTOS
 - voiceover: ""
-- duration: 10.75s
+- duration: 11.25s
 - poster: 4s
 - transition_in: crossfade
 - status: animated

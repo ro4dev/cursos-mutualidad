@@ -1,6 +1,6 @@
 ---
 format: 1920x1080
-duration: 58s
+duration: 60s
 message: "Un riesgo es la probabilidad de un evento indeseado con daño. Y el cuasi-accidente, el que nosale nada, es la misma información."
 arc: concept-explainer with a contrast
 audience: "Personal de mutualidades y empresas en Chile"
@@ -20,7 +20,7 @@ music: none
 
 - scene: UN RIESGO,ES PROBABILIDAD,Y ES DAÑO
 - voiceover: ""
-- duration: 14.5s
+- duration: 15s
 - poster: 4s
 - transition_in: cut
 - status: animated
@@ -38,7 +38,7 @@ Beats:
 
 - scene: Puesto de trabajo y comité
 - voiceover: ""
-- duration: 14.5s
+- duration: 15s
 - poster: 5s
 - transition_in: cut
 - status: animated
@@ -56,7 +56,7 @@ Beats:
 
 - scene: Tres cosas que se descartan
 - voiceover: ""
-- duration: 14.5s
+- duration: 15s
 - poster: 6s
 - transition_in: cut
 - status: animated
@@ -74,7 +74,7 @@ Beats:
 
 - scene: PRIMERO SE ELIMINA,AL FINAL,SE PROTEGE
 - voiceover: ""
-- duration: 14.5s
+- duration: 15s
 - poster: 7s
 - transition_in: crossfade
 - status: animated

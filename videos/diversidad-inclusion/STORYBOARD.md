@@ -1,6 +1,6 @@
 ---
 format: 1920x1080
-duration: 43s
+duration: 45s
 message: "Tener personas distintas en la organization no es Inclusión: la Inclusión es que todas esas voces puedan participar y ser escuchadas."
 arc: concept-explainer with contrast
 audience: "Personal de mutualidades y empresas en Chile"
@@ -20,7 +20,7 @@ music: none
 
 - scene: TENER PERSONAS DISTINTAS,NO ES LO MISMO QUE INCLUIRLAS
 - voiceover: ""
-- duration: 10.75s
+- duration: 11.25s
 - poster: 4s
 - transition_in: cut
 - status: animated
@@ -38,7 +38,7 @@ Beats:
 
 - scene: Dos cosas que no se sustituyen
 - voiceover: ""
-- duration: 10.75s
+- duration: 11.25s
 - poster: 5s
 - transition_in: cut
 - status: animated
@@ -56,7 +56,7 @@ Beats:
 
 - scene: Tres razones concretas
 - voiceover: ""
-- duration: 10.75s
+- duration: 11.25s
 - poster: 6s
 - transition_in: cut
 - status: animated
@@ -74,7 +74,7 @@ Beats:
 
 - scene: SI LAS VOCES NO ENTRAN,A LA DECISIÓN, NO HAY INCLUSIÓN
 - voiceover: ""
-- duration: 10.75s
+- duration: 11.25s
 - poster: 4s
 - transition_in: crossfade
 - status: animated

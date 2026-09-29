@@ -1,6 +1,6 @@
 ---
 format: 1920x1080
-duration: 43s
+duration: 45s
 message: "Un equipo comparte un resultado, no tareas aisladas. De ahí sale casi todo lo demás: pedir ayuda, la duración de las reuniones y cómo se resuelve un conflicto."
 arc: concept-explainer with contrast
 audience: "Personal de mutualidades y empresas en Chile"
@@ -20,7 +20,7 @@ music: none
 
 - scene: EL EQUIPO COMPARTE,UN RESULTADO
 - voiceover: ""
-- duration: 10.75s
+- duration: 11.25s
 - poster: 4s
 - transition_in: cut
 - status: animated
@@ -38,7 +38,7 @@ Beats:
 
 - scene: Qué se comparte, en el fondo
 - voiceover: ""
-- duration: 10.75s
+- duration: 11.25s
 - poster: 5s
 - transition_in: cut
 - status: animated
@@ -56,7 +56,7 @@ Beats:
 
 - scene: Tres conductas, no dos
 - voiceover: ""
-- duration: 10.75s
+- duration: 11.25s
 - poster: 6s
 - transition_in: cut
 - status: animated
@@ -74,7 +74,7 @@ Beats:
 
 - scene: EL CONFLICTO,SE ABORDA DE FRENTE,Y CON REGLAS COMUNES
 - voiceover: ""
-- duration: 10.75s
+- duration: 11.25s
 - poster: 7s
 - transition_in: crossfade
 - status: animated

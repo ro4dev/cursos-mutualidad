@@ -1,6 +1,6 @@
 ---
 format: 1920x1080
-duration: 57.5s
+duration: 60s
 message: "Proteger no es opcional: el empleador provee y mantiene, el trabajador usa e informa, y ante riesgo grave e inminente se puede retirar."
 arc: concept-explainer with a count and a contrast
 audience: "Personal de mutualidades y empresas en Chile"
@@ -20,7 +20,7 @@ music: none
 
 - scene: PROVEER, MANTENER,Y EXIGIR
 - voiceover: ""
-- duration: 11.5s
+- duration: 12s
 - poster: 4s
 - transition_in: cut
 - status: animated
@@ -38,7 +38,7 @@ Beats:
 
 - scene: stat
 - voiceover: ""
-- duration: 11.5s
+- duration: 12s
 - poster: 5s
 - transition_in: cut
 - status: animated
@@ -56,7 +56,7 @@ Beats:
 
 - scene: Proteger siempre, retirarse si toca
 - voiceover: ""
-- duration: 11.5s
+- duration: 12s
 - poster: 6s
 - transition_in: cut
 - status: animated
@@ -74,7 +74,7 @@ Beats:
 
 - scene: Deber del trabajador y fiscalización
 - voiceover: ""
-- duration: 11.5s
+- duration: 12s
 - poster: 7s
 - transition_in: cut
 - status: animated
@@ -92,7 +92,7 @@ Beats:
 
 - scene: LA DECENCIA,Y EL RESPETO,EN TODOS LOS NIVELES
 - voiceover: ""
-- duration: 11.5s
+- duration: 12s
 - poster: 8s
 - transition_in: crossfade
 - status: animated

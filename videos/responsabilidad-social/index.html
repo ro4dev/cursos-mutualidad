@@ -37,7 +37,7 @@
       id="root"
       data-composition-id="main"
       data-start="0"
-      data-duration="43"
+      data-duration="45"
       data-width="1920"
       data-height="1080"
     >
@@ -47,7 +47,7 @@
         data-composition-id="01-asumido-y-verificable"
         data-composition-src="compositions/frames/01-asumido-y-verificable.html"
         data-start="0"
-        data-duration="10.75"
+        data-duration="11.25"
         data-track-index="0"
       ></div>
 
@@ -56,8 +56,8 @@
         class="scene"
         data-composition-id="02-adentro-y-afuera"
         data-composition-src="compositions/frames/02-adentro-y-afuera.html"
-        data-start="10.75"
-        data-duration="10.75"
+        data-start="11.25"
+        data-duration="11.25"
         data-track-index="1"
       ></div>
 
@@ -66,8 +66,8 @@
         class="scene"
         data-composition-id="03-las-tres-cosas"
         data-composition-src="compositions/frames/03-las-tres-cosas.html"
-        data-start="21.5"
-        data-duration="11.25"
+        data-start="22.5"
+        data-duration="11.75"
         data-track-index="0"
       ></div>
 
@@ -76,8 +76,8 @@
         class="scene"
         data-composition-id="04-sin-transparencia-no-hay"
         data-composition-src="compositions/frames/04-sin-transparencia-no-hay.html"
-        data-start="32.25"
-        data-duration="10.75"
+        data-start="33.75"
+        data-duration="11.25"
         data-track-index="1"
       ></div>
 
@@ -88,10 +88,10 @@
       window.__timelines["main"] = gsap.timeline({ paused: true });
       // ── frame transitions (injected by transitions.mjs) ──
       (function () { var tl = window.__timelines["main"];
-        tl.to("#el-03-las-tres-cosas", { opacity: 0, duration: 0.5, ease: "power2.inOut" }, 32.25);
-        tl.fromTo("#el-04-sin-transparencia-no-hay", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.inOut" }, 32.25);
-        tl.addLabel("hf:transition:03-las-tres-cosas:04-sin-transparencia-no-hay:crossfade", 32.25);
-        tl.to({}, { duration: 43 }, 0); // full-span anchor — main.duration() == composition total (Studio master duration)
+        tl.to("#el-03-las-tres-cosas", { opacity: 0, duration: 0.5, ease: "power2.inOut" }, 33.75);
+        tl.fromTo("#el-04-sin-transparencia-no-hay", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.inOut" }, 33.75);
+        tl.addLabel("hf:transition:03-las-tres-cosas:04-sin-transparencia-no-hay:crossfade", 33.75);
+        tl.to({}, { duration: 45 }, 0); // full-span anchor — main.duration() == composition total (Studio master duration)
       })();
     </script>
   </body>

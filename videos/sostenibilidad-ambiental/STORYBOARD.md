@@ -1,6 +1,6 @@
 ---
 format: 1920x1080
-duration: 43s
+duration: 45s
 message: "La sustentabilidad ambiental se refleja en la operación diaria. Las acciones pequeñas y sostenidas pesan más que las grandes campañas aisladas."
 arc: concept-explainer with contrast
 audience: "Personal de mutualidades y empresas en Chile"
@@ -20,7 +20,7 @@ music: none
 
 - scene: LO QUE PESA,SON LAS ACCIONES DIARIAS
 - voiceover: ""
-- duration: 10.75s
+- duration: 11.25s
 - poster: 4s
 - transition_in: cut
 - status: animated
@@ -38,7 +38,7 @@ Beats:
 
 - scene: La aislada y la sostenida
 - voiceover: ""
-- duration: 10.75s
+- duration: 11.25s
 - poster: 5s
 - transition_in: cut
 - status: animated
@@ -56,7 +56,7 @@ Beats:
 
 - scene: Cuatro acciones, todos los días
 - voiceover: ""
-- duration: 10.75s
+- duration: 11.25s
 - poster: 6s
 - transition_in: cut
 - status: animated
@@ -74,7 +74,7 @@ Beats:
 
 - scene: LA SUSTENTABILIDAD,SE REFLEJA EN LA,OPERACIÓN DIARIA
 - voiceover: ""
-- duration: 10.75s
+- duration: 11.25s
 - poster: 7s
 - transition_in: crossfade
 - status: animated

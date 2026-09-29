@@ -3,28 +3,28 @@
     "id": "01-no-es-un-momento",
     "tipo": "gancho",
     "titulo": "No es un momento",
-    "duracion": 10.75,
+    "duracion": 11.25,
     "transition_in": "cut"
   },
   {
     "id": "02-escape-primero",
     "tipo": "par",
     "titulo": "Escape primero",
-    "duracion": 10.75,
+    "duracion": 11.25,
     "transition_in": "cut"
   },
   {
     "id": "03-el-recorrido",
     "tipo": "lista",
     "titulo": "El recorrido",
-    "duracion": 10.75,
+    "duracion": 11.25,
     "transition_in": "cut"
   },
   {
     "id": "04-lo-que-se-deja",
     "tipo": "cierre",
     "titulo": "Lo que se deja resuelto",
-    "duracion": 10.75,
+    "duracion": 11.25,
     "transition_in": "crossfade"
   }
 ]

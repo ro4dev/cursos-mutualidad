@@ -1,6 +1,6 @@
 ---
 format: 1920x1080
-duration: 58s
+duration: 60s
 message: "Los límites claros son la principal protección frente al exceso de autoridad. Y el ejemplo del jefe fija la norma real del equipo."
 arc: concept-explainer with a contrast
 audience: "Personal de mutualidades y empresas en Chile"
@@ -20,7 +20,7 @@ music: none
 
 - scene: EL EJEMPLO,DEL JEFE
 - voiceover: ""
-- duration: 14.5s
+- duration: 15s
 - poster: 4s
 - transition_in: cut
 - status: animated
@@ -38,7 +38,7 @@ Beats:
 
 - scene: El límite y lo que lo sostiene
 - voiceover: ""
-- duration: 14.5s
+- duration: 15s
 - poster: 5s
 - transition_in: cut
 - status: animated
@@ -56,7 +56,7 @@ Beats:
 
 - scene: Modelo, apoyo y responsabilidad
 - voiceover: ""
-- duration: 14.5s
+- duration: 15s
 - poster: 6s
 - transition_in: cut
 - status: animated
@@ -74,7 +74,7 @@ Beats:
 
 - scene: LA RESPONSABILIDAD,FINAL ANTE EL EQUIPO,ES DE QUIEN DIRIGE
 - voiceover: ""
-- duration: 14.5s
+- duration: 15s
 - poster: 7s
 - transition_in: crossfade
 - status: animated

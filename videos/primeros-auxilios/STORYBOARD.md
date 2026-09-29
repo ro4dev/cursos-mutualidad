@@ -1,6 +1,6 @@
 ---
 format: 1920x1080
-duration: 58s
+duration: 60s
 message: "Antes de atender, revisa que la escena sea segura. Después: aviso, respiración, compresiones. Y lo que no se hace también importa."
 arc: how-to with a contrast
 audience: "Personal de mutualidades y empresas en Chile"
@@ -20,7 +20,7 @@ music: none
 
 - scene: ANTES DE ATENDER,REVISA LA ESCENA
 - voiceover: ""
-- duration: 14.5s
+- duration: 15s
 - poster: 4s
 - transition_in: cut
 - status: animated
@@ -38,7 +38,7 @@ Beats:
 
 - scene: Lo que se hace y lo que no
 - voiceover: ""
-- duration: 14.5s
+- duration: 15s
 - poster: 5s
 - transition_in: cut
 - status: animated
@@ -56,7 +56,7 @@ Beats:
 
 - scene: Avisar, verificar, comprimir
 - voiceover: ""
-- duration: 14.5s
+- duration: 15s
 - poster: 6s
 - transition_in: cut
 - status: animated
@@ -74,7 +74,7 @@ Beats:
 
 - scene: AISLAR, ESPERAR,Y NO ABANDONAR,A LA PERSONA
 - voiceover: ""
-- duration: 14.5s
+- duration: 15s
 - poster: 7s
 - transition_in: crossfade
 - status: animated

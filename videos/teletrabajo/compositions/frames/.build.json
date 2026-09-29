@@ -3,28 +3,28 @@
     "id": "01-se-acuerda",
     "tipo": "gancho",
     "titulo": "Se acuerda",
-    "duracion": 14.5,
+    "duracion": 15,
     "transition_in": "cut"
   },
   {
     "id": "02-herramientas-o-espacio",
     "tipo": "par",
     "titulo": "Herramientas o espacio",
-    "duracion": 14.5,
+    "duracion": 15,
     "transition_in": "cut"
   },
   {
     "id": "03-definicion-derechos-y-carga",
     "tipo": "lista",
     "titulo": "Definición, derechos y carga",
-    "duracion": 14.5,
+    "duracion": 15,
     "transition_in": "cut"
   },
   {
     "id": "04-acordado-no-impuesto",
     "tipo": "cierre",
     "titulo": "Acordado, no impuesto",
-    "duracion": 14.5,
+    "duracion": 15,
     "transition_in": "crossfade"
   }
 ]

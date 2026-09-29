@@ -1,6 +1,6 @@
 ---
 format: 1920x1080
-duration: 58s
+duration: 60s
 message: "El teletrabajo se acuerda entre las partes: no puede imponerse unilateralmente. Y la jornada sigue rigiéndose por la duración máxima legal."
 arc: concept-explainer with a contrast
 audience: "Personal de mutualidades y empresas en Chile"
@@ -20,7 +20,7 @@ music: none
 
 - scene: EL TELETRABAJO,SE ACUERDA
 - voiceover: ""
-- duration: 14.5s
+- duration: 15s
 - poster: 4s
 - transition_in: cut
 - status: animated
@@ -38,7 +38,7 @@ Beats:
 
 - scene: Herramientas y espacio
 - voiceover: ""
-- duration: 14.5s
+- duration: 15s
 - poster: 5s
 - transition_in: cut
 - status: animated
@@ -56,7 +56,7 @@ Beats:
 
 - scene: Tres cosas del derecho
 - voiceover: ""
-- duration: 14.5s
+- duration: 15s
 - poster: 6s
 - transition_in: cut
 - status: animated
@@ -74,7 +74,7 @@ Beats:
 
 - scene: SE ACUERDA,Y FUERA DE LA JORNADA,HAY DESCONEXIÓN
 - voiceover: ""
-- duration: 14.5s
+- duration: 15s
 - poster: 7s
 - transition_in: crossfade
 - status: animated

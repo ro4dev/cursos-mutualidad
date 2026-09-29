@@ -1,6 +1,6 @@
 ---
 format: 1920x1080
-duration: 43s
+duration: 45s
 message: "La responsabilidad social no es una frase sobre la empresa: es un compromiso con su entorno que se puede asumir y verificar."
 arc: concept-explainer with contrast
 audience: "Personal de mutualidades y empresas en Chile"
@@ -20,7 +20,7 @@ music: none
 
 - scene: UN COMPROMISO,ASUMIDO Y VERIFICABLE
 - voiceover: ""
-- duration: 10.75s
+- duration: 11.25s
 - poster: 4s
 - transition_in: cut
 - status: animated
@@ -38,7 +38,7 @@ Beats:
 
 - scene: Adonde empieza, y hacia dónde
 - voiceover: ""
-- duration: 10.75s
+- duration: 11.25s
 - poster: 5s
 - transition_in: cut
 - status: animated
@@ -56,7 +56,7 @@ Beats:
 
 - scene: Tres dimensiones comprobables
 - voiceover: ""
-- duration: 10.75s
+- duration: 11.25s
 - poster: 6s
 - transition_in: cut
 - status: animated
@@ -74,7 +74,7 @@ Beats:
 
 - scene: SI NO SE COMUNICA,CON TRANSPARENCIA,NO SE PUEDE VERIFICAR
 - voiceover: ""
-- duration: 10.75s
+- duration: 11.25s
 - poster: 7s
 - transition_in: crossfade
 - status: animated
