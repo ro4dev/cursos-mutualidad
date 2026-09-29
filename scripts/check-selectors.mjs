@@ -29,7 +29,7 @@
 
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { join, relative, dirname } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -240,9 +240,93 @@ for (const ruta of rutas) {
   }
 }
 
+/* --------------------------------------------------------------------- *
+ * 6. La duracion de los frames, que es una propiedad del CURSO y no del
+ *    archivo, asi que va aparte del bucle anterior.
+ *
+ *    El fallo que se atrapa aqui es silencioso y ya ocurrio: 16 de los 19
+ *    cursos con spec tenian un unico frame con 0.5s de mas que sus hermanos,
+ *    y estaba commiteado. No lo veia `hyperframes check` porque no es un
+ *    problema de layout: el frame se reproduce bien, solo que dura mas, y el
+ *    video sale mas largo de lo que dice la spec sin que nada se queje.
+ *
+ *    No basta con pedir que sean iguales entre si: el valor esperado se
+ *    deriva de la spec, que es la fuente de verdad. build-course.mjs parte
+ *    `duracion` en partes iguales y descuenta 0.5s de superposicion por
+ *    frame, y eso es lo que emite.
+ * --------------------------------------------------------------------- */
+
+/** El data-duration de un frame, o null si el archivo no lo trae. */
+function duracionDe(ruta) {
+  const m = readFileSync(ruta, 'utf8').match(/data-duration="([\d.]+)"/);
+  return m ? Number(m[1]) : null;
+}
+
+/** La duracion que la spec dice, leida del modulo de la spec. */
+async function duracionEsperada(slug, cantidad) {
+  const rutaSpec = join(ROOT, 'courses', slug, 'frames.spec.mjs');
+  if (!existsSync(rutaSpec)) return { esperado: null, motivo: 'sin spec' };
+  const spec = (await import(pathToFileURL(rutaSpec).href)).default;
+  if (!spec || typeof spec.duracion !== 'number') {
+    return { esperado: null, motivo: 'la spec no declara duracion' };
+  }
+  const porFrame = spec.duracion / cantidad;
+  return { esperado: +(porFrame - 0.5).toFixed(2), motivo: null };
+}
+
+async function revisarDuraciones() {
+  const base = join(ROOT, 'videos');
+  let cursos = 0;
+  let malos = 0;
+  console.log('\nduracion de los frames, contra la spec:');
+
+  for (const slug of readdirSync(base).sort()) {
+    const dir = join(base, slug, 'compositions', 'frames');
+    if (!esDirectorio(dir)) continue;
+    const archivos = framesDe(dir);
+    if (archivos.length === 0) continue;
+    cursos += 1;
+
+    const { esperado, motivo } = await duracionEsperada(slug, archivos.length);
+    if (esperado === null) {
+      // El piloto escrito a mano usa duraciones propias por frame. Se dice en
+      // voz alta en vez de saltarselo en silencio: si aparece un curso mas
+      // sin spec, hay que notarlo.
+      console.log(`· ${slug}: sin comparacion (${motivo}, ${archivos.length} frames)`);
+      continue;
+    }
+
+    const malos_ = [];
+    for (const archivo of archivos) {
+      const d = duracionDe(archivo);
+      if (d === null) malos_.push(`${nombreArchivo(archivo)}: sin data-duration`);
+      else if (d !== esperado) malos_.push(`${nombreArchivo(archivo)}: ${d}s en vez de ${esperado}s`);
+    }
+
+    if (malos_.length === 0) {
+      console.log(`✓ ${slug}: ${archivos.length} x ${esperado}s`);
+      continue;
+    }
+    malos += 1;
+    console.log(`✗ ${slug}: ${archivos.length} frames deberian durar ${esperado}s cada uno`);
+    for (const m of malos_) console.log(`    ${m}`);
+  }
+
+  if (cursos === 0) {
+    console.log('· ningun curso compuesto todavia');
+  }
+  return malos;
+}
+
+/* El chequeo de duraciones es del curso, asi que solo tiene sentido cuando
+   se recorre todo el arbol. Con una lista de archivos puntual no se puede
+   afirmar nada sobre la uniformidad del conjunto. */
+const conDuraciones = esLista ? 0 : await revisarDuraciones();
+const total = conProblemas + conDuraciones;
+
 console.log(
-  conProblemas === 0
+  total === 0
     ? `\nOK: ${rutas.length} frame(s) sin selectores rotos ni interlineados imposibles`
-    : `\n${conProblemas} de ${rutas.length} frame(s) con CSS roto`,
+    : `\n${total} problema(s) en ${rutas.length} frame(s) y las duraciones`,
 );
-process.exit(conProblemas === 0 ? 0 : 1);
+process.exit(total === 0 ? 0 : 1);
